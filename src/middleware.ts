@@ -6,6 +6,13 @@ import { routing } from './i18n/routing';
 const intlMiddleware = createMiddleware(routing);
 
 export default function middleware(request: NextRequest) {
+  // the admin portal has no language prefix: /en/admin/... -> /admin/...
+  const admin = request.nextUrl.pathname.match(/^\/(?:en|de|no|it|fr)(\/admin(?:\/.*)?)$/);
+  if (admin) {
+    const url = request.nextUrl.clone();
+    url.pathname = admin[1];
+    return NextResponse.redirect(url);
+  }
   // Only the bare homepage is redirected by country, and only until the visitor picks a language.
   // Inner pages are never force-redirected, so search engines can crawl every language.
   if (request.nextUrl.pathname === '/' && !request.cookies.has('NEXT_LOCALE')) {

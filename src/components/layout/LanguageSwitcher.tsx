@@ -6,7 +6,7 @@ import { useEffect, useRef, useState, useTransition } from 'react';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { routing, type Locale } from '@/i18n/routing';
 
-const LABELS: Record<Locale, string> = { en: 'English', de: 'Deutsch', no: 'Norsk', it: 'Italiano' };
+const LABELS: Record<Locale, string> = { en: 'English', de: 'Deutsch', no: 'Norsk', it: 'Italiano', fr: 'Français' };
 
 export function LanguageSwitcher({ className = '' }: { className?: string }) {
   const t = useTranslations('Nav');

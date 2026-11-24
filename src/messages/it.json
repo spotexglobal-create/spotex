@@ -14,7 +14,10 @@
     "menu": "Menu",
     "close": "Chiudi",
     "language": "Lingua",
-    "skip": "Vai al contenuto"
+    "skip": "Vai al contenuto",
+    "viewAll": "Vedi tutti ({count})",
+    "allProducts": "Tutti i prodotti",
+    "blog": "Blog"
   },
   "Common": {
     "close": "Chiudi",
@@ -291,11 +294,12 @@
         "it": "Italia",
         "de": "Germania",
         "no": "Norvegia",
+        "fr": "Francia",
         "us": "Stati Uniti"
       },
       "markets": {
         "us": "Stati Uniti",
-        "eu": "Europa · Norvegia · Germania · Italia",
+        "eu": "Europa · Norvegia · Germania · Francia · Italia",
         "kr": "Corea del Sud"
       }
     }
@@ -309,43 +313,113 @@
   "Departments": {
     "design": {
       "name": "Design e sviluppo",
-      "text": "La tua grafica trasformata in disegni e schede tecniche pronti per la produzione."
+      "text": "La tua grafica trasformata in disegni e schede tecniche pronti per la produzione.",
+      "lead": "Ogni ordine nasce al reparto design. Il nostro team trasforma logo, colori e idee in grafiche pronte per la produzione, mock-up di posizionamento e una scheda tecnica che guida tutta la fabbrica.",
+      "points": [
+        "Pulizia del logo e grafica vettoriale",
+        "Mock-up per ogni posizione del marchio",
+        "Schede tecniche con misure, materiali e colori"
+      ],
+      "benefit": "Vedi esattamente come sarà l’uniforme prima di tagliare un solo metro di tessuto."
     },
     "pattern": {
       "name": "Modelleria",
-      "text": "Modelli sviluppati per ogni taglia, dai bambini all'A5."
+      "text": "Modelli sviluppati per ogni taglia, dai bambini all'A5.",
+      "lead": "I modellisti trasformano il design in cartamodelli graduati per ogni taglia, dal bambino all’adulto A5, così la vestibilità resta uguale in tutta la gamma.",
+      "points": [
+        "Cartamodelli per taglie bambino e adulto",
+        "Vestibilità adattata a ogni disciplina",
+        "Cartamodelli archiviati per i riordini"
+      ],
+      "benefit": "I riordini vestono esattamente come il primo lotto."
     },
     "fabric": {
       "name": "Tessitura",
-      "text": "Trame pearl, gold e ripstop dai nostri telai."
+      "text": "Trame pearl, gold e ripstop dai nostri telai.",
+      "lead": "Sui nostri telai tessiamo i tessuti pearl, gold, all-play e ripstop dei nostri gi, controllando peso e densità fin dal primo filo.",
+      "points": [
+        "Trame pearl, gold, all-play e ripstop",
+        "Grammature da 280 a 700 GSM",
+        "Ogni rotolo controllato per peso e restringimento"
+      ],
+      "benefit": "Il tessuto del campione è il tessuto del tuo ordine in serie."
     },
     "knitting": {
       "name": "Maglieria",
-      "text": "Tessuti a maglia per rashguard, pantaloncini e fightwear."
+      "text": "Tessuti a maglia per rashguard, pantaloncini e fightwear.",
+      "lead": "Tessuti elasticizzati e a maglia per rash guard, pantaloncini, felpe e abbigliamento da combattimento sono prodotti in casa sulle nostre macchine.",
+      "points": [
+        "Tessuti elastici per rash guard e leggings",
+        "Felpa per hoodie e tute",
+        "Mesh e fodere traspiranti"
+      ],
+      "benefit": "Abbigliamento da combattimento e gi da un solo fornitore, in colori coordinati."
     },
     "dyeing": {
       "name": "Tintoria",
-      "text": "Colori abbinati al tuo marchio, tinti in casa."
+      "text": "Colori abbinati al tuo marchio, tinti in casa.",
+      "lead": "La nostra tintoria colora il tessuto nei colori del tuo marchio, lotto dopo lotto, e controlla ogni lotto rispetto alla tonalità approvata.",
+      "points": [
+        "Colori abbinati al tuo marchio",
+        "Ogni lotto controllato sulla tonalità approvata",
+        "Tinture solide per lavaggi frequenti"
+      ],
+      "benefit": "Il tuo blu resta il tuo blu, ordine dopo ordine."
     },
     "cutting": {
       "name": "Taglio",
-      "text": "Taglio preciso per taglie costanti in ogni ordine."
+      "text": "Taglio preciso per taglie costanti in ogni ordine.",
+      "lead": "Il tessuto viene steso e tagliato con precisione sui cartamodelli graduati, così ogni giacca, pantalone e short di una taglia esce identico.",
+      "points": [
+        "Taglio preciso sui cartamodelli graduati",
+        "Stesura del tessuto con pochi scarti",
+        "Ogni fascio etichettato per taglia"
+      ],
+      "benefit": "Taglie coerenti in tutto l’ordine."
     },
     "printing": {
       "name": "Stampa",
-      "text": "Ricamo, serigrafia e sublimazione totale."
+      "text": "Ricamo, serigrafia e sublimazione totale.",
+      "lead": "Loghi e grafiche vengono applicati in casa: ricamo, patch tessute, serigrafia e sublimazione totale.",
+      "points": [
+        "Ricamo e patch tessute",
+        "Serigrafia",
+        "Sublimazione totale per l’abbigliamento da combattimento"
+      ],
+      "benefit": "Una sola fabbrica gestisce il tuo marchio: posizione e colori corrispondono al mock-up."
     },
     "stitching": {
       "name": "Cucitura",
-      "text": "Cuciture rinforzate per allenamenti duri."
+      "text": "Cuciture rinforzate per allenamenti duri.",
+      "lead": "Operatori esperti assemblano ogni uniforme con cuciture e punti di stress rinforzati, pensati per allenamenti duri e gare.",
+      "points": [
+        "Cuciture e punti di stress rinforzati",
+        "Doppia cucitura dove il gi lavora di più",
+        "Etichette e patch cucite, mai incollate"
+      ],
+      "benefit": "Uniformi che reggono anni di lotta di presa."
     },
     "inspection": {
       "name": "Controllo e stiratura",
-      "text": "Ogni capo viene controllato, stirato e misurato."
+      "text": "Ogni capo viene controllato, stirato e misurato.",
+      "lead": "Ogni capo finito viene controllato, misurato e stirato prima dell’imballaggio, e il nostro laboratorio testa tessuti e prodotti finiti.",
+      "points": [
+        "Misure verificate sulla tabella taglie",
+        "Cuciture, marchio e finiture controllati",
+        "Stirato e piegato, pronto per la vendita"
+      ],
+      "benefit": "Arriva esattamente ciò che hai approvato."
     },
     "packing": {
       "name": "Imballaggio",
-      "text": "Imballato con le tue etichette, pronto per l'export."
+      "text": "Imballato con le tue etichette, pronto per l'export.",
+      "lead": "Gli ordini vengono imballati con le tue etichette, cartellini e confezioni a marchio, poi preparati per l’export via aerea o via mare.",
+      "points": [
+        "Cartellini e sacchetti a marchio",
+        "Packing list per taglia e prodotto",
+        "Documenti di export per USA ed Europa"
+      ],
+      "benefit": "Pronto da vendere il giorno in cui arriva."
     }
   },
   "Catalog": {
@@ -491,7 +565,26 @@
     "related": "Altro da questa linea",
     "code": "Codice",
     "whatsappText": "Buongiorno Spotex, sono interessato a {code} ({name}).",
-    "metaDescription": "{name} {code}: {specs}. Su ordinazione da Spotex International con il tuo marchio."
+    "metaDescription": "{name} {code}: {specs}. Su ordinazione da Spotex International con il tuo marchio.",
+    "zoomHint": "Passa sopra per ingrandire",
+    "madeToOrder": "Su ordinazione",
+    "sampleAvailable": "Campione disponibile",
+    "orderTitle": "Come si ordina",
+    "viewRange": "Vedi tutti: {name}",
+    "highlights": [
+      {
+        "title": "Fabbrica propria",
+        "text": "Tessuto, tagliato e cucito a Gujranwala, Pakistan, dal 1989."
+      },
+      {
+        "title": "Il tuo marchio",
+        "text": "Logo, etichette, colori e confezione fatti per la tua accademia."
+      },
+      {
+        "title": "Pronti per l’export",
+        "text": "Spedizioni negli USA e in tutta Europa."
+      }
+    ]
   },
   "PrivateLabel": {
     "metaTitle": "Divise per arti marziali a marchio privato",
@@ -557,13 +650,58 @@
       "Un centro di formazione informatica gratuito per la comunità locale e i dipendenti, con oltre 1.000 diplomati.",
       "Assicurazione sulla vita per tutti i dipendenti.",
       "Corsi antincendio gratuiti e attività sportive per la comunità locale."
-    ]
+    ],
+    "stats": {
+      "since": "Uniformi dal",
+      "departments": "Reparti interni",
+      "staff": "Personale qualificato",
+      "iso": "Certificati 9001:2015"
+    },
+    "phasesEyebrow": "Come nasce un’uniforme",
+    "phasesTitle": "Dal filo alla spedizione.",
+    "phase": "Fase {n}",
+    "phases": [
+      {
+        "title": "Preparare",
+        "text": "La tua idea diventa un design, una scheda tecnica e cartamodelli in ogni taglia."
+      },
+      {
+        "title": "Fare il tessuto",
+        "text": "Tessiamo, lavoriamo a maglia e tingiamo noi stessi, così colore e peso restano sotto controllo."
+      },
+      {
+        "title": "Produrre",
+        "text": "Taglio, personalizzazione e cucitura, con cuciture fatte per l’allenamento duro."
+      },
+      {
+        "title": "Rifinire",
+        "text": "Ogni capo viene controllato, stirato, misurato e imballato con le tue etichette."
+      }
+    ],
+    "makeTitle": "Prodotto sotto questo tetto",
+    "qualityEyebrow": "Qualità",
+    "qualityPoints": [
+      "Tessuti e prodotti finiti testati nel nostro laboratorio",
+      "Ogni capo controllato, stirato e misurato prima dell’imballaggio",
+      "Un campione approvato da te prima di ogni produzione in serie"
+    ],
+    "certified": "Sistema qualità certificato",
+    "isoText": "La nostra produzione segue lo standard di gestione della qualità ISO 9001:2015.",
+    "csrEyebrow": "Oltre la fabbrica",
+    "ctaTitle": "Verifica la qualità di persona.",
+    "ctaText": "Inizia con un solo campione, prodotto in questa fabbrica con il tuo marchio.",
+    "inHouse": "In casa",
+    "forYou": "Cosa significa per il tuo ordine",
+    "allDepartments": "Tutti i dieci reparti",
+    "previous": "Passo precedente",
+    "next": "Passo successivo",
+    "overview": "Panoramica della fabbrica"
   },
   "AboutPage": {
     "metaTitle": "Chi è Spotex International",
     "metaDescription": "Produttore di divise per arti marziali a Gujranwala, in Pakistan. Kimono e cinture dal 1989.",
     "eyebrow": "Chi siamo",
-    "titleA": "Prodotto a Gujranwala",
+    "titleA": "La tua fabbrica di uniformi",
     "titleB": "dal 1989.",
     "intro": "Spotex International è nata come piccolo laboratorio a Gujranwala, in Pakistan. Oggi produciamo divise per arti marziali, cinture e fightwear per palestre, club e marchi all'estero, con ogni fase della produzione sotto il nostro tetto.",
     "factsTitle": "In breve",
@@ -587,7 +725,58 @@
         "title": "Il tuo marchio",
         "text": "Produciamo con il tuo nome e le tue etichette."
       }
-    ]
+    ],
+    "storyEyebrow": "La nostra storia",
+    "storyTitle": "Dal laboratorio all’export.",
+    "story": [
+      {
+        "title": "Dove siamo partiti",
+        "text": "Spotex è nata nel 1989 come piccolo laboratorio di cucito a Gujranwala, il cuore dell’industria dell’abbigliamento sportivo pakistana."
+      },
+      {
+        "title": "Cosa abbiamo costruito",
+        "text": "Passo dopo passo abbiamo portato in casa tessitura, tintura, stampa e controllo qualità, così ogni uniforme nasce sotto un solo tetto."
+      },
+      {
+        "title": "Dove siamo oggi",
+        "text": "Oggi produciamo uniformi, cinture e abbigliamento da combattimento per accademie, club e marchi negli USA e in tutta Europa."
+      }
+    ],
+    "valuesEyebrow": "I nostri valori",
+    "partnersEyebrow": "Con chi lavoriamo",
+    "partnersTitle": "Fatto per chi si allena.",
+    "partners": [
+      {
+        "title": "Accademie e club",
+        "text": "Uniformi e cinture con il logo del club per ogni iscritto."
+      },
+      {
+        "title": "Marchi",
+        "text": "Gi e abbigliamento da combattimento a marchio privato, con il tuo nome."
+      },
+      {
+        "title": "Distributori",
+        "text": "Produzione in serie affidabile per negozi di arti marziali e grossisti."
+      },
+      {
+        "title": "Squadre e federazioni",
+        "text": "Divise coordinate per squadre agonistiche ed eventi."
+      }
+    ],
+    "marketsEyebrow": "Export",
+    "marketsTitle": "Dove vanno le nostre uniformi",
+    "marketsText": "Spediamo da Gujranwala a clienti in Nord America, Europa e Asia, con un solo referente dal primo messaggio alla consegna.",
+    "ctaTitle": "Lavoriamo insieme.",
+    "ctaText": "Raccontaci della tua accademia o del tuo marchio e ti suggeriremo i prodotti giusti per iniziare.",
+    "est": "Fondata nel 1989",
+    "place": "Gujranwala, Pakistan",
+    "seeFactory": "La nostra fabbrica",
+    "trust": [
+      "Certificati ISO 9001:2015",
+      "10 reparti interni",
+      "Export negli USA e in Europa"
+    ],
+    "yearsLabel": "Anni di uniformi"
   },
   "ContactPage": {
     "metaTitle": "Contatta Spotex International",
@@ -600,11 +789,67 @@
     "phone": "Telefono",
     "email": "Email",
     "whatsapp": "WhatsApp",
-    "formSoon": "Il modulo di preventivo online arriverà a breve. Nel frattempo scrivici su WhatsApp o via email."
+    "formSoon": "Il modulo di preventivo online arriverà a breve. Nel frattempo scrivici su WhatsApp o via email.",
+    "hours": "Da lunedì a sabato, 9:00–18:00 ora del Pakistan (UTC+5). Rispondiamo a e-mail e WhatsApp entro un giorno lavorativo."
   },
   "NotFound": {
     "title": "Pagina non trovata",
     "text": "Questa pagina non esiste o è stata spostata.",
     "back": "Torna alla home"
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "metaDescription": "Guide su tessuti, grammature e produzione a marchio privato di uniformi per arti marziali, dalla fabbrica Spotex in Pakistan.",
+    "intro": "Guide su tessuti, grammature e produzione a marchio privato, scritte da chi le uniformi le produce.",
+    "featured": "In evidenza",
+    "latest": "Ultimi articoli",
+    "readMore": "Leggi l’articolo",
+    "minRead": "{n} min di lettura",
+    "related": "Altri articoli",
+    "backToBlog": "Tutti gli articoli",
+    "englishOnly": "Questo articolo è disponibile in inglese.",
+    "ctaEyebrow": "Prossimo passo",
+    "ctaTitle": "Tocca il tessuto con mano.",
+    "ctaText": "Ordina un campione nella trama e nella grammatura che stai valutando, con o senza marchio.",
+    "topics": {
+      "guides": "Guide",
+      "private-label": "Marchio privato",
+      "factory": "Fabbrica"
+    }
+  },
+  "ContactForm": {
+    "tabQuote": "Richiedi un preventivo",
+    "tabMessage": "Invia un messaggio",
+    "name": "Il tuo nome",
+    "email": "E-mail",
+    "company": "Accademia / azienda",
+    "phone": "Telefono / WhatsApp",
+    "country": "Paese",
+    "quantity": "Quantità",
+    "choose": "Scegli…",
+    "productCode": "Codice prodotto",
+    "products": "Prodotti che ti servono",
+    "branding": "Personalizzazione",
+    "brandingOptions": [
+      "Ricamo",
+      "Patch tessuta",
+      "Serigrafia",
+      "Sublimazione",
+      "Senza logo",
+      "Non ancora deciso"
+    ],
+    "sample": "Vorrei prima un campione",
+    "message": "Messaggio",
+    "messageQuotePlaceholder": "Colori, taglie, scadenza e tutto ciò che dovremmo sapere…",
+    "messagePlaceholder": "Come possiamo aiutarti?",
+    "privacy": "Usiamo i tuoi dati solo per rispondere alla tua richiesta.",
+    "sending": "Invio…",
+    "sendQuote": "Invia la richiesta",
+    "sendMessage": "Invia il messaggio",
+    "invalid": "Compila i campi evidenziati.",
+    "offline": "Il modulo online non è ancora collegato, quindi la richiesta non è stata inviata. Inviacela su WhatsApp con un tocco:",
+    "offlineButton": "Invia su WhatsApp",
+    "sentTitle": "Grazie!",
+    "sentText": "La tua richiesta è arrivata al nostro team commerciale. Di solito rispondiamo entro un giorno lavorativo."
   }
 }

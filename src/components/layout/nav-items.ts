@@ -7,5 +7,6 @@ export const NAV_ITEMS = [
   { href: '/private-label', label: 'privateLabel' },
   { href: '/factory', label: 'factory' },
   { href: '/about', label: 'about' },
+  { href: '/blog', label: 'blog' },
   { href: '/contact', label: 'contact' },
 ] as const satisfies readonly { href: AppPathname; label: string }[];

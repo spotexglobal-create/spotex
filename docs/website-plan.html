@@ -1,0 +1,465 @@
+<title>Spotex Website Master Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* layout: one reading column with a sticky contents rail on wide screens; brand red/black on white */
+:root{
+  --bg:#ffffff; --fg:#141414; --soft:#f6f5f5; --line:#e7e3e3; --muted:#3d3a3a;
+  --red:#d40000; --redsoft:#fde9e9; --ok:#0f7a3d; --oksoft:#e3f4ea; --warn:#9a5b00; --warnsoft:#fdf1dc;
+  --display:'Bebas Neue',Impact,'Arial Narrow',sans-serif; --body:'Montserrat',system-ui,-apple-system,sans-serif; --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121111;--fg:#f1eeee;--soft:#1c1a1a;--line:#2f2b2b;--muted:#c9c3c3;--red:#ff4a4a;--redsoft:#3a1616;--ok:#5fd394;--oksoft:#12301f;--warn:#f0b35a;--warnsoft:#3a2a10;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121111;--fg:#f1eeee;--soft:#1c1a1a;--line:#2f2b2b;--muted:#c9c3c3;--red:#ff4a4a;--redsoft:#3a1616;--ok:#5fd394;--oksoft:#12301f;--warn:#f0b35a;--warnsoft:#3a2a10;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.65;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px}
+@media(max-width:900px){.wrap{grid-template-columns:minmax(0,1fr)}.toc{display:none}}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 24px);align-self:start;padding-top:40px;font-size:12.5px}
+.toc b{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.toc a{display:block;color:var(--muted);text-decoration:none;padding:4px 0 4px 10px;border-left:2px solid var(--line)}
+.toc a:hover,.toc a:focus-visible{color:var(--fg);border-left-color:var(--red);outline:none}
+main{min-width:0}
+header{padding:44px 0 28px;border-bottom:2px solid var(--fg);margin-bottom:8px}
+.kick{font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--red)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(48px,8vw,92px);line-height:.88;margin:10px 0 14px;letter-spacing:.01em;text-wrap:balance}
+h1 em,h2 em{font-style:normal;color:var(--red)}
+.lede{max-width:66ch;font-size:16px;margin:0}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;font-size:12.5px;color:var(--muted)}
+.facts span b{color:var(--fg)}
+section{padding:40px 0 8px;border-bottom:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.4vw,48px);line-height:.95;margin:0 0 6px;letter-spacing:.01em;text-wrap:balance;display:flex;gap:14px;align-items:baseline}
+h2 .n{font-family:var(--mono);font-size:13px;color:var(--red);letter-spacing:0}
+h3{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:26px 0 8px}
+p{max-width:72ch;margin:8px 0}
+.sub{color:var(--muted);margin-top:0}
+ul,ol{padding-left:20px;margin:8px 0}li{margin:4px 0;max-width:72ch}
+code,.mono{font-family:var(--mono);font-size:12.5px;background:var(--soft);padding:1px 6px;border-radius:4px}
+.tw{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:620px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--soft);color:var(--muted);font-weight:700}
+tr:last-child td{border-bottom:0}
+.tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.t-new{background:var(--redsoft);color:var(--red)}.t-keep{background:var(--oksoft);color:var(--ok)}.t-fix{background:var(--warnsoft);color:var(--warn)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:14px 0}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:14px 0}
+@media(max-width:760px){.grid2,.grid3{grid-template-columns:minmax(0,1fr)}}
+.box{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--bg);min-width:0}
+.box h4{margin:0 0 6px;font-size:14px;font-weight:800}
+.box ul{margin:0;font-size:13.5px}
+.note{border-left:3px solid var(--red);background:var(--soft);padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0;max-width:80ch}
+.note b{color:var(--red)}
+pre{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:14px 16px;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.55;margin:12px 0}
+.phase{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.phase:first-of-type{border-top:0}
+.phase .w{font-family:var(--display);font-size:26px;line-height:1;color:var(--red)}
+.phase .w small{display:block;font-family:var(--body);font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+@media(max-width:560px){.phase{grid-template-columns:minmax(0,1fr);gap:4px}}
+.check li{list-style:none;position:relative;padding-left:4px}
+.check{padding-left:22px}
+.check li::before{content:"";position:absolute;left:-20px;top:7px;width:11px;height:11px;border:2px solid var(--red);border-radius:3px}
+a{color:var(--red)}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+</style>
+
+<div class="wrap">
+<nav class="toc" aria-label="Contents">
+  <b>Contents</b>
+  <a href="#audit">1 · Purani site audit</a>
+  <a href="#facts">2 · Company facts</a>
+  <a href="#domain">3 · Naya domain</a>
+  <a href="#lang">4 · Languages</a>
+  <a href="#sitemap">5 · Naye pages</a>
+  <a href="#product">6 · Product page</a>
+  <a href="#admin">7 · Admin portal</a>
+  <a href="#tech">8 · Tech stack</a>
+  <a href="#db">9 · Database &amp; API</a>
+  <a href="#seo">10 · SEO</a>
+  <a href="#ideas">11 · Creative pages</a>
+  <a href="#content">12 · Company se kya chahiye</a>
+  <a href="#roadmap">13 · Roadmap</a>
+  <a href="#launch">14 · Launch checklist</a>
+</nav>
+
+<main>
+<header>
+  <div class="kick">Spotex International · New website</div>
+  <h1>Website <em>master plan</em></h1>
+  <p class="lede">Naye domain pe Spotex ki nayi website ka poora plan. Maqsad: USA, Norway aur Europe ke academies, clubs aur brands ko site pe lana, unhe unki apni zubaan mein dikhana, aur unse quote ya sample request lena. Purani site (spotexint.com) se sirf idea liya hai ke kaun se pages hain. Koi text ya design copy nahi karna.</p>
+  <div class="facts"><span><b>Frontend:</b> Next.js + Tailwind</span><span><b>Backend:</b> Next.js API routes (Node.js)</span><span><b>Hosting:</b> sirf Vercel</span><span><b>Database:</b> MongoDB</span><span><b>Markets:</b> USA · Norway · Europe</span><span><b>Languages:</b> English · German · Norwegian · Italian</span></div>
+</header>
+
+<!-- 1 -->
+<section id="audit">
+  <h2><span class="n">01</span>Purani site audit</h2>
+  <p class="sub">spotexint.com pe abhi yeh pages hain, aur yeh masle mile.</p>
+
+  <h3>Pages jo abhi maujood hain</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Section</th><th>Pages</th><th>Haalat</th></tr></thead>
+    <tbody>
+      <tr><td>Home</td><td>1</td><td>Kai jagah template ka filler text (dummy lines) abhi tak laga hai</td></tr>
+      <tr><td>Who We Are (About)</td><td>1</td><td>Content hai, lekin English kamzor hai aur facts aapas mein takrate hain</td></tr>
+      <tr><td>Products (category index)</td><td>1</td><td>Sirf category naam, koi intro text nahi</td></tr>
+      <tr><td>Product categories</td><td>~24</td><td>Uniforms, Jiu Jitsu, Judo, Karate, Taekwondo, Samba, Gi Bag, No Gi, MMA Shorts, Belts, BJJ Belts, Casual Belts, BJJ 350-gram Belts, Judo Belts, Key Chains, Wrestling Singlets, Hoodies, Half Sleeves, Full Sleeves, Tudo Shorts, Leggings, Sports Bra, Rash Guard, aur "Certifications" (jo product category hi nahi hai)</td></tr>
+      <tr><td>Product detail</td><td>Bohot saare</td><td>Sirf ek line description. Sizes, colours, MOQ, lead time ya specs table nahi</td></tr>
+      <tr><td>Basket</td><td>1</td><td>"Add to Cart" aur "Add to Inquiry" dono, B2B buyer confuse hota hai</td></tr>
+      <tr><td>Departments</td><td>1 + 10</td><td>Design &amp; Development, Pattern Making, Cutting, Stitching, Printing, Fabric Making, Knitting, Fabric Dyeing, Inspection &amp; Press, Packing. Zyada tar pages khaali (sirf heading)</td></tr>
+      <tr><td>CSR / Compliance</td><td>1</td><td>Achha content: free IT centre, employee life insurance, firefighting training</td></tr>
+      <tr><td>R&amp;D</td><td>1</td><td>Testing lab ka zikr, lekin photos aur detail kam</td></tr>
+      <tr><td>Contact Us</td><td>1</td><td>Form, address, phone aur emails</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Masle jo nayi site mein theek karne hain</h3>
+  <ul>
+    <li><b>SEO:</b> <code>sitemap.xml</code> maujood hi nahi (404). Homepage ki meta description abhi tak template wali "Your site description is here" hai. Title sirf "Spotex International".</li>
+    <li><b>Filler text:</b> homepage pe "It is a long established fact…" aur "It has survived not only five centuries" jaise dummy lines. Buyer ko yeh foran ghair-professional lagta hai.</li>
+    <li><b>Kisi aur site ka menu:</b> HTML mein ek purane template ka chhupa menu hai ("History of WCCIS", "STSI Executive Committee", "History of Sialkot").</li>
+    <li><b>Facts aapas mein takrate hain:</b> ek jagah "1989 se", ek jagah "29 saal", homepage pe "15+ years". Homepage yeh bhi kehta hai ke company "partners with top manufacturers", jab ke asal taqat yeh hai ke sab kuch apni factory mein banta hai.</li>
+    <li><b>Spelling:</b> "SAMBA UNIFORM" (Sambo hona chahiye), "MMa Shorts", "Key Chain's", "Leggies".</li>
+    <li><b>Phone number:</b> header mein …33 34 aur contact page pe …33 33.</li>
+    <li><b>Product codes:</b> do system chal rahe hain (<code>SI-JJU-1001</code> aur <code>JJ-102-(STI-3)</code>).</li>
+    <li><b>Language:</b> sirf English, koi hreflang nahi.</li>
+  </ul>
+</section>
+
+<!-- 2 -->
+<section id="facts">
+  <h2><span class="n">02</span>Company facts</h2>
+  <p class="sub">Purani site se liye gaye facts. Jin ke saath "confirm" likha hai, woh company se pakka karwa kar hi nayi site pe lagayein.</p>
+  <div class="grid2">
+    <div class="box"><h4>Company</h4><ul>
+      <li>Spotex International, Sialkot Road, Sialkot Bypass, Sardar Town, Gujranwala 52250, Pakistan</li>
+      <li>Shuruaat: 1989 <span class="tag t-fix">confirm</span></li>
+      <li>ISO 9001:2015 certified <span class="tag t-fix">certificate ki current copy chahiye</span></li>
+      <li>Alibaba Gold Member (site pe "8th year" likha hai) <span class="tag t-fix">confirm</span></li>
+      <li>50+ qualified staff, 100+ clients <span class="tag t-fix">confirm</span></li>
+      <li>Pakistan Ju-Jitsu Federation / Jiu Jitsu Association ke certificates</li>
+    </ul></div>
+    <div class="box"><h4>Apni factory (in-house)</h4><ul>
+      <li>10 departments: Design &amp; Development, Pattern Making, Fabric Making, Knitting, Fabric Dyeing, Cutting, Stitching, Printing, Inspection &amp; Press, Packing</li>
+      <li>R&amp;D aur apparel testing lab</li>
+      <li>Custom artwork ke saath first sample</li>
+      <li><b>Yahi sab se bari selling point hai:</b> dhaaga se le kar packing tak ek chhat ke neeche</li>
+    </ul></div>
+    <div class="box"><h4>Product range</h4><ul>
+      <li><b>BJJ Gi:</b> Pearl weave 280 / 350 GSM, All-Play 350 GSM, Gold weave 350 / 450 / 550 / 750 GSM, ripstop pants</li>
+      <li><b>Judo:</b> 450 GSM academy (poly/cotton, 100% cotton drill pant), 550 aur 750 GSM</li>
+      <li><b>Karate:</b> 10 oz canvas. <b>Taekwondo</b> doboks, <b>Sambo</b></li>
+      <li><b>Belts:</b> BJJ, judo, casual, 350 GSM gi-fabric belts</li>
+      <li><b>No-Gi:</b> rash guards, MMA shorts, leggings, sports bra, wrestling singlets</li>
+      <li><b>Other:</b> gi bags, hoodies, T-shirts, key chains</li>
+    </ul></div>
+    <div class="box"><h4>CSR</h4><ul>
+      <li>Free IT centre (Trade Testing Board se registered), 1,000+ students</li>
+      <li>Saare employees ki life insurance</li>
+      <li>Ilaqe ke logon ke liye free firefighting training, sports activities</li>
+      <li>Europe ke buyers (khaas kar Norway aur Germany) ke liye yeh bohot ahem hai. Isay alag page do.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="domain">
+  <h2><span class="n">03</span>Naya domain</h2>
+  <ul>
+    <li><b>Naam:</b> chhota, aasaan spelling, aur "Spotex" naam ke saath, taake brand wahi rahe. <code>.com</code> sab se behtar hai, kyun ke teeno markets ke liye ek hi domain hoga aur language subfolder se badlegi.</li>
+    <li><b>Ek domain, language folders:</b> <code>newdomain.com/en</code>, <code>/no</code>, <code>/de</code> wagaira. Har mulk ka alag domain (<code>.no</code>, <code>.de</code>) mat lein. Is se SEO ki taqat bat jati hai aur kharcha bhi barhta hai.</li>
+    <li><b>Email:</b> naye domain pe professional email (Google Workspace ya Zoho), jaise <code>sales@</code>, <code>info@</code>. SPF, DKIM aur DMARC set karein, warna Europe mein emails spam mein jayengi.</li>
+  </ul>
+  <div class="note"><b>Faisla:</b> sirf naya domain use hoga. Purana <code>spotexint.com</code> is project mein shamil nahi, aur us se koi redirect nahi hoga. Is liye naya domain SEO mein zero se shuru karega. Isay jaldi mazboot karne ke liye launch ke din Alibaba profile, Google Business Profile, LinkedIn, Facebook, Instagram aur B2B directories pe naye domain ka link lagayein, aur Search Console mein sitemap submit karein. Domain kam se kam 2 saal ke liye renew rakhein.</div>
+</section>
+
+<!-- 4 -->
+<section id="lang">
+  <h2><span class="n">04</span>Languages aur regions</h2>
+  <p class="sub">Abhi 4 languages: English, German, Norwegian aur Italian. Visitor jis mulk se aaye, use us mulk ki zubaan mein site dikhe. Baaki saari duniya ko English. Baad mein nayi language add karni ho to sirf ek JSON file aur admin mein ek tab barhega.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Visitor ka mulk</th><th>Language</th><th>URL</th></tr></thead>
+    <tbody>
+      <tr><td>USA, Canada, UK, Ireland, aur baaki saari duniya (France, Spain, Sweden wagaira bhi)</td><td>English</td><td><code>/en</code> (default)</td></tr>
+      <tr><td>Germany, Austria, Liechtenstein</td><td>Deutsch</td><td><code>/de</code></td></tr>
+      <tr><td>Norway</td><td>Norsk (Bokmål)</td><td><code>/no</code></td></tr>
+      <tr><td>Italy, San Marino</td><td>Italiano</td><td><code>/it</code></td></tr>
+      <tr><td>Switzerland</td><td>Browser ki language se: German ho to <code>/de</code>, Italian ho to <code>/it</code>, warna English</td><td>auto</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Kaise kaam karega</h3>
+  <ol>
+    <li>Visitor <code>newdomain.com</code> kholta hai. Next.js middleware hosting ka country header (<code>x-vercel-ip-country</code> ya <code>cf-ipcountry</code>) aur browser ki language parhta hai.</li>
+    <li>Upar wali table se language chun kar <b>sirf homepage</b> pe redirect, aur choice cookie mein save.</li>
+    <li>Header mein har waqt language switcher. User ki apni choice hamesha IP pe bhari rahe.</li>
+    <li>Andar ke pages (jaise <code>/de/judoanzug</code>) kabhi zabardasti redirect nahi honge. Google zyada tar USA se crawl karta hai, aur force redirect se use German aur Norwegian pages kabhi nahi milenge.</li>
+    <li>Har page pe <code>hreflang</code> tags aur <code>x-default</code> (English), taake Google khud har mulk ko sahi page dikhaye.</li>
+  </ol>
+  <div class="note"><b>Translation:</b> UI ka text (buttons, menu) <code>next-intl</code> ki JSON files mein, aur products, blog aur SEO fields MongoDB mein har language ke liye alag. Main pages ki translation us zubaan ke native translator se karwayein. Machine translation se B2B buyer ka bharosa toot jata hai. URL slugs bhi translate hon: <code>/de/judoanzuege</code>, <code>/no/judodrakter</code>, <code>/it/judogi</code>.</div>
+</section>
+
+<!-- 5 -->
+<section id="sitemap">
+  <h2><span class="n">05</span>Nayi site ke pages</h2>
+  <p class="sub"><span class="tag t-keep">idea purani site se</span> <span class="tag t-fix">purana idea, naya tareeqa</span> <span class="tag t-new">naya page</span></p>
+  <div class="tw"><table>
+    <thead><tr><th>Page</th><th>Kya hoga</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td><b>Home</b></td><td>Scroll animation hero (jo demo mein bana), in-house factory ki kahani, best products, markets, aur quote ka CTA</td><td><span class="tag t-fix">naya tareeqa</span></td></tr>
+      <tr><td><b>Products</b> (index)</td><td>Discipline ke hisaab se grid, filters: discipline, weave, GSM, colour</td><td><span class="tag t-fix">naya tareeqa</span></td></tr>
+      <tr><td><b>Category pages</b></td><td>BJJ Gi, Judo, Karate, Taekwondo, Sambo, Belts, No-Gi, Gi Bags, Apparel. Har ek pe 200–400 lafzon ka asal intro aur FAQ. Purani 24 categories ko inhi mein merge karein</td><td><span class="tag t-fix">naya tareeqa</span></td></tr>
+      <tr><td><b>Product detail</b></td><td>Section 6 dekhein</td><td><span class="tag t-fix">naya tareeqa</span></td></tr>
+      <tr><td><b>Private Label / Custom</b></td><td>Apna brand banane ka process: design → sample → approval → production → shipping. Logo placement aur embroidery options</td><td><span class="tag t-new">naya</span></td></tr>
+      <tr><td><b>Our Factory</b></td><td>10 departments ek page pe, scroll story ki shakal mein, apni photos aur videos ke saath. Har department ka chhota section. Purane 10 khaali pages ki jagah</td><td><span class="tag t-fix">naya tareeqa</span></td></tr>
+      <tr><td><b>Quality &amp; Testing</b></td><td>R&amp;D lab, testing, inspection, ISO certificate ki tasveer. Purana R&amp;D page + certifications</td><td><span class="tag t-fix">naya tareeqa</span></td></tr>
+      <tr><td><b>Fabrics &amp; Weaves</b></td><td>Pearl weave, gold weave, ripstop, GSM ka matlab, zoom photos</td><td><span class="tag t-new">naya</span></td></tr>
+      <tr><td><b>Responsibility (CSR)</b></td><td>IT centre, insurance, training, environment</td><td><span class="tag t-keep">purana idea</span></td></tr>
+      <tr><td><b>About / Our Story</b></td><td>1989 se ab tak ki kahani, team, timeline</td><td><span class="tag t-keep">purana idea</span></td></tr>
+      <tr><td><b>Markets</b></td><td>USA, Norway aur Europe ke liye alag page: shipping time, Incoterms (FOB, DDP), customs, size standards</td><td><span class="tag t-new">naya</span></td></tr>
+      <tr><td><b>Request a Quote</b></td><td>3 steps: products aur quantity → customisation aur logo upload → contact. Basket ki jagah "Inquiry list"</td><td><span class="tag t-fix">naya tareeqa</span></td></tr>
+      <tr><td><b>Order a Sample</b></td><td>Alag form, kyun ke pehle sample hi sab se aasaan qadam hai</td><td><span class="tag t-new">naya</span></td></tr>
+      <tr><td><b>How We Work / MOQ</b></td><td>Minimum order, lead time, payment terms, shipping, aur sawal-jawab</td><td><span class="tag t-new">naya</span></td></tr>
+      <tr><td><b>Size Charts</b></td><td>BJJ (A0–A5, F1–F5, kids), Judo, Karate, Taekwondo</td><td><span class="tag t-new">naya</span></td></tr>
+      <tr><td><b>Catalog download</b></td><td>PDF catalog, email de kar milega (leads)</td><td><span class="tag t-new">naya</span></td></tr>
+      <tr><td><b>Blog / Guides</b></td><td>Section 11 ke SEO articles</td><td><span class="tag t-new">naya</span></td></tr>
+      <tr><td><b>FAQ</b></td><td>Buyer ke aam sawal</td><td><span class="tag t-new">naya</span></td></tr>
+      <tr><td><b>Contact</b></td><td>Form, WhatsApp, email, address aur map ka link</td><td><span class="tag t-keep">purana idea</span></td></tr>
+      <tr><td><b>Legal</b></td><td>Privacy Policy, Cookie Policy, Terms, aur German visitors ke liye Impressum</td><td><span class="tag t-new">naya</span></td></tr>
+    </tbody>
+  </table></div>
+  <h3>Main menu</h3>
+  <pre>Products ▾ (BJJ · Judo · Karate · Taekwondo · Belts · No-Gi · Bags &amp; Apparel)
+Private Label     Factory ▾ (Our Factory · Quality · Fabrics · Responsibility)
+Guides ▾ (Size Charts · Blog · FAQ)     About     Contact
+[ Language ▾ ]   [ Request a Quote ]</pre>
+</section>
+
+<!-- 6 -->
+<section id="product">
+  <h2><span class="n">06</span>Product page</h2>
+  <p class="sub">Purani site pe ek line thi. Naye page pe buyer ko faisla karne ke liye sab kuch chahiye.</p>
+  <div class="grid3">
+    <div class="box"><h4>Upar</h4><ul><li>Image gallery (front, back, close-up fabric, patch, label)</li><li>Naam, code, discipline</li><li>"Add to inquiry" aur "Order sample" buttons</li></ul></div>
+    <div class="box"><h4>Specs table</h4><ul><li>Jacket fabric, weave, GSM</li><li>Pants fabric</li><li>Composition (cotton / poly-cotton)</li><li>Sizes aur colours</li><li>Pre-shrunk (haan / nahi)</li><li>Competition legal (IBJJF / IJF)</li></ul></div>
+    <div class="box"><h4>Order info</h4><ul><li>MOQ</li><li>Sample lead time</li><li>Production lead time</li><li>Customisation: embroidery, print, woven label, patch</li><li>Related products</li></ul></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section id="admin">
+  <h2><span class="n">07</span>Admin portal</h2>
+  <p class="sub"><code>/admin</code> pe, login ke saath. Roles: <b>Admin</b> (sab kuch), <b>Editor</b> (content), <b>Sales</b> (inquiries).</p>
+  <div class="grid2">
+    <div class="box"><h4>Content</h4><ul>
+      <li>Products: add, edit, delete, duplicate. Har language ka apna tab</li>
+      <li>Categories aur sub-categories</li>
+      <li>Media library (Cloudinary), image alt text har language mein</li>
+      <li>Blog posts, FAQ, testimonials, case studies</li>
+      <li>Translations: jo text translate nahi hua, woh highlight ho</li>
+      <li>Har page ke SEO fields: title, description, slug, OG image</li>
+    </ul></div>
+    <div class="box"><h4>Sales</h4><ul>
+      <li>Inquiry inbox: New → Contacted → Quoted → Sample sent → Won / Lost</li>
+      <li>Har inquiry: mulk, language, products, quantity, logo file, notes</li>
+      <li>Sample requests aur catalog downloads ki alag list</li>
+      <li>Nayi inquiry pe email (aur chahein to WhatsApp) notification</li>
+      <li>CSV export</li>
+      <li>Dashboard: is mahine kis mulk se kitni inquiries aayin</li>
+    </ul></div>
+    <div class="box"><h4>Settings</h4><ul>
+      <li>Phone, email, address, social links</li>
+      <li>Redirect manager (jab kisi page ka URL badle, 301)</li>
+      <li>Languages on/off</li>
+      <li>Users aur roles</li>
+    </ul></div>
+    <div class="box"><h4>Security</h4><ul>
+      <li>Password bcrypt mein, session httpOnly cookie mein</li>
+      <li>Login pe rate limit, 2FA (admins ke liye)</li>
+      <li>Har form pe Cloudflare Turnstile (spam se bachao)</li>
+      <li>Upload ki file type aur size check</li>
+      <li>Activity log: kis ne kya badla</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section id="tech">
+  <h2><span class="n">08</span>Tech stack</h2>
+  <div class="tw"><table>
+    <thead><tr><th>Hissa</th><th>Kya use hoga</th><th>Kyun</th></tr></thead>
+    <tbody>
+      <tr><td>Website</td><td>Next.js (App Router) + Tailwind + next-intl + GSAP</td><td>Pages server pe HTML bante hain (SSG/ISR), Google ko poora content milta hai, site tez</td></tr>
+      <tr><td>Admin</td><td>Isi Next.js app mein <code>/admin</code> (client pages)</td><td>Ek hi codebase, ek hi deploy</td></tr>
+      <tr><td>API</td><td>Next.js API routes (Route Handlers, Node.js runtime) + Zod validation</td><td>Website, admin aur API ek hi project mein, ek hi deploy. Baad mein mobile app ya ERP aaye to API alag karna aasaan</td></tr>
+      <tr><td>Database</td><td>MongoDB Atlas + Mongoose, region Frankfurt</td><td>Europe ke qareeb, GDPR ke liye behtar</td></tr>
+      <tr><td>Images</td><td>Cloudinary (ya S3 + CDN), AVIF/WebP</td><td>Har screen ke liye sahi size khud bane</td></tr>
+      <tr><td>Email</td><td>Resend ya Brevo</td><td>Inquiry notifications aur buyer ko confirmation</td></tr>
+      <tr><td>Hosting</td><td>Sab kuch Vercel pe (website + admin + API). Database MongoDB Atlas pe</td><td>Ek jagah, kam kharcha. Vercel country header bhi khud deta hai</td></tr>
+      <tr><td>Scheduled kaam</td><td>Vercel Cron</td><td>Jaise roz ka inquiry summary email ya purani files ki safai</td></tr>
+      <tr><td>Analytics</td><td>Google Analytics 4 + Search Console (consent ke baad)</td><td>GDPR</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Folder structure</h3>
+  <pre>spotex/                   ek hi Next.js project, Vercel pe
+├─ app/
+│  ├─ [locale]/             website pages (en, de, no, it)
+│  ├─ admin/                admin portal
+│  └─ api/                  API routes: products, categories, inquiries, auth, uploads …
+├─ lib/
+│  ├─ db.ts                 MongoDB connection (cached, har request pe naya nahi)
+│  ├─ models/               Mongoose models
+│  ├─ auth.ts               login, session, role check
+│  └─ validation/           Zod schemas
+├─ messages/                en.json, de.json, no.json, it.json
+├─ components/
+└─ middleware.ts            country → language, aur /admin ki hifazat</pre>
+  <div class="note"><b>Vercel pe 3 baatein:</b> (1) MongoDB connection <code>lib/db.ts</code> mein cache ho, warna har request pe naya connection banega. (2) Logo aur images browser se seedha Cloudinary pe upload hon (signed upload); API sirf signature deti hai, kyun ke Vercel pe request size ki limit hai. (3) Lamba kaam Vercel Cron se chale.</div>
+  <div class="note"><b>Speed:</b> admin mein product save ho to API usi waqt <code>revalidatePath</code> chalaye, aur sirf woh page dobara bane. Is tarah site static jaisi tez rahegi aur update bhi foran dikhega. Heavy animation sirf homepage pe rakhein, aur "reduced motion" wale users ke liye band kar dein.</div>
+</section>
+
+<!-- 9 -->
+<section id="db">
+  <h2><span class="n">09</span>Database aur API</h2>
+  <h3>MongoDB collections</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Collection</th><th>Fields</th></tr></thead>
+    <tbody>
+      <tr><td><code>products</code></td><td>code, category, slug{en,no,de…}, name{…}, description{…}, specs{fabric, weave, gsm, composition, pantsFabric, preShrunk, competitionLegal[]}, sizes[], colours[], moq, leadTimeDays{sample, production}, customisation[], images[{url, alt{…}}], seo{title{…}, description{…}}, status (draft/published), order</td></tr>
+      <tr><td><code>categories</code></td><td>slug{…}, name{…}, intro{…}, faq[{q{…}, a{…}}], parent, image, seo{…}</td></tr>
+      <tr><td><code>inquiries</code></td><td>type (quote/sample/catalog/contact), items[{product, qty, notes}], customisation, files[], name, company, email, phone, country, locale, status, assignedTo, notesLog[], createdAt</td></tr>
+      <tr><td><code>posts</code></td><td>slug{…}, title{…}, body{…}, cover, tags[], author, publishedAt, seo{…}</td></tr>
+      <tr><td><code>pages</code></td><td>key (home, about, factory…), blocks per language, seo{…}</td></tr>
+      <tr><td><code>users</code></td><td>name, email, passwordHash, role, twoFactor, lastLogin</td></tr>
+      <tr><td><code>redirects</code></td><td>from, to, code (301)</td></tr>
+      <tr><td><code>settings</code>, <code>auditLogs</code>, <code>testimonials</code></td><td>site settings, kis ne kya badla, buyer reviews (sirf asli, ijazat ke saath)</td></tr>
+    </tbody>
+  </table></div>
+  <h3>API routes</h3>
+  <pre>Public
+GET  /api/products?category=&amp;locale=&amp;page=
+GET  /api/products/:slug?locale=
+GET  /api/categories?locale=
+GET  /api/posts · /api/posts/:slug
+POST /api/inquiries          (quote, sample, contact, catalog)
+POST /api/uploads/sign       (Cloudinary signed upload; file seedha Cloudinary jati hai)
+
+Admin  (login zaroori, role check)
+POST /api/auth/login · /api/auth/logout · GET /api/auth/me
+CRUD /api/admin/products · /categories · /posts · /pages · /redirects · /users
+GET  /api/admin/inquiries · PATCH /api/admin/inquiries/:id   (status, notes)
+GET  /api/admin/stats         (mulk aur mahine ke hisaab se inquiries)
+(admin mein save hote hi woh page revalidatePath se khud refresh)</pre>
+</section>
+
+<!-- 10 -->
+<section id="seo">
+  <h2><span class="n">10</span>SEO</h2>
+  <div class="grid2">
+    <div class="box"><h4>Technical</h4><ul>
+      <li>Har language ka sitemap, aur <code>robots.txt</code></li>
+      <li>hreflang + x-default + canonical har page pe</li>
+      <li>Structured data: Organization, Product, BreadcrumbList, FAQPage, Article</li>
+      <li>Core Web Vitals green: <code>next/image</code>, fonts self-host, kam JavaScript</li>
+      <li>Har image ka alt text, har language mein</li>
+      <li>Search Console aur Bing Webmaster, dono mein har language submit</li>
+    </ul></div>
+    <div class="box"><h4>Keywords (har zubaan ki apni research)</h4><ul>
+      <li>EN: BJJ gi manufacturer, private label jiu jitsu gi, custom judo uniforms wholesale, martial arts uniform supplier</li>
+      <li>NO: judodrakt, kampsportdrakt, BJJ gi produsent</li>
+      <li>DE: Judoanzug Hersteller, BJJ Gi Hersteller, Kampfsportbekleidung Großhandel</li>
+      <li>IT: produttore kimono judo, kimono BJJ personalizzati, abbigliamento arti marziali all'ingrosso</li>
+      <li>Keyword translate mat karein. Har zubaan mein log alag tarah search karte hain, is liye har ek ki alag research chahiye.</li>
+    </ul></div>
+    <div class="box"><h4>Local aur trust</h4><ul>
+      <li>Gujranwala factory ka Google Business Profile (photos ke saath)</li>
+      <li>Naye domain ka link Alibaba profile, LinkedIn, Facebook, Instagram pe</li>
+      <li>B2B directories: Europages, Kompass, Thomasnet (USA)</li>
+    </ul></div>
+    <div class="box"><h4>Backlinks</h4><ul>
+      <li>Norway aur Europe ke chhote tournaments ko sponsor karna</li>
+      <li>Partner academies ki site pe "Made by Spotex" badge aur link</li>
+      <li>Martial arts blogs aur YouTube channels ko sample bhejna</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section id="ideas">
+  <h2><span class="n">11</span>Creative pages jo rank karwayenge</h2>
+  <div class="grid2">
+    <div class="box"><h4>Gi Builder</h4><p>Buyer colour, weave, patches aur embroidery ki jagah chune, preview dekhe, aur wahin se quote bheje. Lead bhi deta hai, log share bhi karte hain.</p></div>
+    <div class="box"><h4>"Is my gi competition legal?"</h4><p>IBJJF, IJF, WKF aur World Taekwondo ke uniform rules, aur ek chhota checker. Is pe har mahine bohot search hoti hai.</p></div>
+    <div class="box"><h4>Size calculator</h4><p>Height aur weight daalo, size milega (A0–A5, kids, judo sizes). Har mulk ke apne size standard ke hisaab se.</p></div>
+    <div class="box"><h4>Fabric &amp; weave guide</h4><p>Pearl vs gold vs ripstop, GSM ka matlab, aur 280 se 750 GSM tak ka farq zoom photos ke saath. Yeh sirf ek asli factory hi likh sakti hai.</p></div>
+    <div class="box"><h4>"Start your own BJJ gi brand"</h4><p>Private label buyers ke liye mukammal guide: design, MOQ, kharcha, timeline. Sab se high-intent page.</p></div>
+    <div class="box"><h4>MOQ &amp; lead time estimator</h4><p>Quantity aur product chuno, andaza mile kitne din lagenge. Range admin se set hogi.</p></div>
+    <div class="box"><h4>"How a gi is made"</h4><p>Dhaaga se packing tak ka virtual tour, 10 departments ki videos ke saath.</p></div>
+    <div class="box"><h4>Belt rank guides</h4><p>BJJ belt system, aur judo kyu/dan colours har mulk mein. Informational traffic jo belts tak le jaye.</p></div>
+    <div class="box"><h4>Country pages</h4><p>Misal: "Judo uniform supplier for clubs in Norway". Asal content ho: shipping din, customs, VAT, size standards. Copy-paste pages Google spam samajhta hai.</p></div>
+    <div class="box"><h4>Care guide &amp; downloads</h4><p>Gi kaise dhoyein, shrinkage. Free "tech pack template" aur catalog PDF, email ke badle.</p></div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section id="content">
+  <h2><span class="n">12</span>Company se kya chahiye</h2>
+  <p class="sub">Development ke saath saath yeh cheezein jama karni hongi. Sab se zyada waqt isi mein lagta hai.</p>
+  <ul class="check">
+    <li>Har product ki 4–6 achhi photos, saaf white background pe (front, back, fabric close-up, label, patch)</li>
+    <li>Har product ke specs: fabric, GSM, composition, sizes, colours, MOQ, lead time</li>
+    <li>Factory ke 10 departments ki apni photos aur 10–20 second ki videos</li>
+    <li>ISO aur baaki certificates ki current scan copies</li>
+    <li>Pakke facts: shuruaat ka saal, staff, clients, kin mulkon ko export</li>
+    <li>Logo ka original vector file (AI, SVG ya PDF), ya naya vector banwana</li>
+    <li>Size charts, MOQ, payment terms, shipping terms (FOB / DDP)</li>
+    <li>Asli buyers ke testimonials aur case studies (unki ijazat se)</li>
+    <li>German, Norwegian aur Italian ke native translators, ya translation agency</li>
+    <li>Naye domain ka naam aur us pe email accounts</li>
+  </ul>
+</section>
+
+<!-- 13 -->
+<section id="roadmap">
+  <h2><span class="n">13</span>Roadmap</h2>
+  <p class="sub">Deadline 2–3 din. Pehle launch mein sirf zaroori cheezein, baaki launch ke baad. Domain milne tak site Vercel ke free link pe live rahegi.</p>
+  <div class="phase"><div class="w">Din 1<small>Website</small></div><div><ul>
+    <li>Next.js + Tailwind + next-intl (EN, DE, NO, IT) aur country → language</li>
+    <li>Header, footer, language switcher, design demo se</li>
+    <li>Home (scroll Spotlight hero), Products, Category, Product detail, Private Label, Factory, About + Quality, Contact</li>
+    <li>Charon languages ka text (pehle AI translation, baad mein native review)</li>
+  </ul></div></div>
+  <div class="phase"><div class="w">Din 2<small>Backend + Admin</small></div><div><ul>
+    <li>MongoDB models aur API routes: products, categories, inquiries, uploads</li>
+    <li>Admin: login, products (4 language tabs, images), inquiry inbox</li>
+    <li>Quote, Sample aur Contact forms: database mein save + email notification</li>
+  </ul></div></div>
+  <div class="phase"><div class="w">Din 3<small>SEO + Launch</small></div><div><ul>
+    <li>Meta tags, sitemap, hreflang, structured data</li>
+    <li>Legal pages aur cookie consent</li>
+    <li>Speed aur overlap check, Vercel pe deploy, forms test</li>
+  </ul></div></div>
+  <div class="phase"><div class="w">Baad mein<small>Launch ke baad</small></div><div><ul>
+    <li>Editor/Sales roles, 2FA, CSV export, dashboard</li>
+    <li>Blog, FAQ, Size charts, Fabric guide, Catalog PDF, Markets pages</li>
+    <li>Gi Builder, size calculator, competition checker, native translation review</li>
+  </ul></div></div>
+</section>
+
+<!-- 14 -->
+<section id="launch">
+  <h2><span class="n">14</span>Launch checklist</h2>
+  <ul class="check">
+    <li>Har page pe unique title aur description, har language mein</li>
+    <li>Sitemap Search Console mein submit, aur hreflang mein koi error nahi</li>
+    <li>Naye domain ka link Alibaba, Google Business Profile aur directories pe laga hua</li>
+    <li>Saare forms kaam karte hain, admin ko email aati hai, buyer ko confirmation jati hai</li>
+    <li>Cookie consent: Europe aur Norway ke visitors ke liye analytics consent ke baad hi chale</li>
+    <li>PageSpeed: mobile pe 85+ score</li>
+    <li>Koi dummy text, ghalat phone number ya takrate hue facts nahi</li>
+    <li>Alibaba, LinkedIn, Facebook, Instagram aur email signatures mein naya domain</li>
+    <li>Database ka daily backup on</li>
+    <li>Admin passwords mazboot aur 2FA on</li>
+  </ul>
+</section>
+</main>
+</div>

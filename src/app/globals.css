@@ -5,7 +5,7 @@
   --color-brand: #de0000;
   --color-brand-bright: #f50f17;
   --color-ink: #0b0b0b;
-  --color-text: #111111;
+  --color-text: #0b0b0b;
   --color-line: #ececec;
   --color-soft: #f5f5f5;
 
@@ -32,6 +32,8 @@ body {
   background: #fff;
   color: var(--color-text);
   font-family: var(--font-sans);
+  /* a touch heavier than regular so body copy reads clearly on white */
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -67,3 +69,5 @@ body {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+@keyframes menu-in { from { opacity: 0; transform: translateY(-8px); } }

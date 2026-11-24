@@ -14,7 +14,10 @@
     "menu": "Menu",
     "close": "Close",
     "language": "Language",
-    "skip": "Skip to content"
+    "skip": "Skip to content",
+    "viewAll": "View all {count}",
+    "allProducts": "All products",
+    "blog": "Blog"
   },
   "Common": {
     "close": "Close",
@@ -291,11 +294,12 @@
         "it": "Italy",
         "de": "Germany",
         "no": "Norway",
+        "fr": "France",
         "us": "United States"
       },
       "markets": {
         "us": "United States",
-        "eu": "Europe · Norway · Germany · Italy",
+        "eu": "Europe · Norway · Germany · France · Italy",
         "kr": "South Korea"
       }
     }
@@ -309,43 +313,113 @@
   "Departments": {
     "design": {
       "name": "Design & Development",
-      "text": "Your artwork turned into production-ready designs and tech packs."
+      "text": "Your artwork turned into production-ready designs and tech packs.",
+      "lead": "Every order starts at the design desk. Our team turns your logo, colours and ideas into production-ready artwork, placement mock-ups and a tech pack the whole factory works from.",
+      "points": [
+        "Logo clean-up and vector artwork",
+        "Placement mock-ups for every branding spot",
+        "Tech packs with measurements, materials and colours"
+      ],
+      "benefit": "You see exactly how the uniform will look before a single metre of fabric is cut."
     },
     "pattern": {
       "name": "Pattern Making",
-      "text": "Patterns graded for every size, from kids to A5."
+      "text": "Patterns graded for every size, from kids to A5.",
+      "lead": "Pattern makers turn the design into patterns graded for every size, from kids to adult A5, so the fit stays the same across the whole size range.",
+      "points": [
+        "Patterns graded for kids and adult sizes",
+        "Fit adjusted for each discipline",
+        "Patterns kept on file for repeat orders"
+      ],
+      "benefit": "Re-orders fit exactly like your first batch."
     },
     "fabric": {
       "name": "Fabric Making",
-      "text": "Pearl, gold and ripstop weaves made on our own looms."
+      "text": "Pearl, gold and ripstop weaves made on our own looms.",
+      "lead": "On our own looms we weave the pearl, gold, all-play and ripstop fabrics that go into our gis, controlling weight and density from the very first thread.",
+      "points": [
+        "Pearl, gold, all-play and ripstop weaves",
+        "Weights from 280 to 700 GSM",
+        "Every roll checked for weight and shrinkage"
+      ],
+      "benefit": "The fabric in your sample is the fabric in your bulk order."
     },
     "knitting": {
       "name": "Knitting",
-      "text": "Knitted fabrics for rash guards, shorts and fight wear."
+      "text": "Knitted fabrics for rash guards, shorts and fight wear.",
+      "lead": "Stretch and knitted fabrics for rash guards, shorts, hoodies and fight wear are made in-house on our knitting machines.",
+      "points": [
+        "Stretch fabrics for rash guards and leggings",
+        "Fleece for hoodies and track wear",
+        "Breathable mesh and linings"
+      ],
+      "benefit": "Fight wear and gis from one supplier, in matching colours."
     },
     "dyeing": {
       "name": "Fabric Dyeing",
-      "text": "Colours matched to your brand and dyed in-house."
+      "text": "Colours matched to your brand and dyed in-house.",
+      "lead": "Our dye house colours fabric to your brand colours, batch by batch, and checks every batch against the approved shade.",
+      "points": [
+        "Colours matched to your brand",
+        "Every batch checked against the approved shade",
+        "Colour-fast dyes for frequent washing"
+      ],
+      "benefit": "Your blue stays your blue, order after order."
     },
     "cutting": {
       "name": "Cutting",
-      "text": "Precise cutting for consistent sizing across every order."
+      "text": "Precise cutting for consistent sizing across every order.",
+      "lead": "Fabric is laid out and cut precisely to the graded patterns, so every jacket, pair of pants and short in a size comes out the same.",
+      "points": [
+        "Precise cutting to graded patterns",
+        "Fabric laid out to keep waste low",
+        "Every bundle labelled by size"
+      ],
+      "benefit": "Consistent sizing across the whole order."
     },
     "printing": {
       "name": "Printing",
-      "text": "Embroidery, screen print and full sublimation."
+      "text": "Embroidery, screen print and full sublimation.",
+      "lead": "Logos and artwork are applied in-house: embroidery, woven patches, screen print and full sublimation.",
+      "points": [
+        "Embroidery and woven patches",
+        "Screen printing",
+        "Full sublimation for fight wear"
+      ],
+      "benefit": "One factory handles your branding, so placement and colours match the mock-up."
     },
     "stitching": {
       "name": "Stitching",
-      "text": "Reinforced seams built for hard training."
+      "text": "Reinforced seams built for hard training.",
+      "lead": "Skilled operators assemble each uniform with reinforced seams and stress points built for hard training and competition.",
+      "points": [
+        "Reinforced seams and stress points",
+        "Double stitching where gis take the most strain",
+        "Labels and patches sewn in, never glued"
+      ],
+      "benefit": "Uniforms that survive years of grip fighting."
     },
     "inspection": {
       "name": "Inspection & Press",
-      "text": "Every piece checked, pressed and measured."
+      "text": "Every piece checked, pressed and measured.",
+      "lead": "Every finished piece is checked, measured and pressed before packing, and our lab tests fabric and finished products.",
+      "points": [
+        "Measurements checked against the size chart",
+        "Seams, branding and finish inspected",
+        "Pressed and folded, ready for retail"
+      ],
+      "benefit": "What arrives is exactly what you approved."
     },
     "packing": {
       "name": "Packing",
-      "text": "Packed with your labels, ready for export."
+      "text": "Packed with your labels, ready for export.",
+      "lead": "Orders are packed with your labels, hang tags and branded packaging, then prepared for export by air or sea.",
+      "points": [
+        "Hang tags and branded bags",
+        "Packing lists by size and product",
+        "Export paperwork for the USA and Europe"
+      ],
+      "benefit": "Ready to sell the day it reaches you."
     }
   },
   "Catalog": {
@@ -491,7 +565,26 @@
     "related": "More from this range",
     "code": "Code",
     "whatsappText": "Hello Spotex, I'm interested in {code} ({name}).",
-    "metaDescription": "{name} {code}: {specs}. Made to order by Spotex International with your branding."
+    "metaDescription": "{name} {code}: {specs}. Made to order by Spotex International with your branding.",
+    "zoomHint": "Hover to zoom",
+    "madeToOrder": "Made to order",
+    "sampleAvailable": "Sample available",
+    "orderTitle": "How ordering works",
+    "viewRange": "View all {name}",
+    "highlights": [
+      {
+        "title": "Own factory",
+        "text": "Woven, cut and stitched in Gujranwala, Pakistan, since 1989."
+      },
+      {
+        "title": "Your branding",
+        "text": "Logo, labels, colours and packaging made for your academy."
+      },
+      {
+        "title": "Export ready",
+        "text": "Shipped to the USA and across Europe."
+      }
+    ]
   },
   "PrivateLabel": {
     "metaTitle": "Private Label Martial Arts Uniforms",
@@ -557,13 +650,58 @@
       "A free IT training centre for local people and employees, with more than 1,000 graduates.",
       "Life insurance for every employee.",
       "Free firefighting training and sports activities for the local community."
-    ]
+    ],
+    "stats": {
+      "since": "Making uniforms since",
+      "departments": "In-house departments",
+      "staff": "Qualified staff",
+      "iso": "9001:2015 certified"
+    },
+    "phasesEyebrow": "How a uniform is made",
+    "phasesTitle": "From thread to shipment.",
+    "phase": "Phase {n}",
+    "phases": [
+      {
+        "title": "Prepare",
+        "text": "Your idea becomes a design, a tech pack and a pattern in every size."
+      },
+      {
+        "title": "Make the fabric",
+        "text": "We weave, knit and dye the fabric ourselves, so colour and weight stay under control."
+      },
+      {
+        "title": "Produce",
+        "text": "Cutting, branding and stitching, with seams built for hard training."
+      },
+      {
+        "title": "Finish",
+        "text": "Every piece is checked, pressed, measured and packed with your labels."
+      }
+    ],
+    "makeTitle": "Made under this roof",
+    "qualityEyebrow": "Quality",
+    "qualityPoints": [
+      "Fabric and finished products tested in our own lab",
+      "Every piece checked, pressed and measured before packing",
+      "A sample approved by you before any bulk production"
+    ],
+    "certified": "Certified quality system",
+    "isoText": "Our production follows the ISO 9001:2015 quality management standard.",
+    "csrEyebrow": "Beyond the factory",
+    "ctaTitle": "See the quality for yourself.",
+    "ctaText": "Start with a single sample, made in this factory with your branding.",
+    "inHouse": "In-house",
+    "forYou": "What it means for your order",
+    "allDepartments": "All ten departments",
+    "previous": "Previous step",
+    "next": "Next step",
+    "overview": "Factory overview"
   },
   "AboutPage": {
     "metaTitle": "About Spotex International",
     "metaDescription": "A martial arts uniform manufacturer in Gujranwala, Pakistan, making gis and belts since 1989.",
     "eyebrow": "About us",
-    "titleA": "Made in Gujranwala",
+    "titleA": "Your uniform factory",
     "titleB": "since 1989.",
     "intro": "Spotex International started as a small workshop in Gujranwala, Pakistan. Today we make martial arts uniforms, belts and fight wear for academies, clubs and brands abroad, with every step of production under our own roof.",
     "factsTitle": "At a glance",
@@ -587,7 +725,58 @@
         "title": "Your brand",
         "text": "We produce under your name, with your labels."
       }
-    ]
+    ],
+    "storyEyebrow": "Our story",
+    "storyTitle": "From workshop to exporter.",
+    "story": [
+      {
+        "title": "Where we started",
+        "text": "Spotex began in 1989 as a small stitching workshop in Gujranwala, the heart of Pakistan’s sportswear industry."
+      },
+      {
+        "title": "What we built",
+        "text": "Step by step we brought fabric making, dyeing, printing and quality testing in-house, so every uniform is made under one roof."
+      },
+      {
+        "title": "Where we are today",
+        "text": "Today we make uniforms, belts and fight wear for academies, clubs and brands in the USA and across Europe."
+      }
+    ],
+    "valuesEyebrow": "Our values",
+    "partnersEyebrow": "Who we work with",
+    "partnersTitle": "Made for the people who train.",
+    "partners": [
+      {
+        "title": "Academies & clubs",
+        "text": "Uniforms and belts with your club logo for every member."
+      },
+      {
+        "title": "Brands",
+        "text": "Private label gis and fight wear launched under your own name."
+      },
+      {
+        "title": "Distributors",
+        "text": "Reliable bulk production for martial arts shops and wholesalers."
+      },
+      {
+        "title": "Teams & federations",
+        "text": "Matching kit for competition teams and events."
+      }
+    ],
+    "marketsEyebrow": "Export",
+    "marketsTitle": "Where our uniforms go",
+    "marketsText": "We ship from Gujranwala to customers in North America, Europe and Asia, with one contact person from the first message to delivery.",
+    "ctaTitle": "Let’s work together.",
+    "ctaText": "Tell us about your academy or brand and we will suggest the right products to start with.",
+    "est": "Est. 1989",
+    "place": "Gujranwala, Pakistan",
+    "seeFactory": "See our factory",
+    "trust": [
+      "ISO 9001:2015 certified",
+      "10 in-house departments",
+      "Exporting to USA & Europe"
+    ],
+    "yearsLabel": "Years making uniforms"
   },
   "ContactPage": {
     "metaTitle": "Contact Spotex International",
@@ -600,11 +789,67 @@
     "phone": "Phone",
     "email": "Email",
     "whatsapp": "WhatsApp",
-    "formSoon": "The online quote form opens soon. Until then, send us a WhatsApp message or an email."
+    "formSoon": "The online quote form opens soon. Until then, send us a WhatsApp message or an email.",
+    "hours": "Monday to Saturday, 9:00–18:00 Pakistan time (UTC+5). We reply to e-mails and WhatsApp messages within one working day."
   },
   "NotFound": {
     "title": "Page not found",
     "text": "This page doesn't exist or has moved.",
     "back": "Back to home"
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "metaDescription": "Guides on martial arts uniform fabrics, weights and private label production, from the Spotex factory in Pakistan.",
+    "intro": "Guides on fabrics, weights and private label production, written by the people who make the uniforms.",
+    "featured": "Featured",
+    "latest": "Latest articles",
+    "readMore": "Read article",
+    "minRead": "{n} min read",
+    "related": "More articles",
+    "backToBlog": "All articles",
+    "englishOnly": "This article is available in English.",
+    "ctaEyebrow": "Next step",
+    "ctaTitle": "Feel the fabric yourself.",
+    "ctaText": "Order one sample in the weave and weight you are considering, branded or plain.",
+    "topics": {
+      "guides": "Guides",
+      "private-label": "Private label",
+      "factory": "Factory"
+    }
+  },
+  "ContactForm": {
+    "tabQuote": "Request a quote",
+    "tabMessage": "Send a message",
+    "name": "Your name",
+    "email": "E-mail",
+    "company": "Academy / company",
+    "phone": "Phone / WhatsApp",
+    "country": "Country",
+    "quantity": "Quantity",
+    "choose": "Choose…",
+    "productCode": "Product code",
+    "products": "Products you need",
+    "branding": "Branding",
+    "brandingOptions": [
+      "Embroidery",
+      "Woven patch",
+      "Screen print",
+      "Sublimation",
+      "No branding",
+      "Not sure yet"
+    ],
+    "sample": "I would like a sample first",
+    "message": "Message",
+    "messageQuotePlaceholder": "Colours, sizes, deadline, anything else we should know…",
+    "messagePlaceholder": "How can we help?",
+    "privacy": "We only use your details to answer your request.",
+    "sending": "Sending…",
+    "sendQuote": "Send quote request",
+    "sendMessage": "Send message",
+    "invalid": "Please fill in the highlighted fields.",
+    "offline": "The online form is not connected yet, so your request was not sent. Send it to us on WhatsApp in one tap:",
+    "offlineButton": "Send on WhatsApp",
+    "sentTitle": "Thank you!",
+    "sentText": "Your request has reached our sales team. We usually reply within one working day."
   }
 }

@@ -1,0 +1,855 @@
+{
+  "Meta": {
+    "siteName": "Spotex International",
+    "homeTitle": "Spotex International · Fabricant d'uniformes d'arts martiaux",
+    "homeDescription": "Kimonos de JJB, de judo, de karaté et doboks de taekwondo, ceintures comprises, fabriqués dans notre propre usine au Pakistan et personnalisés pour les clubs et les marques aux États-Unis et en Europe."
+  },
+  "Nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "privateLabel": "Uniformes sur mesure",
+    "factory": "Usine",
+    "about": "À propos",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Fermer",
+    "language": "Langue",
+    "skip": "Aller au contenu",
+    "viewAll": "Voir les {count}",
+    "allProducts": "Tous les produits",
+    "blog": "Blog"
+  },
+  "Common": {
+    "close": "Fermer",
+    "viewDetails": "Fiche complète",
+    "viewAllProducts": "Voir tous les produits",
+    "quickNote": "Fabriqué dans notre propre usine. Votre logo, vos couleurs et vos tailles sur demande, avec d'abord un échantillon.",
+    "requestQuote": "Demander un devis",
+    "requestSample": "Demander un échantillon",
+    "whatsapp": "Écrivez-nous sur WhatsApp",
+    "viewCollection": "Voir la collection",
+    "viewAll": "Tout voir",
+    "viewProducts": "Voir les produits",
+    "products": "{count, plural, one {# produit} other {# produits}}",
+    "scroll": "Défiler",
+    "learnMore": "En savoir plus"
+  },
+  "Footer": {
+    "tagline": "Uniformes d'arts martiaux tissés, coupés et cousus dans notre propre usine à Gujranwala, au Pakistan, depuis 1989.",
+    "explore": "Explorer",
+    "categories": "Produits",
+    "contact": "Contact",
+    "rights": "Tous droits réservés.",
+    "since": "Notre usine depuis {year}",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "madeIn": "Fabriqué à Gujranwala, Pakistan"
+  },
+  "Hero": {
+    "introTop": "Fabricant et exportateur d'uniformes d'arts martiaux",
+    "introFacts": [
+      "Notre usine depuis 1989",
+      "Gujranwala · Pakistan",
+      "Export vers les USA et l'Europe"
+    ],
+    "eyebrow": "Spotex International",
+    "titleA": "Uniformes sur mesure,",
+    "titleB": "faits maison.",
+    "copy": "Uniformes de jiu-jitsu, de judo, de karaté et de taekwondo, fabriqués dans notre propre usine et personnalisés pour les clubs aux États-Unis et en Europe.",
+    "callouts": {
+      "si-jju-1001": {
+        "label": {
+          "title": "Étiquettes tissées",
+          "text": "Votre marque au col"
+        },
+        "weave": {
+          "title": "Tissage perlé",
+          "text": "Veste polycoton 280 g/m²"
+        },
+        "logo": {
+          "title": "Votre logo",
+          "text": "Brodé sur la poitrine, les manches et le dos"
+        },
+        "pants": {
+          "title": "Pantalon ripstop",
+          "text": "Léger et anti-déchirure"
+        },
+        "belt": {
+          "title": "Ceintures assorties",
+          "text": "Toutes les couleurs de grade, faites maison"
+        }
+      },
+      "si-ju-1005": {
+        "dye": {
+          "title": "Vos couleurs",
+          "text": "Bleu, blanc ou teint à la demande"
+        },
+        "weight": {
+          "title": "550 g/m²",
+          "text": "Tissage polycoton Challenger"
+        },
+        "belt": {
+          "title": "Ceintures de grade",
+          "text": "Ceintures de judo de toutes les couleurs"
+        },
+        "range": {
+          "title": "Trois grammages",
+          "text": "450 · 550 · 700 g/m²"
+        },
+        "pants": {
+          "title": "Pantalon en drill",
+          "text": "100 % coton"
+        }
+      },
+      "si-jju-1002": {
+        "stitch": {
+          "title": "Coutures contrastées",
+          "text": "Fil assorti à votre marque"
+        },
+        "patch": {
+          "title": "Écusson d'épaule",
+          "text": "Le badge de votre club"
+        },
+        "logo": {
+          "title": "Broderie poitrine",
+          "text": "Votre logo brodé"
+        },
+        "made": {
+          "title": "Fait maison",
+          "text": "Tissé, coupé et cousu à Gujranwala"
+        },
+        "belt": {
+          "title": "Ceintures assorties",
+          "text": "Toutes les couleurs de grade, faites maison"
+        }
+      },
+      "si-ms-1001": {
+        "waist": {
+          "title": "Logo à la ceinture",
+          "text": "Votre marque sur la taille"
+        },
+        "print": {
+          "title": "Sublimation intégrale",
+          "text": "Tout design, toute couleur"
+        },
+        "fabric": {
+          "title": "Polyester",
+          "text": "Tissu léger pour le combat"
+        },
+        "team": {
+          "title": "Commandes d'équipe",
+          "text": "Pour clubs et marques de combat"
+        }
+      },
+      "si-gbp-1001": {
+        "handle": {
+          "title": "Poignée de transport",
+          "text": "Facile à porter jusqu'à la salle"
+        },
+        "kit": {
+          "title": "Tout votre équipement",
+          "text": "De la place pour le kimono, la ceinture et le matériel"
+        },
+        "pocket": {
+          "title": "Poches latérales",
+          "text": "Gourde et petits objets"
+        },
+        "brand": {
+          "title": "Votre marque",
+          "text": "Logo du club sur le devant"
+        }
+      }
+    }
+  },
+  "Film": {
+    "chapters": {
+      "fabric": "Tissu",
+      "uniforms": "Uniformes",
+      "custom": "Sur mesure",
+      "collection": "Collection",
+      "belts": "Ceintures",
+      "factory": "Usine",
+      "export": "Export"
+    },
+    "fabric": {
+      "eyebrow": "01 · Tissu",
+      "titleA": "Tissé",
+      "titleB": "chez nous.",
+      "text": "Nos propres ateliers de tissage, de tricotage et de teinture nous permettent de maîtriser le tissage dès le premier fil.",
+      "academy": "Judo · Academy",
+      "challenger": "Judo · Challenger",
+      "winner": "Judo · Winner",
+      "details": {
+        "label": "Étiquette de marque tissée",
+        "fabric": "Tissu à tissage perlé",
+        "embroidery": "Broderie poitrine",
+        "belt": "Ceinture de grade",
+        "drawstring": "Taille à cordon",
+        "pants": "Pantalon ripstop"
+      },
+      "zoomHint": "Survolez pour zoomer",
+      "notes": {
+        "label": "Étiquette de col tissée à votre nom, cousue pour ne jamais se décoller ni se ternir.",
+        "embroidery": "Logo poitrine en broderie dense, aux couleurs exactes de votre club.",
+        "fabric": "Veste en coton à tissage perlé : légère, solide et douce, tissée sur nos propres métiers.",
+        "belt": "Ceinture de grade en tissu de kimono résistant, avec des surpiqûres qui la gardent plate et ferme.",
+        "drawstring": "Cordon passé dans des œillets renforcés : le pantalon tient en place à chaque roulade.",
+        "pants": "Pantalon ripstop : léger, à séchage rapide et anti-déchirure, avec genoux renforcés."
+      }
+    },
+    "uniforms": {
+      "eyebrow": "02 · Uniformes",
+      "titleA": "Une usine.",
+      "titleB": "Toutes les disciplines.",
+      "allCategories": "Voir toutes les catégories",
+      "disciplines": [
+        "Jiu-Jitsu",
+        "Judo",
+        "Karaté",
+        "Taekwondo",
+        "Sambo"
+      ],
+      "facts": [
+        "Tissage perlé et gold · 280–400 g/m²",
+        "450 · 550 · 700 g/m²",
+        "Toile 10 oz",
+        "Polycoton ou 100 % coton",
+        "Vestes et shorts, rouge et bleu"
+      ],
+      "notes": [
+        "Kimonos de JJB en tissage perlé, gold et all-play, avec pantalon ripstop et les écussons de votre club.",
+        "Judogis en tissage simple et double, de 450 à 700 g/m², conçus pour un travail de saisie intense.",
+        "Karategis en toile de coton légère ou lourde, coupés pour le kata et pour le kumite.",
+        "Doboks de taekwondo à col en V en polycoton, avec col blanc, noir ou de couleur.",
+        "Vestes de sambo avec ailes d'épaule et shorts assortis, en rouge et en bleu."
+      ]
+    },
+    "custom": {
+      "eyebrow": "03 · Votre marque",
+      "titleA": "Votre logo,",
+      "titleB": "cousu dedans.",
+      "text": "Envoyez le logo de votre club ou de votre marque. Nous le plaçons où vous voulez, réalisons un premier échantillon et produisons à votre nom.",
+      "steps": [
+        "Envoyez votre logo",
+        "Maquette du design",
+        "Validez l'échantillon",
+        "Production et expédition"
+      ],
+      "methodsTitle": "Techniques",
+      "methods": [
+        "Broderie",
+        "Écusson tissé",
+        "Sérigraphie",
+        "Sublimation"
+      ],
+      "stepsTitle": "Comment ça marche",
+      "places": {
+        "collar": "Étiquette de col",
+        "chest": "Poitrine",
+        "sleeve": "Manche",
+        "belt": "Ceinture",
+        "thigh": "Cuisse du pantalon",
+        "pants": "Jambe du pantalon"
+      }
+    },
+    "collection": {
+      "eyebrow": "04 · Collection",
+      "titleA": "L'équipement",
+      "titleB": "complet.",
+      "also": "Touchez un produit pour voir la fiche · Nous faisons aussi :",
+      "alsoList": "Rashguards · Sweats à capuche · Singlets · Leggings · Brassières de sport"
+    },
+    "belts": {
+      "eyebrow": "05 · Ceintures",
+      "title": "Chaque grade.",
+      "titleA": "Des ceintures pour",
+      "titleB": "chaque grade.",
+      "ranks": [
+        "Blanche",
+        "Bleue",
+        "Violette",
+        "Marron",
+        "Noire"
+      ],
+      "rank": "Grade {n}"
+    },
+    "factory": {
+      "eyebrow": "06 · Usine",
+      "titleA": "Un seul toit.",
+      "titleB": "Dix ateliers.",
+      "text": "Chaque étape se fait chez nous, à Gujranwala, au Pakistan.",
+      "staff": "Employés qualifiés",
+      "clients": "Clients fidèles",
+      "iso": "Certifié 9001:2015",
+      "since": "Fabricant d'uniformes depuis"
+    },
+    "export": {
+      "eyebrow": "07 · Export",
+      "titleA": "De notre usine",
+      "titleB": "à votre tatami.",
+      "origin": "Gujranwala, Pakistan",
+      "countries": {
+        "kr": "Corée du Sud",
+        "it": "Italie",
+        "de": "Allemagne",
+        "no": "Norvège",
+        "fr": "France",
+        "us": "États-Unis"
+      },
+      "markets": {
+        "us": "États-Unis",
+        "eu": "Europe · Norvège · Allemagne · France · Italie",
+        "kr": "Corée du Sud"
+      }
+    }
+  },
+  "HomeCta": {
+    "eyebrow": "Commencez par un échantillon",
+    "titleA": "Fabriquons",
+    "titleB": "votre uniforme.",
+    "text": "Dites-nous ce qu'il vous faut : uniformes, ceintures, rashguards ou shorts, avec ou sans votre logo."
+  },
+  "Departments": {
+    "design": {
+      "name": "Design et développement",
+      "text": "Votre logo transformé en designs et fiches techniques prêts pour la production.",
+      "lead": "Chaque commande commence au bureau de design. Notre équipe transforme votre logo, vos couleurs et vos idées en fichiers prêts à produire, en maquettes de placement et en une fiche technique que toute l’usine suit.",
+      "points": [
+        "Nettoyage du logo et fichiers vectoriels",
+        "Maquettes pour chaque emplacement de marquage",
+        "Fiches techniques avec mesures, matières et couleurs"
+      ],
+      "benefit": "Vous voyez exactement à quoi ressemblera l’uniforme avant qu’un seul mètre de tissu soit coupé."
+    },
+    "pattern": {
+      "name": "Patronage",
+      "text": "Des patrons gradués pour chaque taille, de l'enfant à A5.",
+      "lead": "Nos modélistes transforment le design en patrons gradués pour chaque taille, de l’enfant à l’adulte A5, pour une coupe identique sur toute la gamme.",
+      "points": [
+        "Patrons pour tailles enfant et adulte",
+        "Coupe adaptée à chaque discipline",
+        "Patrons archivés pour les réassorts"
+      ],
+      "benefit": "Vos réassorts taillent exactement comme le premier lot."
+    },
+    "fabric": {
+      "name": "Tissage",
+      "text": "Tissages perlé, gold et ripstop réalisés sur nos propres métiers.",
+      "lead": "Sur nos propres métiers, nous tissons les tissus perlé, gold, all-play et ripstop de nos kimonos, en maîtrisant grammage et densité dès le premier fil.",
+      "points": [
+        "Tissages perlé, gold, all-play et ripstop",
+        "Grammages de 280 à 700 g/m²",
+        "Chaque rouleau contrôlé en poids et en retrait"
+      ],
+      "benefit": "Le tissu de votre échantillon est celui de votre commande en série."
+    },
+    "knitting": {
+      "name": "Tricotage",
+      "text": "Tissus tricotés pour rashguards, shorts et vêtements de combat.",
+      "lead": "Les tissus extensibles et tricotés pour rashguards, shorts, sweats et vêtements de combat sont produits chez nous sur nos machines à tricoter.",
+      "points": [
+        "Tissus extensibles pour rashguards et leggings",
+        "Molleton pour sweats et survêtements",
+        "Mesh et doublures respirants"
+      ],
+      "benefit": "Vêtements de combat et kimonos chez un seul fournisseur, aux couleurs assorties."
+    },
+    "dyeing": {
+      "name": "Teinture",
+      "text": "Couleurs assorties à votre marque et teintes chez nous.",
+      "lead": "Notre teinturerie teint le tissu aux couleurs de votre marque, lot par lot, et contrôle chaque lot par rapport à la teinte validée.",
+      "points": [
+        "Couleurs assorties à votre marque",
+        "Chaque lot comparé à la teinte validée",
+        "Teintures solides aux lavages fréquents"
+      ],
+      "benefit": "Votre bleu reste votre bleu, commande après commande."
+    },
+    "cutting": {
+      "name": "Découpe",
+      "text": "Une découpe précise pour des tailles constantes à chaque commande.",
+      "lead": "Le tissu est étendu et coupé avec précision selon les patrons gradués, pour que chaque veste, pantalon et short d’une taille soit identique.",
+      "points": [
+        "Découpe précise selon les patrons gradués",
+        "Matelassage du tissu pour limiter les chutes",
+        "Chaque paquet étiqueté par taille"
+      ],
+      "benefit": "Des tailles constantes sur toute la commande."
+    },
+    "printing": {
+      "name": "Impression",
+      "text": "Broderie, sérigraphie et sublimation intégrale.",
+      "lead": "Logos et visuels sont appliqués chez nous : broderie, écussons tissés, sérigraphie et sublimation intégrale.",
+      "points": [
+        "Broderie et écussons tissés",
+        "Sérigraphie",
+        "Sublimation intégrale pour les vêtements de combat"
+      ],
+      "benefit": "Une seule usine gère votre marquage : placement et couleurs fidèles à la maquette."
+    },
+    "stitching": {
+      "name": "Couture",
+      "text": "Coutures renforcées pour les entraînements intenses.",
+      "lead": "Des opérateurs expérimentés assemblent chaque uniforme avec des coutures et des points de tension renforcés pour l’entraînement intensif et la compétition.",
+      "points": [
+        "Coutures et points de tension renforcés",
+        "Double piqûre là où le kimono travaille le plus",
+        "Étiquettes et écussons cousus, jamais collés"
+      ],
+      "benefit": "Des uniformes qui résistent à des années de saisies."
+    },
+    "inspection": {
+      "name": "Contrôle et repassage",
+      "text": "Chaque pièce contrôlée, repassée et mesurée.",
+      "lead": "Chaque pièce finie est contrôlée, mesurée et repassée avant emballage, et notre laboratoire teste tissus et produits finis.",
+      "points": [
+        "Mesures vérifiées selon le guide des tailles",
+        "Coutures, marquage et finitions contrôlés",
+        "Repassé et plié, prêt pour la vente"
+      ],
+      "benefit": "Vous recevez exactement ce que vous avez validé."
+    },
+    "packing": {
+      "name": "Emballage",
+      "text": "Emballé avec vos étiquettes, prêt pour l'export.",
+      "lead": "Les commandes sont emballées avec vos étiquettes, étiquettes volantes et emballages à votre marque, puis préparées pour l’export par avion ou par bateau.",
+      "points": [
+        "Étiquettes volantes et sachets à votre marque",
+        "Listes de colisage par taille et produit",
+        "Documents d’export pour les USA et l’Europe"
+      ],
+      "benefit": "Prêt à vendre dès son arrivée."
+    }
+  },
+  "Catalog": {
+    "categories": {
+      "bjj-gis": {
+        "name": "Kimonos de JJB",
+        "intro": "Kimonos de jiu-jitsu brésilien en tissage perlé, gold et all-play de 280 à 400 g/m², avec pantalon ripstop. Fabriqués sur commande à vos couleurs et à l'image de votre club."
+      },
+      "judo-uniforms": {
+        "name": "Judogis",
+        "intro": "Judogis en trois grammages : 450 g/m² Academy, 550 g/m² Challenger et 700 g/m² Winner, avec pantalon en drill 100 % coton."
+      },
+      "karate-uniforms": {
+        "name": "Karategis",
+        "intro": "Karategis 10 oz en polycoton ou 100 % coton, dans toutes les couleurs courantes, avec taille élastique ou à cordon."
+      },
+      "taekwondo-uniforms": {
+        "name": "Doboks de taekwondo",
+        "intro": "Doboks de taekwondo en polycoton ou 100 % coton, dans toutes les couleurs courantes, avec pantalon à taille élastique."
+      },
+      "sambo-uniforms": {
+        "name": "Tenues de sambo",
+        "intro": "Vestes et shorts de sambo fabriqués sur commande en rouge et en bleu."
+      },
+      "belts": {
+        "name": "Ceintures de JJB",
+        "intro": "Ceintures de grade de JJB et de judo, ceintures en tissu de kimono 350 g/m² et ceintures casual, dans toutes les couleurs de grade et en tailles S à 3XL."
+      },
+      "mma-shorts": {
+        "name": "Shorts de MMA",
+        "intro": "Shorts de MMA et de grappling en polyester stretch à sublimation intégrale, imprimés avec vos designs et les couleurs de votre équipe."
+      },
+      "rash-guards": {
+        "name": "Rashguards",
+        "intro": "Rashguards à manches courtes et longues en tissu de compression, sublimés avec vos designs et les couleurs de grade."
+      },
+      "fight-wear": {
+        "name": "Vêtements de combat",
+        "intro": "Sweats à capuche et singlets de lutte pour équipes et clubs, à vos couleurs et à votre image."
+      },
+      "bags": {
+        "name": "Sacs à kimono",
+        "intro": "Sacs à dos pour kimono avec de la place pour l'uniforme, la ceinture et le matériel, personnalisés pour votre club."
+      }
+    },
+    "types": {
+      "bjjGi": "Kimono de jiu-jitsu",
+      "judoUniform": "Judogi",
+      "karateUniform": "Karategi",
+      "taekwondoUniform": "Dobok de taekwondo",
+      "samboUniform": "Tenue de sambo",
+      "bjjBelt": "Ceinture de JJB",
+      "giFabricBelt": "Ceinture en tissu de kimono 350 g/m²",
+      "casualBelt": "Ceinture casual",
+      "judoBelt": "Ceinture de judo",
+      "mmaShorts": "Short de MMA",
+      "hoodie": "Sweat à capuche",
+      "singlet": "Singlet de lutte",
+      "giBag": "Sac à dos pour kimono"
+    },
+    "labels": {
+      "weave": "Tissage",
+      "jacket": "Tissu",
+      "weight": "Grammage",
+      "pants": "Pantalon",
+      "colours": "Couleurs",
+      "waist": "Taille",
+      "width": "Largeur",
+      "sizes": "Tailles",
+      "print": "Impression",
+      "use": "Usage"
+    },
+    "values": {
+      "pearl": "Tissage perlé",
+      "gold": "Tissage gold",
+      "allPlay": "Tissage all-play",
+      "polyCotton": "Polycoton",
+      "cotton": "100 % coton",
+      "bambooCotton": "Coton de bambou",
+      "polyCottonOrCotton": "Polycoton ou 100 % coton",
+      "polyester": "Polyester",
+      "giFabric": "Tissu de kimono",
+      "ripstop": "Ripstop",
+      "ripstopCotton": "Ripstop, 100 % coton",
+      "ripstop10oz": "Ripstop 10 oz, 100 % coton",
+      "drillCotton": "Drill, 100 % coton",
+      "allRegular": "Toutes les couleurs courantes",
+      "allRanks": "Toutes les couleurs de grade",
+      "redBlue": "Rouge et bleu",
+      "elastic": "Élastique",
+      "elasticOrDrawstring": "Élastique ou cordon",
+      "sToXxxl": "S à 3XL",
+      "sublimated": "Sublimation intégrale",
+      "sambo": "Entraînement et compétition de sambo",
+      "bjjRank": "Grades de JJB",
+      "judoRank": "Grades de judo",
+      "giAndGear": "Kimono, ceinture et matériel"
+    },
+    "units": {
+      "gsm": "{n} g/m²",
+      "oz": "{n} oz",
+      "cm": "{n} cm"
+    }
+  },
+  "ProductsPage": {
+    "title": "Produits",
+    "eyebrow": "Catalogue",
+    "intro": "Chaque produit est fabriqué sur commande dans notre propre usine, à vos couleurs et à votre image. Choisissez une catégorie pour voir la gamme.",
+    "metaDescription": "Kimonos de JJB, judogis, karategis et doboks, ceintures, vêtements de combat et sacs, fabriqués sur commande à votre image.",
+    "searchLabel": "Rechercher des produits",
+    "searchPlaceholder": "Rechercher par nom ou code…",
+    "filterLabel": "Filtrer par catégorie",
+    "noResults": "Aucun produit ne correspond à votre recherche.",
+    "clear": "Effacer les filtres",
+    "searchAll": "Rechercher dans le catalogue : produit, code ou sport…",
+    "viewRange": "Voir la gamme",
+    "categoryLabel": "Catégorie",
+    "sortLabel": "Trier",
+    "sortDefault": "En vedette",
+    "sortCode": "Code A–Z",
+    "filters": "Filtres",
+    "clearAll": "Tout effacer",
+    "pagination": "Pages",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "allCategories": "Toutes les catégories",
+    "sortMost": "Plus de produits",
+    "sortName": "Nom A–Z"
+  },
+  "CategoryPage": {
+    "metaDescription": "{name} fabriqués sur commande par Spotex International au Pakistan, à vos couleurs et à votre image."
+  },
+  "ProductPage": {
+    "specs": "Caractéristiques",
+    "custom": "Personnalisation",
+    "customList": [
+      "Vos couleurs",
+      "Logo brodé ou imprimé",
+      "Étiquettes et écussons tissés",
+      "Emballage personnalisé"
+    ],
+    "moq": "Fabriqué sur commande. Commencez par un échantillon, puis passez à la production pour votre club ou votre marque.",
+    "related": "Dans la même gamme",
+    "code": "Code",
+    "whatsappText": "Bonjour Spotex, je suis intéressé(e) par {code} ({name}).",
+    "metaDescription": "{name} {code} : {specs}. Fabriqué sur commande par Spotex International à votre image.",
+    "zoomHint": "Survolez pour zoomer",
+    "madeToOrder": "Sur commande",
+    "sampleAvailable": "Échantillon disponible",
+    "orderTitle": "Comment commander",
+    "viewRange": "Voir tous : {name}",
+    "highlights": [
+      {
+        "title": "Notre usine",
+        "text": "Tissé, coupé et cousu à Gujranwala, au Pakistan, depuis 1989."
+      },
+      {
+        "title": "Votre marque",
+        "text": "Logo, étiquettes, couleurs et emballage faits pour votre club."
+      },
+      {
+        "title": "Prêt pour l'export",
+        "text": "Expédié aux États-Unis et dans toute l'Europe."
+      }
+    ]
+  },
+  "PrivateLabel": {
+    "metaTitle": "Uniformes d'arts martiaux en marque blanche",
+    "metaDescription": "Lancez votre propre marque de kimonos de JJB ou d'arts martiaux. Votre design, vos étiquettes, fabriqués dans notre propre usine.",
+    "eyebrow": "Marque blanche",
+    "titleA": "Votre marque.",
+    "titleB": "Notre usine.",
+    "intro": "Nous fabriquons des uniformes et des équipements pour des clubs, des fédérations et des marques, sous leur propre nom. Vous apportez l'idée, nous nous occupons du tissu, de la production et de l'emballage.",
+    "stepsTitle": "Comment ça marche",
+    "steps": [
+      {
+        "title": "Partagez votre idée",
+        "text": "Envoyez votre logo, vos couleurs et les produits dont vous avez besoin."
+      },
+      {
+        "title": "Design et échantillon",
+        "text": "Nous préparons le design et réalisons un premier échantillon, avec ou sans votre logo."
+      },
+      {
+        "title": "Validation",
+        "text": "Vous vérifiez l'échantillon et nous l'ajustons jusqu'à ce qu'il soit parfait."
+      },
+      {
+        "title": "Production",
+        "text": "Votre commande est fabriquée dans notre propre usine, du tissu à la finition."
+      },
+      {
+        "title": "Emballage et expédition",
+        "text": "Emballé avec vos étiquettes et livré à votre porte."
+      }
+    ],
+    "optionsTitle": "Ce que vous pouvez personnaliser",
+    "options": [
+      {
+        "title": "Tissu et grammage",
+        "text": "Tissages perlé, gold, ripstop ou all-play de 280 à 700 g/m²."
+      },
+      {
+        "title": "Couleurs",
+        "text": "Tissu teint aux couleurs de votre marque."
+      },
+      {
+        "title": "Logos",
+        "text": "Broderie, sérigraphie, sublimation et écussons."
+      },
+      {
+        "title": "Étiquettes et emballage",
+        "text": "Étiquettes tissées, étiquettes volantes et emballage à votre marque."
+      }
+    ]
+  },
+  "FactoryPage": {
+    "metaTitle": "Notre usine à Gujranwala",
+    "metaDescription": "Dix ateliers intégrés, du tissage et de la teinture à la couture et à l'emballage. Découvrez comment Spotex fabrique ses uniformes d'arts martiaux.",
+    "eyebrow": "Notre usine",
+    "titleA": "Un seul toit.",
+    "titleB": "Dix ateliers.",
+    "intro": "La plupart des fournisseurs d'uniformes achètent leur tissu et sous-traitent la couture. Nous réalisons chaque étape nous-mêmes à Gujranwala, au Pakistan, pour maîtriser la qualité, la couleur et les délais.",
+    "qualityTitle": "Qualité et tests",
+    "quality": "Notre laboratoire de R&D et de tests textiles contrôle les matières et les produits finis avant expédition. Spotex est certifié ISO 9001:2015.",
+    "csrTitle": "Responsabilité",
+    "csr": [
+      "Un centre de formation informatique gratuit pour les habitants et les employés, avec plus de 1 000 diplômés.",
+      "Une assurance vie pour chaque employé.",
+      "Des formations gratuites à la lutte contre l'incendie et des activités sportives pour la communauté locale."
+    ],
+    "stats": {
+      "since": "Uniformes depuis",
+      "departments": "Ateliers intégrés",
+      "staff": "Employés qualifiés",
+      "iso": "Certifié 9001:2015"
+    },
+    "phasesEyebrow": "Comment naît un uniforme",
+    "phasesTitle": "Du fil à l’expédition.",
+    "phase": "Étape {n}",
+    "phases": [
+      {
+        "title": "Préparer",
+        "text": "Votre idée devient un design, une fiche technique et des patrons dans chaque taille."
+      },
+      {
+        "title": "Fabriquer le tissu",
+        "text": "Nous tissons, tricotons et teignons nous-mêmes, pour maîtriser la couleur et le grammage."
+      },
+      {
+        "title": "Produire",
+        "text": "Découpe, marquage et couture, avec des coutures faites pour les entraînements intenses."
+      },
+      {
+        "title": "Finir",
+        "text": "Chaque pièce est contrôlée, repassée, mesurée et emballée avec vos étiquettes."
+      }
+    ],
+    "makeTitle": "Fabriqué sous ce toit",
+    "qualityEyebrow": "Qualité",
+    "qualityPoints": [
+      "Tissus et produits finis testés dans notre propre laboratoire",
+      "Chaque pièce contrôlée, repassée et mesurée avant emballage",
+      "Un échantillon validé par vous avant toute production en série"
+    ],
+    "certified": "Système qualité certifié",
+    "isoText": "Notre production suit la norme de management de la qualité ISO 9001:2015.",
+    "csrEyebrow": "Au-delà de l’usine",
+    "ctaTitle": "Jugez la qualité par vous-même.",
+    "ctaText": "Commencez par un seul échantillon, fabriqué dans cette usine à votre image.",
+    "inHouse": "Chez nous",
+    "forYou": "Ce que cela change pour votre commande",
+    "allDepartments": "Les dix ateliers",
+    "previous": "Étape précédente",
+    "next": "Étape suivante",
+    "overview": "Vue d’ensemble de l’usine"
+  },
+  "AboutPage": {
+    "metaTitle": "À propos de Spotex International",
+    "metaDescription": "Un fabricant d'uniformes d'arts martiaux à Gujranwala, au Pakistan, qui produit des kimonos et des ceintures depuis 1989.",
+    "eyebrow": "À propos",
+    "titleA": "Votre usine d’uniformes",
+    "titleB": "depuis 1989.",
+    "intro": "Spotex International a commencé comme un petit atelier à Gujranwala, au Pakistan. Aujourd'hui, nous fabriquons des uniformes d'arts martiaux, des ceintures et des vêtements de combat pour des clubs et des marques à l'étranger, avec chaque étape de la production sous notre propre toit.",
+    "factsTitle": "En bref",
+    "facts": {
+      "since": "Fondée en",
+      "staff": "Employés qualifiés",
+      "clients": "Clients",
+      "departments": "Ateliers intégrés"
+    },
+    "valuesTitle": "Nos engagements",
+    "values": [
+      {
+        "title": "Fait maison",
+        "text": "Tissu, couleur, découpe et couture sous un même toit."
+      },
+      {
+        "title": "Échantillon d'abord",
+        "text": "Chaque nouveau client peut commencer par un seul échantillon."
+      },
+      {
+        "title": "Votre marque",
+        "text": "Nous produisons à votre nom, avec vos étiquettes."
+      }
+    ],
+    "storyEyebrow": "Notre histoire",
+    "storyTitle": "De l’atelier à l’export.",
+    "story": [
+      {
+        "title": "Nos débuts",
+        "text": "Spotex est né en 1989 sous la forme d’un petit atelier de couture à Gujranwala, au cœur de l’industrie pakistanaise du vêtement de sport."
+      },
+      {
+        "title": "Ce que nous avons construit",
+        "text": "Pas à pas, nous avons intégré le tissage, la teinture, l’impression et les tests qualité, pour que chaque uniforme soit fabriqué sous un même toit."
+      },
+      {
+        "title": "Où nous en sommes",
+        "text": "Aujourd’hui, nous fabriquons des uniformes, des ceintures et des vêtements de combat pour des clubs et des marques aux États-Unis et dans toute l’Europe."
+      }
+    ],
+    "valuesEyebrow": "Nos valeurs",
+    "partnersEyebrow": "Avec qui nous travaillons",
+    "partnersTitle": "Fait pour ceux qui s’entraînent.",
+    "partners": [
+      {
+        "title": "Clubs et académies",
+        "text": "Uniformes et ceintures au logo du club pour chaque membre."
+      },
+      {
+        "title": "Marques",
+        "text": "Kimonos et vêtements de combat en marque blanche, à votre nom."
+      },
+      {
+        "title": "Distributeurs",
+        "text": "Une production en série fiable pour les magasins d’arts martiaux et les grossistes."
+      },
+      {
+        "title": "Équipes et fédérations",
+        "text": "Des tenues assorties pour les équipes de compétition et les événements."
+      }
+    ],
+    "marketsEyebrow": "Export",
+    "marketsTitle": "Où vont nos uniformes",
+    "marketsText": "Nous expédions depuis Gujranwala vers l’Amérique du Nord, l’Europe et l’Asie, avec un seul interlocuteur du premier message à la livraison.",
+    "ctaTitle": "Travaillons ensemble.",
+    "ctaText": "Parlez-nous de votre club ou de votre marque et nous vous proposerons les bons produits pour commencer.",
+    "est": "Fondée en 1989",
+    "place": "Gujranwala, Pakistan",
+    "seeFactory": "Voir notre usine",
+    "trust": [
+      "Certifié ISO 9001:2015",
+      "10 ateliers intégrés",
+      "Export vers les USA et l’Europe"
+    ],
+    "yearsLabel": "Ans d’uniformes"
+  },
+  "ContactPage": {
+    "metaTitle": "Contacter Spotex International",
+    "metaDescription": "Demandez un devis ou un échantillon d'uniformes d'arts martiaux. Contactez Spotex International par WhatsApp ou par e-mail.",
+    "eyebrow": "Contact",
+    "titleA": "Parlons de",
+    "titleB": "votre commande.",
+    "intro": "Dites-nous ce dont vous avez besoin et en quelle quantité, notre équipe commerciale vous répondra.",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp",
+    "formSoon": "Le formulaire de devis en ligne arrive bientôt. En attendant, envoyez-nous un message WhatsApp ou un e-mail.",
+    "hours": "Du lundi au samedi, 9h–18h heure du Pakistan (UTC+5). Nous répondons aux e-mails et messages WhatsApp sous un jour ouvré."
+  },
+  "NotFound": {
+    "title": "Page introuvable",
+    "text": "Cette page n'existe pas ou a été déplacée.",
+    "back": "Retour à l'accueil"
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "metaDescription": "Guides sur les tissus, les grammages et la production en marque blanche d’uniformes d’arts martiaux, depuis l’usine Spotex au Pakistan.",
+    "intro": "Des guides sur les tissus, les grammages et la marque blanche, écrits par ceux qui fabriquent les uniformes.",
+    "featured": "À la une",
+    "latest": "Derniers articles",
+    "readMore": "Lire l’article",
+    "minRead": "{n} min de lecture",
+    "related": "Autres articles",
+    "backToBlog": "Tous les articles",
+    "englishOnly": "Cet article est disponible en anglais.",
+    "ctaEyebrow": "Prochaine étape",
+    "ctaTitle": "Touchez le tissu vous-même.",
+    "ctaText": "Commandez un échantillon dans le tissage et le grammage qui vous intéressent, avec ou sans votre marque.",
+    "topics": {
+      "guides": "Guides",
+      "private-label": "Marque blanche",
+      "factory": "Usine"
+    }
+  },
+  "ContactForm": {
+    "tabQuote": "Demander un devis",
+    "tabMessage": "Envoyer un message",
+    "name": "Votre nom",
+    "email": "E-mail",
+    "company": "Club / entreprise",
+    "phone": "Téléphone / WhatsApp",
+    "country": "Pays",
+    "quantity": "Quantité",
+    "choose": "Choisir…",
+    "productCode": "Code produit",
+    "products": "Produits souhaités",
+    "branding": "Marquage",
+    "brandingOptions": [
+      "Broderie",
+      "Écusson tissé",
+      "Sérigraphie",
+      "Sublimation",
+      "Sans marquage",
+      "Pas encore décidé"
+    ],
+    "sample": "Je souhaite d’abord un échantillon",
+    "message": "Message",
+    "messageQuotePlaceholder": "Couleurs, tailles, délai et tout ce que nous devrions savoir…",
+    "messagePlaceholder": "Comment pouvons-nous vous aider ?",
+    "privacy": "Nous utilisons vos données uniquement pour répondre à votre demande.",
+    "sending": "Envoi…",
+    "sendQuote": "Envoyer la demande",
+    "sendMessage": "Envoyer le message",
+    "invalid": "Veuillez remplir les champs signalés.",
+    "offline": "Le formulaire en ligne n’est pas encore connecté, votre demande n’a donc pas été envoyée. Envoyez-la-nous sur WhatsApp en un clic :",
+    "offlineButton": "Envoyer sur WhatsApp",
+    "sentTitle": "Merci !",
+    "sentText": "Votre demande est arrivée chez notre équipe commerciale. Nous répondons en général sous un jour ouvré."
+  }
+}

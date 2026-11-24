@@ -14,7 +14,10 @@
     "menu": "Menü",
     "close": "Schließen",
     "language": "Sprache",
-    "skip": "Zum Inhalt springen"
+    "skip": "Zum Inhalt springen",
+    "viewAll": "Alle {count} ansehen",
+    "allProducts": "Alle Produkte",
+    "blog": "Blog"
   },
   "Common": {
     "close": "Schließen",
@@ -291,11 +294,12 @@
         "it": "Italien",
         "de": "Deutschland",
         "no": "Norwegen",
+        "fr": "Frankreich",
         "us": "USA"
       },
       "markets": {
         "us": "USA",
-        "eu": "Europa · Norwegen · Deutschland · Italien",
+        "eu": "Europa · Norwegen · Deutschland · Frankreich · Italien",
         "kr": "Südkorea"
       }
     }
@@ -309,43 +313,113 @@
   "Departments": {
     "design": {
       "name": "Design & Entwicklung",
-      "text": "Ihr Entwurf wird zu produktionsreifen Designs und Tech-Packs."
+      "text": "Ihr Entwurf wird zu produktionsreifen Designs und Tech-Packs.",
+      "lead": "Jede Bestellung beginnt im Design. Unser Team macht aus Ihrem Logo, Ihren Farben und Ideen druckfertige Vorlagen, Platzierungs-Mock-ups und ein Tech-Pack, nach dem die ganze Fabrik arbeitet.",
+      "points": [
+        "Logo-Aufbereitung und Vektorgrafiken",
+        "Mock-ups für jede Branding-Position",
+        "Tech-Packs mit Maßen, Materialien und Farben"
+      ],
+      "benefit": "Sie sehen genau, wie die Uniform aussieht, bevor ein Meter Stoff geschnitten wird."
     },
     "pattern": {
       "name": "Schnittmuster",
-      "text": "Schnitte für jede Größe, von Kindern bis A5."
+      "text": "Schnitte für jede Größe, von Kindern bis A5.",
+      "lead": "Schnittmacher setzen das Design in Schnitte für jede Größe um, von Kindern bis Erwachsenen A5, damit die Passform über alle Größen gleich bleibt.",
+      "points": [
+        "Schnitte für Kinder- und Erwachsenengrößen",
+        "Passform je Kampfsportart angepasst",
+        "Schnitte für Nachbestellungen archiviert"
+      ],
+      "benefit": "Nachbestellungen passen genau wie die erste Lieferung."
     },
     "fabric": {
       "name": "Weberei",
-      "text": "Pearl-, Gold- und Ripstop-Gewebe von eigenen Webstühlen."
+      "text": "Pearl-, Gold- und Ripstop-Gewebe von eigenen Webstühlen.",
+      "lead": "Auf eigenen Webstühlen weben wir die Pearl-, Gold-, All-Play- und Ripstop-Stoffe unserer Gis und kontrollieren Gewicht und Dichte ab dem ersten Faden.",
+      "points": [
+        "Pearl-, Gold-, All-Play- und Ripstop-Gewebe",
+        "Gewichte von 280 bis 700 GSM",
+        "Jede Rolle auf Gewicht und Einlaufen geprüft"
+      ],
+      "benefit": "Der Stoff Ihres Musters ist der Stoff Ihrer Serienbestellung."
     },
     "knitting": {
       "name": "Strickerei",
-      "text": "Strickstoffe für Rashguards, Shorts und Fightwear."
+      "text": "Strickstoffe für Rashguards, Shorts und Fightwear.",
+      "lead": "Stretch- und Strickstoffe für Rash Guards, Shorts, Hoodies und Fightwear entstehen im Haus auf unseren Strickmaschinen.",
+      "points": [
+        "Stretchstoffe für Rash Guards und Leggings",
+        "Fleece für Hoodies und Trainingsbekleidung",
+        "Atmungsaktives Mesh und Futter"
+      ],
+      "benefit": "Fightwear und Gis von einem Lieferanten, in passenden Farben."
     },
     "dyeing": {
       "name": "Färberei",
-      "text": "Farben passend zu Ihrer Marke, im eigenen Haus gefärbt."
+      "text": "Farben passend zu Ihrer Marke, im eigenen Haus gefärbt.",
+      "lead": "Unsere Färberei färbt Stoff Charge für Charge in Ihren Markenfarben und prüft jede Charge gegen den freigegebenen Farbton.",
+      "points": [
+        "Farben passend zu Ihrer Marke",
+        "Jede Charge gegen den freigegebenen Ton geprüft",
+        "Farbechte Färbung für häufiges Waschen"
+      ],
+      "benefit": "Ihr Blau bleibt Ihr Blau, Bestellung für Bestellung."
     },
     "cutting": {
       "name": "Zuschnitt",
-      "text": "Präziser Zuschnitt für gleichbleibende Größen."
+      "text": "Präziser Zuschnitt für gleichbleibende Größen.",
+      "lead": "Stoff wird ausgelegt und exakt nach den gradierten Schnitten zugeschnitten, damit jede Jacke, Hose und Short einer Größe gleich ausfällt.",
+      "points": [
+        "Exakter Zuschnitt nach gradierten Schnitten",
+        "Stofflagen mit wenig Verschnitt",
+        "Jedes Bündel nach Größe beschriftet"
+      ],
+      "benefit": "Einheitliche Größen in der ganzen Bestellung."
     },
     "printing": {
       "name": "Druck",
-      "text": "Stickerei, Siebdruck und vollflächige Sublimation."
+      "text": "Stickerei, Siebdruck und vollflächige Sublimation.",
+      "lead": "Logos und Grafiken bringen wir im Haus auf: Stickerei, gewebte Aufnäher, Siebdruck und vollflächige Sublimation.",
+      "points": [
+        "Stickerei und gewebte Aufnäher",
+        "Siebdruck",
+        "Vollflächige Sublimation für Fightwear"
+      ],
+      "benefit": "Eine Fabrik übernimmt Ihr Branding, Position und Farben entsprechen dem Mock-up."
     },
     "stitching": {
       "name": "Näherei",
-      "text": "Verstärkte Nähte für hartes Training."
+      "text": "Verstärkte Nähte für hartes Training.",
+      "lead": "Erfahrene Näherinnen und Näher fertigen jede Uniform mit verstärkten Nähten und Belastungspunkten für hartes Training und Wettkampf.",
+      "points": [
+        "Verstärkte Nähte und Belastungspunkte",
+        "Doppelnähte, wo der Gi am meisten aushalten muss",
+        "Etiketten und Aufnäher genäht, nie geklebt"
+      ],
+      "benefit": "Uniformen, die jahrelange Griffkämpfe überstehen."
     },
     "inspection": {
       "name": "Prüfung & Bügeln",
-      "text": "Jedes Teil wird geprüft, gebügelt und vermessen."
+      "text": "Jedes Teil wird geprüft, gebügelt und vermessen.",
+      "lead": "Jedes fertige Teil wird vor dem Verpacken geprüft, vermessen und gebügelt, und unser Labor testet Stoffe und Endprodukte.",
+      "points": [
+        "Maße gegen die Größentabelle geprüft",
+        "Nähte, Branding und Verarbeitung kontrolliert",
+        "Gebügelt und gefaltet, bereit für den Handel"
+      ],
+      "benefit": "Was ankommt, ist genau das, was Sie freigegeben haben."
     },
     "packing": {
       "name": "Verpackung",
-      "text": "Mit Ihren Etiketten verpackt, bereit für den Export."
+      "text": "Mit Ihren Etiketten verpackt, bereit für den Export.",
+      "lead": "Bestellungen werden mit Ihren Etiketten, Hangtags und Markenverpackungen verpackt und für den Export per Luft- oder Seefracht vorbereitet.",
+      "points": [
+        "Hangtags und Markenbeutel",
+        "Packlisten nach Größe und Produkt",
+        "Exportdokumente für die USA und Europa"
+      ],
+      "benefit": "Verkaufsfertig am Tag der Ankunft."
     }
   },
   "Catalog": {
@@ -491,7 +565,26 @@
     "related": "Mehr aus dieser Serie",
     "code": "Artikelnr.",
     "whatsappText": "Hallo Spotex, ich interessiere mich für {code} ({name}).",
-    "metaDescription": "{name} {code}: {specs}. Auf Bestellung von Spotex International mit Ihrem Branding."
+    "metaDescription": "{name} {code}: {specs}. Auf Bestellung von Spotex International mit Ihrem Branding.",
+    "zoomHint": "Zum Zoomen darüberfahren",
+    "madeToOrder": "Auf Bestellung",
+    "sampleAvailable": "Muster verfügbar",
+    "orderTitle": "So läuft die Bestellung",
+    "viewRange": "Alle {name} ansehen",
+    "highlights": [
+      {
+        "title": "Eigene Fabrik",
+        "text": "Gewebt, zugeschnitten und genäht in Gujranwala, Pakistan, seit 1989."
+      },
+      {
+        "title": "Ihr Branding",
+        "text": "Logo, Etiketten, Farben und Verpackung für Ihre Akademie."
+      },
+      {
+        "title": "Exportbereit",
+        "text": "Versand in die USA und ganz Europa."
+      }
+    ]
   },
   "PrivateLabel": {
     "metaTitle": "Kampfsportanzüge als Eigenmarke",
@@ -557,13 +650,58 @@
       "Ein kostenloses IT-Ausbildungszentrum für Menschen aus der Region und Mitarbeitende, mit mehr als 1.000 Absolventen.",
       "Eine Lebensversicherung für alle Mitarbeitenden.",
       "Kostenlose Brandschutzschulungen und Sportangebote für die Gemeinde."
-    ]
+    ],
+    "stats": {
+      "since": "Uniformen seit",
+      "departments": "Eigene Abteilungen",
+      "staff": "Fachkräfte",
+      "iso": "9001:2015 zertifiziert"
+    },
+    "phasesEyebrow": "So entsteht eine Uniform",
+    "phasesTitle": "Vom Faden bis zum Versand.",
+    "phase": "Phase {n}",
+    "phases": [
+      {
+        "title": "Vorbereiten",
+        "text": "Aus Ihrer Idee werden ein Design, ein Tech-Pack und Schnitte in jeder Größe."
+      },
+      {
+        "title": "Stoff herstellen",
+        "text": "Wir weben, stricken und färben selbst, damit Farbe und Gewicht stimmen."
+      },
+      {
+        "title": "Produzieren",
+        "text": "Zuschnitt, Branding und Nähen, mit Nähten für hartes Training."
+      },
+      {
+        "title": "Fertigstellen",
+        "text": "Jedes Teil wird geprüft, gebügelt, vermessen und mit Ihren Etiketten verpackt."
+      }
+    ],
+    "makeTitle": "Unter diesem Dach gefertigt",
+    "qualityEyebrow": "Qualität",
+    "qualityPoints": [
+      "Stoffe und Endprodukte im eigenen Labor geprüft",
+      "Jedes Teil vor dem Verpacken geprüft, gebügelt und vermessen",
+      "Ein von Ihnen freigegebenes Muster vor jeder Serienproduktion"
+    ],
+    "certified": "Zertifiziertes Qualitätssystem",
+    "isoText": "Unsere Produktion folgt der Qualitätsmanagement-Norm ISO 9001:2015.",
+    "csrEyebrow": "Über die Fabrik hinaus",
+    "ctaTitle": "Überzeugen Sie sich selbst.",
+    "ctaText": "Starten Sie mit einem einzigen Muster, gefertigt in dieser Fabrik mit Ihrem Branding.",
+    "inHouse": "Im eigenen Haus",
+    "forYou": "Was das für Ihre Bestellung bedeutet",
+    "allDepartments": "Alle zehn Abteilungen",
+    "previous": "Vorheriger Schritt",
+    "next": "Nächster Schritt",
+    "overview": "Zur Fabrik-Übersicht"
   },
   "AboutPage": {
     "metaTitle": "Über Spotex International",
     "metaDescription": "Hersteller von Kampfsportanzügen in Gujranwala, Pakistan. Gis und Gürtel seit 1989.",
     "eyebrow": "Über uns",
-    "titleA": "Gefertigt in Gujranwala",
+    "titleA": "Ihre Uniform-Fabrik",
     "titleB": "seit 1989.",
     "intro": "Spotex International begann als kleine Werkstatt in Gujranwala, Pakistan. Heute fertigen wir Kampfsportanzüge, Gürtel und Fightwear für Vereine, Schulen und Marken im Ausland, mit jedem Produktionsschritt unter unserem eigenen Dach.",
     "factsTitle": "Auf einen Blick",
@@ -587,7 +725,58 @@
         "title": "Ihre Marke",
         "text": "Wir fertigen unter Ihrem Namen, mit Ihren Etiketten."
       }
-    ]
+    ],
+    "storyEyebrow": "Unsere Geschichte",
+    "storyTitle": "Von der Werkstatt zum Exporteur.",
+    "story": [
+      {
+        "title": "Unser Anfang",
+        "text": "Spotex begann 1989 als kleine Näherei in Gujranwala, dem Herzen der pakistanischen Sportbekleidungsindustrie."
+      },
+      {
+        "title": "Was wir aufgebaut haben",
+        "text": "Schritt für Schritt haben wir Weberei, Färberei, Druck und Qualitätsprüfung ins Haus geholt, damit jede Uniform unter einem Dach entsteht."
+      },
+      {
+        "title": "Wo wir heute stehen",
+        "text": "Heute fertigen wir Uniformen, Gürtel und Fightwear für Akademien, Vereine und Marken in den USA und ganz Europa."
+      }
+    ],
+    "valuesEyebrow": "Unsere Werte",
+    "partnersEyebrow": "Mit wem wir arbeiten",
+    "partnersTitle": "Gemacht für alle, die trainieren.",
+    "partners": [
+      {
+        "title": "Akademien & Vereine",
+        "text": "Uniformen und Gürtel mit Ihrem Vereinslogo für jedes Mitglied."
+      },
+      {
+        "title": "Marken",
+        "text": "Gis und Fightwear als Eigenmarke unter Ihrem Namen."
+      },
+      {
+        "title": "Händler",
+        "text": "Zuverlässige Serienproduktion für Kampfsportläden und Großhändler."
+      },
+      {
+        "title": "Teams & Verbände",
+        "text": "Einheitliche Ausrüstung für Wettkampfteams und Events."
+      }
+    ],
+    "marketsEyebrow": "Export",
+    "marketsTitle": "Wohin unsere Uniformen gehen",
+    "marketsText": "Wir liefern von Gujranwala aus an Kunden in Nordamerika, Europa und Asien, mit einem Ansprechpartner von der ersten Nachricht bis zur Lieferung.",
+    "ctaTitle": "Lassen Sie uns zusammenarbeiten.",
+    "ctaText": "Erzählen Sie uns von Ihrer Akademie oder Marke, und wir schlagen die passenden Produkte für den Start vor.",
+    "est": "Gegr. 1989",
+    "place": "Gujranwala, Pakistan",
+    "seeFactory": "Unsere Fabrik",
+    "trust": [
+      "ISO 9001:2015 zertifiziert",
+      "10 eigene Abteilungen",
+      "Export in die USA & nach Europa"
+    ],
+    "yearsLabel": "Jahre Uniformen"
   },
   "ContactPage": {
     "metaTitle": "Kontakt zu Spotex International",
@@ -600,11 +789,67 @@
     "phone": "Telefon",
     "email": "E-Mail",
     "whatsapp": "WhatsApp",
-    "formSoon": "Das Online-Anfrageformular folgt in Kürze. Bis dahin schreiben Sie uns gern per WhatsApp oder E-Mail."
+    "formSoon": "Das Online-Anfrageformular folgt in Kürze. Bis dahin schreiben Sie uns gern per WhatsApp oder E-Mail.",
+    "hours": "Montag bis Samstag, 9:00–18:00 Uhr pakistanischer Zeit (UTC+5). Wir antworten auf E-Mails und WhatsApp innerhalb eines Werktags."
   },
   "NotFound": {
     "title": "Seite nicht gefunden",
     "text": "Diese Seite existiert nicht oder wurde verschoben.",
     "back": "Zur Startseite"
+  },
+  "BlogPage": {
+    "title": "Blog",
+    "metaDescription": "Ratgeber zu Stoffen, Gewichten und Eigenmarken-Produktion von Kampfsportuniformen, aus der Spotex-Fabrik in Pakistan.",
+    "intro": "Ratgeber zu Stoffen, Gewichten und Eigenmarken-Produktion, geschrieben von den Menschen, die die Uniformen herstellen.",
+    "featured": "Empfohlen",
+    "latest": "Neueste Artikel",
+    "readMore": "Artikel lesen",
+    "minRead": "{n} Min. Lesezeit",
+    "related": "Weitere Artikel",
+    "backToBlog": "Alle Artikel",
+    "englishOnly": "Dieser Artikel ist auf Englisch verfügbar.",
+    "ctaEyebrow": "Nächster Schritt",
+    "ctaTitle": "Fühlen Sie den Stoff selbst.",
+    "ctaText": "Bestellen Sie ein Muster in der Webart und dem Gewicht Ihrer Wahl, mit oder ohne Branding.",
+    "topics": {
+      "guides": "Ratgeber",
+      "private-label": "Eigenmarke",
+      "factory": "Fabrik"
+    }
+  },
+  "ContactForm": {
+    "tabQuote": "Angebot anfragen",
+    "tabMessage": "Nachricht senden",
+    "name": "Ihr Name",
+    "email": "E-Mail",
+    "company": "Akademie / Firma",
+    "phone": "Telefon / WhatsApp",
+    "country": "Land",
+    "quantity": "Menge",
+    "choose": "Bitte wählen…",
+    "productCode": "Produktcode",
+    "products": "Gewünschte Produkte",
+    "branding": "Branding",
+    "brandingOptions": [
+      "Stickerei",
+      "Gewebter Aufnäher",
+      "Siebdruck",
+      "Sublimation",
+      "Ohne Branding",
+      "Noch unklar"
+    ],
+    "sample": "Ich möchte zuerst ein Muster",
+    "message": "Nachricht",
+    "messageQuotePlaceholder": "Farben, Größen, Termin und alles, was wir wissen sollten…",
+    "messagePlaceholder": "Wie können wir helfen?",
+    "privacy": "Wir nutzen Ihre Daten nur zur Beantwortung Ihrer Anfrage.",
+    "sending": "Wird gesendet…",
+    "sendQuote": "Anfrage senden",
+    "sendMessage": "Nachricht senden",
+    "invalid": "Bitte füllen Sie die markierten Felder aus.",
+    "offline": "Das Online-Formular ist noch nicht verbunden, Ihre Anfrage wurde nicht gesendet. Senden Sie sie mit einem Klick per WhatsApp:",
+    "offlineButton": "Per WhatsApp senden",
+    "sentTitle": "Vielen Dank!",
+    "sentText": "Ihre Anfrage ist bei unserem Vertrieb angekommen. Wir antworten meist innerhalb eines Werktags."
   }
 }

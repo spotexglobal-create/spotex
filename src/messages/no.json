@@ -14,7 +14,10 @@
     "menu": "Meny",
     "close": "Lukk",
     "language": "Språk",
-    "skip": "Gå til innhold"
+    "skip": "Gå til innhold",
+    "viewAll": "Se alle {count}",
+    "allProducts": "Alle produkter",
+    "blog": "Blogg"
   },
   "Common": {
     "close": "Lukk",
@@ -291,11 +294,12 @@
         "it": "Italia",
         "de": "Tyskland",
         "no": "Norge",
+        "fr": "Frankrike",
         "us": "USA"
       },
       "markets": {
         "us": "USA",
-        "eu": "Europa · Norge · Tyskland · Italia",
+        "eu": "Europa · Norge · Tyskland · Frankrike · Italia",
         "kr": "Sør-Korea"
       }
     }
@@ -309,43 +313,113 @@
   "Departments": {
     "design": {
       "name": "Design og utvikling",
-      "text": "Ditt design gjort klart for produksjon, med tech packs."
+      "text": "Ditt design gjort klart for produksjon, med tech packs.",
+      "lead": "Hver bestilling starter på designavdelingen. Teamet vårt gjør logoen, fargene og ideene dine om til produksjonsklare filer, plasseringsskisser og en tech pack hele fabrikken jobber etter.",
+      "points": [
+        "Opprydding av logo og vektorfiler",
+        "Plasseringsskisser for hver merkeplass",
+        "Tech packs med mål, materialer og farger"
+      ],
+      "benefit": "Du ser nøyaktig hvordan uniformen blir før en eneste meter stoff kuttes."
     },
     "pattern": {
       "name": "Mønster",
-      "text": "Mønstre gradert for alle størrelser, fra barn til A5."
+      "text": "Mønstre gradert for alle størrelser, fra barn til A5.",
+      "lead": "Mønstermakere gjør designet om til mønstre gradert for alle størrelser, fra barn til voksen A5, så passformen er lik i hele størrelsesutvalget.",
+      "points": [
+        "Mønstre for barne- og voksenstørrelser",
+        "Passform tilpasset hver kampsport",
+        "Mønstre lagret for nye bestillinger"
+      ],
+      "benefit": "Nye bestillinger passer akkurat som den første."
     },
     "fabric": {
       "name": "Veving",
-      "text": "Pearl-, gold- og ripstopvev fra egne vevstoler."
+      "text": "Pearl-, gold- og ripstopvev fra egne vevstoler.",
+      "lead": "På egne vevstoler vever vi pearl-, gold-, all-play- og ripstop-stoffene i giene våre, og kontrollerer vekt og tetthet fra første tråd.",
+      "points": [
+        "Pearl-, gold-, all-play- og ripstop-vev",
+        "Vekt fra 280 til 700 GSM",
+        "Hver rull kontrollert for vekt og krymping"
+      ],
+      "benefit": "Stoffet i prøven er stoffet i storordren din."
     },
     "knitting": {
       "name": "Strikking",
-      "text": "Strikkede stoffer til rashguards, shorts og fightwear."
+      "text": "Strikkede stoffer til rashguards, shorts og fightwear.",
+      "lead": "Stretch- og strikkestoffer til rash guards, shorts, hettegensere og fight wear lages i huset på våre strikkemaskiner.",
+      "points": [
+        "Stretchstoff til rash guards og leggings",
+        "Fleece til hettegensere og treningsklær",
+        "Pustende mesh og fôr"
+      ],
+      "benefit": "Fight wear og gier fra én leverandør, i matchende farger."
     },
     "dyeing": {
       "name": "Farging",
-      "text": "Farger tilpasset merkevaren din, farget i egen fabrikk."
+      "text": "Farger tilpasset merkevaren din, farget i egen fabrikk.",
+      "lead": "Fargeriet vårt farger stoffet i merkefargene dine, parti for parti, og kontrollerer hvert parti mot den godkjente fargen.",
+      "points": [
+        "Farger tilpasset merkevaren din",
+        "Hvert parti kontrollert mot godkjent farge",
+        "Fargeekte farging som tåler mye vask"
+      ],
+      "benefit": "Din blåfarge forblir din, bestilling etter bestilling."
     },
     "cutting": {
       "name": "Tilskjæring",
-      "text": "Presis tilskjæring for jevne størrelser i hver ordre."
+      "text": "Presis tilskjæring for jevne størrelser i hver ordre.",
+      "lead": "Stoffet legges ut og kuttes nøyaktig etter de graderte mønstrene, så hver jakke, bukse og shorts i en størrelse blir lik.",
+      "points": [
+        "Nøyaktig kutting etter graderte mønstre",
+        "Stoff lagt ut for lite svinn",
+        "Hver bunt merket med størrelse"
+      ],
+      "benefit": "Like størrelser i hele bestillingen."
     },
     "printing": {
       "name": "Trykk",
-      "text": "Brodering, silketrykk og full sublimering."
+      "text": "Brodering, silketrykk og full sublimering.",
+      "lead": "Logoer og grafikk påføres i huset: brodering, vevde merker, silketrykk og helsublimering.",
+      "points": [
+        "Brodering og vevde merker",
+        "Silketrykk",
+        "Helsublimering til fight wear"
+      ],
+      "benefit": "Én fabrikk tar seg av merkingen, så plassering og farger stemmer med skissen."
     },
     "stitching": {
       "name": "Søm",
-      "text": "Forsterkede sømmer laget for hard trening."
+      "text": "Forsterkede sømmer laget for hard trening.",
+      "lead": "Dyktige operatører syr hver uniform med forsterkede sømmer og belastningspunkter laget for hard trening og konkurranse.",
+      "points": [
+        "Forsterkede sømmer og belastningspunkter",
+        "Dobbel søm der gien belastes mest",
+        "Merker og etiketter sydd på, aldri limt"
+      ],
+      "benefit": "Uniformer som tåler år med grepskamp."
     },
     "inspection": {
       "name": "Kontroll og pressing",
-      "text": "Hvert plagg kontrolleres, presses og måles."
+      "text": "Hvert plagg kontrolleres, presses og måles.",
+      "lead": "Hvert ferdig plagg kontrolleres, måles og presses før pakking, og laboratoriet vårt tester stoff og ferdige produkter.",
+      "points": [
+        "Mål kontrollert mot størrelsestabellen",
+        "Sømmer, merking og finish kontrollert",
+        "Presset og brettet, klart for butikk"
+      ],
+      "benefit": "Det som kommer frem er nøyaktig det du godkjente."
     },
     "packing": {
       "name": "Pakking",
-      "text": "Pakket med dine etiketter, klar for eksport."
+      "text": "Pakket med dine etiketter, klar for eksport.",
+      "lead": "Bestillinger pakkes med dine merker, hang tags og merkevareemballasje, og klargjøres for eksport med fly eller skip.",
+      "points": [
+        "Hang tags og merkede poser",
+        "Pakklister per størrelse og produkt",
+        "Eksportpapirer for USA og Europa"
+      ],
+      "benefit": "Klar til salg samme dag som den kommer frem."
     }
   },
   "Catalog": {
@@ -491,7 +565,26 @@
     "related": "Mer fra denne serien",
     "code": "Varenr.",
     "whatsappText": "Hei Spotex, jeg er interessert i {code} ({name}).",
-    "metaDescription": "{name} {code}: {specs}. Laget på bestilling av Spotex International med din merking."
+    "metaDescription": "{name} {code}: {specs}. Laget på bestilling av Spotex International med din merking.",
+    "zoomHint": "Hold over for å zoome",
+    "madeToOrder": "Laget på bestilling",
+    "sampleAvailable": "Prøve tilgjengelig",
+    "orderTitle": "Slik bestiller du",
+    "viewRange": "Se alle {name}",
+    "highlights": [
+      {
+        "title": "Egen fabrikk",
+        "text": "Vevd, kuttet og sydd i Gujranwala, Pakistan, siden 1989."
+      },
+      {
+        "title": "Din merkevare",
+        "text": "Logo, merker, farger og emballasje laget for akademiet ditt."
+      },
+      {
+        "title": "Klar for eksport",
+        "text": "Sendes til USA og hele Europa."
+      }
+    ]
   },
   "PrivateLabel": {
     "metaTitle": "Kampsportdrakter under egen merkevare",
@@ -557,13 +650,58 @@
       "Et gratis IT-opplæringssenter for lokalbefolkning og ansatte, med over 1 000 uteksaminerte.",
       "Livsforsikring for alle ansatte.",
       "Gratis brannvernopplæring og idrettsaktiviteter for lokalsamfunnet."
-    ]
+    ],
+    "stats": {
+      "since": "Uniformer siden",
+      "departments": "Egne avdelinger",
+      "staff": "Fagfolk",
+      "iso": "9001:2015-sertifisert"
+    },
+    "phasesEyebrow": "Slik lages en uniform",
+    "phasesTitle": "Fra tråd til forsendelse.",
+    "phase": "Fase {n}",
+    "phases": [
+      {
+        "title": "Forberede",
+        "text": "Ideen din blir et design, en tech pack og mønstre i alle størrelser."
+      },
+      {
+        "title": "Lage stoffet",
+        "text": "Vi vever, strikker og farger selv, så farge og vekt er under kontroll."
+      },
+      {
+        "title": "Produsere",
+        "text": "Kutting, merking og søm, med sømmer laget for hard trening."
+      },
+      {
+        "title": "Ferdigstille",
+        "text": "Hvert plagg kontrolleres, presses, måles og pakkes med dine merker."
+      }
+    ],
+    "makeTitle": "Laget under dette taket",
+    "qualityEyebrow": "Kvalitet",
+    "qualityPoints": [
+      "Stoff og ferdige produkter testet i vårt eget laboratorium",
+      "Hvert plagg kontrollert, presset og målt før pakking",
+      "En prøve godkjent av deg før all serieproduksjon"
+    ],
+    "certified": "Sertifisert kvalitetssystem",
+    "isoText": "Produksjonen vår følger kvalitetsstandarden ISO 9001:2015.",
+    "csrEyebrow": "Utover fabrikken",
+    "ctaTitle": "Se kvaliteten selv.",
+    "ctaText": "Start med én enkelt prøve, laget i denne fabrikken med din merkevare.",
+    "inHouse": "I eget hus",
+    "forYou": "Hva det betyr for bestillingen din",
+    "allDepartments": "Alle ti avdelingene",
+    "previous": "Forrige steg",
+    "next": "Neste steg",
+    "overview": "Oversikt over fabrikken"
   },
   "AboutPage": {
     "metaTitle": "Om Spotex International",
     "metaDescription": "Produsent av kampsportdrakter i Gujranwala, Pakistan. Gier og belter siden 1989.",
     "eyebrow": "Om oss",
-    "titleA": "Laget i Gujranwala",
+    "titleA": "Din uniformfabrikk",
     "titleB": "siden 1989.",
     "intro": "Spotex International startet som et lite verksted i Gujranwala, Pakistan. I dag lager vi kampsportdrakter, belter og fightwear for klubber, skoler og merkevarer i utlandet, med hvert produksjonssteg under eget tak.",
     "factsTitle": "Kort fortalt",
@@ -587,7 +725,58 @@
         "title": "Din merkevare",
         "text": "Vi produserer under ditt navn, med dine etiketter."
       }
-    ]
+    ],
+    "storyEyebrow": "Vår historie",
+    "storyTitle": "Fra verksted til eksportør.",
+    "story": [
+      {
+        "title": "Der vi startet",
+        "text": "Spotex startet i 1989 som et lite sy-verksted i Gujranwala, hjertet av Pakistans sportsklærindustri."
+      },
+      {
+        "title": "Det vi bygde",
+        "text": "Steg for steg tok vi veving, farging, trykk og kvalitetstesting inn i huset, så hver uniform lages under ett tak."
+      },
+      {
+        "title": "Der vi er i dag",
+        "text": "I dag lager vi uniformer, belter og fight wear for akademier, klubber og merkevarer i USA og hele Europa."
+      }
+    ],
+    "valuesEyebrow": "Våre verdier",
+    "partnersEyebrow": "Hvem vi jobber med",
+    "partnersTitle": "Laget for dem som trener.",
+    "partners": [
+      {
+        "title": "Akademier og klubber",
+        "text": "Uniformer og belter med klubblogoen til hvert medlem."
+      },
+      {
+        "title": "Merkevarer",
+        "text": "Gier og fight wear under ditt eget navn."
+      },
+      {
+        "title": "Forhandlere",
+        "text": "Pålitelig serieproduksjon for kampsportbutikker og grossister."
+      },
+      {
+        "title": "Lag og forbund",
+        "text": "Like drakter for konkurranselag og arrangementer."
+      }
+    ],
+    "marketsEyebrow": "Eksport",
+    "marketsTitle": "Hvor uniformene våre går",
+    "marketsText": "Vi sender fra Gujranwala til kunder i Nord-Amerika, Europa og Asia, med én kontaktperson fra første melding til levering.",
+    "ctaTitle": "La oss samarbeide.",
+    "ctaText": "Fortell oss om akademiet eller merkevaren din, så foreslår vi de riktige produktene å starte med.",
+    "est": "Grunnlagt 1989",
+    "place": "Gujranwala, Pakistan",
+    "seeFactory": "Se fabrikken vår",
+    "trust": [
+      "ISO 9001:2015-sertifisert",
+      "10 egne avdelinger",
+      "Eksport til USA og Europa"
+    ],
+    "yearsLabel": "År med uniformer"
   },
   "ContactPage": {
     "metaTitle": "Kontakt Spotex International",
@@ -600,11 +789,67 @@
     "phone": "Telefon",
     "email": "E-post",
     "whatsapp": "WhatsApp",
-    "formSoon": "Tilbudsskjemaet på nett kommer snart. Inntil da kan du sende oss en melding på WhatsApp eller e-post."
+    "formSoon": "Tilbudsskjemaet på nett kommer snart. Inntil da kan du sende oss en melding på WhatsApp eller e-post.",
+    "hours": "Mandag til lørdag, 9.00–18.00 pakistansk tid (UTC+5). Vi svarer på e-post og WhatsApp innen én arbeidsdag."
   },
   "NotFound": {
     "title": "Fant ikke siden",
     "text": "Denne siden finnes ikke eller er flyttet.",
     "back": "Til forsiden"
+  },
+  "BlogPage": {
+    "title": "Blogg",
+    "metaDescription": "Guider om stoffer, vekt og egen merkevare-produksjon av kampsportuniformer, fra Spotex-fabrikken i Pakistan.",
+    "intro": "Guider om stoffer, vekt og produksjon under egen merkevare, skrevet av de som lager uniformene.",
+    "featured": "Utvalgt",
+    "latest": "Nyeste artikler",
+    "readMore": "Les artikkelen",
+    "minRead": "{n} min lesing",
+    "related": "Flere artikler",
+    "backToBlog": "Alle artikler",
+    "englishOnly": "Denne artikkelen er tilgjengelig på engelsk.",
+    "ctaEyebrow": "Neste steg",
+    "ctaTitle": "Kjenn på stoffet selv.",
+    "ctaText": "Bestill én prøve i vevingen og vekten du vurderer, med eller uten merkevare.",
+    "topics": {
+      "guides": "Guider",
+      "private-label": "Egen merkevare",
+      "factory": "Fabrikk"
+    }
+  },
+  "ContactForm": {
+    "tabQuote": "Be om tilbud",
+    "tabMessage": "Send en melding",
+    "name": "Navnet ditt",
+    "email": "E-post",
+    "company": "Akademi / firma",
+    "phone": "Telefon / WhatsApp",
+    "country": "Land",
+    "quantity": "Antall",
+    "choose": "Velg…",
+    "productCode": "Produktkode",
+    "products": "Produkter du trenger",
+    "branding": "Merking",
+    "brandingOptions": [
+      "Brodering",
+      "Vevd merke",
+      "Silketrykk",
+      "Sublimering",
+      "Uten merking",
+      "Usikker ennå"
+    ],
+    "sample": "Jeg vil ha en prøve først",
+    "message": "Melding",
+    "messageQuotePlaceholder": "Farger, størrelser, frist og alt annet vi bør vite…",
+    "messagePlaceholder": "Hvordan kan vi hjelpe?",
+    "privacy": "Vi bruker opplysningene dine kun til å svare på forespørselen.",
+    "sending": "Sender…",
+    "sendQuote": "Send forespørsel",
+    "sendMessage": "Send melding",
+    "invalid": "Fyll ut de markerte feltene.",
+    "offline": "Skjemaet er ikke koblet til ennå, så forespørselen ble ikke sendt. Send den til oss på WhatsApp med ett trykk:",
+    "offlineButton": "Send på WhatsApp",
+    "sentTitle": "Takk!",
+    "sentText": "Forespørselen din har kommet fram til salgsteamet vårt. Vi svarer vanligvis innen én arbeidsdag."
   }
 }

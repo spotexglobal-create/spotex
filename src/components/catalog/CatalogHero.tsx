@@ -9,7 +9,18 @@ type Href = ComponentProps<typeof Link>['href'];
  * Header for the catalogue pages: breadcrumbs, title, a short red rule and the intro on the left;
  * the two ways to get in touch on the right, so buyers can ask without scrolling.
  */
-export async function CatalogHero({ crumbs, title, intro }: { crumbs: { label: string; href?: Href }[]; title: string; intro: string }) {
+export async function CatalogHero({
+  crumbs,
+  title,
+  intro,
+  actions = true,
+}: {
+  crumbs: { label: string; href?: Href }[];
+  title: string;
+  intro: string;
+  /** Quote + WhatsApp buttons on the right (off on the contact page, which has its own forms). */
+  actions?: boolean;
+}) {
   const t = await getTranslations('Common');
   return (
     <section className="container-page pt-24 pb-8 md:pt-[104px]">
@@ -37,6 +48,7 @@ export async function CatalogHero({ crumbs, title, intro }: { crumbs: { label: s
           <span aria-hidden className="mt-3 block h-[3px] w-14 rounded-full bg-brand" />
           <p className="mt-4 max-w-xl text-[15px] leading-relaxed">{intro}</p>
         </div>
+        {actions && (
         <div className="flex flex-none flex-wrap gap-3">
           <Link href="/contact" className="btn">
             {t('requestQuote')}
@@ -45,6 +57,7 @@ export async function CatalogHero({ crumbs, title, intro }: { crumbs: { label: s
             {t('whatsapp')}
           </a>
         </div>
+        )}
       </div>
     </section>
   );

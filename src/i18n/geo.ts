@@ -10,6 +10,9 @@ const COUNTRY_LOCALE: Record<string, Locale> = {
   IT: 'it',
   SM: 'it',
   VA: 'it',
+  FR: 'fr',
+  MC: 'fr',
+  LU: 'fr',
 };
 
 /**
@@ -24,6 +27,7 @@ export function localeForCountry(country: string | null, acceptLanguage: string)
     const primary = acceptLanguage.split(',')[0]?.trim().slice(0, 2).toLowerCase();
     if (primary === 'de') return 'de';
     if (primary === 'it') return 'it';
+    if (primary === 'fr') return 'fr';
     return 'en';
   }
   return COUNTRY_LOCALE[code] ?? 'en';

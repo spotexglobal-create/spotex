@@ -29,7 +29,7 @@ export default async function PrivateLabelPage({ params }: LocaleParams) {
         {/* a real sequence, so the numbers carry meaning */}
         <ol className="mt-8 grid gap-4 md:grid-cols-5">
           {steps.map((s, i) => (
-            <li key={s.title} className="rounded-[18px] border-[1.5px] border-line p-5">
+            <li key={s.title} className="rounded-[18px] border-[1.5px] border-ink bg-white p-5">
               <span className="display text-4xl text-brand">{String(i + 1).padStart(2, '0')}</span>
               <h3 className="mt-3 text-sm font-extrabold tracking-[0.08em] uppercase">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed">{s.text}</p>
@@ -43,7 +43,7 @@ export default async function PrivateLabelPage({ params }: LocaleParams) {
           <h2 className="display text-[clamp(36px,5vw,64px)] text-ink">{t('optionsTitle')}</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {options.map((o) => (
-              <div key={o.title} className="rounded-[18px] bg-white p-6">
+              <div key={o.title} className="rounded-[18px] border-[1.5px] border-ink bg-white p-6">
                 <h3 className="display text-2xl text-ink">{o.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed">{o.text}</p>
               </div>

@@ -21,23 +21,27 @@ export const CATEGORY_SLUGS = [
 
 export type CategorySlug = (typeof CATEGORY_SLUGS)[number];
 
-export type ProductType =
-  | 'bjjGi'
-  | 'judoUniform'
-  | 'karateUniform'
-  | 'taekwondoUniform'
-  | 'samboUniform'
-  | 'bjjBelt'
-  | 'giFabricBelt'
-  | 'casualBelt'
-  | 'judoBelt'
-  | 'mmaShorts'
-  | 'hoodie'
-  | 'singlet'
-  | 'giBag';
+export const PRODUCT_TYPES = [
+  'bjjGi',
+  'judoUniform',
+  'karateUniform',
+  'taekwondoUniform',
+  'samboUniform',
+  'bjjBelt',
+  'giFabricBelt',
+  'casualBelt',
+  'judoBelt',
+  'mmaShorts',
+  'hoodie',
+  'singlet',
+  'giBag',
+] as const;
+
+export type ProductType = (typeof PRODUCT_TYPES)[number];
 
 /** Spec rows shown on the product page. Text values are keys in "Catalog.values". */
-export type SpecLabel = 'weave' | 'jacket' | 'weight' | 'pants' | 'colours' | 'waist' | 'width' | 'sizes' | 'print' | 'use';
+export const SPEC_LABELS = ['weave', 'jacket', 'weight', 'pants', 'colours', 'waist', 'width', 'sizes', 'print', 'use'] as const;
+export type SpecLabel = (typeof SPEC_LABELS)[number];
 
 export type SpecValue = keyof (typeof messages)['Catalog']['values'];
 
@@ -67,4 +71,6 @@ export interface Product {
   /** Absolute image URLs, main photo first. */
   images: string[];
   featured?: boolean;
+  /** False hides the product from the website (still listed in the admin). Default true. */
+  visible?: boolean;
 }

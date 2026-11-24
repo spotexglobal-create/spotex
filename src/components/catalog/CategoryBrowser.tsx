@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useMemo, useState } from 'react';
+import { Dropdown } from '@/components/ui/Dropdown';
 import { Link, useRouter } from '@/i18n/navigation';
 import type { CategorySlug } from '@/lib/catalog/types';
 
@@ -72,53 +73,34 @@ export function CategoryBrowser({
             className="w-full rounded-full border-[1.5px] border-ink/30 bg-white py-3 pr-4 pl-11 text-sm text-ink outline-none placeholder:text-ink/45 focus:border-ink"
           />
         </label>
-        <label className="relative md:w-72 md:flex-none">
-          <span className="sr-only">{t('categoryLabel')}</span>
-          <select
-            value=""
-            onChange={(e) => e.target.value && router.push({ pathname: '/products/[category]', params: { category: e.target.value as CategorySlug } })}
-            className="w-full appearance-none rounded-full border-[1.5px] border-ink/30 bg-white py-3 pr-10 pl-5 text-sm font-semibold text-ink outline-none transition-colors hover:border-ink focus:border-ink"
-          >
-            <option value="">
-              {t('allCategories')} ({categories.length})
-            </option>
-            {categories.map((c) => (
-              <option key={c.slug} value={c.slug}>
-                {c.name} ({c.count})
-              </option>
-            ))}
-          </select>
-          <svg viewBox="0 0 24 24" aria-hidden className="pointer-events-none absolute top-1/2 right-4 h-3.5 w-3.5 -translate-y-1/2 fill-none stroke-ink stroke-[2.5]">
-            <path d="m6 9 6 6 6-6" />
-          </svg>
-        </label>
-        <label className="relative md:w-56 md:flex-none">
-          <span className="sr-only">{t('sortLabel')}</span>
-          <select
-            value={sort}
-            onChange={(e) => setSort(e.target.value as 'default' | 'most' | 'name')}
-            className="w-full appearance-none rounded-full border-[1.5px] border-ink/30 bg-white py-3 pr-10 pl-5 text-sm font-semibold text-ink outline-none transition-colors hover:border-ink focus:border-ink"
-          >
-            <option value="default">
-              {t('sortLabel')}: {t('sortDefault')}
-            </option>
-            <option value="most">
-              {t('sortLabel')}: {t('sortMost')}
-            </option>
-            <option value="name">
-              {t('sortLabel')}: {t('sortName')}
-            </option>
-          </select>
-          <svg viewBox="0 0 24 24" aria-hidden className="pointer-events-none absolute top-1/2 right-4 h-3.5 w-3.5 -translate-y-1/2 fill-none stroke-ink stroke-[2.5]">
-            <path d="m6 9 6 6 6-6" />
-          </svg>
-        </label>
+        <Dropdown
+          className="md:w-64 md:flex-none"
+          label={t('categoryLabel')}
+          value=""
+          options={[
+            { value: '', label: t('allCategories'), hint: categories.length },
+            ...categories.map((c) => ({ value: c.slug, label: c.name, hint: c.count })),
+          ]}
+          onChange={(v) => v && router.push({ pathname: '/products/[category]', params: { category: v as CategorySlug } })}
+        />
+        <Dropdown
+          className="md:w-56 md:flex-none"
+          label={t('sortLabel')}
+          prefix={`${t('sortLabel')}:`}
+          value={sort}
+          options={[
+            { value: 'default', label: t('sortDefault') },
+            { value: 'most', label: t('sortMost') },
+            { value: 'name', label: t('sortName') },
+          ]}
+          onChange={(v) => setSort(v as 'default' | 'most' | 'name')}
+        />
       </div>
 
       {/* products matching the search */}
       {words.length > 0 && (
         <div className="mt-6">
-          <p className="text-xs font-bold tracking-[0.16em] text-ink/60 uppercase" aria-live="polite">
+          <p className="text-xs font-bold tracking-[0.16em] text-ink/85 uppercase" aria-live="polite">
             {common('products', { count: hits.length })}
           </p>
           {hits.length > 0 ? (
@@ -135,7 +117,7 @@ export function CategoryBrowser({
                   <span className="min-w-0">
                     <span className="block text-[10px] font-extrabold tracking-[0.14em] text-brand">{p.code}</span>
                     <span className="block truncate text-sm font-semibold text-ink">{p.name}</span>
-                    <span className="block text-[11px] text-ink/60">{nameOf.get(p.category)}</span>
+                    <span className="block text-[11px] text-ink/85">{nameOf.get(p.category)}</span>
                   </span>
                 </Link>
               ))}
@@ -160,7 +142,7 @@ export function CategoryBrowser({
                   {String(categories.indexOf(c) + 1).padStart(2, '0')} / {String(categories.length).padStart(2, '0')}
                 </span>
                 <span className="display mt-2 block text-[clamp(28px,2.6vw,40px)] leading-none text-ink">{c.name}</span>
-                <span className="mt-2.5 line-clamp-2 block text-[13px] leading-relaxed text-ink/75">{c.intro}</span>
+                <span className="mt-2.5 line-clamp-2 block text-[13px] leading-relaxed text-ink/85">{c.intro}</span>
               </span>
               <span className="flex items-center justify-between gap-3">
                 <span className="rounded-full border-[1.5px] border-ink/30 px-3 py-1 text-[10.5px] font-bold tracking-[0.12em] text-ink uppercase">

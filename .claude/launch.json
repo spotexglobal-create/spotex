@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "spotex-web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:\\Users\\Sohaib\\OneDrive\\Desktop\\Spotex", "run", "dev"],
+      "port": 3000
+    }
+  ]
+}

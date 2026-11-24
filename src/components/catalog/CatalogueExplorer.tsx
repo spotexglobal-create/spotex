@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { Dropdown } from '@/components/ui/Dropdown';
 import { Link, useRouter } from '@/i18n/navigation';
 import type { CategorySlug } from '@/lib/catalog/types';
 import { Pagination } from './Pagination';
@@ -21,19 +22,8 @@ export interface ExplorerItem {
 
 type Selected = Record<string, string[]>;
 
-/** Products per page (three rows of three next to the sidebar). */
-const PAGE_SIZE = 9;
-
-const SELECT =
-  'appearance-none rounded-full border-[1.5px] border-ink/30 bg-white py-2.5 pr-10 pl-4 text-sm font-semibold text-ink outline-none transition-colors hover:border-ink focus:border-ink';
-
-function Chevron() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden className="pointer-events-none absolute top-1/2 right-4 h-3.5 w-3.5 -translate-y-1/2 fill-none stroke-ink stroke-[2.5]">
-      <path d="m6 9 6 6 6-6" />
-    </svg>
-  );
-}
+/** Products per page (three rows of four next to the sidebar). */
+const PAGE_SIZE = 12;
 
 /**
  * Product grid of one category: a filter sidebar built from the products' specs (weave, fabric,
@@ -137,33 +127,24 @@ export function CatalogueExplorer({
               {active.length > 0 && ` (${active.length})`}
             </button>
           )}
-          <label className="relative">
-            <span className="sr-only">{t('categoryLabel')}</span>
-            <select
-              className={SELECT}
-              value={current}
-              onChange={(e) => router.push({ pathname: '/products/[category]', params: { category: e.target.value as CategorySlug } })}
-            >
-              {categories.map((c) => (
-                <option key={c.slug} value={c.slug}>
-                  {c.name} ({c.count})
-                </option>
-              ))}
-            </select>
-            <Chevron />
-          </label>
-          <label className="relative">
-            <span className="sr-only">{t('sortLabel')}</span>
-            <select className={SELECT} value={sort} onChange={(e) => setSort(e.target.value as 'default' | 'code')}>
-              <option value="default">
-                {t('sortLabel')}: {t('sortDefault')}
-              </option>
-              <option value="code">
-                {t('sortLabel')}: {t('sortCode')}
-              </option>
-            </select>
-            <Chevron />
-          </label>
+          <Dropdown
+            className="min-w-56"
+            label={t('categoryLabel')}
+            value={current}
+            options={categories.map((c) => ({ value: c.slug, label: c.name, hint: c.count }))}
+            onChange={(v) => router.push({ pathname: '/products/[category]', params: { category: v as CategorySlug } })}
+          />
+          <Dropdown
+            className="min-w-48"
+            label={t('sortLabel')}
+            prefix={`${t('sortLabel')}:`}
+            value={sort}
+            options={[
+              { value: 'default', label: t('sortDefault') },
+              { value: 'code', label: t('sortCode') },
+            ]}
+            onChange={(v) => setSort(v as 'default' | 'code')}
+          />
           <span className="rounded-full bg-ink px-4 py-2.5 text-xs font-bold tracking-[0.12em] text-white uppercase" aria-live="polite">
             {common('products', { count: results.length })}
           </span>
@@ -186,7 +167,7 @@ export function CatalogueExplorer({
               {facets.map(({ group, values }) => (
                 <fieldset key={group} className="mt-5 border-t border-ink/12 pt-4">
                   <legend className="sr-only">{group}</legend>
-                  <p aria-hidden className="text-[11px] font-bold tracking-[0.18em] text-ink/60 uppercase">
+                  <p aria-hidden className="text-[11px] font-bold tracking-[0.18em] text-ink/85 uppercase">
                     {group}
                   </p>
                   <ul className="mt-2.5 space-y-1">
@@ -233,26 +214,26 @@ export function CatalogueExplorer({
           )}
 
           {results.length > 0 ? (
-            <div className={`grid grid-cols-2 gap-4 md:gap-5 ${facets.length ? 'md:grid-cols-3' : 'md:grid-cols-3 xl:grid-cols-4'}`}>
+            <div className={`grid grid-cols-2 gap-3 md:gap-4 ${facets.length ? 'md:grid-cols-3 xl:grid-cols-4' : 'md:grid-cols-4 xl:grid-cols-5'}`}>
               {visible.map((p) => (
                 <Link
                   key={p.slug}
                   href={{ pathname: '/products/[category]/[product]', params: { category: p.category, product: p.slug } }}
-                  className="group flex flex-col overflow-hidden rounded-[18px] border-[1.5px] border-ink/35 bg-white transition-[border-color,transform] duration-300 hover:-translate-y-1 hover:border-ink"
+                  className="group flex flex-col overflow-hidden rounded-[18px] border-[1.5px] border-ink bg-white transition-[border-color,transform] duration-300 hover:-translate-y-1 hover:border-brand"
                 >
-                  <div className="relative aspect-[4/5] bg-soft">
+                  <div className="relative aspect-square bg-soft">
                     <Image
                       src={p.image}
                       alt={`${p.name} ${p.code}`}
                       fill
-                      sizes="(min-width: 1280px) 22vw, (min-width: 768px) 30vw, 46vw"
+                      sizes="(min-width: 1280px) 17vw, (min-width: 768px) 24vw, 46vw"
                       className="photo-multiply object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                   </div>
-                  <div className="flex flex-1 flex-col gap-1 px-4 py-3.5">
+                  <div className="flex flex-1 flex-col gap-0.5 px-3.5 py-3">
                     <span className="text-[10.5px] font-extrabold tracking-[0.16em] text-brand">{p.code}</span>
-                    <span className="display text-2xl text-ink">{p.name}</span>
-                    <span className="text-xs leading-snug">{p.summary}</span>
+                    <span className="display text-xl leading-tight text-ink">{p.name}</span>
+                    <span className="line-clamp-2 text-[11.5px] leading-snug text-ink/85">{p.summary}</span>
                   </div>
                 </Link>
               ))}

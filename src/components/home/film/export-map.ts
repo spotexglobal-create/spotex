@@ -10,7 +10,7 @@ export const MAP_W = 1000;
 export const MAP_H = 240;
 
 /** Country keys; names live in messages Film.export.countries. */
-export type CountryKey = 'kr' | 'it' | 'de' | 'no' | 'us';
+export type CountryKey = 'kr' | 'it' | 'de' | 'fr' | 'no' | 'us';
 
 /** Where a pin's label sits relative to its dot. */
 type LabelSide = 'above' | 'below' | 'left' | 'right';
@@ -24,7 +24,8 @@ const ORIGIN: [number, number] = [74.19, 32.16]; // Gujranwala
  */
 const MARKETS: { country: CountryKey; iso: string; label: LabelSide; centre?: [number, number] }[] = [
   { country: 'it', iso: '380', label: 'left', centre: [12.6, 42.6] },
-  { country: 'de', iso: '276', label: 'left' },
+  { country: 'fr', iso: '250', label: 'left', centre: [2.4, 46.6] },
+  { country: 'de', iso: '276', label: 'above' },
   { country: 'no', iso: '578', label: 'left', centre: [9.2, 61.6] },
   { country: 'us', iso: '840', label: 'above' },
   { country: 'kr', iso: '410', label: 'above' },

@@ -5,10 +5,12 @@ import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { SITE } from '@/config/site';
 import { Link, usePathname } from '@/i18n/navigation';
+import { FactoryMenu } from './FactoryMenu';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { ProductsMenu, type MenuCategory } from './ProductsMenu';
 import { NAV_ITEMS } from './nav-items';
 
-export function Header() {
+export function Header({ categories }: { categories: MenuCategory[] }) {
   const t = useTranslations();
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,17 +43,23 @@ export function Header() {
         </Link>
 
         <nav aria-label="Main" className="hidden lg:block">
-          <ul className="flex items-center gap-6 rounded-full border-[1.5px] border-ink/20 bg-white/85 px-6 py-3 text-xs font-bold tracking-[0.12em] uppercase backdrop-blur">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`transition-colors hover:text-brand ${isActive(item.href) ? 'text-brand' : 'text-ink/80'}`}
-                >
-                  {t(`Nav.${item.label}`)}
-                </Link>
-              </li>
-            ))}
+          <ul className="flex items-center gap-6 rounded-full border-[1.5px] border-ink/20 bg-white/95 px-6 py-3 text-xs font-bold tracking-[0.12em] uppercase">
+            {NAV_ITEMS.map((item) =>
+              item.href === '/products' ? (
+                <ProductsMenu key={item.href} label={t(`Nav.${item.label}`)} active={isActive(item.href)} categories={categories} />
+              ) : item.href === '/factory' ? (
+                <FactoryMenu key={item.href} label={t(`Nav.${item.label}`)} active={isActive(item.href)} />
+              ) : (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={`transition-colors hover:text-brand ${isActive(item.href) ? 'text-brand' : 'text-ink/80'}`}
+                  >
+                    {t(`Nav.${item.label}`)}
+                  </Link>
+                </li>
+              ),
+            )}
           </ul>
         </nav>
 
@@ -83,6 +91,21 @@ export function Header() {
                 <Link href={item.href} className={`display block py-4 text-3xl ${isActive(item.href) ? 'text-brand' : ''}`}>
                   {t(`Nav.${item.label}`)}
                 </Link>
+                {item.href === '/products' && (
+                  <ul className="-mt-1 grid grid-cols-2 gap-x-4 gap-y-2 pb-4">
+                    {categories.map((c) => (
+                      <li key={c.slug}>
+                        <Link
+                          href={{ pathname: '/products/[category]', params: { category: c.slug } }}
+                          className="flex items-center justify-between text-sm font-semibold text-ink/75"
+                        >
+                          {c.name}
+                          <span className="text-xs text-brand">{c.count}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
