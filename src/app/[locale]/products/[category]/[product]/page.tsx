@@ -9,6 +9,7 @@ import { initLocale, type LocaleParams } from '@/i18n/server';
 import { getProduct, getProducts, getRelatedProducts, isCategorySlug } from '@/lib/catalog';
 import { getCatalogText } from '@/lib/catalog/text';
 import { localeAlternates } from '@/lib/seo';
+import { getSite } from '@/lib/site';
 
 type Props = LocaleParams<{ category: string; product: string }>;
 
@@ -45,6 +46,7 @@ const LABEL = 'text-[11px] font-bold tracking-[0.2em] text-ink/55 uppercase';
 export default async function ProductPage({ params }: Props) {
   const { locale, category, product: slug } = await params;
   initLocale(locale);
+  const site = await getSite();
   const product = await load(category, slug);
   if (!product) notFound();
 
@@ -133,7 +135,7 @@ export default async function ProductPage({ params }: Props) {
                 {common('requestSample')}
               </Link>
               <a
-                href={whatsappLink(t('whatsappText', { code: product.code, name }))}
+                href={whatsappLink(t('whatsappText', { code: product.code, name }), site.whatsapp)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn border-[#25d366] bg-[#25d366] text-white hover:border-[#1ebe5b] hover:bg-[#1ebe5b]"

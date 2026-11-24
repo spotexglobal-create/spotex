@@ -85,7 +85,10 @@
 - [x] Admin → Blog: naya article, edit, draft/publish, delete; website blog database se — browser mein check baaki
 - [x] Cloudinary upload: API route `/admin/api/upload-signature` + "Upload photos" button (products + blog cover) — code bana
 - [ ] `.env.local` mein `CLOUDINARY_URL` (aap se), phir browser mein upload check
-- [ ] Settings page (company details) database se
+- [x] Settings page: email, phone, WhatsApp, address, facts admin se badlein → database → poori website pe (2026-11-24)
+- [x] Resend domain `spotexinternational.com` verified; `.env.local` mein RESEND_API_KEY / INQUIRY_TO_EMAIL (inquiry@spotexinternational.com) / INQUIRY_FROM_EMAIL
+- [x] Reply: portal mein box nahi (user ne mana kiya). "Reply by e-mail" button email app kholta hai (customer, subject, salaam aur asal message pehle se bhare); baat-cheet mailbox mein (2026-11-24)
+- [x] Admin: Messages ka alag page; Settings mein social links (footer icons); portal mein tool ke naam kahin nahi dikhte
 
 ### Din 3 · SEO + launch
 - [ ] Har page ka title/description (5 languages), sitemap, robots, hreflang + x-default, structured data (Organization, Product, Breadcrumb)

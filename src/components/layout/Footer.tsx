@@ -4,6 +4,8 @@ import { SITE } from '@/config/site';
 import { Link } from '@/i18n/navigation';
 import { getCategories } from '@/lib/catalog';
 import { NAV_ITEMS } from './nav-items';
+import { getSite } from '@/lib/site';
+import { SocialLinks } from './SocialLinks';
 
 const HEADING = 'mb-4 text-[11px] font-bold tracking-[0.24em] text-brand uppercase';
 const LINK = 'text-white/75 transition-colors hover:text-white';
@@ -11,6 +13,7 @@ const LINK = 'text-white/75 transition-colors hover:text-white';
 /** Site footer: dark band with brand, menus and contact, closed by a large outlined wordmark. */
 export async function Footer() {
   const [t, categories] = await Promise.all([getTranslations(), getCategories()]);
+  const site = await getSite();
   const year = new Date().getFullYear();
 
   return (
@@ -29,8 +32,9 @@ export async function Footer() {
             <p className="mt-5 max-w-xs leading-7 text-white/75">{t('Footer.tagline')}</p>
             <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-[11px] font-bold tracking-[0.18em] uppercase">
               <i className="h-2 w-2 rounded-full bg-brand" aria-hidden />
-              {t('Footer.since', { year: String(SITE.foundedYear) })}
+              {t('Footer.since', { year: String(site.foundedYear) })}
             </p>
+            <SocialLinks social={site.social} className="mt-6" />
           </div>
 
           <nav aria-label={t('Footer.explore')}>
@@ -65,24 +69,24 @@ export async function Footer() {
               <div>
                 <dt className="text-[11px] font-bold tracking-[0.18em] text-white/45 uppercase">{t('Footer.address')}</dt>
                 <dd className="mt-1 leading-6 text-white/85">
-                  {SITE.address.street}
+                  {site.address.street}
                   <br />
-                  {SITE.address.city} {SITE.address.postalCode}, {SITE.address.country}
+                  {site.address.city} {site.address.postalCode}, {site.address.country}
                 </dd>
               </div>
               <div>
                 <dt className="text-[11px] font-bold tracking-[0.18em] text-white/45 uppercase">{t('Footer.phone')}</dt>
                 <dd className="mt-1">
-                  <a href={`tel:${SITE.phone.replace(/\s/g, '')}`} className={LINK}>
-                    {SITE.phone}
+                  <a href={`tel:${site.phone.replace(/\s/g, '')}`} className={LINK}>
+                    {site.phone}
                   </a>
                 </dd>
               </div>
               <div>
                 <dt className="text-[11px] font-bold tracking-[0.18em] text-white/45 uppercase">{t('Footer.email')}</dt>
                 <dd className="mt-1">
-                  <a href={`mailto:${SITE.email}`} className={LINK}>
-                    {SITE.email}
+                  <a href={`mailto:${site.email}`} className={LINK}>
+                    {site.email}
                   </a>
                 </dd>
               </div>

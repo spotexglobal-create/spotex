@@ -13,6 +13,7 @@ const NAV: { href: string; label: string; icon: keyof typeof ICONS }[] = [
   { href: '/admin/products', label: 'Products', icon: 'products' },
   { href: '/admin/categories', label: 'Categories', icon: 'categories' },
   { href: '/admin/quotes', label: 'Quote requests', icon: 'quotes' },
+  { href: '/admin/messages', label: 'Messages', icon: 'chat' },
   { href: '/admin/blog', label: 'Blog', icon: 'blog' },
   { href: '/admin/settings', label: 'Settings', icon: 'settings' },
 ];
@@ -42,7 +43,7 @@ export function Sidebar({ email, counts }: { email: string; counts: Record<strin
       >
         <div className="px-6 pt-6 pb-8">
           <Image src={SITE.logo} alt={SITE.name} width={140} height={38} className="h-9 w-auto rounded-md" />
-          <p className="mt-3 text-[10px] font-bold tracking-[0.24em] text-white/40 uppercase">Admin portal</p>
+          <p className="mt-3 text-[10px] font-bold tracking-[0.24em] text-white/65 uppercase">Admin portal</p>
         </div>
 
         <nav className="flex-1 space-y-1 px-3">
@@ -60,7 +61,7 @@ export function Sidebar({ email, counts }: { email: string; counts: Record<strin
               </span>
               <span className="flex-1">{item.label}</span>
               {counts[item.href] !== undefined && (
-                <span className={`rounded-full px-2 py-0.5 text-[10.5px] font-bold ${active(item.href) ? 'bg-ink/5 text-ink/60' : 'bg-white/10 text-white/60'}`}>
+                <span className={`rounded-full px-2 py-0.5 text-[10.5px] font-bold ${active(item.href) ? 'bg-ink/5 text-ink/75' : 'bg-white/10 text-white/80'}`}>
                   {counts[item.href]}
                 </span>
               )}
@@ -81,7 +82,7 @@ export function Sidebar({ email, counts }: { email: string; counts: Record<strin
             <span className="grid h-8 w-8 flex-none place-items-center rounded-full bg-brand text-xs font-bold uppercase">{email[0]}</span>
             <span className="min-w-0 flex-1 truncate text-xs text-white/70">{email}</span>
             <form action={logout}>
-              <button type="submit" title="Sign out" aria-label="Sign out" className="rounded-lg p-1.5 text-white/60 hover:bg-white/10 hover:text-white">
+              <button type="submit" title="Sign out" aria-label="Sign out" className="rounded-lg p-1.5 text-white/80 hover:bg-white/10 hover:text-white">
                 <Icon name="logout" className="h-4 w-4" />
               </button>
             </form>

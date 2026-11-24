@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
-import { useActionState, useState } from 'react';
+import { useActionState, useState, useTransition } from 'react';
 import { whatsappLink } from '@/config/site';
 import { sendInquiry, type InquiryState } from './actions';
 
@@ -17,15 +17,19 @@ export function ContactForms({
   categories,
   product,
   sample,
+  whatsapp,
 }: {
   categories: string[];
   product?: string;
   sample?: boolean;
+  /** Company WhatsApp number from admin settings. */
+  whatsapp: string;
 }) {
   const t = useTranslations('ContactForm');
   const locale = useLocale();
   const [tab, setTab] = useState<'quote' | 'message'>('quote');
   const [state, action, pending] = useActionState<InquiryState, FormData>(sendInquiry, { status: 'idle' });
+  const [, startSend] = useTransition();
   const bad = (field: string) => state.status === 'invalid' && state.errors?.includes(field);
 
   if (state.status === 'sent') {
@@ -62,7 +66,16 @@ export function ContactForms({
         ))}
       </div>
 
-      <form action={action} className="space-y-4 p-6 md:p-7" noValidate>
+      <form
+        onSubmit={(e) => {
+          // a transition instead of <form action>, so a visitor's typing is kept when the server returns an error
+          e.preventDefault();
+          const data = new FormData(e.currentTarget);
+          startSend(() => action(data));
+        }}
+        className="space-y-4 p-6 md:p-7"
+        noValidate
+      >
         <input type="hidden" name="kind" value={tab} />
         <input type="hidden" name="locale" value={locale} />
         {/* honeypot for bots */}
@@ -77,7 +90,7 @@ export function ContactForms({
           <div role="alert" className="rounded-xl border-[1.5px] border-amber-500/40 bg-amber-50 px-4 py-3 text-sm text-amber-900">
             <p className="font-semibold">{t('offline')}</p>
             <a
-              href={whatsappLink(state.summary)}
+              href={whatsappLink(state.summary, whatsapp)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn mt-3 border-[#25d366] bg-[#25d366] hover:border-[#1ebe5b] hover:bg-[#1ebe5b]"

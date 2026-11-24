@@ -60,7 +60,7 @@ export function ProductsTable({
   const shown = found.slice((page - 1) * PAGE, page * PAGE);
 
   return (
-    <section className="overflow-hidden rounded-[20px] border border-ink/10 bg-white">
+    <section className="overflow-hidden rounded-[20px] border border-ink bg-white">
       {/* toolbar */}
       <div className="flex flex-col gap-3 border-b border-ink/10 p-4 md:flex-row md:items-center">
         <label className="relative flex-1">
@@ -76,7 +76,7 @@ export function ProductsTable({
               setPage(1);
             }}
             placeholder="Search by code, name or spec…"
-            className="w-full rounded-xl border-[1.5px] border-ink/10 bg-[#fafafa] py-2.5 pr-3 pl-10 text-sm outline-none focus:border-ink focus:bg-white"
+            className="w-full rounded-xl border-[1.5px] border-ink bg-[#fafafa] py-2.5 pr-3 pl-10 text-sm outline-none focus:border-brand focus:bg-white"
           />
         </label>
         <select
@@ -85,7 +85,7 @@ export function ProductsTable({
             setCategory(e.target.value);
             setPage(1);
           }}
-          className="rounded-xl border-[1.5px] border-ink/10 bg-white px-3.5 py-2.5 text-sm font-semibold outline-none focus:border-ink"
+          className="rounded-xl border-[1.5px] border-ink bg-white px-3.5 py-2.5 text-sm font-semibold outline-none focus:border-brand"
           aria-label="Category"
         >
           <option value="">All categories</option>
@@ -95,13 +95,13 @@ export function ProductsTable({
             </option>
           ))}
         </select>
-        <span className="text-xs font-bold text-ink/50">{found.length} results</span>
+        <span className="text-xs font-bold text-ink/70">{found.length} results</span>
       </div>
 
       {/* table */}
       <div className="overflow-x-auto">
         <table className="w-full min-w-[760px] text-left text-sm">
-          <thead className="bg-[#fafafa] text-[11px] font-bold tracking-[0.12em] text-ink/50 uppercase">
+          <thead className="bg-[#fafafa] text-[11px] font-bold tracking-[0.12em] text-ink/70 uppercase">
             <tr>
               <th className="px-5 py-3">Product</th>
               <th className="px-3 py-3">Category</th>
@@ -126,7 +126,7 @@ export function ProductsTable({
                   </Link>
                 </td>
                 <td className="px-3 py-3 text-ink/70">{r.categoryName}</td>
-                <td className="max-w-[260px] truncate px-3 py-3 text-ink/60">{r.summary}</td>
+                <td className="max-w-[260px] truncate px-3 py-3 text-ink/75">{r.summary}</td>
                 <td className="px-3 py-3 text-ink/70">{r.photos}</td>
                 <td className="px-3 py-3">
                   <span className="flex flex-wrap gap-1.5">
@@ -144,7 +144,7 @@ export function ProductsTable({
                 </td>
                 <td className="px-5 py-3">
                   <span className="flex justify-end gap-1.5">
-                    <Link href={`/admin/products/${r.slug}`} title="Edit" className="rounded-lg p-2 text-ink/60 hover:bg-ink/5 hover:text-ink">
+                    <Link href={`/admin/products/${r.slug}`} title="Edit" className="rounded-lg p-2 text-ink/75 hover:bg-ink/5 hover:text-ink">
                       <Icon name="edit" className="h-4 w-4" />
                     </Link>
                     <a
@@ -152,7 +152,7 @@ export function ProductsTable({
                       target="_blank"
                       rel="noopener noreferrer"
                       title="View on website"
-                      className="rounded-lg p-2 text-ink/60 hover:bg-ink/5 hover:text-ink"
+                      className="rounded-lg p-2 text-ink/75 hover:bg-ink/5 hover:text-ink"
                     >
                       <Icon name="eye" className="h-4 w-4" />
                     </a>
@@ -162,7 +162,7 @@ export function ProductsTable({
             ))}
             {!shown.length && (
               <tr>
-                <td colSpan={6} className="px-5 py-14 text-center text-sm text-ink/50">
+                <td colSpan={6} className="px-5 py-14 text-center text-sm text-ink/70">
                   No products match.
                 </td>
               </tr>
@@ -173,7 +173,7 @@ export function ProductsTable({
 
       {/* paging */}
       {pages > 1 && (
-        <div className="flex items-center justify-between border-t border-ink/10 px-5 py-3 text-xs font-semibold text-ink/60">
+        <div className="flex items-center justify-between border-t border-ink/10 px-5 py-3 text-xs font-semibold text-ink/75">
           <span>
             Page {page} of {pages}
           </span>

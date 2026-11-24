@@ -4,7 +4,7 @@ import { useActionState, useState } from 'react';
 import { login, type LoginState } from '../actions';
 
 const FIELD =
-  'mt-1.5 w-full rounded-xl border-[1.5px] border-ink/15 bg-white px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-ink/35 focus:border-ink';
+  'mt-1.5 w-full rounded-xl border-[1.5px] border-ink bg-white px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-ink/55 focus:border-brand';
 
 export function LoginForm() {
   const [state, action, pending] = useActionState<LoginState, FormData>(login, {});
@@ -28,7 +28,7 @@ export function LoginForm() {
           <button
             type="button"
             onClick={() => setShow((s) => !s)}
-            className="absolute top-1/2 right-3 mt-[3px] -translate-y-1/2 rounded-md px-2 py-1 text-[11px] font-bold tracking-[0.1em] text-ink/50 uppercase hover:text-ink"
+            className="absolute top-1/2 right-3 mt-[3px] -translate-y-1/2 rounded-md px-2 py-1 text-[11px] font-bold tracking-[0.1em] text-ink/70 uppercase hover:text-ink"
           >
             {show ? 'Hide' : 'Show'}
           </button>

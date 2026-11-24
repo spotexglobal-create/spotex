@@ -9,6 +9,8 @@ export type CalloutSide = 'L' | 'R';
 export interface HeroItem {
   slug: 'si-jju-1001' | 'si-ju-1005' | 'si-jju-1002' | 'si-ms-1001' | 'si-gbp-1001';
   callouts: { key: string; side: CalloutSide; x: number; y: number }[];
+  /** Gap between the photo edge and the product, as a share of the photo width (default 0.24). Wide products need less. */
+  inner?: number;
 }
 
 export const HERO_ITEMS: HeroItem[] = [
@@ -44,6 +46,7 @@ export const HERO_ITEMS: HeroItem[] = [
   },
   {
     slug: 'si-ms-1001',
+    inner: 0.06, // the shorts fill almost the whole photo width
     callouts: [
       { key: 'waist', side: 'R', x: 0.49, y: 0.15 }, // logo on the waistband
       { key: 'print', side: 'L', x: 0.22, y: 0.58 }, // big side print

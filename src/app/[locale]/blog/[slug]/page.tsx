@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { initLocale, type LocaleParams } from '@/i18n/server';
 import { localeAlternates } from '@/lib/seo';
+import { getSite } from '@/lib/site';
 
 type Props = LocaleParams<{ slug: string }>;
 
@@ -31,6 +32,7 @@ export async function generateMetadata({ params }: Props) {
 export default async function PostPage({ params }: Props) {
   const { locale, slug } = await params;
   initLocale(locale);
+  const site = await getSite();
   const post = await getPost(slug);
   if (!post) notFound();
 
@@ -126,7 +128,7 @@ export default async function PostPage({ params }: Props) {
               <Link href="/contact" className="btn mt-5 w-full">
                 {common('requestSample')}
               </Link>
-              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="mt-3 block text-center text-xs font-bold text-white/70 hover:text-white">
+              <a href={whatsappLink(undefined, site.whatsapp)} target="_blank" rel="noopener noreferrer" className="mt-3 block text-center text-xs font-bold text-white/70 hover:text-white">
                 {common('whatsapp')} →
               </a>
             </div>

@@ -14,6 +14,6 @@ export async function POST(req: Request) {
   if (!(folder in UPLOAD_FOLDERS)) return NextResponse.json({ error: 'Unknown folder' }, { status: 400 });
 
   const signed = signUpload(folder);
-  if (!signed) return NextResponse.json({ error: 'Image upload is not set up yet (Cloudinary keys are missing in .env.local).' }, { status: 503 });
+  if (!signed) return NextResponse.json({ error: 'Photo upload is not available right now. Please try again later.' }, { status: 503 });
   return NextResponse.json(signed, { headers: { 'Cache-Control': 'no-store' } });
 }

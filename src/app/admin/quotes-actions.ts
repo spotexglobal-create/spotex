@@ -2,10 +2,14 @@
 
 import { isValidObjectId } from 'mongoose';
 import { revalidatePath } from 'next/cache';
+import { redirect } from 'next/navigation';
 import { requireAdmin } from '@/lib/admin/auth';
 import { isInquiryStatus } from '@/lib/admin/inquiries';
 import { connectDb, dbConfigured } from '@/lib/db/connect';
 import { InquiryModel } from '@/lib/db/models';
+
+/** Which inbox the form was sent from, so we return to it. */
+const section = (form: FormData) => (form.get('section') === 'messages' ? 'messages' : 'quotes');
 
 /** Changes a request's status and internal note (the form on each row of the quotes inbox). */
 export async function updateInquiry(form: FormData) {
@@ -19,6 +23,7 @@ export async function updateInquiry(form: FormData) {
   await connectDb();
   await InquiryModel.updateOne({ _id: id }, note ? { $set: { status, note } } : { $set: { status }, $unset: { note: 1 } });
   revalidatePath('/admin', 'layout');
+  redirect(`/admin/${section(form)}/${id}?saved=1`);
 }
 
 /** Removes a request for good (spam, test entries). */
@@ -30,4 +35,5 @@ export async function deleteInquiry(form: FormData) {
   await connectDb();
   await InquiryModel.deleteOne({ _id: id });
   revalidatePath('/admin', 'layout');
+  redirect(`/admin/${section(form)}?deleted=1`);
 }

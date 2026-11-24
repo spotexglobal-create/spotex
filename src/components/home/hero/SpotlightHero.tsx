@@ -27,6 +27,7 @@ export async function SpotlightHero() {
         image: product.images[0],
         spec: catalog.summary(product),
         callouts: item.callouts.map((c) => ({ ...c, ...calloutText[item.slug][c.key] })),
+        ...(item.inner !== undefined ? { inner: item.inner } : {}),
       },
     ];
   });

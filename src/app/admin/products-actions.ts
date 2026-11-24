@@ -61,7 +61,7 @@ function parseImages(raw: string): string[] | null {
 }
 
 function noDatabase(): ProductFormState {
-  return { error: 'The database is not connected yet (MONGODB_URI is missing), so changes cannot be saved.' };
+  return { error: 'Saving is not available right now, so the changes were not saved.' };
 }
 
 /** Creates a product, or updates the one named by "originalSlug". */
@@ -90,7 +90,11 @@ export async function saveProduct(_: ProductFormState, form: FormData): Promise<
 
   await connectDb();
   const clash = slug !== originalSlug && (await ProductModel.exists({ slug }));
-  if (clash) return { error: `Another product already uses the URL slug “${slug}”.`, fields: ['slug'] };
+  if (clash) {
+    return str(form, 'slug')
+      ? { error: `Another product already uses the web address “${slug}”. Type a different URL slug.`, fields: ['slug'] }
+      : { error: `Product ${code} already exists. Use a new product code, or open ${code} from the product list to edit it.`, fields: ['code'] };
+  }
 
   const data = {
     slug,

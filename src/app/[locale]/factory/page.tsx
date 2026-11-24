@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { ContactActions } from '@/components/ui/ContactActions';
-import { SITE } from '@/config/site';
 import { Link } from '@/i18n/navigation';
 import { initLocale, type LocaleParams } from '@/i18n/server';
 import { getCategories } from '@/lib/catalog';
 import { getCatalogText } from '@/lib/catalog/text';
 import { localeAlternates } from '@/lib/seo';
+import { getSite } from '@/lib/site';
 
 /** The ten departments grouped into the four phases of production. */
 const PHASES = [
@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: LocaleParams) {
 
 export default async function FactoryPage({ params }: LocaleParams) {
   initLocale((await params).locale);
+  const site = await getSite();
   const [t, dept, nav, text, categories] = await Promise.all([
     getTranslations('FactoryPage'),
     getTranslations('Departments'),
@@ -37,9 +38,9 @@ export default async function FactoryPage({ params }: LocaleParams) {
   let n = 0;
 
   const stats = [
-    { value: String(SITE.foundedYear), label: t('stats.since') },
-    { value: String(SITE.stats.departments), label: t('stats.departments') },
-    { value: `${SITE.stats.staff}+`, label: t('stats.staff') },
+    { value: String(site.foundedYear), label: t('stats.since') },
+    { value: String(site.stats.departments), label: t('stats.departments') },
+    { value: `${site.stats.staff}+`, label: t('stats.staff') },
     { value: 'ISO', label: t('stats.iso') },
   ];
 

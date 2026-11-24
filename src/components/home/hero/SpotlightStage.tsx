@@ -22,6 +22,8 @@ export interface HeroSlide {
   /** One-line spec summary, e.g. "Pearl weave · Poly-cotton · 280 GSM". */
   spec: string;
   callouts: { key: string; side: CalloutSide; x: number; y: number; title: string; text: string }[];
+  /** Per-product override of INNER for wide products. */
+  inner?: number;
 }
 
 export interface HeroText {
@@ -110,10 +112,11 @@ export function SpotlightStage({ slides, text }: { slides: HeroSlide[]; text: He
               const label = co.querySelector<HTMLElement>('.lb')!;
               const x = prod.left + c.x * prod.width;
               const y = prod.top + c.y * prod.height;
+              const inner = slide.inner ?? INNER;
               const lx =
                 c.side === 'L'
-                  ? Math.max(16, prod.left + INNER * prod.width - LABEL_W - 36)
-                  : Math.min(window.innerWidth - LABEL_W - 16, prod.right - INNER * prod.width + 36);
+                  ? Math.max(16, prod.left + inner * prod.width - LABEL_W - 36)
+                  : Math.min(window.innerWidth - LABEL_W - 16, prod.right - inner * prod.width + 36);
               const h = label.offsetHeight;
               const titleMid = label.querySelector<HTMLElement>('b')!.offsetHeight / 2;
 

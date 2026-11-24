@@ -27,7 +27,7 @@ export default async function LoginPage() {
             Products, categories, quote requests and company details for the Spotex website, in one place.
           </p>
         </div>
-        <p className="relative z-10 text-xs text-white/40">© {new Date().getFullYear()} {SITE.name}</p>
+        <p className="relative z-10 text-xs text-white/65">© {new Date().getFullYear()} {SITE.name}</p>
         <span
           aria-hidden
           className="display pointer-events-none absolute -right-10 -bottom-16 text-[340px] leading-none text-white/[0.04] select-none"
@@ -42,9 +42,9 @@ export default async function LoginPage() {
           <Image src={SITE.logo} alt={SITE.name} width={130} height={36} className="mb-10 h-9 w-auto rounded-md lg:hidden" />
           <p className="text-[11px] font-bold tracking-[0.22em] text-brand uppercase">Restricted area</p>
           <h2 className="display mt-2 text-5xl text-ink">Sign in</h2>
-          <p className="mt-2 text-sm text-ink/60">Use your admin e-mail and password.</p>
+          <p className="mt-2 text-sm text-ink/75">Use your admin e-mail and password.</p>
           <LoginForm />
-          <Link href="/" className="mt-8 inline-block text-xs font-semibold text-ink/50 hover:text-brand">
+          <Link href="/" className="mt-8 inline-block text-xs font-semibold text-ink/70 hover:text-brand">
             ← Back to the website
           </Link>
         </div>

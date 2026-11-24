@@ -1,5 +1,14 @@
-import { Schema, model, models, type InferSchemaType, type Model } from 'mongoose';
+import mongoose, { Schema, model, models, type InferSchemaType, type Model } from 'mongoose';
 import { CATEGORY_SLUGS, PRODUCT_TYPES, SPEC_LABELS } from '../catalog/types';
+
+/**
+ * Registers a model once per server. In development the file reloads on every edit while mongoose
+ * keeps the old model, which silently drops new fields; so there the old one is replaced.
+ */
+function define<T>(name: string, schema: Schema): Model<T> {
+  if (models[name] && process.env.NODE_ENV !== 'production') mongoose.deleteModel(name);
+  return (models[name] as Model<T>) ?? (model(name, schema) as unknown as Model<T>);
+}
 
 /**
  * MongoDB collections. Product records keep the same language-independent shape as
@@ -106,10 +115,33 @@ const PostSchema = new Schema(
   { timestamps: true },
 );
 
+/** Company details edited in admin → Settings. One record (key "site"); empty fields fall back to src/config/site.ts. */
+const SettingsSchema = new Schema(
+  {
+    key: { type: String, required: true, unique: true, default: 'site' },
+    email: String,
+    phone: String,
+    whatsapp: String,
+    street: String,
+    city: String,
+    postalCode: String,
+    country: String,
+    foundedYear: Number,
+    staff: Number,
+    clients: Number,
+    /** Full profile URLs; empty ones are not shown. */
+    social: { facebook: String, instagram: String, linkedin: String, youtube: String, tiktok: String },
+  },
+  { timestamps: true },
+);
+
+export type SettingsDoc = InferSchemaType<typeof SettingsSchema>;
+export const SettingsModel = define<SettingsDoc>('Settings', SettingsSchema);
+
 export type ProductDoc = InferSchemaType<typeof ProductSchema>;
 export type InquiryDoc = InferSchemaType<typeof InquirySchema>;
 export type PostDoc = InferSchemaType<typeof PostSchema>;
-export const PostModel = (models.Post as Model<PostDoc>) ?? model('Post', PostSchema);
+export const PostModel = define<PostDoc>('Post', PostSchema);
 
-export const ProductModel = (models.Product as Model<ProductDoc>) ?? model('Product', ProductSchema);
-export const InquiryModel = (models.Inquiry as Model<InquiryDoc>) ?? model('Inquiry', InquirySchema);
+export const ProductModel = define<ProductDoc>('Product', ProductSchema);
+export const InquiryModel = define<InquiryDoc>('Inquiry', InquirySchema);

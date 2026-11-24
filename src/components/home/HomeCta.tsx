@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react';
 import { getTranslations } from 'next-intl/server';
-import { SITE, whatsappLink } from '@/config/site';
+import { whatsappLink } from '@/config/site';
 import { Link } from '@/i18n/navigation';
+import { getSite } from '@/lib/site';
 
 /** Red contact button: icon in a white circle, small label over the number/address, arrow on the right. */
 function ContactButton({ href, external, label, value, icon }: { href: string; external?: boolean; label: string; value: string; icon: ReactNode }) {
@@ -18,7 +19,9 @@ function ContactButton({ href, external, label, value, icon }: { href: string; e
       </span>
       <span className="min-w-0 flex-1">
         <span className="block text-[9.5px] font-bold tracking-[0.16em] whitespace-nowrap text-white/80 uppercase">{label}</span>
-        <span className="block text-[13px] font-semibold whitespace-nowrap">{value}</span>
+        <span className="block truncate text-[13px] font-semibold" title={value}>
+          {value}
+        </span>
       </span>
     </a>
   );
@@ -30,6 +33,7 @@ function ContactButton({ href, external, label, value, icon }: { href: string; e
  */
 export async function HomeCta() {
   const t = await getTranslations();
+  const site = await getSite();
   const steps = t.raw('Film.custom.steps') as string[];
 
   return (
@@ -68,20 +72,21 @@ export async function HomeCta() {
             </ol>
           </div>
 
-          <div className="mt-auto grid gap-3 sm:grid-cols-2">
+          {/* one button per row: the e-mail address is too long for half a row */}
+          <div className="mt-auto grid gap-3">
             <ContactButton
-              href={whatsappLink()}
+              href={whatsappLink(undefined, site.whatsapp)}
               external
               label={t('Common.whatsapp')}
-              value={`+${SITE.whatsapp.replace(/^(\d{2})(\d{3})(\d+)/, '$1 $2 $3')}`}
+              value={`+${site.whatsapp.replace(/^(\d{2})(\d{3})(\d+)/, '$1 $2 $3')}`}
               icon={
                 <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Zm4.6 12.6c-.2.6-1.1 1.1-1.6 1.2-.4 0-.9.1-2.9-.7-2.4-1-4-3.4-4.1-3.6-.1-.2-1-1.3-1-2.5s.6-1.8.9-2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.6-.1 1.2Z" />
               }
             />
             <ContactButton
-              href={`mailto:${SITE.email}`}
+              href={`mailto:${site.email}`}
               label={t('Footer.email')}
-              value={SITE.email}
+              value={site.email}
               icon={<path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm8 7.2L19 7.6V7H5v.6l7 4.6Zm7-2.2-6.5 4.3a1 1 0 0 1-1 0L5 10v7h14v-7Z" />}
             />
           </div>

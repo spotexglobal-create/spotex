@@ -13,10 +13,11 @@ export const SITE = {
   },
   phone: '+92 55 320 33 33', // TODO: confirm (old site also lists …33 34)
   whatsapp: '923009648142',
-  email: 'info@spotexint.com', // TODO: switch to the new domain's address
+  email: 'inquiry@spotexinternational.com',
   foundedYear: 1989, // TODO: confirm
   stats: { staff: 50, clients: 100, departments: 10 }, // TODO: confirm staff and clients
 } as const;
 
-export const whatsappLink = (text?: string) =>
-  `https://wa.me/${SITE.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ''}`;
+/** WhatsApp chat link. Pass the number from getSite() so admin changes apply. */
+export const whatsappLink = (text?: string, number: string = SITE.whatsapp) =>
+  `https://wa.me/${number}${text ? `?text=${encodeURIComponent(text)}` : ''}`;

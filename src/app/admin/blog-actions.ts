@@ -69,7 +69,7 @@ const readingMinutes = (title: string, excerpt: string, sections: Section[]) => 
 /** Creates an article, or updates the one named by "originalSlug". */
 export async function savePost(_: PostFormState, form: FormData): Promise<PostFormState> {
   await requireAdmin();
-  if (!dbConfigured()) return { error: 'The database is not connected (MONGODB_URI is missing), so articles cannot be saved.' };
+  if (!dbConfigured()) return { error: 'Saving is not available right now, so the article was not saved.' };
 
   const originalSlug = str(form, 'originalSlug', 80);
   const title = str(form, 'title', 160);

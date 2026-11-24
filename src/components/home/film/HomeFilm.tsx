@@ -1,10 +1,10 @@
-import { SITE } from '@/config/site';
 import { getProducts } from '@/lib/catalog';
 import { getCatalogText } from '@/lib/catalog/text';
 import { CATEGORY_SLUGS, type Product } from '@/lib/catalog/types';
 import type { QuickViewProduct } from '@/components/catalog/ProductQuickView';
 import { buildExportMap } from './export-map';
 import { FilmStage, type FilmProduct } from './FilmStage';
+import { getSite } from '@/lib/site';
 
 /** Products used in each scene, by slug. Line-up: one product per discipline (index into Film.uniforms.disciplines). */
 const LINEUP = [
@@ -22,6 +22,7 @@ const BELTS = ['jjb-101-sti-01', 'jjb103-sti-01', 'jjb-102-sti-01', 'j-101-sti-1
 /** Server part of the home film: picks the products and builds the map, then renders the animated stage. */
 export async function HomeFilm() {
   const [products, text] = await Promise.all([getProducts(), getCatalogText()]);
+  const site = await getSite();
   const bySlug = new Map(products.map((p) => [p.slug, p]));
 
   const toFilm = (p: Product): FilmProduct => ({
@@ -61,7 +62,7 @@ export async function HomeFilm() {
         ring: ring.map(toQuickView),
         belts: BELTS.map(pick),
         map: buildExportMap(),
-        stats: { staff: SITE.stats.staff, clients: SITE.stats.clients, since: SITE.foundedYear },
+        stats: { staff: site.stats.staff, clients: site.stats.clients, since: site.foundedYear },
       }}
     />
   );

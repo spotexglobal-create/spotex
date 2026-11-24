@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ProductsTable } from '@/components/admin/ProductsTable';
-import { Icon, PageHeader, btnDark } from '@/components/admin/ui';
+import { Icon, PageHeader, StatCards, btnDark } from '@/components/admin/ui';
 import { getAllProducts, getCategories } from '@/lib/catalog';
 import { getCatalogText } from '@/lib/catalog/text';
 import { dbConfigured } from '@/lib/db/connect';
@@ -24,6 +24,14 @@ export default async function AdminProductsPage({ searchParams }: { searchParams
           <Icon name="plus" className="h-4 w-4" /> Add product
         </Link>
       </PageHeader>
+      <StatCards
+        items={[
+          { label: 'All products', value: products.length, icon: 'products' },
+          { label: 'Live on website', value: products.length - hidden, icon: 'eye' },
+          { label: 'Hidden', value: hidden, icon: 'edit', hint: hidden ? 'Not shown to visitors' : 'Everything is live' },
+          { label: 'Featured', value: products.filter((p) => p.featured).length, icon: 'image', hint: 'Category cover photos' },
+        ]}
+      />
       {deleted === '1' && (
         <p className="mb-5 rounded-2xl border border-emerald-600/25 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-800">Product deleted.</p>
       )}

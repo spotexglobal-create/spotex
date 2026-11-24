@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { ContactActions } from '@/components/ui/ContactActions';
-import { SITE } from '@/config/site';
 import { Link } from '@/i18n/navigation';
 import { initLocale, type LocaleParams } from '@/i18n/server';
 import { localeAlternates } from '@/lib/seo';
+import { getSite } from '@/lib/site';
 
 /** Photos for the opening collage: BJJ gi, judo uniform, MMA shorts. */
 const HERO_IMAGES = [
@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: LocaleParams) {
 
 export default async function AboutPage({ params }: LocaleParams) {
   initLocale((await params).locale);
+  const site = await getSite();
   const [t, nav, film, common] = await Promise.all([
     getTranslations('AboutPage'),
     getTranslations('Nav'),
@@ -31,13 +32,13 @@ export default async function AboutPage({ params }: LocaleParams) {
   const story = t.raw('story') as { title: string; text: string }[];
   const partners = t.raw('partners') as { title: string; text: string }[];
   const markets = ['us', 'no', 'de', 'fr', 'it', 'kr'] as const;
-  const years = new Date().getFullYear() - SITE.foundedYear;
+  const years = new Date().getFullYear() - site.foundedYear;
 
   const facts = [
-    { value: String(SITE.foundedYear), label: t('facts.since') },
-    { value: `${SITE.stats.staff}+`, label: t('facts.staff') },
-    { value: `${SITE.stats.clients}+`, label: t('facts.clients') },
-    { value: String(SITE.stats.departments), label: t('facts.departments') },
+    { value: String(site.foundedYear), label: t('facts.since') },
+    { value: `${site.stats.staff}+`, label: t('facts.staff') },
+    { value: `${site.stats.clients}+`, label: t('facts.clients') },
+    { value: String(site.stats.departments), label: t('facts.departments') },
   ];
 
   return (

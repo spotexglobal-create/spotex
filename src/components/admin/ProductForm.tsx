@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useActionState, useState, useTransition } from 'react';
+import { type FormEvent, useActionState, useState, useTransition } from 'react';
 import { deleteProduct, saveProduct, type ProductFormState } from '@/app/admin/products-actions';
 import type { Product, Spec } from '@/lib/catalog/types';
 import { ImageUpload } from './ImageUpload';
@@ -73,7 +73,7 @@ export function ProductForm({
   const [imageError, setImageError] = useState('');
   const addImage = () => {
     const src = newImage.trim();
-    if (!IMAGE.test(src)) return setImageError('Use a photo from /products/… or a res.cloudinary.com address.');
+    if (!IMAGE.test(src)) return setImageError('Use the Upload photos button, or paste the address of a photo already on this website.');
     if (!images.includes(src)) setImages([...images, src]);
     setNewImage('');
     setImageError('');
@@ -86,13 +86,22 @@ export function ProductForm({
     });
   };
 
+  // Submit through a transition instead of <form action>: React resets a form after an action runs,
+  // which blanked every field when the server sent back an error.
+  const [, startSave] = useTransition();
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    startSave(() => action(data));
+  };
+
   return (
-    <form action={action}>
+    <form onSubmit={onSubmit}>
       {!dbReady && (
         <div className="mb-6 flex items-start gap-3 rounded-2xl border border-amber-500/30 bg-amber-50 px-4 py-3 text-sm text-amber-900">
           <Icon name="database" className="mt-0.5 h-[18px] w-[18px]" />
           <p>
-            <b>Read-only.</b> Saving switches on as soon as the database (MONGODB_URI) is connected.
+            <b>Read-only.</b> Saving is not available right now.
           </p>
         </div>
       )}
@@ -147,7 +156,7 @@ export function ProductForm({
               <label className="sm:col-span-2">
                 <span className={fieldLabel}>Line name (optional)</span>
                 <input name="line" className={field} defaultValue={product?.line} placeholder="e.g. Academy" disabled={disabled} />
-                <span className="mt-1 block text-xs text-ink/45">Shown after the type, the same in every language: “Judo Uniform Academy”.</span>
+                <span className="mt-1 block text-xs text-ink/65">Shown after the type, the same in every language: “Judo Uniform Academy”.</span>
               </label>
             </div>
           </Card>
@@ -214,7 +223,7 @@ export function ProductForm({
                       type="button"
                       onClick={() => setSpecs(specs.filter((_, j) => j !== i))}
                       disabled={disabled}
-                      className="justify-self-end rounded-lg px-2 py-1 text-xs font-bold text-ink/45 hover:bg-ink/5 hover:text-brand disabled:opacity-40"
+                      className="justify-self-end rounded-lg px-2 py-1 text-xs font-bold text-ink/65 hover:bg-ink/5 hover:text-brand disabled:opacity-40"
                     >
                       Remove
                     </button>
@@ -222,7 +231,7 @@ export function ProductForm({
                 );
               })}
             </div>
-            <p className="border-t border-ink/[0.07] px-5 py-3 text-xs text-ink/45">Values are translated into every language automatically.</p>
+            <p className="border-t border-ink/[0.07] px-5 py-3 text-xs text-ink/65">Values are translated into every language automatically.</p>
           </Card>
 
           <Card>
@@ -230,7 +239,7 @@ export function ProductForm({
             <div className={`p-5 ${invalid(state, 'images') ? 'ring-1 ring-brand ring-inset' : ''}`}>
               <div className="grid grid-cols-3 gap-3 sm:grid-cols-5">
                 {images.map((src, i) => (
-                  <div key={src} className="group relative aspect-square overflow-hidden rounded-xl border border-ink/10 bg-[#f3f3f3]">
+                  <div key={src} className="group relative aspect-square overflow-hidden rounded-xl border border-ink bg-[#f3f3f3]">
                     <Image src={src} alt="" fill sizes="140px" className="object-cover mix-blend-multiply" />
                     {i === 0 && <span className="absolute top-2 left-2 rounded-full bg-ink px-2 py-0.5 text-[10px] font-bold text-white">Main</span>}
                     {!disabled && (
@@ -250,7 +259,7 @@ export function ProductForm({
                     )}
                   </div>
                 ))}
-                {!images.length && <p className="col-span-full text-sm text-ink/50">No photos yet. Add at least one.</p>}
+                {!images.length && <p className="col-span-full text-sm text-ink/70">No photos yet. Add at least one.</p>}
               </div>
               <div className="mt-4">
                 <ImageUpload
@@ -260,7 +269,7 @@ export function ProductForm({
                   disabled={disabled || images.length >= 12}
                   onUploaded={(urls) => setImages((list) => [...list, ...urls.filter((u) => !list.includes(u))].slice(0, 12))}
                 />
-                <p className="mt-1.5 text-xs text-ink/45">JPG, PNG or WebP, up to 10 MB each. White background works best. Or paste an address below.</p>
+                <p className="mt-1.5 text-xs text-ink/65">JPG, PNG or WebP, up to 10 MB each. White background works best.</p>
               </div>
               <div className="mt-3 flex gap-2">
                 <input
@@ -273,7 +282,7 @@ export function ProductForm({
                       addImage();
                     }
                   }}
-                  placeholder="/products/photo.webp or https://res.cloudinary.com/…"
+                  placeholder="Or paste a photo address"
                   disabled={disabled}
                   aria-label="Photo address"
                 />
@@ -332,11 +341,11 @@ export function ProductForm({
                 </div>
                 <p className="mt-3 text-[11px] font-extrabold tracking-[0.12em] text-brand">{product.code}</p>
                 <p className="display text-2xl text-ink">{preview.name}</p>
-                <p className="mt-1 text-xs text-ink/55">{preview.summary}</p>
+                <p className="mt-1 text-xs text-ink/70">{preview.summary}</p>
               </div>
             </Card>
           )}
-          <Link href="/admin/products" className="inline-block text-xs font-semibold text-ink/50 hover:text-brand">
+          <Link href="/admin/products" className="inline-block text-xs font-semibold text-ink/70 hover:text-brand">
             ← All products
           </Link>
         </div>

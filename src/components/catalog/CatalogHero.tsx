@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { whatsappLink } from '@/config/site';
 import { Link } from '@/i18n/navigation';
 import type { ComponentProps } from 'react';
+import { getSite } from '@/lib/site';
 
 type Href = ComponentProps<typeof Link>['href'];
 
@@ -21,7 +22,7 @@ export async function CatalogHero({
   /** Quote + WhatsApp buttons on the right (off on the contact page, which has its own forms). */
   actions?: boolean;
 }) {
-  const t = await getTranslations('Common');
+  const [t, site] = await Promise.all([getTranslations('Common'), getSite()]);
   return (
     <section className="container-page pt-24 pb-8 md:pt-[104px]">
       <nav aria-label="Breadcrumb" className="text-[11px] font-bold tracking-[0.18em] uppercase">
@@ -53,7 +54,7 @@ export async function CatalogHero({
           <Link href="/contact" className="btn">
             {t('requestQuote')}
           </Link>
-          <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+          <a href={whatsappLink(undefined, site.whatsapp)} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
             {t('whatsapp')}
           </a>
         </div>

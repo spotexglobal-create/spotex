@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useActionState, useState, useTransition } from 'react';
+import { type FormEvent, useActionState, useState, useTransition } from 'react';
 import { deletePost, savePost, type PostFormState } from '@/app/admin/blog-actions';
 import type { Post } from '@/data/posts';
 import { ImageUpload } from './ImageUpload';
@@ -51,11 +51,19 @@ export function PostForm({ post, dbReady, saved }: { post?: Post; dbReady: boole
     });
   };
 
+  // Submit through a transition so React does not reset (blank) the form when the server returns an error.
+  const [, startSave] = useTransition();
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    startSave(() => action(data));
+  };
+
   return (
-    <form action={action}>
+    <form onSubmit={onSubmit}>
       {!dbReady && (
         <p className="mb-6 rounded-2xl border border-amber-500/30 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-          <b>Read-only.</b> Saving switches on when the database (MONGODB_URI) is connected.
+          <b>Read-only.</b> Saving is not available right now.
         </p>
       )}
       {saved && !state.error && (
@@ -98,8 +106,8 @@ export function PostForm({ post, dbReady, saved }: { post?: Post; dbReady: boole
               {blocks.map((b, i) => (
                 <div key={i} className="space-y-3 p-5">
                   <div className="flex items-center justify-between gap-3">
-                    <span className="text-[11px] font-bold tracking-[0.14em] text-ink/40 uppercase">Section {i + 1}</span>
-                    <span className="flex gap-1 text-xs font-bold text-ink/45">
+                    <span className="text-[11px] font-bold tracking-[0.14em] text-ink/60 uppercase">Section {i + 1}</span>
+                    <span className="flex gap-1 text-xs font-bold text-ink/65">
                       <button type="button" onClick={() => move(i, i - 1)} disabled={disabled || i === 0} className="rounded px-2 py-1 hover:bg-ink/5 disabled:opacity-30" aria-label="Move up">
                         ↑
                       </button>
@@ -169,16 +177,16 @@ export function PostForm({ post, dbReady, saved }: { post?: Post; dbReady: boole
                 {IMAGE.test(cover) ? (
                   <Image src={cover} alt="" fill sizes="300px" className="object-contain p-3 mix-blend-multiply" />
                 ) : (
-                  <span className="grid h-full place-items-center text-xs text-ink/40">No photo yet</span>
+                  <span className="grid h-full place-items-center text-xs text-ink/60">No photo yet</span>
                 )}
               </div>
               <ImageUpload folder="blog" label={cover ? 'Replace photo' : 'Upload photo'} disabled={disabled} onUploaded={([url]) => setCover(url)} />
               <input name="cover" value={cover} onChange={(e) => setCover(e.target.value.trim())} className={`${field} mt-0 ${bad('cover')}`} disabled={disabled} placeholder="/products/photo.webp" />
-              <p className="text-xs text-ink/45">Upload a photo, or use one already on the website (/products/…).</p>
+              <p className="text-xs text-ink/65">Upload a photo, or use one already on the website (/products/…).</p>
             </div>
           </Card>
 
-          <Link href="/admin/blog" className="inline-block text-xs font-semibold text-ink/50 hover:text-brand">
+          <Link href="/admin/blog" className="inline-block text-xs font-semibold text-ink/70 hover:text-brand">
             ← All articles
           </Link>
         </div>
