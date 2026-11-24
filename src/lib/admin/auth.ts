@@ -5,8 +5,8 @@ import { redirect } from 'next/navigation';
 /**
  * Admin sign-in. One admin account, configured with environment variables:
  *   ADMIN_EMAIL          the login e-mail
- *   ADMIN_PASSWORD_HASH  "scrypt:<salt>:<hash>" (make one with `node scripts/hash-password.mjs <password>`;
- *                        no "$" in it, because Next.js expands "$name" inside .env files)
+ *   ADMIN_PASSWORD       the password itself (avoid "$" in it, because Next.js expands "$name" inside .env files)
+ *   or ADMIN_PASSWORD_HASH  "scrypt:<salt>:<hash>" (make one with `node scripts/hash-password.mjs <password>`)
  *   AUTH_SECRET          long random string that signs the session cookie
  * The session is a signed, http-only cookie; nothing is stored server side.
  */
@@ -31,7 +31,7 @@ const sign = (payload: string) => createHmac('sha256', secret()).update(payload)
 
 /** True when the admin login has been configured on this deployment. */
 export const authConfigured = () =>
-  Boolean(process.env.ADMIN_EMAIL && process.env.ADMIN_PASSWORD_HASH && (process.env.AUTH_SECRET?.length ?? 0) >= 32);
+  Boolean(process.env.ADMIN_EMAIL && (process.env.ADMIN_PASSWORD || process.env.ADMIN_PASSWORD_HASH) && (process.env.AUTH_SECRET?.length ?? 0) >= 32);
 
 export function hashPassword(password: string) {
   const salt = randomBytes(16);
@@ -50,7 +50,10 @@ function verifyPassword(password: string, stored: string) {
 export function checkCredentials(email: string, password: string) {
   if (!authConfigured()) return false;
   const emailOk = email.trim().toLowerCase() === process.env.ADMIN_EMAIL!.trim().toLowerCase();
-  const passwordOk = verifyPassword(password, process.env.ADMIN_PASSWORD_HASH!);
+  const plain = process.env.ADMIN_PASSWORD;
+  const passwordOk = plain
+    ? timingSafeEqual(createHmac('sha256', secret()).update(password).digest(), createHmac('sha256', secret()).update(plain).digest())
+    : verifyPassword(password, process.env.ADMIN_PASSWORD_HASH!);
   return emailOk && passwordOk;
 }
 

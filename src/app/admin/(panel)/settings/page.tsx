@@ -63,8 +63,8 @@ export default async function SettingsPage() {
             <div className="space-y-2 p-5 text-sm">
               <p className="font-semibold text-ink">{session.email}</p>
               <p className="text-xs leading-relaxed text-ink/55">
-                The login is set with the ADMIN_EMAIL and ADMIN_PASSWORD_HASH environment variables. To change the password, make a new hash with
-                <code className="mx-1 rounded bg-ink/5 px-1.5 py-0.5">node scripts/hash-password.mjs</code>and update it in Vercel.
+                The login is set with the ADMIN_EMAIL and ADMIN_PASSWORD environment variables. To change the password, update ADMIN_PASSWORD in
+                Vercel and redeploy.
               </p>
             </div>
           </Card>
