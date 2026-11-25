@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { SITE } from '@/config/site';
 import { Link } from '@/i18n/navigation';
 import { getCategories } from '@/lib/catalog';
+import { getCatalogText } from '@/lib/catalog/text';
 import { NAV_ITEMS } from './nav-items';
 import { getSite } from '@/lib/site';
 import { SocialLinks } from './SocialLinks';
@@ -12,7 +13,7 @@ const LINK = 'text-white/75 transition-colors hover:text-white';
 
 /** Site footer: dark band with brand, menus and contact, closed by a large outlined wordmark. */
 export async function Footer() {
-  const [t, categories] = await Promise.all([getTranslations(), getCategories()]);
+  const [t, categories, text] = await Promise.all([getTranslations(), getCategories(), getCatalogText()]);
   const site = await getSite();
   const year = new Date().getFullYear();
 
@@ -56,7 +57,7 @@ export async function Footer() {
               {categories.map(({ slug }) => (
                 <li key={slug}>
                   <Link href={{ pathname: '/products/[category]', params: { category: slug } }} className={LINK}>
-                    {t(`Catalog.categories.${slug}.name`)}
+                    {text.categoryName(slug)}
                   </Link>
                 </li>
               ))}

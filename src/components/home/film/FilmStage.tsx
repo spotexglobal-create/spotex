@@ -118,7 +118,7 @@ export function FilmStage({ data }: { data: FilmData }) {
                 [
                   [450, 'academy'],
                   [550, 'challenger'],
-                  [700, 'winner'],
+                  [750, 'winner'],
                 ] as const
               ).map(([gsm, key]) => (
                 <div key={key}>

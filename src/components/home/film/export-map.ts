@@ -76,7 +76,16 @@ export function buildExportMap(): ExportMapData {
     ],
     { type: 'MultiPoint', coordinates: [[-126, 20], [134, 68], [-126, 68], [134, 20]] },
   );
-  const path = geoPath(projection).digits(1);
+  // shapes are cut at the frame (plus a margin), so land outside the map (Africa, Australia …) is not sent to the browser;
+  // clipExtent only trims geometry, points like pins and arcs are projected as before
+  const clipped = geoMercator()
+    .scale(projection.scale())
+    .translate(projection.translate())
+    .clipExtent([
+      [-40, -40],
+      [MAP_W + 40, MAP_H + 40],
+    ]);
+  const path = geoPath(clipped).digits(1);
   const [ox, oy] = projection(ORIGIN)!;
   const pct = (x: number, y: number) => ({ x: (x / MAP_W) * 100, y: (y / MAP_H) * 100 });
 

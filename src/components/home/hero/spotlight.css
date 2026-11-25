@@ -14,7 +14,14 @@
 }
 .sl-word span { display: inline-block; color: var(--color-ink); }
 .sl-word span.x { color: var(--color-brand); }
-.sl-word i { display: inline-block; font-style: normal; opacity: 0; }
+/* the logo builds itself on load in CSS (no wait for the script): each letter rises and straightens, one after another.
+   --i is the letter index (set inline); the curve matches GSAP's expo.out that was used before. */
+.sl-word i {
+  display: inline-block; font-style: normal;
+  animation: sl-letter 1.1s cubic-bezier(.16, 1, .3, 1) calc(.15s + var(--i, 0) * .07s) both;
+}
+@keyframes sl-letter { from { opacity: 0; transform: translateY(110%) rotate(calc((var(--i, 0) - 2.5) * 10deg)); } }
+@media (prefers-reduced-motion: reduce) { .sl-word i { animation: none; } }
 
 /* intro lines: placed from the word's real top/bottom (its glyphs are .8 × font-size tall) */
 .sl-intro-in { position: absolute; inset: 0; pointer-events: none; animation: sl-in .9s cubic-bezier(.2,.7,.2,1) .7s both; }

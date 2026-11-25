@@ -60,6 +60,21 @@ export interface Category {
   cover: string;
 }
 
+export const CATEGORY_LOCALES = ['en', 'de', 'no', 'it', 'fr'] as const;
+export type CategoryLocale = (typeof CATEGORY_LOCALES)[number];
+export type LocalizedText = Partial<Record<CategoryLocale, string>>;
+
+/** A category as stored in the database (admin → Categories). Empty texts fall back to the message files. */
+export interface CategoryRecord {
+  slug: CategorySlug;
+  name: LocalizedText;
+  intro: LocalizedText;
+  /** Uploaded cover photo; empty means "first featured product photo". */
+  cover: string;
+  visible: boolean;
+  order: number;
+}
+
 export interface Product {
   slug: string;
   code: string;

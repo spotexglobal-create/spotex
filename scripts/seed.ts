@@ -1,14 +1,21 @@
 /**
- * Copies the built-in catalogue (src/data/products.ts) into MongoDB.
- *   npm run db:seed            adds products that are missing, leaves existing ones untouched
- *   npm run db:seed -- --force  also overwrites existing products with the built-in data
+ * Copies the built-in catalogue (src/data/products.ts, src/data/posts.ts and the category texts in
+ * src/messages/*.json) into MongoDB.
+ *   npm run db:seed            adds records that are missing, leaves existing ones untouched
+ *   npm run db:seed -- --force  also overwrites existing records with the built-in data (admin edits are lost)
  * Reads MONGODB_URI (and MONGODB_DB) from .env.local or the environment.
  */
 import { existsSync } from 'node:fs';
 import mongoose from 'mongoose';
 import { PRODUCTS } from '../src/data/products';
 import { POSTS } from '../src/data/posts';
-import { PostModel, ProductModel } from '../src/lib/db/models';
+import { CATEGORY_LOCALES, CATEGORY_SLUGS } from '../src/lib/catalog/types';
+import { CategoryModel, PostModel, ProductModel } from '../src/lib/db/models';
+import de from '../src/messages/de.json';
+import en from '../src/messages/en.json';
+import fr from '../src/messages/fr.json';
+import it from '../src/messages/it.json';
+import no from '../src/messages/no.json';
 
 if (existsSync('.env.local')) process.loadEnvFile('.env.local');
 
@@ -66,6 +73,30 @@ async function main() {
   });
   const postRes = await PostModel.bulkWrite(postOps as unknown as Parameters<typeof PostModel.bulkWrite>[0]);
   console.log(`Blog: added ${postRes.upsertedCount}, updated ${postRes.modifiedCount}. Articles in database: ${await PostModel.countDocuments()}.`);
+
+  // categories: names and descriptions in all five languages from the message files, same rule
+  await CategoryModel.syncIndexes();
+  const MESSAGES = { en, de, no, it, fr } as const;
+  const catOps = CATEGORY_SLUGS.map((slug, i) => {
+    const name: Record<string, string> = {};
+    const intro: Record<string, string> = {};
+    for (const l of CATEGORY_LOCALES) {
+      name[l] = MESSAGES[l].Catalog.categories[slug].name;
+      intro[l] = MESSAGES[l].Catalog.categories[slug].intro;
+    }
+    const doc = { slug, name, intro, cover: '', visible: true, order: (i + 1) * 10 };
+    const now = new Date();
+    return {
+      updateOne: {
+        filter: { slug },
+        update: force ? { $set: doc } : { $setOnInsert: { ...doc, createdAt: now, updatedAt: now } },
+        upsert: true,
+        timestamps: force,
+      },
+    };
+  });
+  const catRes = await CategoryModel.bulkWrite(catOps as unknown as Parameters<typeof CategoryModel.bulkWrite>[0]);
+  console.log(`Categories: added ${catRes.upsertedCount}, updated ${catRes.modifiedCount}. Categories in database: ${await CategoryModel.countDocuments()}.`);
   await mongoose.disconnect();
 }
 

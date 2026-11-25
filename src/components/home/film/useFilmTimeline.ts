@@ -278,7 +278,8 @@ export function useFilmTimeline(
       count('.s7 .cnt', 15.5);
 
       /* ---- export: the black lifts away, routes draw out to each market ---- */
-      tl.set(q('.s8'), { autoAlpha: 1 }, 17.2)
+      // data-live starts the map's moving dots (film.css); scrubbing back above this point removes it again
+      tl.set(q('.s8'), { autoAlpha: 1, attr: { 'data-live': '1' } }, 17.2)
         .to(q('.s7'), { clipPath: 'inset(0 0 100% 0)', duration: 0.6, ease: 'power3.inOut' }, 17.3)
         .from(q('.s8 .head > *'), { y: 60, autoAlpha: 0, duration: 0.6, stagger: 0.1 }, 17.5)
         .from(q('.map'), { scale: 1.2, autoAlpha: 0, duration: 0.8 }, 17.5)

@@ -16,7 +16,7 @@ export function ImageUpload({
   onUploaded,
   label = 'Upload photo',
 }: {
-  folder: 'products' | 'blog';
+  folder: 'products' | 'blog' | 'categories';
   multiple?: boolean;
   disabled?: boolean;
   onUploaded: (urls: string[]) => void;

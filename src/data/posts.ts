@@ -22,7 +22,7 @@ export const POSTS: Post[] = [
     date: '2026-11-10',
     topic: 'guides',
     minutes: 5,
-    cover: '/products/jiu-jitsu-uniforms-si-jju-1001-631636-1775541913.webp',
+    cover: 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599006/spotex/products/jiu-jitsu-uniforms-si-jju-1001-631636-1775541913.webp',
     title: 'Pearl, gold or all-play: choosing the right BJJ gi fabric',
     excerpt:
       'The weave decides how a gi feels, how long it lasts and how hard it is to grip. Here is how the three most common BJJ weaves compare for academies and brands.',
@@ -65,8 +65,8 @@ export const POSTS: Post[] = [
     date: '2026-11-03',
     topic: 'guides',
     minutes: 4,
-    cover: '/products/judo-uniforms-si-ju-1005-190467-1775543959.webp',
-    title: 'Judo gi weights explained: 450, 550 or 700 GSM?',
+    cover: 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599010/spotex/products/judo-uniforms-si-ju-1005-190467-1775543959.webp',
+    title: 'Judo gi weights explained: 450, 550 or 750 GSM?',
     excerpt:
       'GSM tells you how heavy a judo gi is, and that changes everything from grip fights to price. A short guide to picking the right weight for your club.',
     sections: [
@@ -88,15 +88,15 @@ export const POSTS: Post[] = [
         ],
       },
       {
-        heading: '700 GSM: for competition',
+        heading: '750 GSM: for competition',
         paragraphs: [
-          'Double-weave 700 GSM uniforms are built for competition and hard randori. They last for years, but they are heavier, take longer to dry and cost more.',
+          'Double-weave 750 GSM uniforms are built for competition and hard randori. They last for years, but they are heavier, take longer to dry and cost more.',
         ],
-        points: ['Kids and beginners: 450 GSM', 'Regular club training: 550 GSM', 'Competitors and black belts: 700 GSM'],
+        points: ['Kids and beginners: 450 GSM', 'Regular club training: 550 GSM', 'Competitors and black belts: 750 GSM'],
       },
       {
         paragraphs: [
-          'All three weights can be made in white or blue, with your club logo embroidered on the jacket and pants in 100% cotton drill.',
+          'All three weights can be made in white, blue, black or pink, with your club logo embroidered on the jacket and pants in 100% cotton drill.',
         ],
       },
     ],
@@ -106,7 +106,7 @@ export const POSTS: Post[] = [
     date: '2026-10-27',
     topic: 'private-label',
     minutes: 6,
-    cover: '/products/jiu-jitsu-uniform-si-jju-1002-118840-1775542142.webp',
+    cover: 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599006/spotex/products/jiu-jitsu-uniform-si-jju-1002-118840-1775542142.webp',
     title: 'Private label uniforms: from your artwork to the first order',
     excerpt:
       'Launching your own gi line is simpler than it looks. This is how a private label order runs at Spotex, step by step, from the first sketch to delivery.',

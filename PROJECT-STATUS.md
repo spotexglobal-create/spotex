@@ -1,7 +1,7 @@
 # Spotex Website — Project Status
 
 > Yeh file har kaam ke baad update hogi. Naya session shuru ho to sab se pehle yahi parhein.
-> Last updated: 2026-11-23 (Din 1 ho gaya, Din 2 backend zyada tar ban gaya; project root ab Spotex folder)
+> Last updated: 2026-11-25 (certificates section + company info sheet website pe)
 
 **Full plan:** [docs/website-plan.html](docs/website-plan.html) · Online: https://claude.ai/artifact/2rXDHU6CmeQ9LgbaR4LMDx
 
@@ -44,11 +44,15 @@
 
 ## ⏳ Pending — company se chahiye (client)
 
-- [ ] Naye domain ka naam final + kharidna
-- [ ] Facts confirm: shuruaat ka saal (1989?), staff (50+?), clients (100+?), Alibaba Gold Member saal
-- [ ] Sahi phone number (purani site pe …33 33 aur …33 34 dono likhe hain)
+- [x] Naye domain ka naam final + kharidna (user: ho gaya, 2026-11-25)
+- [x] Facts confirm: 1989, 50+ staff, 100+ clients (2026-11-25). Alibaba Gold Member saal abhi baaki
+- [x] Phone/WhatsApp: +92 300 9648142; timing Sat–Thu 9–18, Friday off (2026-11-25)
+- [x] Company info sheet website pe (2026-11-25): MOQ 30, sample 7–10 din, capacity 12–15k/mahina, 30 looms + machines, judo 750 GSM, BJJ 280–550 GSM, IBJJF colours, 9 weaves, pant fabrics, DTF/digital print, naye nogi/belt/bag items category text mein
+- [ ] Database mein haath se: SI-JU-1007 aur SI-JU-1008 ka weight 700 → 750; blog "Judo gi weights explained" mein 700 → 750; Admin Settings mein phone (agar wahan purana number save hai)
+- [ ] Naye products (spats, Muay Thai shorts, key chains, karate/master/metal-loop belts, duffel bags waghaira) ki photos + codes, taa ke catalogue mein alag product ban saken
 - [ ] Logo ka original vector file (AI/SVG/PDF) — warna naya vector banwana hai (yeh sawal abhi tak jawab ka muntazir hai)
-- [ ] ISO 9001:2015 aur baaki certificates ki current scan copies
+- [x] Certificates (7 scans) Factory page pe laga diye — `public/certificates/`, section "Certificates" + click pe bari image (2026-11-25)
+- [ ] ISO 9001:2015 ki **current (valid)** copy — jo scan mila wo 09 Feb 2019 tak valid tha
 - [ ] Har product ki 4–6 photos (white background) + specs (fabric, GSM, sizes, colours, MOQ, lead time)
 - [ ] Factory ke 10 departments ki apni photos aur chhoti videos
 - [ ] Size charts, MOQ, payment terms, shipping terms (FOB / DDP)
@@ -81,10 +85,15 @@
 - [x] Admin login + products CRUD (naya/edit/delete/Live-Hidden) — test hua; delete aur Live/Hidden button browser mein check baaki
 - [x] Quote/Contact form → MongoDB + email; inquiry inbox (status, note, delete), spam limit 5/ghanta — code bana, poora test baaki
 - [x] Atlas connect (`.env.local`), 70 products + 3 blog articles database mein (2026-11-23)
-- [ ] Atlas password badalna (chat mein aa gaya tha) + Vercel mein `MONGODB_URI`
+- [x] Atlas password badal diya, `.env.local` se connection check OK (2026-11-25)
+- [ ] Vercel mein `MONGODB_URI`
 - [x] Admin → Blog: naya article, edit, draft/publish, delete; website blog database se — browser mein check baaki
 - [x] Cloudinary upload: API route `/admin/api/upload-signature` + "Upload photos" button (products + blog cover) — code bana
-- [ ] `.env.local` mein `CLOUDINARY_URL` (aap se), phir browser mein upload check
+- [x] Cloudinary keys `.env.local` mein; 96 catalogue photos Cloudinary pe (ek-baar wali script, kaam ke baad hata di), database + `src/data` seed files ke links badal gaye; purane→naye links `docs/cloudinary-images.json` (2026-11-25)
+- [x] Categories database mein (`CategoryModel`): naam + description 5 languages, cover photo (Cloudinary), Live/Switched off, position. Admin → Categories → Edit (2026-11-25)
+- [ ] Browser mein check: category edit + save, cover upload, switch off karne pe website se category ghayab
+- [ ] Vercel pe bhi `CLOUDINARY_CLOUD_NAME/API_KEY/API_SECRET` daalne hain
+- Note: `public/products/` mein ab sirf 9 photos + `details/` hain (About, departments, home film ki design photos). Baaki 87 Cloudinary pe hain, local se hata di (2026-11-25)
 - [x] Settings page: email, phone, WhatsApp, address, facts admin se badlein → database → poori website pe (2026-11-24)
 - [x] Resend domain `spotexinternational.com` verified; `.env.local` mein RESEND_API_KEY / INQUIRY_TO_EMAIL (inquiry@spotexinternational.com) / INQUIRY_FROM_EMAIL
 - [x] Reply: portal mein box nahi (user ne mana kiya). "Reply by e-mail" button email app kholta hai (customer, subject, salaam aur asal message pehle se bhare); baat-cheet mailbox mein (2026-11-24)
@@ -105,11 +114,11 @@
 - [ ] Har mahine 2–4 blog posts, backlinks
 
 ### Shuru karne ke liye abhi chahiye (aap se)
-- [ ] Vercel account (GitHub se login) — main deploy ke steps bataunga
-- [ ] MongoDB Atlas account (free M0 cluster) ka connection string
-- [ ] Cloudinary account (free) ki keys
-- [ ] Email bhejne ke liye Resend account (free) ki key, aur kis email pe inquiries aayen
-- [ ] Sahi phone number aur WhatsApp number
+- [x] Vercel account (GitHub se login)
+- [x] MongoDB Atlas account (free M0 cluster) ka connection string
+- [x] Cloudinary account (free) ki keys
+- [x] Email bhejne ke liye Resend account (free) ki key, aur kis email pe inquiries aayen
+- [x] Sahi phone number aur WhatsApp number
 
 ## Notes
 - Project root = `Spotex/` folder (pehle `web/` subfolder tha, 2026-11-23 ko root pe le aaye). Chalane ke liye: Spotex folder mein `npm run dev` → http://localhost:3000

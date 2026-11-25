@@ -95,7 +95,7 @@
         },
         "range": {
           "title": "Tre vekter",
-          "text": "450 · 550 · 700 GSM"
+          "text": "450 · 550 · 750 GSM"
         },
         "pants": {
           "title": "Drillbukse",
@@ -211,15 +211,15 @@
         "Sambo"
       ],
       "facts": [
-        "Pearl- og gold-vev · 280–400 GSM",
-        "450 · 550 · 700 GSM",
+        "Pearl, gold & flere · 280–550 GSM",
+        "450 · 550 · 750 GSM",
         "10 oz canvas",
         "Polyester-bomull eller 100 % bomull",
         "Jakker og shorts i rødt og blått"
       ],
       "notes": [
-        "BJJ-gier i pearl-, gold- og all-play-vev, med ripstop-bukser og akademiets merker.",
-        "Judodrakter i enkel og dobbel vev fra 450 til 700 GSM, laget for hard grepstrening.",
+        "BJJ-gier i pearl-, gold-, all-play- og honeycomb-vev, i alle IBJJF-godkjente farger, med ripstop-bukser og akademiets merker.",
+        "Judodrakter i enkel- og dobbeltvev fra 450 til 750 GSM, i hvit, blå, svart eller rosa.",
         "Karategier i lett og tung canvas-bomull, sydd for kata og kumite.",
         "Taekwondo-doboker med V-hals i poly-bomull, med hvit, svart eller farget krage.",
         "Sambojakker med skuldervinger og matchende shorts, i rødt og blått."
@@ -241,6 +241,7 @@
         "Brodering",
         "Vevd merke",
         "Silketrykk",
+        "DTF- og digitaltrykk",
         "Sublimering"
       ],
       "stepsTitle": "Slik fungerer det",
@@ -258,7 +259,7 @@
       "titleA": "Hele",
       "titleB": "utstyret.",
       "also": "Trykk på et produkt for detaljer · Vi lager også:",
-      "alsoList": "Rashguards · Hettegensere · Brytedrakter · Tights · Sports-BH-er"
+      "alsoList": "Rashguards · Spats · Muay Thai-shorts · Hettegensere · Singlets · Bager · Nøkkelringer · Leggings · Sports-BH-er"
     },
     "belts": {
       "eyebrow": "05 · Belter",
@@ -335,11 +336,12 @@
     },
     "fabric": {
       "name": "Veving",
-      "text": "Pearl-, gold- og ripstopvev fra egne vevstoler.",
-      "lead": "På egne vevstoler vever vi pearl-, gold-, all-play- og ripstop-stoffene i giene våre, og kontrollerer vekt og tetthet fra første tråd.",
+      "text": "Pearl, gold, honeycomb og flere vev, laget på våre 30 vevstoler.",
+      "lead": "På våre 30 vevstoler vever vi stoffene til gi-ene våre: pearl, pearl plus, gold, all-play, honeycomb, diamond, chess, hemp og bambus-bomull. Vi kontrollerer vekt og tetthet fra første tråd.",
       "points": [
-        "Pearl-, gold-, all-play- og ripstop-vev",
-        "Vekt fra 280 til 700 GSM",
+        "Ni gi-vev, fra pearl og gold til honeycomb og diamond",
+        "Jakkevekter fra 280 til 750 GSM",
+        "Bukser i ripstop, bomullstwill eller baby canvas, 8 til 12 oz",
         "Hver rull kontrollert for vekt og krymping"
       ],
       "benefit": "Stoffet i prøven er stoffet i storordren din."
@@ -379,20 +381,21 @@
     },
     "printing": {
       "name": "Trykk",
-      "text": "Brodering, silketrykk og full sublimering.",
-      "lead": "Logoer og grafikk påføres i huset: brodering, vevde merker, silketrykk og helsublimering.",
+      "text": "Brodering, silketrykk, DTF- og digitaltrykk og full sublimering.",
+      "lead": "Logoer og trykk legges på i eget hus: brodering, vevde merker, silketrykk, DTF-trykk, digitaltrykk og full sublimering.",
       "points": [
         "Brodering og vevde merker",
-        "Silketrykk",
-        "Helsublimering til fight wear"
+        "Silketrykk og DTF-trykk",
+        "Digitaltrykk og full sublimering"
       ],
       "benefit": "Én fabrikk tar seg av merkingen, så plassering og farger stemmer med skissen."
     },
     "stitching": {
       "name": "Søm",
       "text": "Forsterkede sømmer laget for hard trening.",
-      "lead": "Dyktige operatører syr hver uniform med forsterkede sømmer og belastningspunkter laget for hard trening og konkurranse.",
+      "lead": "Dyktige operatører syr hver drakt med forsterkede sømmer og belastningspunkter, på 56 enkeltnålsmaskiner supplert med trenåls-, trense-, overlock- og Kansai-linningsmaskiner.",
       "points": [
+        "56 enkeltnålsmaskiner pluss trenåls-, trense-, overlock- og Kansai-linningsmaskiner",
         "Forsterkede sømmer og belastningspunkter",
         "Dobbel søm der gien belastes mest",
         "Merker og etiketter sydd på, aldri limt"
@@ -426,11 +429,11 @@
     "categories": {
       "bjj-gis": {
         "name": "BJJ-uniformer",
-        "intro": "Brasiliansk jiu-jitsu-gier i pearl-, gold- og all-play-vev fra 280 til 400 GSM, med ripstopbukser. Laget på bestilling i dine farger og med klubbens logo."
+        "intro": "Brasiliansk jiu-jitsu-gier fra 280 til 550 GSM i pearl, gold, all-play, honeycomb og andre vev, med bukser i ripstop, bomullstwill eller canvas. Lages på bestilling i alle IBJJF-godkjente farger, med akademiets merkevare."
       },
       "judo-uniforms": {
         "name": "Judodrakter",
-        "intro": "Judodrakter i tre vekter: 450 GSM Academy, 550 GSM Challenger og 700 GSM Winner, med drillbukser i 100 % bomull."
+        "intro": "Judodrakter i tre vekter: 450 GSM Academy, 550 GSM Challenger og 750 GSM Winner, med bukser i 100 % bomullsdrill. I hvit, blå, svart eller rosa."
       },
       "karate-uniforms": {
         "name": "Karatedrakter",
@@ -445,8 +448,8 @@
         "intro": "Sambojakker og shorts laget på bestilling i rødt og blått."
       },
       "belts": {
-        "name": "BJJ-belter",
-        "intro": "BJJ- og judobelter, 350 GSM belter i gi-stoff og fritidsbelter, i alle gradsfarger og størrelser S til 3XL."
+        "name": "Belter",
+        "intro": "Gradsbelter for BJJ, judo og karate, belter med metallløkke, masterbelter, belter med 13 sydde rader, 350 GSM gi-stoffbelter og fritidsbelter, i alle gradfarger og i størrelse S til 3XL."
       },
       "mma-shorts": {
         "name": "MMA-shorts",
@@ -458,11 +461,11 @@
       },
       "fight-wear": {
         "name": "Fight wear",
-        "intro": "Hettegensere og brytedrakter for lag og akademier, med dine farger og din merkevare."
+        "intro": "Hettegensere, glidelåsjakker, oppvarmingsbukser, spats, kompresjons- og Muay Thai-shorts, brytedrakter, bandanaer og sublimerte håndklær, laget med dine farger og din merkevare."
       },
       "bags": {
-        "name": "Gi-bager",
-        "intro": "Gi-ryggsekker med plass til drakt, belte og utstyr, med klubbens logo."
+        "name": "Bager",
+        "intro": "Sublimerte gi-bager, gi-ryggsekker, duffelbager og skulderbager, med akademiets merkevare."
       }
     },
     "types": {
@@ -561,7 +564,7 @@
       "Vevde etiketter og merker",
       "Egen emballasje"
     ],
-    "moq": "Laget på bestilling. Start med én prøve, og bestill deretter til klubben eller merkevaren din.",
+    "moq": "Minste bestilling 30 stykk. Start med én prøve, vanligvis klar på 7 til 10 dager, og skaler så opp for akademiet eller merkevaren din.",
     "related": "Mer fra denne serien",
     "code": "Varenr.",
     "whatsappText": "Hei Spotex, jeg er interessert i {code} ({name}).",
@@ -592,7 +595,7 @@
     "eyebrow": "Egen merkevare",
     "titleA": "Din merkevare.",
     "titleB": "Vår fabrikk.",
-    "intro": "Vi lager drakter og utstyr for klubber, skoler og merkevarer under deres eget navn. Du kommer med ideen, vi tar oss av stoff, produksjon og pakking.",
+    "intro": "Vi lager drakter og utstyr for klubber, skoler og merkevarer under deres eget navn. Du kommer med ideen, vi tar oss av stoff, produksjon og pakking. Bestillinger starter fra 30 stykk, og vi lager 12 000 til 15 000 drakter i måneden.",
     "stepsTitle": "Slik fungerer det",
     "steps": [
       {
@@ -601,7 +604,7 @@
       },
       {
         "title": "Design og prøve",
-        "text": "Vi lager designet og en første prøve, med eller uten ditt design."
+        "text": "Vi lager designet og en første prøve, med eller uten ditt trykk, vanligvis på 7 til 10 dager."
       },
       {
         "title": "Godkjenning",
@@ -609,7 +612,7 @@
       },
       {
         "title": "Produksjon",
-        "text": "Ordren lages i vår egen fabrikk, fra stoff til finish."
+        "text": "Bestillingen lages i vår egen fabrikk, fra stoff til ferdigstilling. Leveringstiden avhenger av produkt og antall, og vi bekrefter den i tilbudet."
       },
       {
         "title": "Pakking og frakt",
@@ -620,15 +623,15 @@
     "options": [
       {
         "title": "Stoff og vekt",
-        "text": "Pearl-, gold-, ripstop- eller all-play-vev fra 280 til 700 GSM."
+        "text": "Pearl, gold, all-play, honeycomb, diamond og flere vev fra 280 til 750 GSM, med bukser i ripstop, bomullstwill eller canvas."
       },
       {
         "title": "Farger",
-        "text": "Stoff farget etter merkevarens farger."
+        "text": "Alle IBJJF-godkjente gi-farger, eller stoff farget i merkevarens farger."
       },
       {
         "title": "Logoer",
-        "text": "Brodering, silketrykk, sublimering og merker."
+        "text": "Brodering, silketrykk, DTF, digitaltrykk, sublimering og merker."
       },
       {
         "title": "Etiketter og emballasje",
@@ -642,7 +645,7 @@
     "eyebrow": "Vår fabrikk",
     "titleA": "Ett tak.",
     "titleB": "Ti avdelinger.",
-    "intro": "Mange leverandører kjøper inn stoff og setter bort syingen. Vi gjør hvert steg selv i Gujranwala, Pakistan, og kontrollerer dermed kvalitet, farge og leveringstid.",
+    "intro": "Mange leverandører kjøper inn stoff og setter bort syingen. Vi gjør hvert steg selv i Gujranwala, Pakistan, og kontrollerer dermed kvalitet, farge og leveringstid. Med 30 vevstoler og over 60 symaskiner lager vi 12 000 til 15 000 drakter i måneden, og mer ved store ordrer.",
     "qualityTitle": "Kvalitet og testing",
     "quality": "Vårt FoU- og tekstiltestlaboratorium kontrollerer materialer og ferdige produkter før forsendelse. Spotex er sertifisert etter ISO 9001:2015.",
     "csrTitle": "Samfunnsansvar",
@@ -687,6 +690,52 @@
     ],
     "certified": "Sertifisert kvalitetssystem",
     "isoText": "Produksjonen vår følger kvalitetsstandarden ISO 9001:2015.",
+    "certsEyebrow": "Dokumentasjon",
+    "certsTitle": "Sertifiseringer og medlemskap",
+    "certsText": "ISO 9001-sertifisert siden 2014 og offisiell leverandør av ju-jitsu-drakter til Pakistan Ju-Jitsu Federation. Velg et sertifikat for å se det i full størrelse.",
+    "certsQuality": "Kvalitetsledelse",
+    "certsSport": "Idrettsforbund",
+    "certsView": "Se i full størrelse",
+    "certsClose": "Lukk",
+    "fbrTitle": "Registrert eksportør",
+    "fbrText": "Registrert hos Federal Board of Revenue (FBR) i Pakistan siden 2002 som importør og eksportør av tekstiler og klær.",
+    "certs": [
+      {
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Registrar Systems (QRS)",
+        "note": "Produksjon og eksport av kampsportdrakter og sportsklær · utstedt 28.02.2018"
+      },
+      {
+        "title": "ISO 9001:2008",
+        "issuer": "Quality Registrar Systems (QRS)",
+        "note": "Kampsportdrakter, bokseutstyr og sportsklær · utstedt 05.02.2017"
+      },
+      {
+        "title": "ISO 9001:2008",
+        "issuer": "Quality Registrar Systems (QRS)",
+        "note": "Først registrert 10.02.2014 · utstedt 25.01.2016"
+      },
+      {
+        "title": "QMS-opplæring",
+        "issuer": "Cornish Engineering, Lahore",
+        "note": "Kurs i kvalitetsledelse etter ISO 9001:2008 · jan. 2014"
+      },
+      {
+        "title": "Offisiell leverandør",
+        "issuer": "Pakistan Ju-Jitsu Federation",
+        "note": "Offisiell leverandør av ju-jitsu-drakter og utstyr til det nasjonale forbundet"
+      },
+      {
+        "title": "Medlem i god stand",
+        "issuer": "Punjab Ju-Jitsu Association",
+        "note": "Gujranwala Ju-Jitsu Association, ledet av president Husnain Raza"
+      },
+      {
+        "title": "Registrert forening",
+        "issuer": "Punjab Judo Association",
+        "note": "Gujranwala Division Judo Association, president Husnain Raza · 2017"
+      }
+    ],
     "csrEyebrow": "Utover fabrikken",
     "ctaTitle": "Se kvaliteten selv.",
     "ctaText": "Start med én enkelt prøve, laget i denne fabrikken med din merkevare.",
@@ -790,7 +839,7 @@
     "email": "E-post",
     "whatsapp": "WhatsApp",
     "formSoon": "Tilbudsskjemaet på nett kommer snart. Inntil da kan du sende oss en melding på WhatsApp eller e-post.",
-    "hours": "Mandag til lørdag, 9.00–18.00 pakistansk tid (UTC+5). Vi svarer på e-post og WhatsApp innen én arbeidsdag."
+    "hours": "Lørdag til torsdag, 9:00–18:00 pakistansk tid (UTC+5); stengt fredager. Vi svarer på e-post og WhatsApp innen én arbeidsdag."
   },
   "NotFound": {
     "title": "Fant ikke siden",
@@ -834,6 +883,8 @@
       "Brodering",
       "Vevd merke",
       "Silketrykk",
+      "DTF-trykk",
+      "Digitaltrykk",
       "Sublimering",
       "Uten merking",
       "Usikker ennå"

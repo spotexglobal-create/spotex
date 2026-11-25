@@ -1,11 +1,10 @@
-import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { deleteInquiry, updateInquiry } from '@/app/admin/quotes-actions';
 import type { Inquiry } from '@/lib/admin/inquiries';
 import { INQUIRY_STATUSES, type InquiryStatus } from '@/lib/db/models';
 import { MailboxButton } from './MailboxButton';
 import { MESSAGE_STATUSES, STATUS, initials, quoteDate } from './quote-ui';
-import { Card, CardTitle, Icon, Pill, btnDark, field, fieldLabel } from './ui';
+import { BackLink, Card, CardTitle, Icon, Pill, btnDark, field, fieldLabel } from './ui';
 
 /** Label + value pair; hidden when there is no value. */
 function Item({ label, children }: { label: string; children?: ReactNode }) {
@@ -34,9 +33,7 @@ export function InquiryDetail({ q, section, saved }: { q: Inquiry; section: 'quo
 
   return (
     <>
-      <Link href={`/admin/${section}`} className="mb-5 inline-flex items-center gap-1.5 text-xs font-bold text-ink/70 hover:text-brand">
-        <Icon name="chevron" className="h-3.5 w-3.5 rotate-90" /> {isQuote ? 'All quote requests' : 'All messages'}
-      </Link>
+      <BackLink href={`/admin/${section}`} label={isQuote ? 'All quote requests' : 'All messages'} />
 
       {/* header */}
       <div className="mb-6 flex flex-wrap items-center gap-4">

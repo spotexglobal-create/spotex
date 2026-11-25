@@ -57,6 +57,8 @@
 .film .fi-hint { position: absolute; top: 12px; right: 12px; z-index: 2; display: flex; align-items: center; gap: 6px; padding: 6px 12px 6px 9px; border-radius: 999px;
   background: rgba(11,11,11,.78); color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .film .fi-hint svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+/* phones and tablets have no hover: touching the photo zooms, so the "hover" hint is hidden there */
+@media (hover: none) { .film .fi-hint { display: none; } }
 .film .fi-thumbs { display: grid; grid-template-rows: repeat(6, 1fr); gap: 8px; }
 .film .fi-thumb { position: relative; overflow: hidden; border-radius: 12px; background: var(--soft); border: 2px solid rgba(11,11,11,.15); cursor: pointer; transition: border-color .2s, opacity .2s; opacity: .6; }
 .film .fi-thumb:hover { opacity: 1; border-color: var(--black); }
@@ -174,7 +176,9 @@
 .film .map { position: relative; width: min(100%, 1240px); }
 .film .map svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .film .map .arc { fill: none; stroke: var(--red); stroke-width: 1.2; stroke-linecap: round; vector-effect: non-scaling-stroke; opacity: .35; }
-.film .map .flow { fill: none; stroke: var(--red); stroke-width: 3.2; stroke-linecap: round; stroke-dasharray: 0 10; animation: map-flow .9s linear infinite; }
+/* the moving dots run on the main thread every frame, so they only play while the export scene is on screen (data-live, set by the timeline) */
+.film .map .flow { fill: none; stroke: var(--red); stroke-width: 3.2; stroke-linecap: round; stroke-dasharray: 0 10; animation: map-flow .9s linear infinite paused; }
+.film .s8[data-live='1'] .map .flow { animation-play-state: running; }
 @keyframes map-flow { to { stroke-dashoffset: -10; } }
 @media (prefers-reduced-motion: reduce) { .film .map .flow { animation: none; } }
 .film .city { position: absolute; transform: translate(-50%, -50%); z-index: 2; }
@@ -209,13 +213,20 @@
   .film .s2 .copy { top: var(--top); transform: none; right: var(--pad); }
   .film .s2 .copy .lead { display: none; }
   .film .gsm div { min-width: 0; flex: 1; padding: 12px; }
+  /* long names ("Judo · Challenger") must fit a third of a phone screen */
+  .film .gsm div > span { display: block; font-size: 9px; letter-spacing: .06em; line-height: 1.5; margin-top: 6px; overflow-wrap: anywhere; }
   .film .weave-pos { left: 50%; right: auto; top: auto; bottom: var(--bot); width: min(74vw, 42vh); transform: translateX(-50%); }
   /* mobile line-up: two rows of bigger cards (3 + 2) instead of five tiny ones */
   .film .lineup { flex-wrap: wrap; align-content: center; align-items: flex-start; gap: 18px 3vw; }
   .film .lineup .item { height: auto; width: 25vw; aspect-ratio: auto; }
   .film .lineup .ph { height: auto; aspect-ratio: .72; border-radius: 12px; }
   .film .lineup .lab small { display: none; }
-  .film .lineup .lab b { font-size: 13px; }
+  .film .lineup .lab b { font-size: 15px; }
+  /* phones: heading, bigger cards and the note sit together in the middle instead of spreading over the screen */
+  .film .s3 { justify-content: center; }
+  .film .s3 .lineup { flex: none; margin-top: 26px; gap: 18px 3vw; }
+  .film .s3 .lineup .item { width: 26.5vw; } /* still three per row (3 × 26.5vw + gaps fits the padded width) */
+  .film .s3 .u-foot { margin-top: 24px; }
   .film .s4 .copy { top: var(--top); transform: none; right: var(--pad); }
   /* phones: short text + the "how it's applied" chips fill the space above the gi; the steps stay desktop-only */
   .film .s4 .lead { font-size: 13px; margin-top: 8px; }
@@ -226,13 +237,20 @@
     .film .beltrow { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 8px; }
   .film .beltrow .cap { padding: 6px 10px; font-size: 10px; }
   .film .stats { grid-template-columns: 1fr 1fr; gap: 8px; }
-  .film .stats div { padding: 10px 14px; }
+  /* compact cards so the 2×2 grid stays above the scene counter at the bottom */
+  .film .stats div { padding: 9px 12px; border-radius: 12px; }
+  .film .stats b { font-size: 30px; }
+  .film .stats div > span { font-size: 9px; letter-spacing: .1em; }
+  .film .s7 .head p { font-size: 13px; }
+  /* factory: heading, department names and numbers as one group in the middle (no big empty bands) */
+  .film .s7 { justify-content: center; }
+  .film .s7 .rushband { flex: none; margin-top: 30px; margin-bottom: 30px; gap: 4px; }
   /* mobile map: full screen width, markets stacked underneath */
   .film .s8 { justify-content: center; }
   .film .s8 .exp { flex: none; margin: 28px calc(var(--pad) * -1) 22px; }
   .film .map { width: 100vw; max-width: none !important; }
   .film .markets { flex-direction: column; align-items: center; gap: 8px; }
-  .film .city > span { font-size: 7.5px; padding: 2px 5px; }
+  .film .city > span { font-size: 8.5px; padding: 2px 6px; }
   .film .markets span { font-size: 10.5px; padding: 9px 16px; }
   .film .city .full { display: none; }
   .film .city .short { display: inline; }

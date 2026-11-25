@@ -1,6 +1,6 @@
 # Spotex International — website
 
-Next.js 15 (App Router) · Tailwind CSS 4 · next-intl (EN / DE / NO / IT) · GSAP + Lenis. Deploys to Vercel.
+Next.js 15 (App Router) · Tailwind CSS 4 · next-intl (EN / DE / NO / IT / FR) · GSAP + Lenis. Deploys to Vercel.
 
 ```bash
 npm install

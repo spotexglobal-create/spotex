@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
-import { useRef, useState } from 'react';
+import { type CSSProperties, useRef, useState } from 'react';
 import { scrollToY, useLenis } from '@/components/motion/SmoothScroll';
 import { Link } from '@/i18n/navigation';
 import type { CategorySlug } from '@/lib/catalog/types';
@@ -148,12 +148,7 @@ export function SpotlightStage({ slides, text }: { slides: HeroSlide[]; text: He
       gsap.set(q('.sl-plat'), { xPercent: -50, yPercent: -50, rotateX: 74, transformPerspective: 1200 });
       gsap.set(q('.sl-co .ln'), { scaleX: 0 });
       gsap.set(q('.sl-copy, .sl-meta, .sl-plat, .sl-mdet, .sl-shadow'), { autoAlpha: 0 });
-      // the logo builds itself once (the intro lines fade in by CSS)
-      gsap.fromTo(
-        q('.sl-word i'),
-        { yPercent: 110, rotate: (i) => (i - 2.5) * 10, autoAlpha: 0 },
-        { yPercent: 0, rotate: 0, autoAlpha: 1, duration: 1.1, stagger: 0.07, ease: 'expo.out', delay: 0.15 },
-      );
+      // the logo builds itself on load in CSS (spotlight.css → sl-letter), so it shows before this script runs
 
       // scroll film: letters fly apart, the set appears, then one product per step
       const tl = gsap.timeline({ defaults: { ease: 'power2.inOut' } });
@@ -202,9 +197,21 @@ export function SpotlightStage({ slides, text }: { slides: HeroSlide[]; text: He
 
         if (i < slides.length - 1) {
           const out = t + STEP - 0.3;
-          tl.to(q(`[data-co^="${i}-"]`), { autoAlpha: 0, duration: 0.12 }, out).to(
+          // fromTo with the known start values (not to): GSAP then never reads styles back, which on a phone
+          // forced a fresh layout for every tween while the page was starting up
+          tl.fromTo(q(`[data-co^="${i}-"]`), { autoAlpha: 1 }, { autoAlpha: 0, duration: 0.12, immediateRender: false }, out).fromTo(
             imgs[i],
-            { opacity: 0, y: () => window.innerHeight * 0.35, rotate: 7, scale: 0.9, filter: 'blur(8px)', duration: 0.35, ease: 'power3.in' },
+            { opacity: 1, y: 0, rotate: 0, scale: 1, filter: 'blur(0px)' },
+            {
+              opacity: 0,
+              y: () => window.innerHeight * 0.35,
+              rotate: 7,
+              scale: 0.9,
+              filter: 'blur(8px)',
+              duration: 0.35,
+              ease: 'power3.in',
+              immediateRender: false,
+            },
             out,
           );
         }
@@ -282,7 +289,7 @@ export function SpotlightStage({ slides, text }: { slides: HeroSlide[]; text: He
           <div className="sl-word-in">
             {LETTERS.map((l, i) => (
               <span key={l} className={i === LETTERS.length - 1 ? 'x' : undefined}>
-                <i>{l}</i>
+                <i style={{ '--i': i } as CSSProperties}>{l}</i>
               </span>
             ))}
           </div>

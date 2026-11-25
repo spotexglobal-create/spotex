@@ -8,10 +8,10 @@ import { FABRIC_DETAILS, tileCover, type FabricDetail } from './fabric-details';
 const ZOOM = 2.6;
 
 /** One close-up, filling its box (an HD photo or a tile cut from the composite photo). */
-function DetailImage({ d, sizes }: { d: FabricDetail; sizes: string }) {
+function DetailImage({ d, sizes, sharp }: { d: FabricDetail; sizes: string; sharp?: boolean }) {
   return d.src ? (
-    // already web-sized HD webp files: served as they are, so the close-up stays crisp
-    <Image src={d.src} alt="" fill loading="eager" unoptimized sizes={sizes} className="object-cover" />
+    // resized per screen by next/image (a phone gets a small file); the zoom lens asks for a bigger, sharper one
+    <Image src={d.src} alt="" fill sizes={sizes} quality={sharp ? 90 : 75} className="object-cover" />
   ) : d.tile ? (
     <span className="fi-crop" style={tileCover(d.tile)} />
   ) : null;
@@ -45,7 +45,7 @@ export function FabricInspector({
   return (
     <div className="fi">
       <div ref={view} className="fi-view" onPointerMove={move} onPointerDown={move} onPointerLeave={() => setLens(null)}>
-        <DetailImage d={d} sizes="40vw" />
+        <DetailImage d={d} sizes="(max-width: 800px) 72vw, 40vw" sharp />
         {lens && (
           <span className="fi-lens" style={{ left: lens.x, top: lens.y }} aria-hidden>
             {/* the same close-up, ZOOM times bigger, shifted so the point under the pointer sits in the lens centre */}
@@ -57,7 +57,7 @@ export function FabricInspector({
                 transform: `translate(${-lens.x * ZOOM}px, ${-lens.y * ZOOM}px)`,
               }}
             >
-              <DetailImage d={d} sizes="100vw" />
+              <DetailImage d={d} sizes="(max-width: 800px) 100vw, 1200px" sharp />
             </span>
           </span>
         )}

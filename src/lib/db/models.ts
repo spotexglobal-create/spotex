@@ -54,7 +54,29 @@ const ProductSchema = new Schema(
   { timestamps: true },
 );
 
-export const INQUIRY_STATUSES = ['new', 'replied', 'sample', 'won', 'lost'] as const;
+/** One text per website language; an empty one falls back to src/messages/<locale>.json. */
+const LocalizedSchema = new Schema({ en: String, de: String, no: String, it: String, fr: String }, { _id: false });
+
+/**
+ * Category details edited in admin → Categories. The ten slugs (URLs) stay fixed in
+ * src/lib/catalog/types.ts; everything a visitor reads or sees is stored here.
+ */
+const CategorySchema = new Schema(
+  {
+    slug: { type: String, required: true, unique: true, enum: CATEGORY_SLUGS },
+    name: { type: LocalizedSchema, default: () => ({}) },
+    intro: { type: LocalizedSchema, default: () => ({}) },
+    /** Cloudinary photo for the category card; empty uses the first featured product photo. */
+    cover: { type: String, default: '' },
+    /** False hides the category and its products from the website. */
+    visible: { type: Boolean, default: true },
+    /** Position in menus and lists; lower comes first. */
+    order: { type: Number, default: 0 },
+  },
+  { timestamps: true },
+);
+
+export const INQUIRY_STATUSES =['new', 'replied', 'sample', 'won', 'lost'] as const;
 export type InquiryStatus = (typeof INQUIRY_STATUSES)[number];
 
 const InquirySchema = new Schema(
@@ -144,4 +166,6 @@ export type PostDoc = InferSchemaType<typeof PostSchema>;
 export const PostModel = define<PostDoc>('Post', PostSchema);
 
 export const ProductModel = define<ProductDoc>('Product', ProductSchema);
+export type CategoryDoc = InferSchemaType<typeof CategorySchema>;
+export const CategoryModel = define<CategoryDoc>('Category', CategorySchema);
 export const InquiryModel = define<InquiryDoc>('Inquiry', InquirySchema);

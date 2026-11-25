@@ -32,6 +32,7 @@ export default async function AdminProductPage({ params, searchParams }: Props) 
   return (
     <>
       <PageHeader
+        back={{ href: '/admin/products', label: 'All products' }}
         eyebrow={product ? product.code : 'Catalogue'}
         title={product ? text.productName(product) : 'New product'}
         text={product ? text.categoryName(product.category) : 'Add a product to the catalogue.'}

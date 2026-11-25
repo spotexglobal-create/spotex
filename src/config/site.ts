@@ -1,6 +1,5 @@
 /**
- * Company details used across the site. Values marked TODO still need confirming with Spotex
- * (see PROJECT-STATUS.md → "company se chahiye"). Day 2 moves these into admin settings.
+ * Company defaults (confirmed by Spotex, 2026-11-25). Admin → Settings overrides them.
  */
 export const SITE = {
   name: 'Spotex International',
@@ -11,11 +10,11 @@ export const SITE = {
     postalCode: '52250',
     country: 'Pakistan',
   },
-  phone: '+92 55 320 33 33', // TODO: confirm (old site also lists …33 34)
+  phone: '+92 300 9648142',
   whatsapp: '923009648142',
   email: 'inquiry@spotexinternational.com',
-  foundedYear: 1989, // TODO: confirm
-  stats: { staff: 50, clients: 100, departments: 10 }, // TODO: confirm staff and clients
+  foundedYear: 1989,
+  stats: { staff: 50, clients: 100, departments: 10 },
 } as const;
 
 /** WhatsApp chat link. Pass the number from getSite() so admin changes apply. */

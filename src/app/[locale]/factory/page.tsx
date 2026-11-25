@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import { CertificateGallery } from '@/components/factory/CertificateGallery';
 import { ContactActions } from '@/components/ui/ContactActions';
 import { Link } from '@/i18n/navigation';
 import { initLocale, type LocaleParams } from '@/i18n/server';
@@ -14,6 +15,17 @@ const PHASES = [
   ['fabric', 'knitting', 'dyeing'],
   ['cutting', 'printing', 'stitching'],
   ['inspection', 'packing'],
+] as const;
+
+/** Certificate scans in /public/certificates, in the same order as FactoryPage.certs in the messages. */
+const CERTIFICATES = [
+  { src: '/certificates/iso-9001-2015.jpg', group: 'quality' },
+  { src: '/certificates/iso-9001-2008-2017.jpg', group: 'quality' },
+  { src: '/certificates/iso-9001-2008-2016.jpg', group: 'quality' },
+  { src: '/certificates/qms-training-2014.jpg', group: 'quality' },
+  { src: '/certificates/pakistan-ju-jitsu-federation.jpg', group: 'sport' },
+  { src: '/certificates/punjab-ju-jitsu-association.jpg', group: 'sport' },
+  { src: '/certificates/punjab-judo-association.jpg', group: 'sport' },
 ] as const;
 
 export async function generateMetadata({ params }: LocaleParams) {
@@ -35,13 +47,14 @@ export default async function FactoryPage({ params }: LocaleParams) {
   const csr = t.raw('csr') as string[];
   const phases = t.raw('phases') as { title: string; text: string }[];
   const qualityPoints = t.raw('qualityPoints') as string[];
+  const certs = t.raw('certs') as { title: string; issuer: string; note: string }[];
   let n = 0;
 
   const stats = [
     { value: String(site.foundedYear), label: t('stats.since') },
     { value: String(site.stats.departments), label: t('stats.departments') },
     { value: `${site.stats.staff}+`, label: t('stats.staff') },
-    { value: 'ISO', label: t('stats.iso') },
+    { value: 'ISO', label: t('stats.iso'), href: '#certificates' },
   ];
 
   return (
@@ -72,9 +85,20 @@ export default async function FactoryPage({ params }: LocaleParams) {
             </div>
             <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-[22px] border-[1.5px] border-ink bg-ink/10">
               {stats.map((s) => (
-                <div key={s.label} className="flex flex-col-reverse bg-white p-6">
-                  <dt className="mt-1 text-[11px] font-bold tracking-[0.16em] text-ink/85 uppercase">{s.label}</dt>
-                  <dd className="display text-[clamp(44px,4.4vw,68px)] leading-none text-ink">{s.value}</dd>
+                <div key={s.label} className="group relative flex flex-col-reverse bg-white p-6">
+                  <dt className="mt-1 text-[11px] font-bold tracking-[0.16em] text-ink/85 uppercase">
+                    {s.href ? (
+                      // the link stretches over the whole tile
+                      <a href={s.href} className="after:absolute after:inset-0 group-hover:text-brand">
+                        {s.label} <span aria-hidden className="text-brand">↓</span>
+                      </a>
+                    ) : (
+                      s.label
+                    )}
+                  </dt>
+                  <dd className="display text-[clamp(44px,4.4vw,68px)] leading-none text-ink group-has-[a]:group-hover:text-brand">
+                    {s.value}
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -120,6 +144,37 @@ export default async function FactoryPage({ params }: LocaleParams) {
             </li>
           ))}
         </ol>
+      </section>
+
+      {/* certificates */}
+      <section id="certificates" className="scroll-mt-24 border-t border-ink/10 py-20">
+        <div className="container-page">
+          <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-end">
+            <div>
+              <p className="eyebrow">{t('certsEyebrow')}</p>
+              <h2 className="display mt-3 text-[clamp(40px,5vw,72px)] leading-[0.92] text-ink">{t('certsTitle')}</h2>
+              <p className="mt-4 max-w-xl text-[15.5px] leading-relaxed">{t('certsText')}</p>
+            </div>
+            <div className="flex gap-4 rounded-[22px] border-[1.5px] border-ink bg-white p-5">
+              <span className="display grid h-14 w-14 flex-none place-items-center rounded-full bg-brand text-xl text-white">FBR</span>
+              <div>
+                <p className="text-sm font-bold text-ink">{t('fbrTitle')}</p>
+                <p className="mt-1 text-[13px] leading-relaxed text-ink/85">{t('fbrText')}</p>
+              </div>
+            </div>
+          </div>
+          <CertificateGallery
+            items={CERTIFICATES.map((c, i) => ({ ...c, ...certs[i] }))}
+            labels={{
+              quality: t('certsQuality'),
+              sport: t('certsSport'),
+              view: t('certsView'),
+              close: t('certsClose'),
+              prev: t('previous'),
+              next: t('next'),
+            }}
+          />
+        </div>
       </section>
 
       {/* what comes off the line */}

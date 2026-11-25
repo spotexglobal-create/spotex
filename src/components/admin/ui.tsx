@@ -33,17 +33,44 @@ export function Icon({ name, className = 'h-[18px] w-[18px]' }: { name: keyof ty
   );
 }
 
-/** Page title row with an optional action area on the right. */
-export function PageHeader({ eyebrow, title, text, children }: { eyebrow?: string; title: string; text?: string; children?: ReactNode }) {
+/** "← All products" button at the top of a sub page, back to its list. */
+export function BackLink({ href, label }: { href: string; label: string }) {
   return (
-    <div className="mb-7 flex flex-wrap items-end justify-between gap-4">
-      <div>
-        {eyebrow && <p className="text-[11px] font-bold tracking-[0.22em] text-brand uppercase">{eyebrow}</p>}
-        <h1 className="display mt-1 text-[44px] leading-none text-ink">{title}</h1>
-        {text && <p className="mt-2 max-w-2xl text-sm text-ink/75">{text}</p>}
+    <Link
+      href={href}
+      className="mb-5 inline-flex items-center gap-1.5 rounded-full border-[1.5px] border-ink/20 bg-white py-1.5 pr-4 pl-2.5 text-xs font-bold text-ink transition-colors hover:border-ink hover:text-brand"
+    >
+      <Icon name="chevron" className="h-3.5 w-3.5 rotate-90" /> {label}
+    </Link>
+  );
+}
+
+/** Page title row with an optional action area on the right; `back` adds a back button above it. */
+export function PageHeader({
+  eyebrow,
+  title,
+  text,
+  back,
+  children,
+}: {
+  eyebrow?: string;
+  title: string;
+  text?: string;
+  back?: { href: string; label: string };
+  children?: ReactNode;
+}) {
+  return (
+    <>
+      {back && <BackLink {...back} />}
+      <div className="mb-7 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          {eyebrow && <p className="text-[11px] font-bold tracking-[0.22em] text-brand uppercase">{eyebrow}</p>}
+          <h1 className="display mt-1 text-[44px] leading-none text-ink">{title}</h1>
+          {text && <p className="mt-2 max-w-2xl text-sm text-ink/75">{text}</p>}
+        </div>
+        {children && <div className="flex flex-wrap items-center gap-2.5">{children}</div>}
       </div>
-      {children && <div className="flex flex-wrap items-center gap-2.5">{children}</div>}
-    </div>
+    </>
   );
 }
 

@@ -95,7 +95,7 @@
         },
         "range": {
           "title": "Trois grammages",
-          "text": "450 · 550 · 700 g/m²"
+          "text": "450 · 550 · 750 GSM"
         },
         "pants": {
           "title": "Pantalon en drill",
@@ -211,15 +211,15 @@
         "Sambo"
       ],
       "facts": [
-        "Tissage perlé et gold · 280–400 g/m²",
-        "450 · 550 · 700 g/m²",
+        "Pearl, gold et plus · 280–550 GSM",
+        "450 · 550 · 750 GSM",
         "Toile 10 oz",
         "Polycoton ou 100 % coton",
         "Vestes et shorts, rouge et bleu"
       ],
       "notes": [
-        "Kimonos de JJB en tissage perlé, gold et all-play, avec pantalon ripstop et les écussons de votre club.",
-        "Judogis en tissage simple et double, de 450 à 700 g/m², conçus pour un travail de saisie intense.",
+        "Kimonos de BJJ en tissage pearl, gold, all-play et honeycomb, dans toutes les couleurs approuvées IBJJF, avec pantalon ripstop et écussons de votre académie.",
+        "Judogis en tissage simple et double de 450 à 750 GSM, en blanc, bleu, noir ou rose.",
         "Karategis en toile de coton légère ou lourde, coupés pour le kata et pour le kumite.",
         "Doboks de taekwondo à col en V en polycoton, avec col blanc, noir ou de couleur.",
         "Vestes de sambo avec ailes d'épaule et shorts assortis, en rouge et en bleu."
@@ -241,6 +241,7 @@
         "Broderie",
         "Écusson tissé",
         "Sérigraphie",
+        "Impression DTF et numérique",
         "Sublimation"
       ],
       "stepsTitle": "Comment ça marche",
@@ -258,7 +259,7 @@
       "titleA": "L'équipement",
       "titleB": "complet.",
       "also": "Touchez un produit pour voir la fiche · Nous faisons aussi :",
-      "alsoList": "Rashguards · Sweats à capuche · Singlets · Leggings · Brassières de sport"
+      "alsoList": "Rashguards · Spats · Shorts de Muay Thai · Sweats à capuche · Justaucorps · Sacs · Porte-clés · Leggings · Brassières"
     },
     "belts": {
       "eyebrow": "05 · Ceintures",
@@ -335,11 +336,12 @@
     },
     "fabric": {
       "name": "Tissage",
-      "text": "Tissages perlé, gold et ripstop réalisés sur nos propres métiers.",
-      "lead": "Sur nos propres métiers, nous tissons les tissus perlé, gold, all-play et ripstop de nos kimonos, en maîtrisant grammage et densité dès le premier fil.",
+      "text": "Pearl, gold, honeycomb et d’autres tissages, sur nos 30 métiers à tisser.",
+      "lead": "Sur nos 30 métiers à tisser, nous fabriquons les tissus de nos kimonos : pearl, pearl plus, gold, all-play, honeycomb, diamond, chess, hemp et coton-bambou, en contrôlant poids et densité dès le premier fil.",
       "points": [
-        "Tissages perlé, gold, all-play et ripstop",
-        "Grammages de 280 à 700 g/m²",
+        "Neuf tissages de kimono, du pearl et gold au honeycomb et diamond",
+        "Vestes de 280 à 750 GSM",
+        "Pantalons en ripstop, sergé de coton ou baby canvas, de 8 à 12 oz",
         "Chaque rouleau contrôlé en poids et en retrait"
       ],
       "benefit": "Le tissu de votre échantillon est celui de votre commande en série."
@@ -379,20 +381,21 @@
     },
     "printing": {
       "name": "Impression",
-      "text": "Broderie, sérigraphie et sublimation intégrale.",
-      "lead": "Logos et visuels sont appliqués chez nous : broderie, écussons tissés, sérigraphie et sublimation intégrale.",
+      "text": "Broderie, sérigraphie, impression DTF et numérique, et sublimation intégrale.",
+      "lead": "Logos et visuels sont appliqués en interne : broderie, écussons tissés, sérigraphie, impression DTF, impression numérique et sublimation intégrale.",
       "points": [
         "Broderie et écussons tissés",
-        "Sérigraphie",
-        "Sublimation intégrale pour les vêtements de combat"
+        "Sérigraphie et impression DTF",
+        "Impression numérique et sublimation intégrale"
       ],
       "benefit": "Une seule usine gère votre marquage : placement et couleurs fidèles à la maquette."
     },
     "stitching": {
       "name": "Couture",
       "text": "Coutures renforcées pour les entraînements intenses.",
-      "lead": "Des opérateurs expérimentés assemblent chaque uniforme avec des coutures et des points de tension renforcés pour l’entraînement intensif et la compétition.",
+      "lead": "Des opérateurs qualifiés assemblent chaque tenue avec des coutures et points de tension renforcés, sur 56 machines à une aiguille complétées par des machines à trois aiguilles, à brides, des surjeteuses et des machines Kansai pour ceintures élastiques.",
       "points": [
+        "56 machines à une aiguille, plus machines à trois aiguilles, à brides, surjeteuses et Kansai pour ceintures",
         "Coutures et points de tension renforcés",
         "Double piqûre là où le kimono travaille le plus",
         "Étiquettes et écussons cousus, jamais collés"
@@ -426,11 +429,11 @@
     "categories": {
       "bjj-gis": {
         "name": "Kimonos de JJB",
-        "intro": "Kimonos de jiu-jitsu brésilien en tissage perlé, gold et all-play de 280 à 400 g/m², avec pantalon ripstop. Fabriqués sur commande à vos couleurs et à l'image de votre club."
+        "intro": "Kimonos de jiu-jitsu brésilien de 280 à 550 GSM en tissage pearl, gold, all-play, honeycomb et autres, avec pantalon en ripstop, sergé de coton ou canvas. Fabriqués sur commande dans toutes les couleurs approuvées IBJJF, aux couleurs de votre académie."
       },
       "judo-uniforms": {
         "name": "Judogis",
-        "intro": "Judogis en trois grammages : 450 g/m² Academy, 550 g/m² Challenger et 700 g/m² Winner, avec pantalon en drill 100 % coton."
+        "intro": "Judogis en trois grammages : 450 GSM Academy, 550 GSM Challenger et 750 GSM Winner, avec pantalon en drill 100 % coton. En blanc, bleu, noir ou rose."
       },
       "karate-uniforms": {
         "name": "Karategis",
@@ -445,8 +448,8 @@
         "intro": "Vestes et shorts de sambo fabriqués sur commande en rouge et en bleu."
       },
       "belts": {
-        "name": "Ceintures de JJB",
-        "intro": "Ceintures de grade de JJB et de judo, ceintures en tissu de kimono 350 g/m² et ceintures casual, dans toutes les couleurs de grade et en tailles S à 3XL."
+        "name": "Ceintures",
+        "intro": "Ceintures de grade de BJJ, judo et karaté, ceintures à boucle métallique, ceintures de maître, ceintures à 13 rangs de coutures, ceintures en tissu de kimono 350 GSM et ceintures casual, dans toutes les couleurs de grade, du S au 3XL."
       },
       "mma-shorts": {
         "name": "Shorts de MMA",
@@ -458,11 +461,11 @@
       },
       "fight-wear": {
         "name": "Vêtements de combat",
-        "intro": "Sweats à capuche et singlets de lutte pour équipes et clubs, à vos couleurs et à votre image."
+        "intro": "Sweats à capuche, vestes zippées, pantalons d’échauffement, spats, shorts de compression et de Muay Thai, justaucorps de lutte, bandanas et serviettes sublimées, à vos couleurs et à votre marque."
       },
       "bags": {
-        "name": "Sacs à kimono",
-        "intro": "Sacs à dos pour kimono avec de la place pour l'uniforme, la ceinture et le matériel, personnalisés pour votre club."
+        "name": "Sacs",
+        "intro": "Sacs à kimono sublimés, sacs à dos pour kimono, sacs de sport et sacs à bandoulière, aux couleurs de votre académie."
       }
     },
     "types": {
@@ -561,7 +564,7 @@
       "Étiquettes et écussons tissés",
       "Emballage personnalisé"
     ],
-    "moq": "Fabriqué sur commande. Commencez par un échantillon, puis passez à la production pour votre club ou votre marque.",
+    "moq": "Commande minimum : 30 pièces. Commencez par un échantillon, généralement prêt en 7 à 10 jours, puis passez à l’échelle de votre académie ou marque.",
     "related": "Dans la même gamme",
     "code": "Code",
     "whatsappText": "Bonjour Spotex, je suis intéressé(e) par {code} ({name}).",
@@ -592,7 +595,7 @@
     "eyebrow": "Marque blanche",
     "titleA": "Votre marque.",
     "titleB": "Notre usine.",
-    "intro": "Nous fabriquons des uniformes et des équipements pour des clubs, des fédérations et des marques, sous leur propre nom. Vous apportez l'idée, nous nous occupons du tissu, de la production et de l'emballage.",
+    "intro": "Nous fabriquons des uniformes et des équipements pour des clubs, des fédérations et des marques, sous leur propre nom. Vous apportez l'idée, nous nous occupons du tissu, de la production et de l'emballage. Les commandes commencent à 30 pièces, et nous fabriquons 12 000 à 15 000 tenues par mois.",
     "stepsTitle": "Comment ça marche",
     "steps": [
       {
@@ -601,7 +604,7 @@
       },
       {
         "title": "Design et échantillon",
-        "text": "Nous préparons le design et réalisons un premier échantillon, avec ou sans votre logo."
+        "text": "Nous préparons le design et réalisons un premier échantillon, avec ou sans votre visuel, généralement en 7 à 10 jours."
       },
       {
         "title": "Validation",
@@ -609,7 +612,7 @@
       },
       {
         "title": "Production",
-        "text": "Votre commande est fabriquée dans notre propre usine, du tissu à la finition."
+        "text": "Votre commande est fabriquée dans notre propre usine, du tissu à la finition. Le délai dépend du produit et de la quantité ; nous le confirmons avec votre devis."
       },
       {
         "title": "Emballage et expédition",
@@ -620,15 +623,15 @@
     "options": [
       {
         "title": "Tissu et grammage",
-        "text": "Tissages perlé, gold, ripstop ou all-play de 280 à 700 g/m²."
+        "text": "Tissages pearl, gold, all-play, honeycomb, diamond et autres de 280 à 750 GSM, avec pantalon en ripstop, sergé de coton ou canvas."
       },
       {
         "title": "Couleurs",
-        "text": "Tissu teint aux couleurs de votre marque."
+        "text": "Toutes les couleurs de kimono approuvées IBJJF, ou un tissu teint aux couleurs de votre marque."
       },
       {
         "title": "Logos",
-        "text": "Broderie, sérigraphie, sublimation et écussons."
+        "text": "Broderie, sérigraphie, DTF, impression numérique, sublimation et écussons."
       },
       {
         "title": "Étiquettes et emballage",
@@ -642,7 +645,7 @@
     "eyebrow": "Notre usine",
     "titleA": "Un seul toit.",
     "titleB": "Dix ateliers.",
-    "intro": "La plupart des fournisseurs d'uniformes achètent leur tissu et sous-traitent la couture. Nous réalisons chaque étape nous-mêmes à Gujranwala, au Pakistan, pour maîtriser la qualité, la couleur et les délais.",
+    "intro": "La plupart des fournisseurs d'uniformes achètent leur tissu et sous-traitent la couture. Nous réalisons chaque étape nous-mêmes à Gujranwala, au Pakistan, pour maîtriser la qualité, la couleur et les délais. Avec 30 métiers à tisser et plus de 60 machines à coudre, nous fabriquons 12 000 à 15 000 tenues par mois, et davantage pour les grosses commandes.",
     "qualityTitle": "Qualité et tests",
     "quality": "Notre laboratoire de R&D et de tests textiles contrôle les matières et les produits finis avant expédition. Spotex est certifié ISO 9001:2015.",
     "csrTitle": "Responsabilité",
@@ -687,6 +690,52 @@
     ],
     "certified": "Système qualité certifié",
     "isoText": "Notre production suit la norme de management de la qualité ISO 9001:2015.",
+    "certsEyebrow": "Références",
+    "certsTitle": "Certifications et affiliations",
+    "certsText": "Certifiés ISO 9001 depuis 2014 et fournisseur officiel de tenues de ju-jitsu de la Pakistan Ju-Jitsu Federation. Sélectionnez un certificat pour le voir en entier.",
+    "certsQuality": "Management de la qualité",
+    "certsSport": "Fédérations sportives",
+    "certsView": "Voir en grand",
+    "certsClose": "Fermer",
+    "fbrTitle": "Exportateur enregistré",
+    "fbrText": "Enregistrés auprès du Federal Board of Revenue (FBR) du Pakistan depuis 2002 comme importateur et exportateur de textiles et de vêtements.",
+    "certs": [
+      {
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Registrar Systems (QRS)",
+        "note": "Fabrication et export de tenues d’arts martiaux et de vêtements de sport · émis le 28/02/2018"
+      },
+      {
+        "title": "ISO 9001:2008",
+        "issuer": "Quality Registrar Systems (QRS)",
+        "note": "Tenues d’arts martiaux, équipement de boxe et vêtements de sport · émis le 05/02/2017"
+      },
+      {
+        "title": "ISO 9001:2008",
+        "issuer": "Quality Registrar Systems (QRS)",
+        "note": "Premier enregistrement le 10/02/2014 · émis le 25/01/2016"
+      },
+      {
+        "title": "Formation QMS",
+        "issuer": "Cornish Engineering, Lahore",
+        "note": "Formation au management de la qualité ISO 9001:2008 · janv. 2014"
+      },
+      {
+        "title": "Fournisseur officiel",
+        "issuer": "Pakistan Ju-Jitsu Federation",
+        "note": "Fournisseur officiel de tenues et d’équipements de ju-jitsu de la fédération nationale"
+      },
+      {
+        "title": "Membre en règle",
+        "issuer": "Punjab Ju-Jitsu Association",
+        "note": "Gujranwala Ju-Jitsu Association, présidée par Husnain Raza"
+      },
+      {
+        "title": "Association enregistrée",
+        "issuer": "Punjab Judo Association",
+        "note": "Gujranwala Division Judo Association, président Husnain Raza · 2017"
+      }
+    ],
     "csrEyebrow": "Au-delà de l’usine",
     "ctaTitle": "Jugez la qualité par vous-même.",
     "ctaText": "Commencez par un seul échantillon, fabriqué dans cette usine à votre image.",
@@ -790,7 +839,7 @@
     "email": "E-mail",
     "whatsapp": "WhatsApp",
     "formSoon": "Le formulaire de devis en ligne arrive bientôt. En attendant, envoyez-nous un message WhatsApp ou un e-mail.",
-    "hours": "Du lundi au samedi, 9h–18h heure du Pakistan (UTC+5). Nous répondons aux e-mails et messages WhatsApp sous un jour ouvré."
+    "hours": "Du samedi au jeudi, 9h00–18h00 heure du Pakistan (UTC+5) ; fermé le vendredi. Nous répondons aux e-mails et messages WhatsApp sous un jour ouvré."
   },
   "NotFound": {
     "title": "Page introuvable",
@@ -834,6 +883,8 @@
       "Broderie",
       "Écusson tissé",
       "Sérigraphie",
+      "Impression DTF",
+      "Impression numérique",
       "Sublimation",
       "Sans marquage",
       "Pas encore décidé"

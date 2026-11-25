@@ -24,7 +24,7 @@ export function cloudinaryConfig(): CloudinaryConfig | null {
   return m ? { apiKey: m[1], apiSecret: m[2], cloudName: m[3] } : null;
 }
 
-export const UPLOAD_FOLDERS = { products: 'spotex/products', blog: 'spotex/blog' } as const;
+export const UPLOAD_FOLDERS = { products: 'spotex/products', blog: 'spotex/blog', categories: 'spotex/categories' } as const;
 export type UploadFolder = keyof typeof UPLOAD_FOLDERS;
 
 /** Parameters the browser sends along with the file. Everything except file, api_key and signature is signed. */

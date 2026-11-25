@@ -95,7 +95,7 @@
         },
         "range": {
           "title": "Drei Gewichte",
-          "text": "450 · 550 · 700 g/m²"
+          "text": "450 · 550 · 750 GSM"
         },
         "pants": {
           "title": "Drillich-Hose",
@@ -211,15 +211,15 @@
         "Sambo"
       ],
       "facts": [
-        "Pearl- & Gold-Weave · 280–400 g/m²",
-        "450 · 550 · 700 g/m²",
+        "Pearl, Gold & mehr · 280–550 GSM",
+        "450 · 550 · 750 GSM",
         "10 oz Canvas",
         "Mischgewebe oder 100 % Baumwolle",
         "Jacken & Shorts in Rot und Blau"
       ],
       "notes": [
-        "BJJ-Gis in Pearl-, Gold- und All-Play-Webung, mit Ripstop-Hose und Ihren Akademie-Patches.",
-        "Judoanzüge in Einfach- und Doppelwebung von 450 bis 700 GSM, gebaut für hartes Griff-Training.",
+        "BJJ-Gis in Pearl-, Gold-, All-Play- und Honeycomb-Webart, in allen IBJJF-zugelassenen Farben, mit Ripstop-Hosen und Ihren Akademie-Patches.",
+        "Judo-Anzüge in Einfach- und Doppelgewebe von 450 bis 750 GSM, in Weiß, Blau, Schwarz oder Pink.",
         "Karate-Gis aus leichtem und schwerem Canvas-Baumwollstoff, geschnitten für Kata und Kumite.",
         "Taekwondo-Doboks mit V-Ausschnitt aus Mischgewebe, mit weißem, schwarzem oder farbigem Kragen.",
         "Sambo-Jacken mit Schulterflügeln und passenden Shorts, in Rot und Blau."
@@ -241,6 +241,7 @@
         "Stickerei",
         "Gewebter Patch",
         "Siebdruck",
+        "DTF- & Digitaldruck",
         "Sublimation"
       ],
       "stepsTitle": "So funktioniert es",
@@ -258,7 +259,7 @@
       "titleA": "Die ganze",
       "titleB": "Ausrüstung.",
       "also": "Für Details auf ein Produkt tippen · Außerdem:",
-      "alsoList": "Rashguards · Hoodies · Ringertrikots · Leggings · Sport-BHs"
+      "alsoList": "Rashguards · Spats · Muay-Thai-Shorts · Hoodies · Singlets · Taschen · Schlüsselanhänger · Leggings · Sport-BHs"
     },
     "belts": {
       "eyebrow": "05 · Gürtel",
@@ -335,11 +336,12 @@
     },
     "fabric": {
       "name": "Weberei",
-      "text": "Pearl-, Gold- und Ripstop-Gewebe von eigenen Webstühlen.",
-      "lead": "Auf eigenen Webstühlen weben wir die Pearl-, Gold-, All-Play- und Ripstop-Stoffe unserer Gis und kontrollieren Gewicht und Dichte ab dem ersten Faden.",
+      "text": "Pearl, Gold, Honeycomb und mehr, gewebt auf unseren 30 Webstühlen.",
+      "lead": "Auf unseren 30 Webstühlen weben wir die Stoffe für unsere Gis: Pearl, Pearl Plus, Gold, All-Play, Honeycomb, Diamond, Chess, Hemp und Bambus-Baumwolle. Gewicht und Dichte kontrollieren wir ab dem ersten Faden.",
       "points": [
-        "Pearl-, Gold-, All-Play- und Ripstop-Gewebe",
-        "Gewichte von 280 bis 700 GSM",
+        "Neun Gi-Webarten, von Pearl und Gold bis Honeycomb und Diamond",
+        "Jackengewichte von 280 bis 750 GSM",
+        "Hosen aus Ripstop, Baumwoll-Twill oder Baby-Canvas, 8 bis 12 oz",
         "Jede Rolle auf Gewicht und Einlaufen geprüft"
       ],
       "benefit": "Der Stoff Ihres Musters ist der Stoff Ihrer Serienbestellung."
@@ -379,20 +381,21 @@
     },
     "printing": {
       "name": "Druck",
-      "text": "Stickerei, Siebdruck und vollflächige Sublimation.",
-      "lead": "Logos und Grafiken bringen wir im Haus auf: Stickerei, gewebte Aufnäher, Siebdruck und vollflächige Sublimation.",
+      "text": "Stickerei, Sieb-, DTF- und Digitaldruck sowie Vollsublimation.",
+      "lead": "Logos und Motive bringen wir im Haus auf: Stickerei, gewebte Patches, Siebdruck, DTF-Druck, Digitaldruck und Vollsublimation.",
       "points": [
-        "Stickerei und gewebte Aufnäher",
-        "Siebdruck",
-        "Vollflächige Sublimation für Fightwear"
+        "Stickerei und gewebte Patches",
+        "Sieb- und DTF-Druck",
+        "Digitaldruck und Vollsublimation"
       ],
       "benefit": "Eine Fabrik übernimmt Ihr Branding, Position und Farben entsprechen dem Mock-up."
     },
     "stitching": {
       "name": "Näherei",
       "text": "Verstärkte Nähte für hartes Training.",
-      "lead": "Erfahrene Näherinnen und Näher fertigen jede Uniform mit verstärkten Nähten und Belastungspunkten für hartes Training und Wettkampf.",
+      "lead": "Erfahrene Fachkräfte fertigen jede Uniform mit verstärkten Nähten und Belastungspunkten, auf 56 Einnadelmaschinen, ergänzt durch Dreinadel-, Riegel-, Overlock- und Kansai-Bundmaschinen.",
       "points": [
+        "56 Einnadelmaschinen plus Dreinadel-, Riegel-, Overlock- und Kansai-Bundmaschinen",
         "Verstärkte Nähte und Belastungspunkte",
         "Doppelnähte, wo der Gi am meisten aushalten muss",
         "Etiketten und Aufnäher genäht, nie geklebt"
@@ -426,11 +429,11 @@
     "categories": {
       "bjj-gis": {
         "name": "BJJ-Uniformen",
-        "intro": "Brazilian-Jiu-Jitsu-Gis in Pearl-, Gold- und All-Play-Gewebe von 280 bis 400 g/m², mit Ripstop-Hosen. Auf Bestellung in Ihren Farben und mit dem Branding Ihres Vereins."
+        "intro": "Brazilian-Jiu-Jitsu-Gis von 280 bis 550 GSM in Pearl-, Gold-, All-Play-, Honeycomb- und weiteren Webarten, mit Hosen aus Ripstop, Baumwoll-Twill oder Canvas. Auf Bestellung in allen IBJJF-zugelassenen Farben, mit dem Branding Ihrer Akademie."
       },
       "judo-uniforms": {
         "name": "Judoanzüge",
-        "intro": "Judoanzüge in drei Gewichten: 450 g/m² Academy, 550 g/m² Challenger und 700 g/m² Winner, mit Drillich-Hosen aus 100 % Baumwolle."
+        "intro": "Judo-Anzüge in drei Gewichten: 450 GSM Academy, 550 GSM Challenger und 750 GSM Winner, mit Hosen aus 100 % Baumwoll-Drill. In Weiß, Blau, Schwarz oder Pink."
       },
       "karate-uniforms": {
         "name": "Karateanzüge",
@@ -445,8 +448,8 @@
         "intro": "Sambo-Jacken und -Shorts auf Bestellung in Rot und Blau."
       },
       "belts": {
-        "name": "BJJ-Gürtel",
-        "intro": "BJJ- und Judo-Gürtel, 350-g/m²-Gürtel aus Gi-Stoff und Freizeitgürtel, in allen Rangfarben und den Größen S bis 3XL."
+        "name": "Gürtel",
+        "intro": "Graduierungsgürtel für BJJ, Judo und Karate, Gürtel mit Metallschlaufe, Meistergürtel, Gürtel mit 13 Steppreihen, 350-GSM-Gi-Stoff-Gürtel und Freizeitgürtel, in allen Gürtelfarben und den Größen S bis 3XL."
       },
       "mma-shorts": {
         "name": "MMA-Shorts",
@@ -458,11 +461,11 @@
       },
       "fight-wear": {
         "name": "Fight Wear",
-        "intro": "Hoodies und Ringertrikots für Teams und Akademien, in Ihren Farben und mit Ihrem Branding."
+        "intro": "Hoodies, Zip-Jacken, Aufwärmhosen, Spats, Kompressions- und Muay-Thai-Shorts, Ringertrikots, Bandanas und sublimierte Handtücher, in Ihren Farben und mit Ihrem Branding."
       },
       "bags": {
-        "name": "Gi-Taschen",
-        "intro": "Gi-Rucksäcke mit Platz für Anzug, Gürtel und Ausrüstung, mit dem Logo Ihres Vereins."
+        "name": "Taschen",
+        "intro": "Sublimierte Gi-Taschen, Gi-Rucksäcke, Duffel Bags und Umhängetaschen, mit dem Branding Ihrer Akademie."
       }
     },
     "types": {
@@ -561,7 +564,7 @@
       "Gewebte Etiketten und Patches",
       "Eigene Verpackung"
     ],
-    "moq": "Auf Bestellung gefertigt. Beginnen Sie mit einem Muster und bestellen Sie dann für Ihren Verein oder Ihre Marke.",
+    "moq": "Mindestbestellmenge 30 Stück. Starten Sie mit einem Muster, meist in 7 bis 10 Tagen fertig, und skalieren Sie dann für Ihre Akademie oder Marke.",
     "related": "Mehr aus dieser Serie",
     "code": "Artikelnr.",
     "whatsappText": "Hallo Spotex, ich interessiere mich für {code} ({name}).",
@@ -592,7 +595,7 @@
     "eyebrow": "Eigenmarke",
     "titleA": "Ihre Marke.",
     "titleB": "Unsere Fabrik.",
-    "intro": "Wir fertigen Anzüge und Ausrüstung für Vereine, Schulen und Marken unter deren eigenem Namen. Sie bringen die Idee, wir übernehmen Stoff, Produktion und Verpackung.",
+    "intro": "Wir fertigen Anzüge und Ausrüstung für Vereine, Schulen und Marken unter deren eigenem Namen. Sie bringen die Idee, wir übernehmen Stoff, Produktion und Verpackung. Bestellungen ab 30 Stück; wir fertigen 12.000 bis 15.000 Uniformen pro Monat.",
     "stepsTitle": "So funktioniert es",
     "steps": [
       {
@@ -601,7 +604,7 @@
       },
       {
         "title": "Design & Muster",
-        "text": "Wir bereiten das Design vor und fertigen ein erstes Muster, mit oder ohne Ihr Design."
+        "text": "Wir bereiten das Design vor und fertigen ein erstes Muster, mit oder ohne Ihr Motiv, meist in 7 bis 10 Tagen."
       },
       {
         "title": "Freigabe",
@@ -609,7 +612,7 @@
       },
       {
         "title": "Produktion",
-        "text": "Ihre Bestellung entsteht in unserer Fabrik, vom Stoff bis zum Finish."
+        "text": "Ihre Bestellung wird in unserer eigenen Fabrik gefertigt, vom Stoff bis zum Finish. Die Lieferzeit hängt von Produkt und Menge ab; wir bestätigen sie mit Ihrem Angebot."
       },
       {
         "title": "Verpackung & Versand",
@@ -620,15 +623,15 @@
     "options": [
       {
         "title": "Stoff & Gewicht",
-        "text": "Pearl-, Gold-, Ripstop- oder All-Play-Gewebe von 280 bis 700 g/m²."
+        "text": "Pearl, Gold, All-Play, Honeycomb, Diamond und weitere Webarten von 280 bis 750 GSM, mit Hosen aus Ripstop, Baumwoll-Twill oder Canvas."
       },
       {
         "title": "Farben",
-        "text": "Stoff passend zu Ihren Markenfarben gefärbt."
+        "text": "Alle IBJJF-zugelassenen Gi-Farben oder Stoff in Ihren Markenfarben gefärbt."
       },
       {
         "title": "Logos",
-        "text": "Stickerei, Siebdruck, Sublimation und Patches."
+        "text": "Stickerei, Siebdruck, DTF, Digitaldruck, Sublimation und Patches."
       },
       {
         "title": "Etiketten & Verpackung",
@@ -642,7 +645,7 @@
     "eyebrow": "Unsere Fabrik",
     "titleA": "Ein Dach.",
     "titleB": "Zehn Abteilungen.",
-    "intro": "Viele Anbieter kaufen Stoff zu und lassen extern nähen. Wir erledigen jeden Schritt selbst in Gujranwala, Pakistan, und kontrollieren so Qualität, Farbe und Lieferzeit.",
+    "intro": "Viele Anbieter kaufen Stoff zu und lassen extern nähen. Wir erledigen jeden Schritt selbst in Gujranwala, Pakistan, und kontrollieren so Qualität, Farbe und Lieferzeit. Mit 30 Webstühlen und über 60 Nähmaschinen fertigen wir 12.000 bis 15.000 Uniformen pro Monat, bei großen Aufträgen auch mehr.",
     "qualityTitle": "Qualität und Prüfung",
     "quality": "Unser F&E- und Textilprüflabor prüft Materialien und fertige Produkte vor dem Versand. Spotex ist nach ISO 9001:2015 zertifiziert.",
     "csrTitle": "Verantwortung",
@@ -687,6 +690,52 @@
     ],
     "certified": "Zertifiziertes Qualitätssystem",
     "isoText": "Unsere Produktion folgt der Qualitätsmanagement-Norm ISO 9001:2015.",
+    "certsEyebrow": "Nachweise",
+    "certsTitle": "Zertifizierungen & Mitgliedschaften",
+    "certsText": "Seit 2014 nach ISO 9001 zertifiziert und offizieller Lieferant von Ju-Jitsu-Uniformen der Pakistan Ju-Jitsu Federation. Wählen Sie ein Zertifikat, um es vollständig anzuzeigen.",
+    "certsQuality": "Qualitätsmanagement",
+    "certsSport": "Sportverbände",
+    "certsView": "In voller Größe ansehen",
+    "certsClose": "Schließen",
+    "fbrTitle": "Registrierter Exporteur",
+    "fbrText": "Seit 2002 beim Federal Board of Revenue (FBR) Pakistans als Importeur und Exporteur von Textilien und Bekleidung registriert.",
+    "certs": [
+      {
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Registrar Systems (QRS)",
+        "note": "Herstellung und Export von Kampfsportuniformen und Sportbekleidung · ausgestellt 28.02.2018"
+      },
+      {
+        "title": "ISO 9001:2008",
+        "issuer": "Quality Registrar Systems (QRS)",
+        "note": "Kampfsportuniformen, Boxausrüstung und Sportbekleidung · ausgestellt 05.02.2017"
+      },
+      {
+        "title": "ISO 9001:2008",
+        "issuer": "Quality Registrar Systems (QRS)",
+        "note": "Erstregistrierung 10.02.2014 · ausgestellt 25.01.2016"
+      },
+      {
+        "title": "QMS-Schulung",
+        "issuer": "Cornish Engineering, Lahore",
+        "note": "Schulung zum Qualitätsmanagement nach ISO 9001:2008 · Jan. 2014"
+      },
+      {
+        "title": "Offizieller Lieferant",
+        "issuer": "Pakistan Ju-Jitsu Federation",
+        "note": "Offizieller Lieferant von Ju-Jitsu-Uniformen und Ausrüstung des nationalen Verbands"
+      },
+      {
+        "title": "Mitglied in gutem Ansehen",
+        "issuer": "Punjab Ju-Jitsu Association",
+        "note": "Gujranwala Ju-Jitsu Association unter Präsident Husnain Raza"
+      },
+      {
+        "title": "Registrierter Verband",
+        "issuer": "Punjab Judo Association",
+        "note": "Gujranwala Division Judo Association, Präsident Husnain Raza · 2017"
+      }
+    ],
     "csrEyebrow": "Über die Fabrik hinaus",
     "ctaTitle": "Überzeugen Sie sich selbst.",
     "ctaText": "Starten Sie mit einem einzigen Muster, gefertigt in dieser Fabrik mit Ihrem Branding.",
@@ -790,7 +839,7 @@
     "email": "E-Mail",
     "whatsapp": "WhatsApp",
     "formSoon": "Das Online-Anfrageformular folgt in Kürze. Bis dahin schreiben Sie uns gern per WhatsApp oder E-Mail.",
-    "hours": "Montag bis Samstag, 9:00–18:00 Uhr pakistanischer Zeit (UTC+5). Wir antworten auf E-Mails und WhatsApp innerhalb eines Werktags."
+    "hours": "Samstag bis Donnerstag, 9:00–18:00 Uhr pakistanischer Zeit (UTC+5); freitags geschlossen. Wir antworten auf E-Mails und WhatsApp-Nachrichten innerhalb eines Werktags."
   },
   "NotFound": {
     "title": "Seite nicht gefunden",
@@ -834,6 +883,8 @@
       "Stickerei",
       "Gewebter Aufnäher",
       "Siebdruck",
+      "DTF-Druck",
+      "Digitaldruck",
       "Sublimation",
       "Ohne Branding",
       "Noch unklar"

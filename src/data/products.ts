@@ -11,7 +11,7 @@ export const PRODUCTS: Product[] = [
     category: 'bjj-gis',
     type: 'bjjGi',
     specs: [{ label: 'weave', value: 'pearl' }, { label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 280, unit: 'gsm' }, { label: 'pants', value: 'ripstop' }],
-    images: ['/products/jiu-jitsu-uniforms-si-jju-1001-631636-1775541913.webp', '/products/jiu-jitsu-uniforms-si-jju-1001-361636-1775541915.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599006/spotex/products/jiu-jitsu-uniforms-si-jju-1001-631636-1775541913.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599006/spotex/products/jiu-jitsu-uniforms-si-jju-1001-361636-1775541915.webp'],
     featured: true,
   },
   {
@@ -20,7 +20,7 @@ export const PRODUCTS: Product[] = [
     category: 'bjj-gis',
     type: 'bjjGi',
     specs: [{ label: 'weave', value: 'pearl' }, { label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 280, unit: 'gsm' }, { label: 'pants', value: 'ripstop' }],
-    images: ['/products/jiu-jitsu-uniform-si-jju-1002-778279-1775542141.webp', '/products/jiu-jitsu-uniform-si-jju-1002-118840-1775542142.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599006/spotex/products/jiu-jitsu-uniform-si-jju-1002-778279-1775542141.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599006/spotex/products/jiu-jitsu-uniform-si-jju-1002-118840-1775542142.webp'],
     featured: true,
   },
   {
@@ -29,7 +29,7 @@ export const PRODUCTS: Product[] = [
     category: 'bjj-gis',
     type: 'bjjGi',
     specs: [{ label: 'weave', value: 'gold' }, { label: 'jacket', value: 'cotton' }, { label: 'weight', amount: 350, unit: 'gsm' }, { label: 'pants', value: 'ripstopCotton' }],
-    images: ['/products/jiu-jitsu-uniforms-si-jju-1003-399358-1775542290.webp', '/products/jiu-jitsu-uniforms-si-jju-1003-623749-1775542291.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599007/spotex/products/jiu-jitsu-uniforms-si-jju-1003-399358-1775542290.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599007/spotex/products/jiu-jitsu-uniforms-si-jju-1003-623749-1775542291.webp'],
   },
   {
     slug: 'si-jju-1004',
@@ -37,7 +37,7 @@ export const PRODUCTS: Product[] = [
     category: 'bjj-gis',
     type: 'bjjGi',
     specs: [{ label: 'weave', value: 'gold' }, { label: 'jacket', value: 'cotton' }, { label: 'weight', amount: 350, unit: 'gsm' }, { label: 'pants', value: 'ripstopCotton' }],
-    images: ['/products/jiu-jitsu-uniforms-si-jju-1004-106869-1775542391.webp', '/products/jiu-jitsu-uniforms-si-jju-1004-4335-1775542392.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599007/spotex/products/jiu-jitsu-uniforms-si-jju-1004-106869-1775542391.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599007/spotex/products/jiu-jitsu-uniforms-si-jju-1004-4335-1775542392.webp'],
   },
   {
     slug: 'si-jju-1005',
@@ -45,7 +45,7 @@ export const PRODUCTS: Product[] = [
     category: 'bjj-gis',
     type: 'bjjGi',
     specs: [{ label: 'weave', value: 'gold' }, { label: 'jacket', value: 'cotton' }, { label: 'weight', amount: 350, unit: 'gsm' }, { label: 'pants', value: 'ripstopCotton' }],
-    images: ['/products/jiu-jitsu-uniforms-si-jju-1005-318594-1775542495.webp', '/products/jiu-jitsu-uniforms-si-jju-1005-235977-1775542497.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599007/spotex/products/jiu-jitsu-uniforms-si-jju-1005-318594-1775542495.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599007/spotex/products/jiu-jitsu-uniforms-si-jju-1005-235977-1775542497.webp'],
   },
   {
     slug: 'si-jju-1006',
@@ -53,7 +53,7 @@ export const PRODUCTS: Product[] = [
     category: 'bjj-gis',
     type: 'bjjGi',
     specs: [{ label: 'weave', value: 'allPlay' }, { label: 'jacket', value: 'bambooCotton' }, { label: 'weight', amount: 400, unit: 'gsm' }, { label: 'pants', value: 'ripstop10oz' }],
-    images: ['/products/jiu-jitsu-uniforms-si-jju-1006-941276-1775542588.webp', '/products/jiu-jitsu-uniforms-si-jju-1006-773304-1775542589.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599008/spotex/products/jiu-jitsu-uniforms-si-jju-1006-941276-1775542588.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599008/spotex/products/jiu-jitsu-uniforms-si-jju-1006-773304-1775542589.webp'],
   },
   {
     slug: 'si-jju-1007',
@@ -61,7 +61,7 @@ export const PRODUCTS: Product[] = [
     category: 'bjj-gis',
     type: 'bjjGi',
     specs: [{ label: 'weave', value: 'allPlay' }, { label: 'jacket', value: 'bambooCotton' }, { label: 'weight', amount: 400, unit: 'gsm' }, { label: 'pants', value: 'ripstop10oz' }],
-    images: ['/products/jiu-jitsu-uniforms-si-jju-1007-64771-1775542673.webp', '/products/jiu-jitsu-uniforms-si-jju-1007-834909-1775542675.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599008/spotex/products/jiu-jitsu-uniforms-si-jju-1007-64771-1775542673.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599008/spotex/products/jiu-jitsu-uniforms-si-jju-1007-834909-1775542675.webp'],
   },
   {
     slug: 'si-jju-1008',
@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
     category: 'bjj-gis',
     type: 'bjjGi',
     specs: [{ label: 'weave', value: 'allPlay' }, { label: 'jacket', value: 'bambooCotton' }, { label: 'weight', amount: 400, unit: 'gsm' }, { label: 'pants', value: 'ripstop10oz' }],
-    images: ['/products/jiu-jitsu-uniforms-si-jju-1008-332339-1775542756.webp', '/products/jiu-jitsu-uniforms-si-jju-1008-947954-1775542757.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599009/spotex/products/jiu-jitsu-uniforms-si-jju-1008-332339-1775542756.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599009/spotex/products/jiu-jitsu-uniforms-si-jju-1008-947954-1775542757.webp'],
   },
   {
     slug: 'si-jju-1009',
@@ -77,7 +77,7 @@ export const PRODUCTS: Product[] = [
     category: 'bjj-gis',
     type: 'bjjGi',
     specs: [{ label: 'weave', value: 'pearl' }, { label: 'jacket', value: 'cotton' }, { label: 'weight', amount: 350, unit: 'gsm' }, { label: 'pants', value: 'ripstopCotton' }],
-    images: ['/products/jiu-jitsu-uniforms-si-jju-1009-173170-1775542992.webp', '/products/jiu-jitsu-uniforms-si-jju-1009-335527-1775542993.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599008/spotex/products/jiu-jitsu-uniforms-si-jju-1009-173170-1775542992.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599008/spotex/products/jiu-jitsu-uniforms-si-jju-1009-335527-1775542993.webp'],
   },
   {
     slug: 'si-ju-1001',
@@ -86,7 +86,7 @@ export const PRODUCTS: Product[] = [
     type: 'judoUniform',
     line: 'Academy',
     specs: [{ label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 450, unit: 'gsm' }, { label: 'pants', value: 'drillCotton' }],
-    images: ['/products/judo-uniforms-si-ju-1001-987222-1775543618.webp', '/products/judo-uniforms-si-ju-1001-214115-1775543625.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599009/spotex/products/judo-uniforms-si-ju-1001-987222-1775543618.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599009/spotex/products/judo-uniforms-si-ju-1001-214115-1775543625.webp'],
     featured: true,
   },
   {
@@ -96,7 +96,7 @@ export const PRODUCTS: Product[] = [
     type: 'judoUniform',
     line: 'Academy',
     specs: [{ label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 450, unit: 'gsm' }, { label: 'pants', value: 'drillCotton' }],
-    images: ['/products/judo-uniforms-si-ju-1002-866068-1775543725.webp', '/products/judo-uniforms-si-ju-1002-523020-1775543727.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599009/spotex/products/judo-uniforms-si-ju-1002-866068-1775543725.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599010/spotex/products/judo-uniforms-si-ju-1002-523020-1775543727.webp'],
   },
   {
     slug: 'si-ju-1003',
@@ -105,7 +105,7 @@ export const PRODUCTS: Product[] = [
     type: 'judoUniform',
     line: 'Academy',
     specs: [{ label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 450, unit: 'gsm' }, { label: 'pants', value: 'drillCotton' }],
-    images: ['/products/judo-uniforms-si-ju-1003-153351-1775543799.webp', '/products/judo-uniforms-si-ju-1003-561835-1775543804.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599010/spotex/products/judo-uniforms-si-ju-1003-153351-1775543799.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599010/spotex/products/judo-uniforms-si-ju-1003-561835-1775543804.webp'],
   },
   {
     slug: 'si-ju-1004',
@@ -114,7 +114,7 @@ export const PRODUCTS: Product[] = [
     type: 'judoUniform',
     line: 'Academy',
     specs: [{ label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 450, unit: 'gsm' }, { label: 'pants', value: 'drillCotton' }],
-    images: ['/products/judo-uniforms-si-ju-1004-477428-1775543864.webp', '/products/judo-uniforms-si-ju-1004-759763-1775543866.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599010/spotex/products/judo-uniforms-si-ju-1004-477428-1775543864.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599011/spotex/products/judo-uniforms-si-ju-1004-759763-1775543866.webp'],
   },
   {
     slug: 'si-ju-1005',
@@ -123,7 +123,7 @@ export const PRODUCTS: Product[] = [
     type: 'judoUniform',
     line: 'Challenger',
     specs: [{ label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 550, unit: 'gsm' }, { label: 'pants', value: 'drillCotton' }],
-    images: ['/products/judo-uniforms-si-ju-1005-190467-1775543959.webp', '/products/judo-uniforms-si-ju-1005-785431-1775543961.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599010/spotex/products/judo-uniforms-si-ju-1005-190467-1775543959.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599010/spotex/products/judo-uniforms-si-ju-1005-785431-1775543961.webp'],
     featured: true,
   },
   {
@@ -133,7 +133,7 @@ export const PRODUCTS: Product[] = [
     type: 'judoUniform',
     line: 'Challenger',
     specs: [{ label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 550, unit: 'gsm' }, { label: 'pants', value: 'drillCotton' }],
-    images: ['/products/judo-uniforms-si-ju-1006-97532-1775544021.webp', '/products/judo-uniforms-si-ju-1006-561736-1775544023.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599011/spotex/products/judo-uniforms-si-ju-1006-97532-1775544021.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599011/spotex/products/judo-uniforms-si-ju-1006-561736-1775544023.webp'],
   },
   {
     slug: 'si-ju-1007',
@@ -141,8 +141,8 @@ export const PRODUCTS: Product[] = [
     category: 'judo-uniforms',
     type: 'judoUniform',
     line: 'Winner',
-    specs: [{ label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 700, unit: 'gsm' }, { label: 'pants', value: 'drillCotton' }],
-    images: ['/products/judo-uniforms-si-ju-1007-109627-1775544152.webp', '/products/judo-uniforms-si-ju-1007-969900-1775544154.webp'],
+    specs: [{ label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 750, unit: 'gsm' }, { label: 'pants', value: 'drillCotton' }],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599011/spotex/products/judo-uniforms-si-ju-1007-109627-1775544152.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599011/spotex/products/judo-uniforms-si-ju-1007-969900-1775544154.webp'],
   },
   {
     slug: 'si-ju-1008',
@@ -150,8 +150,8 @@ export const PRODUCTS: Product[] = [
     category: 'judo-uniforms',
     type: 'judoUniform',
     line: 'Winner',
-    specs: [{ label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 700, unit: 'gsm' }, { label: 'pants', value: 'drillCotton' }],
-    images: ['/products/judo-uniforms-si-ju-1008-404480-1775544230.webp', '/products/judo-uniforms-si-ju-1008-855150-1775544232.webp'],
+    specs: [{ label: 'jacket', value: 'polyCotton' }, { label: 'weight', amount: 750, unit: 'gsm' }, { label: 'pants', value: 'drillCotton' }],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599011/spotex/products/judo-uniforms-si-ju-1008-404480-1775544230.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599012/spotex/products/judo-uniforms-si-ju-1008-855150-1775544232.webp'],
   },
   {
     slug: 'k-104-sti-1',
@@ -159,7 +159,7 @@ export const PRODUCTS: Product[] = [
     category: 'karate-uniforms',
     type: 'karateUniform',
     specs: [{ label: 'weight', amount: 10, unit: 'oz' }, { label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elasticOrDrawstring' }],
-    images: ['/products/karate-uniforms-k-104-sti-1-10-oz-415201-1731392618.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599012/spotex/products/karate-uniforms-k-104-sti-1-10-oz-415201-1731392618.webp'],
     featured: true,
   },
   {
@@ -168,7 +168,7 @@ export const PRODUCTS: Product[] = [
     category: 'karate-uniforms',
     type: 'karateUniform',
     specs: [{ label: 'weight', amount: 10, unit: 'oz' }, { label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elasticOrDrawstring' }],
-    images: ['/products/karate-uniforms-k-104-bsti-2-10-oz-995735-1731392706.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599012/spotex/products/karate-uniforms-k-104-bsti-2-10-oz-995735-1731392706.webp'],
   },
   {
     slug: 'k-104-sti-3',
@@ -176,7 +176,7 @@ export const PRODUCTS: Product[] = [
     category: 'karate-uniforms',
     type: 'karateUniform',
     specs: [{ label: 'weight', amount: 10, unit: 'oz' }, { label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elasticOrDrawstring' }],
-    images: ['/products/karate-uniforms-k-104-sti-3-10-oz-211074-1731392839.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599012/spotex/products/karate-uniforms-k-104-sti-3-10-oz-211074-1731392839.webp'],
   },
   {
     slug: 'k-104-sti-5',
@@ -184,7 +184,7 @@ export const PRODUCTS: Product[] = [
     category: 'karate-uniforms',
     type: 'karateUniform',
     specs: [{ label: 'weight', amount: 10, unit: 'oz' }, { label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elasticOrDrawstring' }],
-    images: ['/products/karate-uniforms-k-104-sti-5-10-oz-644498-1731392893.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599013/spotex/products/karate-uniforms-k-104-sti-5-10-oz-644498-1731392893.webp'],
   },
   {
     slug: 'k-104-b-sti-6',
@@ -192,7 +192,7 @@ export const PRODUCTS: Product[] = [
     category: 'karate-uniforms',
     type: 'karateUniform',
     specs: [{ label: 'weight', amount: 10, unit: 'oz' }, { label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elasticOrDrawstring' }],
-    images: ['/products/karate-uniforms-k-104-b-sti-6-10-oz-595132-1731392934.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599012/spotex/products/karate-uniforms-k-104-b-sti-6-10-oz-595132-1731392934.webp'],
   },
   {
     slug: 'k-104-sti-7',
@@ -200,7 +200,7 @@ export const PRODUCTS: Product[] = [
     category: 'karate-uniforms',
     type: 'karateUniform',
     specs: [{ label: 'weight', amount: 10, unit: 'oz' }, { label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elasticOrDrawstring' }],
-    images: ['/products/karate-uniforms-k-104-sti-7-10-oz-756735-1731392971.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599012/spotex/products/karate-uniforms-k-104-sti-7-10-oz-756735-1731392971.webp'],
   },
   {
     slug: 'k-104-sti-8',
@@ -208,7 +208,7 @@ export const PRODUCTS: Product[] = [
     category: 'karate-uniforms',
     type: 'karateUniform',
     specs: [{ label: 'weight', amount: 10, unit: 'oz' }, { label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elasticOrDrawstring' }],
-    images: ['/products/karate-uniforms-k-104-sti-8-10-oz-224537-1731393116.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599012/spotex/products/karate-uniforms-k-104-sti-8-10-oz-224537-1731393116.webp'],
   },
   {
     slug: 'k-104-sti-55',
@@ -216,7 +216,7 @@ export const PRODUCTS: Product[] = [
     category: 'karate-uniforms',
     type: 'karateUniform',
     specs: [{ label: 'weight', amount: 10, unit: 'oz' }, { label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elasticOrDrawstring' }],
-    images: ['/products/karate-uniforms-k-104-sti-55-10-oz-38003-1731393153.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599012/spotex/products/karate-uniforms-k-104-sti-55-10-oz-38003-1731393153.webp'],
   },
   {
     slug: 'k-104-sti-56',
@@ -224,7 +224,7 @@ export const PRODUCTS: Product[] = [
     category: 'karate-uniforms',
     type: 'karateUniform',
     specs: [{ label: 'weight', amount: 10, unit: 'oz' }, { label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elasticOrDrawstring' }],
-    images: ['/products/karate-uniforms-k-104-sti-56-10-oz-875603-1731393185.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599013/spotex/products/karate-uniforms-k-104-sti-56-10-oz-875603-1731393185.webp'],
   },
   {
     slug: 'tk-sti-01',
@@ -232,7 +232,7 @@ export const PRODUCTS: Product[] = [
     category: 'taekwondo-uniforms',
     type: 'taekwondoUniform',
     specs: [{ label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elastic' }],
-    images: ['/products/taekwondo-uniforms-tk-sti-01-585796-1731393327.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599014/spotex/products/taekwondo-uniforms-tk-sti-01-585796-1731393327.webp'],
     featured: true,
   },
   {
@@ -241,7 +241,7 @@ export const PRODUCTS: Product[] = [
     category: 'taekwondo-uniforms',
     type: 'taekwondoUniform',
     specs: [{ label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elastic' }],
-    images: ['/products/taekwondo-uniforms-tk-sti-02-359156-1731394207.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599013/spotex/products/taekwondo-uniforms-tk-sti-02-359156-1731394207.webp'],
   },
   {
     slug: 'tk-sti-03',
@@ -249,7 +249,7 @@ export const PRODUCTS: Product[] = [
     category: 'taekwondo-uniforms',
     type: 'taekwondoUniform',
     specs: [{ label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elastic' }],
-    images: ['/products/taekwondo-uniforms-tk-sti-03-235906-1731394358.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599014/spotex/products/taekwondo-uniforms-tk-sti-03-235906-1731394358.webp'],
   },
   {
     slug: 'tk-sti-04',
@@ -257,7 +257,7 @@ export const PRODUCTS: Product[] = [
     category: 'taekwondo-uniforms',
     type: 'taekwondoUniform',
     specs: [{ label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elastic' }],
-    images: ['/products/taekwondo-uniforms-tk-sti-04-469230-1731394361.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599013/spotex/products/taekwondo-uniforms-tk-sti-04-469230-1731394361.webp'],
   },
   {
     slug: 'tk-sti-05',
@@ -265,7 +265,7 @@ export const PRODUCTS: Product[] = [
     category: 'taekwondo-uniforms',
     type: 'taekwondoUniform',
     specs: [{ label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elastic' }],
-    images: ['/products/taekwondo-uniforms-tk-sti-05-711114-1731394366.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599014/spotex/products/taekwondo-uniforms-tk-sti-05-711114-1731394366.webp'],
   },
   {
     slug: 'tk-sti-06',
@@ -273,7 +273,7 @@ export const PRODUCTS: Product[] = [
     category: 'taekwondo-uniforms',
     type: 'taekwondoUniform',
     specs: [{ label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elastic' }],
-    images: ['/products/taekwondo-uniforms-tk-sti-06-745939-1731394371.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599014/spotex/products/taekwondo-uniforms-tk-sti-06-745939-1731394371.webp'],
   },
   {
     slug: 'tk-sti-07',
@@ -281,7 +281,7 @@ export const PRODUCTS: Product[] = [
     category: 'taekwondo-uniforms',
     type: 'taekwondoUniform',
     specs: [{ label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elastic' }],
-    images: ['/products/taekwondo-uniforms-tk-sti-07-619504-1731394377.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599014/spotex/products/taekwondo-uniforms-tk-sti-07-619504-1731394377.webp'],
   },
   {
     slug: 'tk-sti-08',
@@ -289,7 +289,7 @@ export const PRODUCTS: Product[] = [
     category: 'taekwondo-uniforms',
     type: 'taekwondoUniform',
     specs: [{ label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elastic' }],
-    images: ['/products/taekwondo-uniforms-tk-sti-08-550005-1731394383.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599014/spotex/products/taekwondo-uniforms-tk-sti-08-550005-1731394383.webp'],
   },
   {
     slug: 'tk-sti-09',
@@ -297,7 +297,7 @@ export const PRODUCTS: Product[] = [
     category: 'taekwondo-uniforms',
     type: 'taekwondoUniform',
     specs: [{ label: 'jacket', value: 'polyCottonOrCotton' }, { label: 'colours', value: 'allRegular' }, { label: 'waist', value: 'elastic' }],
-    images: ['/products/taekwondo-uniforms-tk-sti-09-148757-1731394387.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599015/spotex/products/taekwondo-uniforms-tk-sti-09-148757-1731394387.webp'],
   },
   {
     slug: 'si-sb-1001',
@@ -305,7 +305,7 @@ export const PRODUCTS: Product[] = [
     category: 'sambo-uniforms',
     type: 'samboUniform',
     specs: [{ label: 'use', value: 'sambo' }, { label: 'colours', value: 'redBlue' }],
-    images: ['/products/asmba-uniform-si-1001-770783-1771061198.webp', '/products/asmba-uniform-si-1001-725742-1771061200.webp', '/products/asmba-uniform-si-1001-538411-1771061197.webp', '/products/asmba-uniform-si-1001-854022-1771061199.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599015/spotex/products/asmba-uniform-si-1001-770783-1771061198.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599015/spotex/products/asmba-uniform-si-1001-725742-1771061200.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599015/spotex/products/asmba-uniform-si-1001-538411-1771061197.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599015/spotex/products/asmba-uniform-si-1001-854022-1771061199.webp'],
   },
   {
     slug: 'jjb-101-sti-01',
@@ -313,7 +313,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'bjjBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'bjjRank' }],
-    images: ['/products/bjj-belts-jjb-101-sti-01-273480-1731403590.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599015/spotex/products/bjj-belts-jjb-101-sti-01-273480-1731403590.webp'],
     featured: true,
   },
   {
@@ -322,7 +322,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'bjjBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'bjjRank' }],
-    images: ['/products/bjj-belts-jjb-101-sti-02-601904-1731403877.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599015/spotex/products/bjj-belts-jjb-101-sti-02-601904-1731403877.webp'],
   },
   {
     slug: 'jjb-101-sti-03',
@@ -330,7 +330,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'bjjBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'bjjRank' }],
-    images: ['/products/bjj-belts-jjb-101-sti-03-234841-1731403914.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599015/spotex/products/bjj-belts-jjb-101-sti-03-234841-1731403914.webp'],
   },
   {
     slug: 'jjb-101-sti-04',
@@ -338,7 +338,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'bjjBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'bjjRank' }],
-    images: ['/products/bjj-belts-jjb-101-sti-04-274474-1731403993.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599016/spotex/products/bjj-belts-jjb-101-sti-04-274474-1731403993.webp'],
   },
   {
     slug: 'jjb-101-sti-05',
@@ -346,7 +346,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'bjjBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'bjjRank' }],
-    images: ['/products/bjj-belts-jjb-101-sti-05-320054-1731404077.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599016/spotex/products/bjj-belts-jjb-101-sti-05-320054-1731404077.webp'],
   },
   {
     slug: 'jjb-101-sti-06',
@@ -354,7 +354,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'bjjBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'bjjRank' }],
-    images: ['/products/bjj-belts-jjb-101-sti-06-787974-1731404548.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599016/spotex/products/bjj-belts-jjb-101-sti-06-787974-1731404548.webp'],
   },
   {
     slug: 'jjb-101-sti-07',
@@ -362,7 +362,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'bjjBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'bjjRank' }],
-    images: ['/products/bjj-belts-jjb-101-sti-07-968807-1731404684.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599016/spotex/products/bjj-belts-jjb-101-sti-07-968807-1731404684.webp'],
   },
   {
     slug: 'jjb-101-sti-08',
@@ -370,7 +370,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'bjjBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'bjjRank' }],
-    images: ['/products/bjj-belts-jjb-101-sti-08-411752-1731404808.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599016/spotex/products/bjj-belts-jjb-101-sti-08-411752-1731404808.webp'],
   },
   {
     slug: 'jjb-101-sti-09',
@@ -378,7 +378,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'bjjBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'bjjRank' }],
-    images: ['/products/bjj-belts-jjb-101-sti-09-479193-1731404886.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599017/spotex/products/bjj-belts-jjb-101-sti-09-479193-1731404886.webp'],
   },
   {
     slug: 'jjb103-sti-01',
@@ -386,7 +386,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'giFabricBelt',
     specs: [{ label: 'weight', amount: 350, unit: 'gsm' }, { label: 'jacket', value: 'giFabric' }, { label: 'sizes', value: 'sToXxxl' }, { label: 'colours', value: 'allRanks' }],
-    images: ['/products/bjj-350-gram-belts-jjb103sti-01350-gsm-gi-fabric-353397-1731411359.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599017/spotex/products/bjj-350-gram-belts-jjb103sti-01350-gsm-gi-fabric-353397-1731411359.webp'],
   },
   {
     slug: 'jjb103-sti-02',
@@ -394,7 +394,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'giFabricBelt',
     specs: [{ label: 'weight', amount: 350, unit: 'gsm' }, { label: 'jacket', value: 'giFabric' }, { label: 'sizes', value: 'sToXxxl' }, { label: 'colours', value: 'allRanks' }],
-    images: ['/products/bjj-350-gram-belts-jjb103sti-02350-gsm-gi-fabric-791091-1731411452.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599017/spotex/products/bjj-350-gram-belts-jjb103sti-02350-gsm-gi-fabric-791091-1731411452.webp'],
   },
   {
     slug: 'jjb103-sti-03',
@@ -402,7 +402,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'giFabricBelt',
     specs: [{ label: 'weight', amount: 350, unit: 'gsm' }, { label: 'jacket', value: 'giFabric' }, { label: 'sizes', value: 'sToXxxl' }, { label: 'colours', value: 'allRanks' }],
-    images: ['/products/bjj-350-gram-belts-jjb103sti-03350-gsm-gi-fabric-467573-1731411531.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599016/spotex/products/bjj-350-gram-belts-jjb103sti-03350-gsm-gi-fabric-467573-1731411531.webp'],
   },
   {
     slug: 'jjb103-sti-04',
@@ -410,7 +410,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'giFabricBelt',
     specs: [{ label: 'weight', amount: 350, unit: 'gsm' }, { label: 'jacket', value: 'giFabric' }, { label: 'sizes', value: 'sToXxxl' }, { label: 'colours', value: 'allRanks' }],
-    images: ['/products/bjj-350-gram-belts-jjb103sti-04350-gsm-gi-fabric-500625-1731411612.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599016/spotex/products/bjj-350-gram-belts-jjb103sti-04350-gsm-gi-fabric-500625-1731411612.webp'],
   },
   {
     slug: 'jjb-103-sti-01',
@@ -418,7 +418,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'giFabricBelt',
     specs: [{ label: 'weight', amount: 350, unit: 'gsm' }, { label: 'jacket', value: 'giFabric' }, { label: 'sizes', value: 'sToXxxl' }, { label: 'colours', value: 'allRanks' }],
-    images: ['/products/bjj-350-gram-belts-jjb-103-sti-01-350-gsm-gi-fabric-410089-1731411945.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599017/spotex/products/bjj-350-gram-belts-jjb-103-sti-01-350-gsm-gi-fabric-410089-1731411945.webp'],
   },
   {
     slug: 'jjb103-sti-22',
@@ -426,7 +426,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'giFabricBelt',
     specs: [{ label: 'weight', amount: 350, unit: 'gsm' }, { label: 'jacket', value: 'giFabric' }, { label: 'sizes', value: 'sToXxxl' }, { label: 'colours', value: 'allRanks' }],
-    images: ['/products/bjj-350-gram-belts-jjb103sti-22350-gsm-gi-fabric-488308-1731411989.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599018/spotex/products/bjj-350-gram-belts-jjb103sti-22350-gsm-gi-fabric-488308-1731411989.webp'],
   },
   {
     slug: 'jjb-102-sti-01',
@@ -434,7 +434,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'casualBelt',
     specs: [{ label: 'width', amount: 4, unit: 'cm' }, { label: 'colours', value: 'allRanks' }, { label: 'sizes', value: 'sToXxxl' }],
-    images: ['/products/casual-belts-jjb-102-sti-01-48253-1731410493.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599018/spotex/products/casual-belts-jjb-102-sti-01-48253-1731410493.webp'],
   },
   {
     slug: 'jjb-102-sti-02',
@@ -442,7 +442,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'casualBelt',
     specs: [{ label: 'width', amount: 4, unit: 'cm' }, { label: 'colours', value: 'allRanks' }, { label: 'sizes', value: 'sToXxxl' }],
-    images: ['/products/casual-belts-jjb-102-sti-02-865821-1731410570.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599018/spotex/products/casual-belts-jjb-102-sti-02-865821-1731410570.webp'],
   },
   {
     slug: 'jjb-102-sti-03',
@@ -450,7 +450,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'casualBelt',
     specs: [{ label: 'width', amount: 4, unit: 'cm' }, { label: 'colours', value: 'allRanks' }, { label: 'sizes', value: 'sToXxxl' }],
-    images: ['/products/casual-belts-jjb-102-sti-03-327555-1731410691.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599017/spotex/products/casual-belts-jjb-102-sti-03-327555-1731410691.webp'],
   },
   {
     slug: 'jjb-102-sti-04',
@@ -458,7 +458,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'casualBelt',
     specs: [{ label: 'width', amount: 4, unit: 'cm' }, { label: 'colours', value: 'allRanks' }, { label: 'sizes', value: 'sToXxxl' }],
-    images: ['/products/casual-belts-jjb-102-sti-04-361226-1731410881.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599018/spotex/products/casual-belts-jjb-102-sti-04-361226-1731410881.webp'],
   },
   {
     slug: 'jjb-102-sti-05',
@@ -466,7 +466,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'casualBelt',
     specs: [{ label: 'width', amount: 4, unit: 'cm' }, { label: 'colours', value: 'allRanks' }, { label: 'sizes', value: 'sToXxxl' }],
-    images: ['/products/casual-belts-jjb-102-sti-05-437927-1731410933.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599018/spotex/products/casual-belts-jjb-102-sti-05-437927-1731410933.webp'],
   },
   {
     slug: 'jjb-102-sti-06',
@@ -474,7 +474,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'casualBelt',
     specs: [{ label: 'width', amount: 4, unit: 'cm' }, { label: 'colours', value: 'allRanks' }, { label: 'sizes', value: 'sToXxxl' }],
-    images: ['/products/casual-belts-jjb-102-sti-06-685400-1731410991.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599018/spotex/products/casual-belts-jjb-102-sti-06-685400-1731410991.webp'],
   },
   {
     slug: 'jjb-102-sti-21',
@@ -482,7 +482,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'casualBelt',
     specs: [{ label: 'width', amount: 4, unit: 'cm' }, { label: 'colours', value: 'allRanks' }, { label: 'sizes', value: 'sToXxxl' }],
-    images: ['/products/casual-belts-jjb-102-sti-21-487592-1731411151.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599019/spotex/products/casual-belts-jjb-102-sti-21-487592-1731411151.webp'],
   },
   {
     slug: 'jjb-102-sti-22',
@@ -490,7 +490,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'casualBelt',
     specs: [{ label: 'width', amount: 4, unit: 'cm' }, { label: 'colours', value: 'allRanks' }, { label: 'sizes', value: 'sToXxxl' }],
-    images: ['/products/casual-belts-jjb-102-sti-22-408641-1731411196.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599019/spotex/products/casual-belts-jjb-102-sti-22-408641-1731411196.webp'],
   },
   {
     slug: 'j-101-sti-1',
@@ -498,7 +498,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'judoBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'judoRank' }],
-    images: ['/products/judo-belt-j-101-sti-1-131668-1731412144.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599019/spotex/products/judo-belt-j-101-sti-1-131668-1731412144.webp'],
   },
   {
     slug: 'j-101-sti-2',
@@ -506,7 +506,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'judoBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'judoRank' }],
-    images: ['/products/judo-belt-j-101-sti-2-301223-1731412444.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599019/spotex/products/judo-belt-j-101-sti-2-301223-1731412444.webp'],
   },
   {
     slug: 'j-101-sti-3',
@@ -514,7 +514,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'judoBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'judoRank' }],
-    images: ['/products/judo-belt-j-101-sti-3-833946-1731412612.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599019/spotex/products/judo-belt-j-101-sti-3-833946-1731412612.webp'],
   },
   {
     slug: 'j-101-sti-4',
@@ -522,7 +522,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'judoBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'judoRank' }],
-    images: ['/products/judo-belt-j-101-sti-4-899382-1731412656.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599019/spotex/products/judo-belt-j-101-sti-4-899382-1731412656.webp'],
   },
   {
     slug: 'j-101-sti-5',
@@ -530,7 +530,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'judoBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'judoRank' }],
-    images: ['/products/judo-belt-j-101-sti-5-256849-1731412697.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599019/spotex/products/judo-belt-j-101-sti-5-256849-1731412697.webp'],
   },
   {
     slug: 'j-101-sti-6',
@@ -538,7 +538,7 @@ export const PRODUCTS: Product[] = [
     category: 'belts',
     type: 'judoBelt',
     specs: [{ label: 'colours', value: 'allRanks' }, { label: 'use', value: 'judoRank' }],
-    images: ['/products/judo-belt-j-101-sti-6-413231-1731412734.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599020/spotex/products/judo-belt-j-101-sti-6-413231-1731412734.webp'],
   },
   {
     slug: 'si-mms-1001',
@@ -546,7 +546,7 @@ export const PRODUCTS: Product[] = [
     category: 'mma-shorts',
     type: 'mmaShorts',
     specs: [{ label: 'print', value: 'sublimated' }, { label: 'jacket', value: 'polyester' }],
-    images: ['/products/mma-short-si-mms-1001-887091-1775555265.webp', '/products/mma-short-si-mms-1001-105218-1775555267.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599020/spotex/products/mma-short-si-mms-1001-887091-1775555265.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599020/spotex/products/mma-short-si-mms-1001-105218-1775555267.webp'],
   },
   {
     slug: 'si-ms-1001',
@@ -554,7 +554,7 @@ export const PRODUCTS: Product[] = [
     category: 'mma-shorts',
     type: 'mmaShorts',
     specs: [{ label: 'print', value: 'sublimated' }, { label: 'jacket', value: 'polyester' }],
-    images: ['/products/mma-shorts-si-ms-1001-813389-1775545568.webp', '/products/mma-shorts-si-ms-1001-84188-1775545570.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599020/spotex/products/mma-shorts-si-ms-1001-813389-1775545568.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599020/spotex/products/mma-shorts-si-ms-1001-84188-1775545570.webp'],
     featured: true,
   },
   {
@@ -563,7 +563,7 @@ export const PRODUCTS: Product[] = [
     category: 'fight-wear',
     type: 'hoodie',
     specs: [{ label: 'print', value: 'sublimated' }, { label: 'jacket', value: 'polyester' }],
-    images: ['/products/hoodies-si-h-1001-278647-1775544768.webp', '/products/hoodies-si-h-1001-888851-1775544770.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599020/spotex/products/hoodies-si-h-1001-278647-1775544768.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599020/spotex/products/hoodies-si-h-1001-888851-1775544770.webp'],
   },
   {
     slug: 'si-ws-1001',
@@ -571,7 +571,7 @@ export const PRODUCTS: Product[] = [
     category: 'fight-wear',
     type: 'singlet',
     specs: [{ label: 'print', value: 'sublimated' }, { label: 'jacket', value: 'polyester' }],
-    images: ['/products/wrestling-singlets-si-ws-1001-786233-1775544632.webp', '/products/wrestling-singlets-si-ws-1001-578127-1775544633.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599020/spotex/products/wrestling-singlets-si-ws-1001-786233-1775544632.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599021/spotex/products/wrestling-singlets-si-ws-1001-578127-1775544633.webp'],
   },
   {
     slug: 'si-gbp-1001',
@@ -579,7 +579,7 @@ export const PRODUCTS: Product[] = [
     category: 'bags',
     type: 'giBag',
     specs: [{ label: 'use', value: 'giAndGear' }],
-    images: ['/products/gi-bag-pack-si-gbp-1001-432446-1775544337.webp', '/products/gi-bag-pack-si-gbp-1001-371366-1775544335.webp', '/products/gi-bag-pack-si-gbp-1001-411624-1775544342.webp'],
+    images: ['https://res.cloudinary.com/vmom2s9f/image/upload/v1795599021/spotex/products/gi-bag-pack-si-gbp-1001-432446-1775544337.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599021/spotex/products/gi-bag-pack-si-gbp-1001-371366-1775544335.webp', 'https://res.cloudinary.com/vmom2s9f/image/upload/v1795599021/spotex/products/gi-bag-pack-si-gbp-1001-411624-1775544342.webp'],
     featured: true,
   },
 ];

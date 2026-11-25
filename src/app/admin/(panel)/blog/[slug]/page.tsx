@@ -19,7 +19,7 @@ export default async function AdminPostPage({ params, searchParams }: Props) {
 
   return (
     <>
-      <PageHeader eyebrow="Blog" title={post ? 'Edit article' : 'New article'} text={post?.title ?? 'Write an article for the website blog (English).'} />
+      <PageHeader back={{ href: '/admin/blog', label: 'All articles' }} eyebrow="Blog"title={post ? 'Edit article' : 'New article'} text={post?.title ?? 'Write an article for the website blog (English).'} />
       <PostForm key={post?.slug ?? 'new'} post={post} dbReady={dbConfigured()} saved={saved === '1'} />
     </>
   );
