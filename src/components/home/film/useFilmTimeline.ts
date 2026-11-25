@@ -284,19 +284,25 @@ export function useFilmTimeline(
         .from(q('.s8 .head > *'), { y: 60, autoAlpha: 0, duration: 0.6, stagger: 0.1 }, 17.5)
         .from(q('.map'), { scale: 1.2, autoAlpha: 0, duration: 0.8 }, 17.5)
         .from(q('.city.origin'), { scale: 0, duration: 0.4, ease: 'back.out(3)' }, 18.0);
-      const arcs = q('.arc');
-      const arcGap = 1.8 / arcs.length;
-      arcs.forEach((arc, i) => {
-        tl.fromTo(arc, drawFrom, { strokeDashoffset: 0, duration: 0.5, ease: 'power1.inOut' }, 18.2 + i * arcGap).from(
-          q(`.city[data-i="${i}"]`),
-          { scale: 0, autoAlpha: 0, duration: 0.3, ease: 'back.out(3)' },
-          18.5 + i * arcGap,
-        );
-        // the market's country fills in as its route lands
-        tl.from(q(`.mk[data-i="${i}"]`), { autoAlpha: 0, duration: 0.3 }, 18.5 + i * arcGap);
-        tl.from(q(`.flow[data-i="${i}"]`), { autoAlpha: 0, duration: 0.3 }, 18.5 + i * arcGap);
-      });
-      tl.from(q('.markets span'), { y: 30, autoAlpha: 0, duration: 0.4, stagger: 0.1 }, 19.6).to({}, { duration: 0.6 }, 20.4);
+      if (isNarrow()) {
+        // phones show the route board instead of the map (its cards come in by CSS), so the film ends
+        // right after the heading instead of keeping the visitor scrolling while the hidden map draws
+        tl.to({}, { duration: 0.3 }, 18.1);
+      } else {
+        const arcs = q('.arc');
+        const arcGap = 1.8 / arcs.length;
+        arcs.forEach((arc, i) => {
+          tl.fromTo(arc, drawFrom, { strokeDashoffset: 0, duration: 0.5, ease: 'power1.inOut' }, 18.2 + i * arcGap).from(
+            q(`.city[data-i="${i}"]`),
+            { scale: 0, autoAlpha: 0, duration: 0.3, ease: 'back.out(3)' },
+            18.5 + i * arcGap,
+          );
+          // the market's country fills in as its route lands
+          tl.from(q(`.mk[data-i="${i}"]`), { autoAlpha: 0, duration: 0.3 }, 18.5 + i * arcGap);
+          tl.from(q(`.flow[data-i="${i}"]`), { autoAlpha: 0, duration: 0.3 }, 18.5 + i * arcGap);
+        });
+        tl.from(q('.markets span'), { y: 30, autoAlpha: 0, duration: 0.4, stagger: 0.1 }, 19.6).to({}, { duration: 0.6 }, 20.4);
+      }
 
       /* ---- fabric close-ups: make room after the fabric scene, then a spec-sheet grid of real details ---- */
       tl.shiftChildren(DETAILS_EXTRA, true, 2.85);
@@ -350,10 +356,14 @@ export function useFilmTimeline(
       tl.to(cards, { opacity: 1, scale: 1, duration: 0.2 }, LINEUP_START + cards.length * LINEUP_SLOT);
 
       /* ---- your brand: make room, then show where a logo can go, one spot at a time ---- */
-      tl.shiftChildren(BRAND_EXTRA, true, BRAND_SHIFT_AT);
-      // two steps: the first three spots together, then the other three
+      // phones: all six spots at once and no extra hold, so one swipe moves on (desktop: two steps of three)
+      const narrow = isNarrow();
+      const brandExtra = narrow ? 0 : BRAND_EXTRA;
+      // everything after the brand scene comes this much earlier on phones
+      const brandSaved = BRAND_EXTRA - brandExtra;
+      if (brandExtra) tl.shiftChildren(brandExtra, true, BRAND_SHIFT_AT);
       q('.place').forEach((place, k) => {
-        const group = k < 3 ? 0 : 1;
+        const group = narrow || k < 3 ? 0 : 1;
         tl.fromTo(
           place,
           { autoAlpha: 0, scale: 0.4 },
@@ -363,24 +373,28 @@ export function useFilmTimeline(
       });
 
       /* ---- collection: make room, then the ring turns smoothly through every product ---- */
-      tl.shiftChildren(RING_EXTRA, true, RING_SHIFT_AT);
+      tl.shiftChildren(RING_EXTRA, true, RING_SHIFT_AT - brandSaved);
+      const ringStart = RING_START - brandSaved;
       const seg = 360 / ringCount;
       const slot = (RING_END - RING_START) / ringCount;
       gsap.set(q('.ring'), { rotateX: -2 });
-      tl.to(q('.ring'), { rotateY: -(ringCount - 1) * seg, duration: (ringCount - 1) * slot, ease: 'none' }, RING_START + slot * 0.5);
+      tl.to(q('.ring'), { rotateY: -(ringCount - 1) * seg, duration: (ringCount - 1) * slot, ease: 'none' }, ringStart + slot * 0.5);
+      // chapter start times (for the scene counter) after the brand scene move with it
+      const chapterAt = (at: number) => (at > BRAND_SHIFT_AT ? at - brandSaved : at);
 
       ScrollTrigger.create({
         trigger: el,
         // start while the film is still scrolling in, so there is never a blank white screen after the hero
         start: 'top 75%',
         end: 'bottom bottom',
-        scrub: 1,
+        // phones: Lenis already smooths the finger scroll, so a short catch-up avoids a floaty double lag
+        scrub: narrow ? 0.4 : 1,
         animation: tl,
         invalidateOnRefresh: true,
         onUpdate: (self) => {
           const t = self.progress * tl.duration();
           let chapter: ChapterKey = 'fabric';
-          for (const [key, at] of CHAPTERS) if (t >= at - 0.3) chapter = key;
+          for (const [key, at] of CHAPTERS) if (t >= chapterAt(at) - 0.3) chapter = key;
           onProgress(self.progress, chapter);
         },
       });

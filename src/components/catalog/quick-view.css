@@ -41,6 +41,6 @@
   .qv { padding: 12px; }
   .qv-stage { flex-direction: column; gap: 12px; overflow: auto; scrollbar-width: none; }
   .qv-stage::-webkit-scrollbar { display: none; }
-  .qv-card { height: 46dvh; }
+  .qv-card { height: min(40dvh, 330px); } /* phones: card and details both fit without scrolling on most screens */
   .qv-info { width: min(92vw, 420px); max-height: none; padding: 20px; }
 }

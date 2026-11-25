@@ -232,7 +232,7 @@ export function SpotlightStage({ slides, text }: { slides: HeroSlide[]; text: He
         trigger: el,
         start: 'top top',
         end: 'bottom bottom',
-        scrub: 0.8,
+        scrub: isNarrow() ? 0.35 : 0.8,
         animation: tl,
         invalidateOnRefresh: true,
         onUpdate: (self) => sync(self.progress),
@@ -271,7 +271,7 @@ export function SpotlightStage({ slides, text }: { slides: HeroSlide[]; text: He
   const current = slides[active];
 
   return (
-    <section ref={root} className="spotlight" style={{ height: `calc(100vh * ${1.4 + total * STEP})` }} aria-label={text.eyebrow}>
+    <section ref={root} className="spotlight" style={{ '--steps': 1.4 + total * STEP } as CSSProperties} aria-label={text.eyebrow}>
       <div className="sl-stage">
         <div className="sl-intro-in">
           <p className="sl-intro sl-intro-top">{text.introTop}</p>

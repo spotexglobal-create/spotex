@@ -33,7 +33,13 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const instance = new Lenis({ lerp: 0.085 });
+    // Phones: the address bar showing/hiding changes the screen height; re-measuring every scroll scene then
+    // makes the page jump, so ScrollTrigger ignores those resizes.
+    ScrollTrigger.config({ ignoreMobileResize: true });
+    // Touch screens: Lenis also smooths finger scrolling (syncTouch), so the pinned home scenes glide with
+    // the same gentle inertia as on desktop instead of jumping with every flick.
+    // touchMultiplier: each swipe travels further on phones, so the home scenes need less finger work
+    const instance = new Lenis({ lerp: 0.085, syncTouch: true, syncTouchLerp: 0.09, touchInertiaExponent: 1.5, touchMultiplier: 1.7 });
     instance.on('scroll', ScrollTrigger.update);
     const tick = (time: number) => instance.raf(time * 1000);
     gsap.ticker.add(tick);

@@ -444,6 +444,23 @@ export function FilmStage({ data }: { data: FilmData }) {
               </span>
             ))}
           </div>
+          {/* phones: a wide world map is tiny on a tall screen, so the routes are shown as a board instead (film.css) */}
+          <div className="routes">
+            <p className="r-origin">
+              <i aria-hidden />
+              <b>PK</b>
+              {t('export.origin')}
+            </p>
+            <ol>
+              {data.map.pins.map((p, i) => (
+                <li key={p.country} style={{ ['--i' as string]: i }}>
+                  <b>{p.country.toUpperCase()}</b>
+                  <span>{t(`export.countries.${p.country}`)}</span>
+                  <small>{p.country === 'us' ? 'US' : p.country === 'kr' ? 'KR' : 'EU'}</small>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
 

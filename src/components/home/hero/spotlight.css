@@ -135,3 +135,18 @@
   font-family: var(--font-display); font-size: min(34vw, 62vh); line-height: .8; white-space: nowrap; letter-spacing: .02em;
   color: transparent; -webkit-text-stroke: 1.5px rgba(11,11,11,.06); opacity: 0; pointer-events: none; user-select: none;
 }
+
+/* scroll length: one screen per step; phones scroll through the same scene in about half the finger travel */
+.spotlight { height: calc(100vh * var(--steps, 7)); }
+@media (max-width: 800px) { .spotlight { height: calc(100vh * var(--steps, 7) * .55); } }
+
+/* phones: the opening screen fills more of the phone (bigger logo, clearer lines, facts as pills) */
+@media (max-width: 800px) {
+  .sl-stage { --word: 35vw; }
+  .sl-intro-top { top: calc(48% - var(--word) * .4 - 74px); font-size: 12px; letter-spacing: .18em; line-height: 1.6; padding: 0 calc(var(--pad) + 8px); }
+  .sl-intro-bot { top: calc(48% + var(--word) * .4 + 34px); gap: 10px; font-size: 11.5px; letter-spacing: .12em; }
+  .sl-intro-bot li { padding: 9px 16px; border-radius: 999px; border: 1.5px solid rgba(11, 11, 11, .16); background: #fff; box-shadow: 0 6px 16px rgba(0, 0, 0, .05); }
+  .sl-intro-bot li:first-child { border-color: var(--color-brand); color: var(--color-brand); }
+  .sl-cue { bottom: 28px; font-size: 11px; }
+  .sl-cue i { height: 46px; width: 2.5px; }
+}

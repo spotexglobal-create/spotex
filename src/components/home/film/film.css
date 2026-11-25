@@ -257,3 +257,67 @@
   .film-hud .track { width: 60px; }
   .film .stripe .rk { display: none; }
 }
+
+/* phones: the same film in less than half the finger travel (every scene still plays in full) */
+@media (max-width: 800px) { .film { height: 1150vh; } }
+
+/* phones: factory + export fill the whole screen (heading, middle, bottom spread out) instead of a small block in the middle */
+@media (max-width: 800px) {
+  .film .s7, .film .s8 { justify-content: space-evenly; }
+  .film .s7 h2, .film .s8 h2 { font-size: clamp(44px, 13.5vw, 66px); }
+  .film .s7 .head p { font-size: 14.5px; margin-top: 14px; }
+  .film .s7 .rushband { margin-top: 0; margin-bottom: 0; gap: 10px; }
+  .film .rush { font-size: clamp(48px, 15vw, 76px); }
+  .film .stats { gap: 10px; }
+  .film .stats div { padding: 16px 16px 14px; border-radius: 16px; }
+  .film .stats b { font-size: clamp(38px, 11vw, 50px); }
+  .film .stats div > span { font-size: 10px; margin-top: 4px; display: block; }
+  .film .s8 .exp { margin-top: 0; margin-bottom: 0; }
+  .film .markets { gap: 10px; align-items: stretch; width: 100%; }
+  .film .markets span { font-size: 11.5px; padding: 14px 18px; border-radius: 16px; text-align: center; line-height: 1.5; }
+  .film .city > span { font-size: 9.5px; padding: 3px 7px; }
+}
+
+/* export route board: phones only (the wide map is hidden there) */
+.film .routes { display: none; }
+@media (max-width: 800px) {
+  .film .s8 .exp, .film .s8 .markets { display: none; }
+  .film .routes { display: block; flex: none; width: 100%; max-width: 420px; margin: 0 auto; }
+  .film .r-origin { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-radius: 18px; background: var(--black); color: #fff;
+    font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .film .r-origin b { font-family: var(--font-display); font-weight: 400; font-size: 24px; letter-spacing: .02em; color: var(--red2); }
+  .film .r-origin i { width: 12px; height: 12px; flex: none; border-radius: 50%; background: var(--red2); box-shadow: 0 0 0 0 rgba(255,40,40,.6); animation: r-pulse 1.8s infinite; }
+  @keyframes r-pulse { 70% { box-shadow: 0 0 0 10px rgba(255,40,40,0); } 100% { box-shadow: 0 0 0 0 rgba(255,40,40,0); } }
+  /* the route: a red line from the factory down to every market, with dots running along it */
+  .film .routes ol { position: relative; list-style: none; margin: 0; padding: 4px 0 0 30px; }
+  .film .routes ol::before { content: ""; position: absolute; left: 21px; top: 0; bottom: 22px; width: 3px; border-radius: 3px;
+    background: repeating-linear-gradient(180deg, var(--red) 0 6px, transparent 6px 14px); animation: r-flow .7s linear infinite paused; }
+  .film .s8[data-live='1'] .routes ol::before { animation-play-state: running; }
+  @keyframes r-flow { to { background-position: 0 14px; } }
+  .film .routes li { position: relative; display: flex; align-items: center; gap: 12px; margin-top: 8px; padding: 10px 14px; border-radius: 14px;
+    border: 1.5px solid var(--black); background: #fff; box-shadow: 0 6px 16px rgba(0,0,0,.06); }
+  /* each market joins the line with a short branch and a dot */
+  .film .routes li::before { content: ""; position: absolute; left: -9px; top: 50%; width: 9px; height: 2px; background: var(--red); }
+  .film .routes li::after { content: ""; position: absolute; left: -15px; top: 50%; width: 11px; height: 11px; margin-top: -5px; border-radius: 50%;
+    background: var(--red); border: 2px solid #fff; box-shadow: 0 0 0 2px var(--red); }
+  .film .routes li b { flex: none; width: 34px; font-family: var(--font-display); font-weight: 400; font-size: 22px; line-height: 1; color: var(--red); }
+  .film .routes li span { flex: 1; min-width: 0; font-size: 12.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--black); }
+  .film .routes li small { flex: none; padding: 3px 9px; border-radius: 999px; background: rgba(11,11,11,.07); font-size: 10px; font-weight: 800; letter-spacing: .12em; color: var(--black); }
+  /* the markets arrive one after another when the scene opens */
+  .film .s8[data-live='1'] .routes li { animation: r-in .5s cubic-bezier(.2,.7,.2,1) calc(.15s + var(--i, 0) * .09s) both; }
+  @keyframes r-in { from { opacity: 0; transform: translateX(24px); } }
+}
+@media (max-width: 800px) and (prefers-reduced-motion: reduce) { .film .routes ol::before, .film .r-origin i, .film .s8[data-live='1'] .routes li { animation: none; } }
+
+/* phones: "your brand" scene easier to read (bigger text and chips, full-width button, larger logo-spot labels) */
+@media (max-width: 800px) {
+  .film .s4 h2 { font-size: clamp(44px, 13vw, 60px); }
+  .film .s4 .lead { font-size: 14.5px; line-height: 1.6; }
+  .film .s4 .c-title { font-size: 11px; }
+  .film .s4 .c-methods { gap: 7px; }
+  .film .s4 .c-methods li { padding: 7px 13px; font-size: 12.5px; border-color: rgba(11, 11, 11, .28); }
+  .film .s4 .c-cta { display: flex; width: 100%; padding: 14px 18px; font-size: 12px; }
+  .film .place em { font-size: 5.4px; padding: 2.5px 6px 2.5px 3px; }
+  .film .place em small { height: 9px; font-size: 5px; }
+  .film .place i { width: 9px; height: 9px; left: -4.5px; top: -4.5px; }
+}
