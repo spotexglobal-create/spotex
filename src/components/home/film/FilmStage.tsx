@@ -221,6 +221,15 @@ export function FilmStage({ data }: { data: FilmData }) {
               <em>{t('custom.titleB')}</em>
             </h2>
             <p className="lead mt-3.5">{t('custom.text')}</p>
+            {/* phones only: the logo spots' names; the gi itself shows just their numbers */}
+            <ol className="c-places" aria-hidden>
+              {LOGO_PLACES.map((p, n) => (
+                <li key={p.key}>
+                  <b>{String(n + 1).padStart(2, '0')}</b>
+                  {t(`custom.places.${p.key}`)}
+                </li>
+              ))}
+            </ol>
             <div className="c-block">
               <p className="c-title">{t('custom.methodsTitle')}</p>
               <ul className="c-methods">

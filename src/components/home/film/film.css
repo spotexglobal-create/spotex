@@ -321,3 +321,48 @@
   .film .place em small { height: 9px; font-size: 5px; }
   .film .place i { width: 9px; height: 9px; left: -4.5px; top: -4.5px; }
 }
+
+/* ===== phones: every scene sizes itself to the real screen height (short iPhone SE … tall Pro Max) ===== */
+@media (max-width: 800px) {
+  /* fabric: heading scales with the height; the inspector takes the room left below the copy (--fab, set in useFilmTimeline) */
+  .film .s2 h2 { font-size: clamp(42px, min(13vw, 7.5vh), 64px); }
+  .film .weave-pos { width: var(--fab, min(74vw, 42vh)); }
+  .film .fi { gap: 8px; grid-template-columns: 1fr clamp(40px, 14vw, 64px); }
+  .film .fi-thumbs { gap: 6px; }
+  /* belts: rank names on the right, so they never run into the big centred heading */
+  .film .stripe { justify-content: flex-end; font-size: clamp(20px, 6vw, 28px); }
+  .film .s6 .belt-head h2 { font-size: clamp(40px, 11vw, 60px); }
+}
+/* short phones (iPhone SE, small Androids): less fixed space, smaller cards, the scene counter hides */
+@media (max-width: 800px) and (max-height: 740px) {
+  :root { --bot: 16px; }
+  .film-hud { display: none; }
+  .film .s3 .head h2, .film .s5 .head h2 { font-size: clamp(30px, 9vw, 40px); }
+  .film .s3 .lineup { margin-top: 14px; gap: 12px 3vw; }
+  .film .s3 .lineup .item { width: min(26.5vw, 13vh); }
+  .film .s3 .u-foot { margin-top: 12px; gap: 8px; }
+  .film .u-note { min-height: 0; }
+  .film .s4 h2 { font-size: clamp(36px, 11vw, 46px); }
+  .film .s4 .lead { font-size: 13.5px; }
+  .film .s4 div.c-block:first-of-type { display: none; } /* the chips; the gi gets their room */
+  .film .s4 .c-cta { margin-top: 12px; padding: 12px 18px; }
+  .film .s7 h2, .film .s8 h2 { font-size: clamp(36px, 11vw, 48px); }
+  .film .rush { font-size: clamp(36px, 11vw, 56px); }
+  .film .stats div { padding: 10px 12px; }
+  .film .stats b { font-size: 32px; }
+  .film .routes li { padding: 8px 12px; margin-top: 6px; }
+}
+
+/* your brand on phones: the gi shows only numbered dots (no crowded labels); the names sit in a
+   small two-column list under the text */
+.film .c-places { display: none; }
+@media (max-width: 800px) {
+  .film .s4 .c-places { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; list-style: none; margin: 12px 0 0; padding: 0; }
+  .film .c-places li { display: flex; align-items: center; gap: 7px; font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .film .c-places b { flex: none; display: grid; place-items: center; min-width: 22px; height: 17px; border-radius: 4px; background: var(--red); color: #fff; font-size: 10px; letter-spacing: .02em; }
+  .film .place b { display: none; }
+  .film .place em { font-size: 0; gap: 0; padding: 0; border: 0; background: none; box-shadow: 0 2px 6px rgba(0,0,0,.18); top: -4.5px; }
+  .film .place.r em { left: 6px; }
+  .film .place.l em { right: 6px; }
+  .film .place em small { height: 9px; padding: 0 2px; font-size: 5.2px; border-radius: 2px; }
+}

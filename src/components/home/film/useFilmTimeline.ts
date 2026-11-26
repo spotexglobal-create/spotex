@@ -124,6 +124,17 @@ export function useFilmTimeline(
       };
       sizeRing();
 
+      // phones: the fabric inspector takes exactly the room left between the copy (heading, note, GSM
+      // cards) and the bottom of the screen, so it never covers them on short phones and fills tall ones
+      const sizeFabric = () => {
+        const s2 = one<HTMLElement>('.s2');
+        if (!isNarrow()) return s2.style.removeProperty('--fab');
+        const copy = one<HTMLElement>('.s2 .copy');
+        const room = window.innerHeight - cssPx('--bot') - (copy.offsetTop + copy.offsetHeight) - 16;
+        s2.style.setProperty('--fab', `${Math.round(Math.max(140, Math.min(room, window.innerWidth * 0.74)))}px`);
+      };
+      sizeFabric();
+
       // layout reads are cached until the next refresh: dozens of tween values ask for the same boxes,
       // and reading layout between GSAP's style writes forces a reflow each time
       const cache = new Map<string, unknown>();
@@ -182,8 +193,8 @@ export function useFilmTimeline(
       };
       const camX = () => {
         const b = giBox();
-        // phones: a little left of centre, so the labels on the right stay on screen
-        return isNarrow() ? window.innerWidth * 0.48 - (b.left + b.w / 2) : window.innerWidth * 0.2;
+        // phones: centred (the spots show only small numbers there, their names are listed in the copy)
+        return isNarrow() ? window.innerWidth * 0.5 - (b.left + b.w / 2) : window.innerWidth * 0.2;
       };
 
       /* ---- initial state ---- */
@@ -404,6 +415,7 @@ export function useFilmTimeline(
       const onRefreshInit = () => {
         cache.clear();
         sizeRing();
+        sizeFabric();
       };
       const onRefresh = () => {
         const p = tl.progress();

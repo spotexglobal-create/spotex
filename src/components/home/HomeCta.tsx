@@ -38,7 +38,7 @@ export async function HomeCta() {
 
   return (
     <section className="container-page py-14 md:py-20">
-      <div className="grid overflow-hidden rounded-[32px] border-[1.5px] border-line bg-soft lg:grid-cols-[1.15fr_1fr]">
+      <div className="grid grid-cols-1 overflow-hidden rounded-[32px] border-[1.5px] border-line bg-soft lg:grid-cols-[1.15fr_1fr]">
         {/* pitch */}
         <div className="flex flex-col justify-center p-8 md:px-12 md:py-14">
           <p className="eyebrow">{t('HomeCta.eyebrow')}</p>
@@ -73,7 +73,7 @@ export async function HomeCta() {
           </div>
 
           {/* one button per row: the e-mail address is too long for half a row */}
-          <div className="mt-auto grid gap-3">
+          <div className="mt-auto grid grid-cols-1 gap-3">
             <ContactButton
               href={whatsappLink(undefined, site.whatsapp)}
               external

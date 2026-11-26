@@ -150,3 +150,14 @@
   .sl-cue { bottom: 28px; font-size: 11px; }
   .sl-cue i { height: 46px; width: 2.5px; }
 }
+
+/* ===== phones: the product fits the room between the copy and the product info on every screen height ===== */
+@media (max-width: 800px) {
+  .sl-copy .row { flex-wrap: wrap; }
+  .sl-mdet { top: 214px; }
+  /* 500px = header + copy + details above the product, info and turntable below it */
+  .sl-prod { height: clamp(140px, calc(100vh - 500px), 40vh); bottom: calc(2vh + 172px); }
+}
+@media (max-width: 380px) {
+  .sl-copy .btn { padding: 10px 12px; letter-spacing: .06em; }
+}

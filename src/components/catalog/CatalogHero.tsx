@@ -45,7 +45,7 @@ export async function CatalogHero({
       </nav>
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
-          <h1 className="display mt-3 text-[clamp(52px,6vw,96px)] text-ink">{title}</h1>
+          <h1 className="display mt-3 text-[clamp(40px,12vw,60px)] break-words text-ink md:text-[clamp(52px,6vw,96px)]">{title}</h1>
           <span aria-hidden className="mt-3 block h-[3px] w-14 rounded-full bg-brand" />
           <p className="mt-4 max-w-xl text-[15px] leading-relaxed">{intro}</p>
         </div>

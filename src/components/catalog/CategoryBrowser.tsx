@@ -134,17 +134,17 @@ export function CategoryBrowser({
           <Link
             key={c.slug}
             href={{ pathname: '/products/[category]', params: { category: c.slug } }}
-            className="group grid min-h-[210px] grid-cols-[1fr_42%] overflow-hidden rounded-[22px] border-[1.5px] border-ink bg-white transition-[border-color,box-shadow] duration-300 hover:border-brand hover:shadow-[0_18px_40px_rgba(0,0,0,.08)]"
+            className="group grid min-h-[190px] grid-cols-[minmax(0,1fr)_36%] overflow-hidden sm:min-h-[210px] sm:grid-cols-[minmax(0,1fr)_42%] rounded-[22px] border-[1.5px] border-ink bg-white transition-[border-color,box-shadow] duration-300 hover:border-brand hover:shadow-[0_18px_40px_rgba(0,0,0,.08)]"
           >
-            <span className="flex flex-col justify-between gap-4 p-5 md:p-6">
+            <span className="flex min-w-0 flex-col justify-between gap-4 p-4 sm:p-5 md:p-6">
               <span>
                 <span className="text-[11px] font-extrabold tracking-[0.18em] text-brand">
                   {String(categories.indexOf(c) + 1).padStart(2, '0')} / {String(categories.length).padStart(2, '0')}
                 </span>
-                <span className="display mt-2 block text-[clamp(28px,2.6vw,40px)] leading-none text-ink">{c.name}</span>
+                <span className="display mt-2 block text-[clamp(24px,7.5vw,34px)] leading-[0.95] break-words text-ink lg:text-[clamp(28px,2.6vw,40px)]">{c.name}</span>
                 <span className="mt-2.5 line-clamp-2 block text-[13px] leading-relaxed text-ink/85">{c.intro}</span>
               </span>
-              <span className="flex items-center justify-between gap-3">
+              <span className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
                 <span className="rounded-full border-[1.5px] border-ink/30 px-3 py-1 text-[10.5px] font-bold tracking-[0.12em] text-ink uppercase">
                   {common('products', { count: c.count })}
                 </span>

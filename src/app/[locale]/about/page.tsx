@@ -113,9 +113,9 @@ export default async function AboutPage({ params }: LocaleParams) {
         <h2 className="sr-only">{t('factsTitle')}</h2>
         <dl className="grid grid-cols-2 overflow-hidden rounded-[22px] border-[1.5px] border-ink lg:grid-cols-4">
           {facts.map((f, i) => (
-            <div key={f.label} className={`flex flex-col-reverse p-6 ${i > 0 ? 'border-l border-ink/10' : ''} ${i > 1 ? 'border-t border-ink/10 lg:border-t-0' : ''}`}>
+            <div key={f.label} className={`flex min-w-0 flex-col-reverse p-4 sm:p-6 ${i > 0 ? 'border-l border-ink/10' : ''} ${i > 1 ? 'border-t border-ink/10 lg:border-t-0' : ''}`}>
               <dt className="mt-1 text-[11px] font-bold tracking-[0.16em] text-ink/80 uppercase">{f.label}</dt>
-              <dd className="display text-[clamp(44px,5vw,72px)] leading-none text-ink">{f.value}</dd>
+              <dd className="display text-[clamp(36px,5vw,72px)] leading-none text-ink">{f.value}</dd>
             </div>
           ))}
         </dl>

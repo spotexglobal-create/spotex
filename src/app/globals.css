@@ -71,3 +71,10 @@ body {
 }
 
 @keyframes menu-in { from { opacity: 0; transform: translateY(-8px); } }
+
+/* phones: long words (German, Norwegian, French) in big headings and buttons wrap instead of
+   pushing past the screen edge */
+@media (max-width: 640px) {
+  h1, h2, h3, .display { overflow-wrap: break-word; hyphens: auto; }
+  .btn { white-space: normal; text-align: center; }
+}

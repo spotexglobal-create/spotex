@@ -85,7 +85,7 @@ export default async function FactoryPage({ params }: LocaleParams) {
             </div>
             <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-[22px] border-[1.5px] border-ink bg-ink/10">
               {stats.map((s) => (
-                <div key={s.label} className="group relative flex flex-col-reverse bg-white p-6">
+                <div key={s.label} className="group relative flex min-w-0 flex-col-reverse bg-white p-4 sm:p-6">
                   <dt className="mt-1 text-[11px] font-bold tracking-[0.16em] text-ink/85 uppercase">
                     {s.href ? (
                       // the link stretches over the whole tile
@@ -96,7 +96,7 @@ export default async function FactoryPage({ params }: LocaleParams) {
                       s.label
                     )}
                   </dt>
-                  <dd className="display text-[clamp(44px,4.4vw,68px)] leading-none text-ink group-has-[a]:group-hover:text-brand">
+                  <dd className="display text-[clamp(36px,4.4vw,68px)] leading-none text-ink group-has-[a]:group-hover:text-brand">
                     {s.value}
                   </dd>
                 </div>
