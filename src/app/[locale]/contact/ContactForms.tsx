@@ -5,8 +5,9 @@ import { useActionState, useState, useTransition } from 'react';
 import { whatsappLink } from '@/config/site';
 import { sendInquiry, type InquiryState } from './actions';
 
+// min-w-0: a select is otherwise as wide as its longest option, which pushed the card off phone screens
 const FIELD =
-  'mt-1.5 w-full rounded-xl border-[1.5px] border-ink/25 bg-white px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-ink/40 focus:border-ink';
+  'mt-1.5 w-full min-w-0 rounded-xl border-[1.5px] border-ink/25 bg-white px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-ink/40 focus:border-ink';
 const LABEL = 'text-[11px] font-bold tracking-[0.14em] text-ink uppercase';
 
 /**
@@ -47,7 +48,7 @@ export function ContactForms({
   }
 
   return (
-    <div className="rounded-[24px] border-[1.5px] border-ink bg-white">
+    <div className="min-w-0 rounded-[24px] border-[1.5px] border-ink bg-white">
       {/* switch between the two forms */}
       <div role="tablist" className="grid grid-cols-2 gap-1 border-b border-ink/10 p-2">
         {(['quote', 'message'] as const).map((k) => (
@@ -73,7 +74,7 @@ export function ContactForms({
           const data = new FormData(e.currentTarget);
           startSend(() => action(data));
         }}
-        className="space-y-4 p-6 md:p-7"
+        className="space-y-4 p-4 sm:p-6 md:p-7"
         noValidate
       >
         <input type="hidden" name="kind" value={tab} />
@@ -100,7 +101,7 @@ export function ContactForms({
           </div>
         )}
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <label>
             <span className={LABEL}>{t('name')} *</span>
             <input name="name" required autoComplete="name" className={`${FIELD} ${bad('name') ? 'border-brand' : ''}`} />
@@ -113,7 +114,7 @@ export function ContactForms({
 
         {tab === 'quote' && (
           <>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <label>
                 <span className={LABEL}>{t('company')}</span>
                 <input name="company" autoComplete="organization" className={FIELD} />
@@ -163,7 +164,7 @@ export function ContactForms({
               </div>
             </fieldset>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <label>
                 <span className={LABEL}>{t('branding')}</span>
                 <select name="branding" className={FIELD} defaultValue="">

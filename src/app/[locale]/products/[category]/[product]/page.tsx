@@ -107,7 +107,7 @@ export default async function ProductPage({ params }: Props) {
           </ol>
         </nav>
 
-        <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
+        <div className="mt-6 grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
           {/* photos stay in view while the details scroll */}
           <div className="lg:sticky lg:top-28 lg:self-start">
             <ProductGallery images={product.images} alt={`${name} ${product.code}`} zoomHint={t('zoomHint')} />
@@ -159,15 +159,15 @@ export default async function ProductPage({ params }: Props) {
               </p>
               <dl className="divide-y divide-ink/10 px-5">
                 {product.specs.map((spec) => (
-                  <div key={spec.label} className="grid grid-cols-[130px_1fr] gap-4 py-3 text-sm">
+                  <div key={spec.label} className="grid grid-cols-[minmax(0,104px)_minmax(0,1fr)] gap-3 py-3 sm:grid-cols-[130px_minmax(0,1fr)] sm:gap-4 text-sm">
                     <dt className="font-medium text-ink/80">{text.specLabel(spec)}</dt>
                     <dd className="font-semibold text-ink">{text.specValue(spec)}</dd>
                   </div>
                 ))}
-                <div className="grid grid-cols-[130px_1fr] gap-4 py-3 text-sm">
+                <div className="grid grid-cols-[minmax(0,104px)_minmax(0,1fr)] gap-3 py-3 sm:grid-cols-[130px_minmax(0,1fr)] sm:gap-4 text-sm">
                   <dt className="font-medium text-ink/80">{t('custom')}</dt>
                   <dd>
-                    <ul className="grid gap-1.5 sm:grid-cols-2">
+                    <ul className="grid grid-cols-1 gap-1.5 sm:grid-cols-2">
                       {customList.map((item) => (
                         <li key={item} className="flex items-center gap-2 font-semibold text-ink">
                           <svg viewBox="0 0 16 16" aria-hidden className="h-3.5 w-3.5 flex-none fill-none stroke-brand stroke-[2.2]">
@@ -181,7 +181,7 @@ export default async function ProductPage({ params }: Props) {
                 </div>
               </dl>
               {/* why order from us */}
-              <ul className="grid border-t border-ink/10 bg-soft sm:grid-cols-3">
+              <ul className="grid grid-cols-1 border-t border-ink/10 bg-soft sm:grid-cols-3">
                 {highlights.map((h, i) => (
                   <li key={h.title} className={`flex items-start gap-3 px-5 py-4 ${i > 0 ? 'border-t border-ink/10 sm:border-t-0 sm:border-l' : ''}`}>
                     <span aria-hidden className="grid h-8 w-8 flex-none place-items-center rounded-full bg-white text-brand ring-1 ring-ink/10">

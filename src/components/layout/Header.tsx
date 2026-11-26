@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
+import { useLenis } from '@/components/motion/SmoothScroll';
 import { SITE } from '@/config/site';
 import { Link, usePathname } from '@/i18n/navigation';
 import { FactoryMenu } from './FactoryMenu';
@@ -26,20 +27,33 @@ export function Header({ categories }: { categories: MenuCategory[] }) {
   // close the mobile menu after navigating
   useEffect(() => setMenuOpen(false), [pathname]);
 
+  // while the mobile menu is open the page behind it stays still; only the menu scrolls
+  const lenis = useLenis();
+  useEffect(() => {
+    if (!menuOpen) return;
+    lenis?.stop();
+    const root = document.documentElement;
+    root.style.overflow = 'hidden';
+    return () => {
+      root.style.overflow = '';
+      lenis?.start();
+    };
+  }, [menuOpen, lenis]);
+
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-300 ${
-        scrolled && pathname !== '/' ? 'bg-white/95 shadow-[0_1px_0_var(--color-line)] backdrop-blur' : ''
+        menuOpen ? 'bg-white' : scrolled && pathname !== '/' ? 'bg-white/95 shadow-[0_1px_0_var(--color-line)] backdrop-blur' : ''
       }`}
     >
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded focus:bg-white focus:px-3 focus:py-2">
         {t('Nav.skip')}
       </a>
       <div className="container-page flex h-[72px] items-center justify-between gap-4">
-        <Link href="/" className="inline-flex shrink-0 rounded-[10px] bg-ink px-3 py-1.5" aria-label={SITE.name}>
-          <Image src={SITE.logo} alt={SITE.name} width={110} height={30} className="h-[30px] w-auto" priority />
+        <Link href="/" className="inline-flex shrink-0 rounded-[10px] bg-ink px-2.5 py-1.5 min-[380px]:px-3" aria-label={SITE.name}>
+          <Image src={SITE.logo} alt={SITE.name} width={110} height={30} className="h-[26px] w-auto min-[380px]:h-[30px]" priority />
         </Link>
 
         <nav aria-label="Main" className="hidden lg:block">
@@ -84,7 +98,13 @@ export function Header({ categories }: { categories: MenuCategory[] }) {
       </div>
 
       {menuOpen && (
-        <nav id="mobile-menu" aria-label="Mobile" className="container-page border-t border-line bg-white pb-6 lg:hidden">
+        <nav
+          id="mobile-menu"
+          aria-label="Mobile"
+          // its own scroll area (data-lenis-prevent: the smooth scroller leaves it alone)
+          data-lenis-prevent
+          className="container-page max-h-[calc(100dvh-72px)] overflow-y-auto overscroll-contain border-t border-line bg-white pb-8 lg:hidden"
+        >
           <ul className="flex flex-col">
             {NAV_ITEMS.map((item) => (
               <li key={item.href} className="border-b border-line">
@@ -92,12 +112,12 @@ export function Header({ categories }: { categories: MenuCategory[] }) {
                   {t(`Nav.${item.label}`)}
                 </Link>
                 {item.href === '/products' && (
-                  <ul className="-mt-1 grid grid-cols-2 gap-x-4 gap-y-2 pb-4">
+                  <ul className="-mt-1 grid grid-cols-1 gap-x-4 pb-4 min-[420px]:grid-cols-2">
                     {categories.map((c) => (
                       <li key={c.slug}>
                         <Link
                           href={{ pathname: '/products/[category]', params: { category: c.slug } }}
-                          className="flex items-center justify-between text-sm font-semibold text-ink/75"
+                          className="flex items-center justify-between gap-3 py-2 text-sm font-semibold text-ink/75"
                         >
                           {c.name}
                           <span className="text-xs text-brand">{c.count}</span>

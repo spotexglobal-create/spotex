@@ -151,7 +151,7 @@ export function CatalogueExplorer({
         </div>
       </div>
 
-      <div className={`mt-8 grid gap-8 ${facets.length ? 'lg:grid-cols-[250px_1fr]' : ''}`}>
+      <div className={`mt-8 grid grid-cols-1 gap-8 ${facets.length ? 'lg:grid-cols-[250px_1fr]' : ''}`}>
         {/* sidebar filters */}
         {facets.length > 0 && (
           <aside className={`${panelOpen ? 'block' : 'hidden'} lg:block`} aria-label={t('filters')}>

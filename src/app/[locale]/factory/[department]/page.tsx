@@ -64,7 +64,7 @@ export default async function DepartmentPage({ params }: Props) {
           </ol>
         </nav>
 
-        <div className="mt-6 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-start lg:gap-14">
+        <div className="mt-6 grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-start lg:gap-14">
           <div>
             <p className="text-[11px] font-extrabold tracking-[0.2em] text-brand uppercase">
               {factory('phase', { n: dept.phase + 1 })} · {phases[dept.phase].title}
@@ -129,7 +129,7 @@ export default async function DepartmentPage({ params }: Props) {
         </ol>
 
         {/* previous / next step */}
-        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {prev ? (
             <Link
               href={{ pathname: '/factory/[department]', params: { department: prev.key } }}

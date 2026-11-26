@@ -73,7 +73,7 @@ export default async function FactoryPage({ params }: LocaleParams) {
               <li className="text-ink">{nav('factory')}</li>
             </ol>
           </nav>
-          <div className="mt-6 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-end">
+          <div className="mt-6 grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-end">
             <div>
               <p className="eyebrow">{t('eyebrow')}</p>
               <h1 className="display mt-3 text-[clamp(52px,7vw,112px)] leading-[0.88] text-ink">
@@ -112,7 +112,7 @@ export default async function FactoryPage({ params }: LocaleParams) {
           <p className="eyebrow">{t('phasesEyebrow')}</p>
           <h2 className="display mt-3 text-[clamp(40px,5vw,72px)] text-ink">{t('phasesTitle')}</h2>
         </div>
-        <ol className="relative mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <ol className="relative mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
           {PHASES.map((keys, p) => (
             <li key={p} className="flex flex-col rounded-[22px] border-[1.5px] border-ink bg-white">
               <div className="border-b border-ink/10 p-5">
@@ -149,7 +149,7 @@ export default async function FactoryPage({ params }: LocaleParams) {
       {/* certificates */}
       <section id="certificates" className="scroll-mt-24 border-t border-ink/10 py-20">
         <div className="container-page">
-          <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-end">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-end">
             <div>
               <p className="eyebrow">{t('certsEyebrow')}</p>
               <h2 className="display mt-3 text-[clamp(40px,5vw,72px)] leading-[0.92] text-ink">{t('certsTitle')}</h2>
@@ -206,7 +206,7 @@ export default async function FactoryPage({ params }: LocaleParams) {
       </section>
 
       {/* quality */}
-      <section className="container-page grid gap-10 py-20 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+      <section className="container-page grid grid-cols-1 gap-10 py-20 lg:grid-cols-[1.2fr_1fr] lg:items-center">
         <div>
           <p className="eyebrow">{t('qualityEyebrow')}</p>
           <h2 className="display mt-3 text-[clamp(40px,5vw,72px)] text-ink">{t('qualityTitle')}</h2>
@@ -242,7 +242,7 @@ export default async function FactoryPage({ params }: LocaleParams) {
         <div className="container-page">
           <p className="eyebrow">{t('csrEyebrow')}</p>
           <h2 className="display mt-3 text-[clamp(40px,5vw,72px)]">{t('csrTitle')}</h2>
-          <ul className="mt-10 grid gap-4 md:grid-cols-3">
+          <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
             {csr.map((item, i) => (
               <li key={item} className="rounded-[22px] border border-white/15 p-6">
                 <span className="display text-5xl text-brand">{String(i + 1).padStart(2, '0')}</span>

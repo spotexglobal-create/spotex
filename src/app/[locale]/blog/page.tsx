@@ -27,7 +27,7 @@ export default async function BlogPage({ params }: LocaleParams) {
         {/* featured article */}
         <Link
           href={{ pathname: '/blog/[slug]', params: { slug: featured.slug } }}
-          className="group grid overflow-hidden rounded-[24px] border-[1.5px] border-ink bg-white md:grid-cols-[0.8fr_1.2fr]"
+          className="group grid grid-cols-1 overflow-hidden rounded-[24px] border-[1.5px] border-ink bg-white md:grid-cols-[0.8fr_1.2fr]"
         >
           <span className="relative block aspect-[16/9] bg-soft md:aspect-auto md:h-[250px]">
             <Image src={featured.cover} alt="" fill priority sizes="(min-width: 768px) 55vw, 100vw" className="photo-multiply object-contain p-5 transition-transform duration-700 group-hover:scale-[1.04]" />
@@ -52,7 +52,7 @@ export default async function BlogPage({ params }: LocaleParams) {
 
         {/* the rest */}
         {rest.length > 0 && <h2 className="mt-14 text-[11px] font-bold tracking-[0.2em] text-ink uppercase">{t('latest')}</h2>}
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {rest.map((p) => (
             <Link
               key={p.slug}

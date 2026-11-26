@@ -56,7 +56,7 @@ export default async function AboutPage({ params }: LocaleParams) {
             <li className="text-ink">{nav('about')}</li>
           </ol>
         </nav>
-        <div className="mt-6 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-start lg:gap-14">
+        <div className="mt-6 grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-start lg:gap-14">
           <div>
             <p className="eyebrow">{t('eyebrow')}</p>
             <h1 className="display mt-3 text-[clamp(52px,6.4vw,104px)] leading-[0.88] text-ink">
@@ -125,7 +125,7 @@ export default async function AboutPage({ params }: LocaleParams) {
       <section className="container-page py-10">
         <p className="eyebrow">{t('storyEyebrow')}</p>
         <h2 className="display mt-3 text-[clamp(40px,5vw,72px)] text-ink">{t('storyTitle')}</h2>
-        <ol className="mt-10 grid gap-8 md:grid-cols-3 md:gap-6">
+        <ol className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
           {story.map((s, i) => (
             <li key={s.title} className="relative">
               {i < story.length - 1 && (
@@ -146,7 +146,7 @@ export default async function AboutPage({ params }: LocaleParams) {
         <div className="container-page">
           <p className="eyebrow">{t('valuesEyebrow')}</p>
           <h2 className="display mt-3 text-[clamp(40px,5vw,72px)]">{t('valuesTitle')}</h2>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
             {values.map((v, i) => (
               <div key={v.title} className="rounded-[22px] border-[1.5px] border-white/25 p-7">
                 <span className="display text-5xl text-brand">{String(i + 1).padStart(2, '0')}</span>
@@ -159,11 +159,11 @@ export default async function AboutPage({ params }: LocaleParams) {
       </section>
 
       {/* customers and markets */}
-      <section className="container-page grid gap-12 py-20 lg:grid-cols-[1.3fr_1fr]">
+      <section className="container-page grid grid-cols-1 gap-12 py-20 lg:grid-cols-[1.3fr_1fr]">
         <div>
           <p className="eyebrow">{t('partnersEyebrow')}</p>
           <h2 className="display mt-3 text-[clamp(36px,4.4vw,60px)] text-ink">{t('partnersTitle')}</h2>
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+          <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {partners.map((p) => (
               <li key={p.title} className="rounded-[20px] border-[1.5px] border-ink bg-white p-5">
                 <p className="text-sm font-bold text-ink">{p.title}</p>

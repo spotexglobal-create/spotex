@@ -92,7 +92,7 @@ export default async function PostPage({ params }: Props) {
           <Image src={post.cover} alt="" fill priority sizes="100vw" className="photo-multiply object-contain p-6" />
         </div>
 
-        <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_300px]">
+        <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_300px]">
           {/* article body */}
           <div className="max-w-[680px] space-y-8" lang="en">
             {post.sections.map((s, i) => (
@@ -140,13 +140,13 @@ export default async function PostPage({ params }: Props) {
       {others.length > 0 && (
         <section className="border-t border-ink/10 bg-soft py-16">
           <div className="container-page">
-            <div className="flex items-end justify-between gap-4">
+            <div className="flex flex-wrap items-end justify-between gap-x-4 gap-y-2">
               <h2 className="display text-4xl text-ink">{t('related')}</h2>
               <Link href="/blog" className="text-xs font-bold tracking-[0.14em] text-brand uppercase hover:underline">
                 {t('backToBlog')} →
               </Link>
             </div>
-            <div className="mt-6 grid gap-5 md:grid-cols-2">
+            <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2">
               {others.map((p) => (
                 <Link
                   key={p.slug}
@@ -156,7 +156,7 @@ export default async function PostPage({ params }: Props) {
                   <span className="relative aspect-square w-28 flex-none overflow-hidden rounded-2xl bg-soft">
                     <Image src={p.cover} alt="" fill sizes="112px" className="photo-multiply object-cover" />
                   </span>
-                  <span className="py-1 pr-2">
+                  <span className="min-w-0 py-1 pr-2">
                     <span className="text-[10.5px] font-bold tracking-[0.16em] text-brand uppercase">{t(`topics.${p.topic}`)}</span>
                     <span className="display mt-1 block text-xl leading-tight text-ink group-hover:text-brand">{p.title}</span>
                     <span className="mt-1 block text-xs text-ink/50">{t('minRead', { n: p.minutes })}</span>

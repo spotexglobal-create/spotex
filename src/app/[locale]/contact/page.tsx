@@ -43,7 +43,7 @@ export default async function ContactPage({ params, searchParams }: Props) {
     <>
       <CatalogHero crumbs={[{ label: nav('home'), href: '/' }, { label: nav('contact') }]} title={`${t('titleA')} ${t('titleB')}`} intro={t('intro')} actions={false} />
 
-      <section className="container-page grid gap-8 pb-24 lg:grid-cols-[1.45fr_1fr] lg:items-start">
+      <section className="container-page grid grid-cols-1 gap-8 pb-24 lg:grid-cols-[1.45fr_1fr] lg:items-start">
         <ContactForms categories={categories.map((c) => text.categoryName(c.slug))} product={product?.slice(0, 60)} sample={sample === '1'} whatsapp={site.whatsapp} />
 
         <aside className="space-y-3 lg:sticky lg:top-28">

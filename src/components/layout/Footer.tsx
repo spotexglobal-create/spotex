@@ -27,7 +27,7 @@ export async function Footer() {
         Spotex
       </p>
       <div className="container-page pt-16 pb-8">
-        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
           <div>
             <Image src={SITE.logo} alt={SITE.name} width={150} height={48} className="h-11 w-auto rounded-md" />
             <p className="mt-5 max-w-xs leading-7 text-white/75">{t('Footer.tagline')}</p>
