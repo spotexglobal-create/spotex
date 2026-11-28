@@ -1,5 +1,5 @@
 import mongoose, { Schema, model, models, type InferSchemaType, type Model } from 'mongoose';
-import { CATEGORY_SLUGS, PRODUCT_TYPES, SPEC_LABELS } from '../catalog/types';
+import { CATEGORY_SLUG_RE, PRODUCT_TYPES, SPEC_LABELS } from '../catalog/types';
 
 /**
  * Registers a model once per server. In development the file reloads on every edit while mongoose
@@ -39,7 +39,7 @@ const ProductSchema = new Schema(
     category: {
       type: String,
       required: true,
-      enum: CATEGORY_SLUGS,
+      match: CATEGORY_SLUG_RE,
       index: true,
     },
     type: { type: String, required: true, enum: PRODUCT_TYPES },
@@ -63,7 +63,7 @@ const LocalizedSchema = new Schema({ en: String, de: String, no: String, it: Str
  */
 const CategorySchema = new Schema(
   {
-    slug: { type: String, required: true, unique: true, enum: CATEGORY_SLUGS },
+    slug: { type: String, required: true, unique: true, match: CATEGORY_SLUG_RE },
     name: { type: LocalizedSchema, default: () => ({}) },
     intro: { type: LocalizedSchema, default: () => ({}) },
     /** Cloudinary photo for the category card; empty uses the first featured product photo. */

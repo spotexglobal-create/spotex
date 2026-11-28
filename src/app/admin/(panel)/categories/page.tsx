@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Card, Icon, PageHeader, Pill, StatCards, btnDark } from '@/components/admin/ui';
+import { Card, Icon, PageHeader, Pill, StatCards, btnDark, btnLight } from '@/components/admin/ui';
 import { getAdminCategories } from '@/lib/catalog';
 import { getCatalogText } from '@/lib/catalog/text';
 
@@ -9,8 +9,8 @@ export const metadata: Metadata = { title: 'Categories' };
 
 const ACTION = 'grid h-9 w-9 place-items-center rounded-full text-ink/70 hover:bg-ink/5 hover:text-brand';
 
-export default async function AdminCategoriesPage() {
-  const [categories, text] = await Promise.all([getAdminCategories(), getCatalogText()]);
+export default async function AdminCategoriesPage({ searchParams }: { searchParams: Promise<{ deleted?: string }> }) {
+  const [categories, text, { deleted }] = await Promise.all([getAdminCategories(), getCatalogText(), searchParams]);
   const live = categories.filter((c) => c.visible && c.liveCount > 0);
   const switchedOff = categories.filter((c) => !c.visible).length;
   const biggest = [...categories].sort((a, b) => b.count - a.count)[0];
@@ -20,12 +20,18 @@ export default async function AdminCategoriesPage() {
       <PageHeader
         eyebrow="Catalogue"
         title="Categories"
-        text="Edit each category's name, description and cover photo in all five languages, hide it, or change its position. A category shows on the website when it is switched on and has a live product."
+        text="Add a new category, edit each one's name, description and cover photo in all five languages, hide it, change its position, or delete an empty one. A category shows on the website when it is switched on and has a live product."
       >
-        <Link href="/admin/products/new" className={btnDark}>
+        <Link href="/admin/products/new" className={btnLight}>
           <Icon name="plus" className="h-4 w-4" /> Add product
         </Link>
+        <Link href="/admin/categories/new" className={btnDark}>
+          <Icon name="plus" className="h-4 w-4" /> New category
+        </Link>
       </PageHeader>
+      {deleted === '1' && (
+        <p className="mb-5 rounded-2xl border border-emerald-600/25 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-800">Category deleted.</p>
+      )}
       <StatCards
         items={[
           { label: 'Categories', value: categories.length, icon: 'categories' },

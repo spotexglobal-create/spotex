@@ -22,13 +22,22 @@ export async function getCatalogText() {
       ? t(`values.${spec.value}`)
       : t(`units.${spec.unit ?? "gsm"}`, { n: spec.amount ?? 0 });
 
+  // this language's text from the admin, else the built-in translation, else the English text from the
+  // admin (categories added in the admin have no built-in translation), else the address itself
+  const categoryText = (slug: CategorySlug, field: "name" | "intro") => {
+    const key = `categories.${slug}.${field}` as Parameters<typeof t>[0];
+    return stored(slug, field) || (t.has(key) ? t(key) : "") || record.get(slug)?.[field].en || (field === "name" ? slug : "");
+  };
+  const categoryName = (slug: CategorySlug) => categoryText(slug, "name");
+
   return {
-    categoryName: (slug: CategorySlug) =>
-      stored(slug, "name") || t(`categories.${slug}.name`),
-    categoryIntro: (slug: CategorySlug) =>
-      stored(slug, "intro") || t(`categories.${slug}.intro`),
-    productName: (p: Product) =>
-      p.line ? `${t(`types.${p.type}`)} ${p.line}` : t(`types.${p.type}`),
+    categoryName,
+    categoryIntro: (slug: CategorySlug) => categoryText(slug, "intro"),
+    productName: (p: Product) => {
+      // "general" products are named after their category
+      const base = p.type === "general" ? categoryName(p.category) : t(`types.${p.type}`);
+      return p.line ? `${base} ${p.line}` : base;
+    },
     specLabel: (spec: Spec) => t(`labels.${spec.label}`),
     specValue,
     /** Short one-line summary, e.g. "Pearl weave · 280 GSM · Ripstop". */

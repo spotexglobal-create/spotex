@@ -3,8 +3,8 @@
 import { revalidateTag } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { requireAdmin } from '@/lib/admin/auth';
-import { CATALOG_TAG } from '@/lib/catalog';
-import { CATEGORY_SLUGS, PRODUCT_TYPES, SPEC_LABELS, type Spec } from '@/lib/catalog/types';
+import { CATALOG_TAG, getCategoryRecords } from '@/lib/catalog';
+import { PRODUCT_TYPES, SPEC_LABELS, type Spec } from '@/lib/catalog/types';
 import { connectDb, dbConfigured } from '@/lib/db/connect';
 import { ProductModel } from '@/lib/db/models';
 import en from '@/messages/en.json';
@@ -81,7 +81,7 @@ export async function saveProduct(_: ProductFormState, form: FormData): Promise<
   const fields: string[] = [];
   if (!code) fields.push('code');
   if (!SLUG.test(slug)) fields.push('slug');
-  if (!oneOf(CATEGORY_SLUGS, category)) fields.push('category');
+  if (!(await getCategoryRecords()).some((c) => c.slug === category)) fields.push('category');
   if (!oneOf(PRODUCT_TYPES, type)) fields.push('type');
   if (!specs) fields.push('specs');
   if (!images) fields.push('images');

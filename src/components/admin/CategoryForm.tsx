@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { type FormEvent, useActionState, useState, useTransition } from 'react';
-import { saveCategory, type CategoryFormState } from '@/app/admin/categories-actions';
+import { deleteCategory, saveCategory, type CategoryFormState } from '@/app/admin/categories-actions';
 import type { CategoryLocale } from '@/lib/catalog/types';
 import { ImageUpload } from './ImageUpload';
 import { Card, CardTitle, Icon, btnDark, btnLight, field, fieldLabel } from './ui';
@@ -26,16 +26,32 @@ export interface CategoryFormData {
   visible: boolean;
   order: number;
   count: number;
+  /** Creating a category (admin → Categories → New category). */
+  isNew?: boolean;
 }
 
-/** Category editor (admin → Categories → Edit): texts in five languages, cover photo, visibility and order. */
-export function CategoryForm({ category, dbReady }: { category: CategoryFormData; dbReady: boolean }) {
+/**
+ * Category editor (admin → Categories → Edit / New category): texts in five languages, cover photo,
+ * visibility and order; a new category also gets its web address. Empty categories can be deleted.
+ */
+export function CategoryForm({ category, dbReady, created }: { category: CategoryFormData; dbReady: boolean; created?: boolean }) {
   const [state, action, saving] = useActionState<CategoryFormState, FormData>(saveCategory, {});
   const [, start] = useTransition();
+  const [deleting, startDelete] = useTransition();
+  const [deleteError, setDeleteError] = useState('');
+  const [slugHint, setSlugHint] = useState('');
   const [lang, setLang] = useState<CategoryLocale>('en');
   const [cover, setCover] = useState(category.cover);
   const bad = (name: string) => (state.fields?.includes(name) ? '!border-brand' : '');
-  const disabled = !dbReady || saving;
+  const disabled = !dbReady || saving || deleting;
+  const remove = () => {
+    if (!window.confirm(`Delete the category “${category.name.en || category.slug}”? This cannot be undone.`)) return;
+    setDeleteError('');
+    startDelete(async () => {
+      const r = await deleteCategory(category.slug);
+      if (r?.error) setDeleteError(r.error);
+    });
+  };
   const shown = cover || category.autoCover;
 
   // a transition instead of <form action>, so typed values stay when the server returns an error
@@ -47,9 +63,14 @@ export function CategoryForm({ category, dbReady }: { category: CategoryFormData
 
   return (
     <form onSubmit={onSubmit} className="space-y-6">
-      <input type="hidden" name="slug" value={category.slug} />
+      {category.isNew ? <input type="hidden" name="isNew" value="1" /> : <input type="hidden" name="slug" value={category.slug} />}
       <input type="hidden" name="cover" value={cover} />
 
+      {created && !state.error && !state.saved && (
+        <p className="rounded-2xl border border-emerald-600/25 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-800">
+          Category created. Add products to it (Products → Add product); it shows on the website once it has a live product.
+        </p>
+      )}
       {state.error && (
         <p role="alert" className="rounded-2xl border border-brand/30 bg-brand/5 px-4 py-3 text-sm font-semibold text-brand">
           {state.error}
@@ -89,8 +110,28 @@ export function CategoryForm({ category, dbReady }: { category: CategoryFormData
             <div key={l} hidden={lang !== l} className="space-y-4 p-5">
               <label className="block">
                 <span className={fieldLabel}>Name ({label})</span>
-                <input name={`name_${l}`} defaultValue={category.name[l]} maxLength={60} className={`${field} ${bad(`name_${l}`)}`} disabled={disabled} />
+                <input
+                  name={`name_${l}`}
+                  defaultValue={category.name[l]}
+                  maxLength={60}
+                  className={`${field} ${bad(`name_${l}`)}`}
+                  disabled={disabled}
+                  onChange={l === 'en' && category.isNew ? (e) => setSlugHint(e.target.value) : undefined}
+                />
               </label>
+              {l === 'en' && category.isNew && (
+                <label className="block">
+                  <span className={fieldLabel}>Web address (optional)</span>
+                  <input
+                    name="slug"
+                    maxLength={60}
+                    placeholder={slugHint ? slugHint.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') : 'made from the English name'}
+                    className={`${field} ${bad('slug')}`}
+                    disabled={disabled}
+                  />
+                  <span className="mt-1 block text-xs text-ink/60">The page will be /products/&lt;address&gt;. It cannot be changed later.</span>
+                </label>
+              )}
               <label className="block">
                 <span className={fieldLabel}>Description ({label})</span>
                 <textarea
@@ -102,7 +143,11 @@ export function CategoryForm({ category, dbReady }: { category: CategoryFormData
                   disabled={disabled}
                 />
                 <span className="mt-1 block text-xs text-ink/60">
-                  {l === 'en' ? 'Required. Shown at the top of the category page and on the products page.' : 'Leave empty to use the built-in translation.'}
+                  {l === 'en'
+                    ? 'Required. Shown at the top of the category page and on the products page.'
+                    : category.isNew
+                      ? 'Leave empty to show the English text.'
+                      : 'Leave empty to use the built-in translation (or the English text).'}
                 </span>
               </label>
             </div>
@@ -160,13 +205,36 @@ export function CategoryForm({ category, dbReady }: { category: CategoryFormData
               </label>
             </div>
           </Card>
+
+          {/* delete: only an empty category, so no product is ever lost by accident */}
+          {!category.isNew && (
+            <Card>
+              <CardTitle title="Delete category" />
+              <div className="space-y-3 p-5">
+                <p className="text-xs text-ink/65">
+                  {category.count
+                    ? `This category has ${category.count} product${category.count === 1 ? '' : 's'}. Move them to another category or delete them first; or switch the category off above to hide it.`
+                    : 'This category has no products. Deleting it removes it from the website and the admin for good.'}
+                </p>
+                {deleteError && <p className="text-xs font-semibold text-brand">{deleteError}</p>}
+                <button
+                  type="button"
+                  onClick={remove}
+                  disabled={disabled || category.count > 0}
+                  className="inline-flex items-center gap-2 rounded-full border border-brand/40 px-4 py-2 text-xs font-bold text-brand transition-colors hover:bg-brand hover:text-white disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-brand"
+                >
+                  <Icon name="trash" className="h-4 w-4" /> {deleting ? 'Deleting…' : 'Delete category'}
+                </button>
+              </div>
+            </Card>
+          )}
         </div>
       </div>
 
       <div className="sticky bottom-4 z-10 flex items-center justify-between gap-4 rounded-2xl border border-ink bg-white px-5 py-3.5 shadow-[0_10px_30px_rgba(0,0,0,.08)]">
         <p className="text-xs text-ink/70">{dbReady ? 'Changes go live on the website after saving.' : 'Saving is not available right now.'}</p>
         <button type="submit" className={btnDark} disabled={disabled}>
-          {saving ? 'Saving…' : 'Save category'}
+          {saving ? 'Saving…' : category.isNew ? 'Create category' : 'Save category'}
         </button>
       </div>
     </form>

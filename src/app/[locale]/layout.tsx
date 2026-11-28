@@ -26,7 +26,11 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
     description: t('homeDescription'),
     openGraph: { siteName: t('siteName'), locale, type: 'website' },
     // Google Search Console ownership check (<meta name="google-site-verification">)
-    verification: { google: 'gor9grF8G0cMAHoR2YmtNvBR9GBPTFaZR9N7MahWdRE' },
+    verification: {
+      google: 'gor9grF8G0cMAHoR2YmtNvBR9GBPTFaZR9N7MahWdRE',
+      // Meta (Facebook) Business domain check, for Meta ads (<meta name="facebook-domain-verification">)
+      other: { 'facebook-domain-verification': 'szb01b42u7wc9hv059gtts5jna8ofv' },
+    },
   };
 }
 

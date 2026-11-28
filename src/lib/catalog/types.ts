@@ -6,10 +6,18 @@ import type messages from '@/messages/en.json';
  * The same shapes are used by the MongoDB models later, so pages won't change when data moves.
  */
 
-// URL slugs stay as they are ('belts' is shown as "BJJ Belts", 'bags' as "Gi Bags")
+/**
+ * Built-in categories: used when there is no database (or it has no categories yet) and by the seed.
+ * With a database, admin → Categories is the real list: categories can be added and deleted there.
+ * ('belts' is shown as "BJJ Belts", 'bags' as "Gi Bags".)
+ */
 export const CATEGORY_SLUGS = ['bjj-gis', 'judo-uniforms', 'rash-guards', 'mma-shorts', 'bags', 'belts'] as const;
 
-export type CategorySlug = (typeof CATEGORY_SLUGS)[number];
+/** A category's web address part, e.g. "bjj-gis". Any category stored in the database. */
+export type CategorySlug = string;
+
+/** Lowercase letters, digits and single dashes. */
+export const CATEGORY_SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 export const PRODUCT_TYPES = [
   'bjjGi',
@@ -21,6 +29,8 @@ export const PRODUCT_TYPES = [
   'judoBelt',
   'mmaShorts',
   'giBag',
+  // named after its category ("Gloves", "Gloves Pro …"); for categories added in the admin
+  'general',
 ] as const;
 
 export type ProductType = (typeof PRODUCT_TYPES)[number];

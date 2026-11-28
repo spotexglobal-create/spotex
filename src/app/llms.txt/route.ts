@@ -14,7 +14,8 @@ const url = (href: Href) => SITE_URL + getPathname({ locale: 'en', href });
 
 const C = en.Catalog;
 const specText = (s: Spec) => (s.value ? C.values[s.value] : `${s.amount ?? ''} ${(s.unit ?? 'gsm').toUpperCase()}`);
-const productName = (p: Product) => (p.line ? `${C.types[p.type]} ${p.line}` : C.types[p.type]);
+/** Built-in English category texts (categories added in the admin have none). */
+const BUILT_IN = C.categories as Record<string, { name: string; intro: string } | undefined>;
 
 /**
  * /llms.txt (https://llmstxt.org): a plain Markdown summary of the company and its key pages for AI
@@ -24,8 +25,10 @@ const productName = (p: Product) => (p.line ? `${C.types[p.type]} ${p.line}` : C
 export async function GET() {
   const [site, categories, records, products, posts] = await Promise.all([getSite(), getCategories(), getCategoryRecords(), getProducts(), getPosts()]);
   const stored = new Map(records.map((r) => [r.slug, r]));
-  const catName = (slug: (typeof categories)[number]['slug']) => stored.get(slug)?.name.en || C.categories[slug].name;
-  const catIntro = (slug: (typeof categories)[number]['slug']) => stored.get(slug)?.intro.en || C.categories[slug].intro;
+  const catName = (slug: string) => stored.get(slug)?.name.en || BUILT_IN[slug]?.name || slug;
+  const catIntro = (slug: string) => stored.get(slug)?.intro.en || BUILT_IN[slug]?.intro || '';
+  const typeName = (p: Product) => (p.type === 'general' ? catName(p.category) : C.types[p.type]);
+  const productName = (p: Product) => (p.line ? `${typeName(p)} ${p.line}` : typeName(p));
   const F = en.FactoryPage;
   const dept = en.Departments;
 

@@ -461,7 +461,8 @@
       "judoBelt": "Ceinture de judo",
       "mmaShorts": "Short de MMA",
       "giBag": "Sac à dos pour kimono",
-      "rashGuard": "Rashguard"
+      "rashGuard": "Rashguard",
+      "general": "Général"
     },
     "labels": {
       "weave": "Tissage",

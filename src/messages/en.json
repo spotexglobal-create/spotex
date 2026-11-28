@@ -461,7 +461,8 @@
       "judoBelt": "Judo Belt",
       "mmaShorts": "MMA Shorts",
       "giBag": "Gi Bag Pack",
-      "rashGuard": "Rash Guard"
+      "rashGuard": "Rash Guard",
+      "general": "General (named after its category)"
     },
     "labels": {
       "weave": "Weave",

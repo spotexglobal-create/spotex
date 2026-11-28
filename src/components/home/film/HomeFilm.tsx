@@ -1,6 +1,6 @@
-import { getProducts } from '@/lib/catalog';
+import { getCategories, getProducts } from '@/lib/catalog';
 import { getCatalogText } from '@/lib/catalog/text';
-import { CATEGORY_SLUGS, type Product } from '@/lib/catalog/types';
+import type { Product } from '@/lib/catalog/types';
 import type { QuickViewProduct } from '@/components/catalog/ProductQuickView';
 import { buildExportMap } from './export-map';
 import { FilmStage, type FilmProduct } from './FilmStage';
@@ -24,7 +24,7 @@ const BELTS = ['jjb-101-sti-01', 'jjb103-sti-01', 'jjb-102-sti-01', 'j-101-sti-1
 
 /** Server part of the home film: picks the products and builds the map, then renders the animated stage. */
 export async function HomeFilm() {
-  const [products, text] = await Promise.all([getProducts(), getCatalogText()]);
+  const [products, text, categories] = await Promise.all([getProducts(), getCatalogText(), getCategories()]);
   const site = await getSite();
   const bySlug = new Map(products.map((p) => [p.slug, p]));
 
@@ -44,8 +44,8 @@ export async function HomeFilm() {
     images: p.images,
     specs: p.specs.map((spec) => ({ label: text.specLabel(spec), value: text.specValue(spec) })),
   });
-  // round-robin over the categories: 1st of each, then 2nd of each … until the ring is full
-  const byCategory = CATEGORY_SLUGS.map((c) => products.filter((p) => p.category === c));
+  // round-robin over the categories (menu order): 1st of each, then 2nd of each … until the ring is full
+  const byCategory = categories.map((c) => products.filter((p) => p.category === c.slug));
   const ring: Product[] = [];
   for (let round = 0; ring.length < RING_SIZE && byCategory.some((list) => list.length > round); round++)
     for (const list of byCategory) if (list[round] && ring.length < RING_SIZE) ring.push(list[round]);

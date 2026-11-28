@@ -4,6 +4,7 @@ import { connectDb, dbConfigured } from '@/lib/db/connect';
 import { CategoryModel, ProductModel } from '@/lib/db/models';
 import {
   CATEGORY_LOCALES,
+  CATEGORY_SLUG_RE,
   CATEGORY_SLUGS,
   type Category,
   type CategoryRecord,
@@ -64,7 +65,7 @@ const defaultCategory = (slug: CategorySlug): CategoryRecord => ({
   intro: {},
   cover: '',
   visible: true,
-  order: CATEGORY_SLUGS.indexOf(slug) * 10,
+  order: (CATEGORY_SLUGS as readonly string[]).indexOf(slug) * 10,
 });
 
 function toCategoryRecord(doc: Record<string, unknown>): CategoryRecord {
@@ -94,23 +95,27 @@ const loadCategoriesFromDb = unstable_cache(
   { tags: [CATALOG_TAG], revalidate: 3600 },
 );
 
-/** All six categories (hidden ones too) with their stored details, in menu order. */
+/**
+ * Every category (hidden ones too) with its stored details, in menu order. With a database these are the
+ * categories saved in admin → Categories (added and deleted there); the built-in list is used only when
+ * there is no database or it has no categories yet.
+ */
 export async function getCategoryRecords(): Promise<CategoryRecord[]> {
   const stored = dbConfigured() ? await loadCategoriesFromDb() : [];
-  return CATEGORY_SLUGS.map((slug) => stored.find((c) => c.slug === slug) ?? defaultCategory(slug)).sort(
-    (a, b) => a.order - b.order || CATEGORY_SLUGS.indexOf(a.slug) - CATEGORY_SLUGS.indexOf(b.slug),
-  );
+  const list = stored.length ? stored : CATEGORY_SLUGS.map(defaultCategory);
+  return [...list].sort((a, b) => a.order - b.order || a.slug.localeCompare(b.slug));
 }
 
-/** Products shown on the website: visible, and in a category that is not hidden. */
+/** Products shown on the website: visible, and in a category that exists and is not hidden. */
 async function live() {
   const [products, records] = await Promise.all([getAllProducts(), getCategoryRecords()]);
-  const hidden = new Set(records.filter((c) => !c.visible).map((c) => c.slug));
-  return products.filter((p) => p.visible !== false && !hidden.has(p.category));
+  const shown = new Set(records.filter((c) => c.visible).map((c) => c.slug));
+  return products.filter((p) => p.visible !== false && shown.has(p.category));
 }
 
+/** A well-formed category address (whether it exists is checked by looking it up). */
 export function isCategorySlug(value: string): value is CategorySlug {
-  return (CATEGORY_SLUGS as readonly string[]).includes(value);
+  return CATEGORY_SLUG_RE.test(value);
 }
 
 /** Cover photo: the uploaded one, else the first featured (or first) product photo. */
