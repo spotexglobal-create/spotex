@@ -2,7 +2,7 @@
   "Meta": {
     "siteName": "Spotex International",
     "homeTitle": "Spotex International · Produsent av kampsportdrakter",
-    "homeDescription": "BJJ-gier, judo-, karate- og taekwondodrakter og belter, laget i vår egen fabrikk i Pakistan og merket for klubber og merkevarer i Europa og USA."
+    "homeDescription": "BJJ-gier, judodrakter, rashguards, MMA-shorts, gi-bager og belter, laget i vår egen fabrikk i Pakistan og merket for klubber og merkevarer i Europa og USA."
   },
   "Nav": {
     "home": "Hjem",
@@ -56,7 +56,7 @@
     "eyebrow": "Spotex International",
     "titleA": "Tilpassede drakter,",
     "titleB": "laget av oss.",
-    "copy": "Jiu-jitsu-, judo-, karate- og taekwondodrakter fra vår egen fabrikk, med klubbens eller merkevarens logo.",
+    "copy": "BJJ-gier, judodrakter, rashguards og MMA-shorts fra vår egen fabrikk, med klubbens eller merkevarens logo.",
     "callouts": {
       "si-jju-1001": {
         "label": {
@@ -201,28 +201,28 @@
     "uniforms": {
       "eyebrow": "02 · Drakter",
       "titleA": "Én fabrikk.",
-      "titleB": "Alle grener.",
+      "titleB": "Alt du trenger.",
       "allCategories": "Se alle kategorier",
       "disciplines": [
         "Jiu-jitsu",
         "Judo",
-        "Karate",
-        "Taekwondo",
-        "Sambo"
+        "MMA-shorts",
+        "Gi-bager",
+        "BJJ-belter"
       ],
       "facts": [
-        "Pearl, gold & flere · 280–550 GSM",
+        "Pearl, gold m.m. · 280–550 GSM",
         "450 · 550 · 750 GSM",
-        "10 oz canvas",
-        "Polyester-bomull eller 100 % bomull",
-        "Jakker og shorts i rødt og blått"
+        "Full sublimering",
+        "Gi-bager og ryggsekker",
+        "Alle IBJJF-gradfarger"
       ],
       "notes": [
-        "BJJ-gier i pearl-, gold-, all-play- og honeycomb-vev, i alle IBJJF-godkjente farger, med ripstop-bukser og akademiets merker.",
-        "Judodrakter i enkel- og dobbeltvev fra 450 til 750 GSM, i hvit, blå, svart eller rosa.",
-        "Karategier i lett og tung canvas-bomull, sydd for kata og kumite.",
-        "Taekwondo-doboker med V-hals i poly-bomull, med hvit, svart eller farget krage.",
-        "Sambojakker med skuldervinger og matchende shorts, i rødt og blått."
+        "BJJ-gier i pearl-, gold-, all-play- og honeycomb-vev, i alle IBJJF-godkjente farger, med ripstop-bukser og klubbens merker.",
+        "Enkelt- og dobbeltvevde judodrakter fra 450 til 750 GSM, i hvitt, blått, svart eller rosa.",
+        "Helsublimerte MMA- og grapplingshorts i stretch-polyester, med deres design og lagfarger.",
+        "Sublimerte gi-bager og ryggsekker med klubbens merking.",
+        "Gradsbelter i alle IBJJF-farger, med gradstriper og deres brodering."
       ]
     },
     "custom": {
@@ -259,7 +259,7 @@
       "titleA": "Hele",
       "titleB": "utstyret.",
       "also": "Trykk på et produkt for detaljer · Vi lager også:",
-      "alsoList": "Rashguards · Spats · Muay Thai-shorts · Hettegensere · Singlets · Bager · Nøkkelringer · Leggings · Sports-BH-er"
+      "alsoList": "Spats · Grapplingshorts · Merker · Nøkkelringer · Leggings"
     },
     "belts": {
       "eyebrow": "05 · Belter",
@@ -348,14 +348,14 @@
     },
     "knitting": {
       "name": "Strikking",
-      "text": "Strikkede stoffer til rashguards, shorts og fightwear.",
-      "lead": "Stretch- og strikkestoffer til rash guards, shorts, hettegensere og fight wear lages i huset på våre strikkemaskiner.",
+      "text": "Strikkede stoffer til rashguards og MMA-shorts.",
+      "lead": "Stretch- og strikkestoffer til rashguards og MMA-shorts lages i huset på våre strikkemaskiner.",
       "points": [
         "Stretchstoff til rash guards og leggings",
-        "Fleece til hettegensere og treningsklær",
+        "Fleece og treningsstoffer",
         "Pustende mesh og fôr"
       ],
-      "benefit": "Fight wear og gier fra én leverandør, i matchende farger."
+      "benefit": "Rashguards, shorts og gier fra én leverandør, i matchende farger."
     },
     "dyeing": {
       "name": "Farging",
@@ -435,53 +435,33 @@
         "name": "Judodrakter",
         "intro": "Judodrakter i tre vekter: 450 GSM Academy, 550 GSM Challenger og 750 GSM Winner, med bukser i 100 % bomullsdrill. I hvit, blå, svart eller rosa."
       },
-      "karate-uniforms": {
-        "name": "Karatedrakter",
-        "intro": "Karatedrakter i 10 oz polyester-bomull eller 100 % bomull, i alle vanlige farger, med strikk- eller snorlinning."
-      },
-      "taekwondo-uniforms": {
-        "name": "Taekwondodrakter",
-        "intro": "Taekwondo-doboker i polyester-bomull eller 100 % bomull, i alle vanlige farger, med strikklinning."
-      },
-      "sambo-uniforms": {
-        "name": "Sambodrakter",
-        "intro": "Sambojakker og shorts laget på bestilling i rødt og blått."
-      },
       "belts": {
-        "name": "Belter",
-        "intro": "Gradsbelter for BJJ, judo og karate, belter med metallløkke, masterbelter, belter med 13 sydde rader, 350 GSM gi-stoffbelter og fritidsbelter, i alle gradfarger og i størrelse S til 3XL."
+        "name": "BJJ-belter",
+        "intro": "Gradsbelter for BJJ og judo, belter med metallløkke, masterbelter, belter med 13 sydde rader, 350 GSM gi-stoffbelter og fritidsbelter, i alle gradfarger og i størrelse S til 3XL."
       },
       "mma-shorts": {
         "name": "MMA-shorts",
         "intro": "Helsublimerte MMA- og grappling-shorts i stretch-polyester, trykket med ditt design og lagets farger."
       },
       "rash-guards": {
-        "name": "Rash guards",
+        "name": "Rashguard",
         "intro": "Rash guards med korte og lange ermer i kompresjonsstoff, sublimert med ditt design og beltefarger."
       },
-      "fight-wear": {
-        "name": "Fight wear",
-        "intro": "Hettegensere, glidelåsjakker, oppvarmingsbukser, spats, kompresjons- og Muay Thai-shorts, brytedrakter, bandanaer og sublimerte håndklær, laget med dine farger og din merkevare."
-      },
       "bags": {
-        "name": "Bager",
+        "name": "Gi-bager",
         "intro": "Sublimerte gi-bager, gi-ryggsekker, duffelbager og skulderbager, med akademiets merkevare."
       }
     },
     "types": {
       "bjjGi": "Jiu-jitsu-gi",
       "judoUniform": "Judodrakt",
-      "karateUniform": "Karatedrakt",
-      "taekwondoUniform": "Taekwondodrakt",
-      "samboUniform": "Sambodrakt",
       "bjjBelt": "BJJ-belte",
       "giFabricBelt": "Belte i 350 GSM gi-stoff",
       "casualBelt": "Fritidsbelte",
       "judoBelt": "Judobelte",
       "mmaShorts": "MMA-shorts",
-      "hoodie": "Hettegenser",
-      "singlet": "Brytedrakt",
-      "giBag": "Gi-ryggsekk"
+      "giBag": "Gi-ryggsekk",
+      "rashGuard": "Rashguard"
     },
     "labels": {
       "weave": "Vev",
@@ -516,7 +496,6 @@
       "elasticOrDrawstring": "Strikk eller snor",
       "sToXxxl": "S til 3XL",
       "sublimated": "Full sublimering",
-      "sambo": "Sambotrening og konkurranse",
       "bjjRank": "BJJ-gradering",
       "judoRank": "Judogradering",
       "giAndGear": "Gi, belte og treningsutstyr"
@@ -531,7 +510,7 @@
     "title": "Produkter",
     "eyebrow": "Katalog",
     "intro": "Alle produkter lages på bestilling i vår egen fabrikk, i dine farger og med din merking. Velg en kategori.",
-    "metaDescription": "BJJ-gier, judo-, karate- og taekwondodrakter, belter, fightwear og bagger, laget på bestilling med din merking.",
+    "metaDescription": "BJJ-gier, judodrakter, rashguards, MMA-shorts, gi-bager og BJJ-belter, laget på bestilling med din merking.",
     "searchLabel": "Søk i produkter",
     "searchPlaceholder": "Søk på navn eller kode…",
     "filterLabel": "Filtrer etter kategori",
@@ -839,11 +818,18 @@
     "email": "E-post",
     "whatsapp": "WhatsApp",
     "formSoon": "Tilbudsskjemaet på nett kommer snart. Inntil da kan du sende oss en melding på WhatsApp eller e-post.",
-    "hours": "Lørdag til torsdag, 9:00–18:00 pakistansk tid (UTC+5); stengt fredager. Vi svarer på e-post og WhatsApp innen én arbeidsdag."
+    "hours": "Lørdag til torsdag, 9:00–18:00 pakistansk tid (UTC+5); stengt fredager. Vi svarer på e-post og WhatsApp innen én arbeidsdag.",
+    "follow": "Følg oss"
   },
   "NotFound": {
     "title": "Fant ikke siden",
     "text": "Denne siden finnes ikke eller er flyttet.",
+    "back": "Til forsiden"
+  },
+  "ErrorPage": {
+    "title": "Noe gikk galt",
+    "text": "Siden kunne ikke lastes. Prøv igjen, eller send oss en melding på WhatsApp.",
+    "retry": "Prøv igjen",
     "back": "Til forsiden"
   },
   "BlogPage": {

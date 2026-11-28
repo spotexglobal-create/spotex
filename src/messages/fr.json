@@ -2,7 +2,7 @@
   "Meta": {
     "siteName": "Spotex International",
     "homeTitle": "Spotex International · Fabricant d'uniformes d'arts martiaux",
-    "homeDescription": "Kimonos de JJB, de judo, de karaté et doboks de taekwondo, ceintures comprises, fabriqués dans notre propre usine au Pakistan et personnalisés pour les clubs et les marques aux États-Unis et en Europe."
+    "homeDescription": "Kimonos de JJB, judogis, rashguards, shorts de MMA, sacs à kimono et ceintures, fabriqués dans notre propre usine au Pakistan et personnalisés pour les clubs et les marques aux États-Unis et en Europe."
   },
   "Nav": {
     "home": "Accueil",
@@ -56,7 +56,7 @@
     "eyebrow": "Spotex International",
     "titleA": "Uniformes sur mesure,",
     "titleB": "faits maison.",
-    "copy": "Uniformes de jiu-jitsu, de judo, de karaté et de taekwondo, fabriqués dans notre propre usine et personnalisés pour les clubs aux États-Unis et en Europe.",
+    "copy": "Kimonos de JJB, judogis, rashguards et shorts de MMA, fabriqués dans notre propre usine et personnalisés pour les clubs aux États-Unis et en Europe.",
     "callouts": {
       "si-jju-1001": {
         "label": {
@@ -201,28 +201,28 @@
     "uniforms": {
       "eyebrow": "02 · Uniformes",
       "titleA": "Une usine.",
-      "titleB": "Toutes les disciplines.",
+      "titleB": "Tout l’essentiel.",
       "allCategories": "Voir toutes les catégories",
       "disciplines": [
         "Jiu-Jitsu",
         "Judo",
-        "Karaté",
-        "Taekwondo",
-        "Sambo"
+        "Shorts de MMA",
+        "Sacs à kimono",
+        "Ceintures JJB"
       ],
       "facts": [
         "Pearl, gold et plus · 280–550 GSM",
         "450 · 550 · 750 GSM",
-        "Toile 10 oz",
-        "Polycoton ou 100 % coton",
-        "Vestes et shorts, rouge et bleu"
+        "Sublimation intégrale",
+        "Sacs et sacs à dos",
+        "Toutes les couleurs IBJJF"
       ],
       "notes": [
-        "Kimonos de BJJ en tissage pearl, gold, all-play et honeycomb, dans toutes les couleurs approuvées IBJJF, avec pantalon ripstop et écussons de votre académie.",
+        "Kimonos de JJB en tissage pearl, gold, all-play et nid d’abeille, dans toutes les couleurs approuvées par l’IBJJF, avec pantalon ripstop et les écussons de votre club.",
         "Judogis en tissage simple et double de 450 à 750 GSM, en blanc, bleu, noir ou rose.",
-        "Karategis en toile de coton légère ou lourde, coupés pour le kata et pour le kumite.",
-        "Doboks de taekwondo à col en V en polycoton, avec col blanc, noir ou de couleur.",
-        "Vestes de sambo avec ailes d'épaule et shorts assortis, en rouge et en bleu."
+        "Shorts de MMA et de grappling en polyester extensible, entièrement sublimés à vos couleurs.",
+        "Sacs et sacs à dos à kimono sublimés, aux couleurs de votre club.",
+        "Ceintures de grade dans toutes les couleurs IBJJF, avec barrettes et votre broderie."
       ]
     },
     "custom": {
@@ -259,7 +259,7 @@
       "titleA": "L'équipement",
       "titleB": "complet.",
       "also": "Touchez un produit pour voir la fiche · Nous faisons aussi :",
-      "alsoList": "Rashguards · Spats · Shorts de Muay Thai · Sweats à capuche · Justaucorps · Sacs · Porte-clés · Leggings · Brassières"
+      "alsoList": "Spats · Shorts de grappling · Écussons · Porte-clés · Leggings"
     },
     "belts": {
       "eyebrow": "05 · Ceintures",
@@ -348,14 +348,14 @@
     },
     "knitting": {
       "name": "Tricotage",
-      "text": "Tissus tricotés pour rashguards, shorts et vêtements de combat.",
-      "lead": "Les tissus extensibles et tricotés pour rashguards, shorts, sweats et vêtements de combat sont produits chez nous sur nos machines à tricoter.",
+      "text": "Tissus tricotés pour rashguards et shorts de MMA.",
+      "lead": "Les tissus extensibles et tricotés pour rashguards et shorts de MMA sont produits chez nous sur nos machines à tricoter.",
       "points": [
         "Tissus extensibles pour rashguards et leggings",
-        "Molleton pour sweats et survêtements",
+        "Molleton et tissus d’entraînement",
         "Mesh et doublures respirants"
       ],
-      "benefit": "Vêtements de combat et kimonos chez un seul fournisseur, aux couleurs assorties."
+      "benefit": "Rashguards, shorts et kimonos chez un seul fournisseur, aux couleurs assorties."
     },
     "dyeing": {
       "name": "Teinture",
@@ -435,53 +435,33 @@
         "name": "Judogis",
         "intro": "Judogis en trois grammages : 450 GSM Academy, 550 GSM Challenger et 750 GSM Winner, avec pantalon en drill 100 % coton. En blanc, bleu, noir ou rose."
       },
-      "karate-uniforms": {
-        "name": "Karategis",
-        "intro": "Karategis 10 oz en polycoton ou 100 % coton, dans toutes les couleurs courantes, avec taille élastique ou à cordon."
-      },
-      "taekwondo-uniforms": {
-        "name": "Doboks de taekwondo",
-        "intro": "Doboks de taekwondo en polycoton ou 100 % coton, dans toutes les couleurs courantes, avec pantalon à taille élastique."
-      },
-      "sambo-uniforms": {
-        "name": "Tenues de sambo",
-        "intro": "Vestes et shorts de sambo fabriqués sur commande en rouge et en bleu."
-      },
       "belts": {
-        "name": "Ceintures",
-        "intro": "Ceintures de grade de BJJ, judo et karaté, ceintures à boucle métallique, ceintures de maître, ceintures à 13 rangs de coutures, ceintures en tissu de kimono 350 GSM et ceintures casual, dans toutes les couleurs de grade, du S au 3XL."
+        "name": "Ceintures JJB",
+        "intro": "Ceintures de grade de JJB et de judo, ceintures à boucle métallique, ceintures de maître, ceintures à 13 rangs de coutures, ceintures en tissu de kimono 350 GSM et ceintures casual, dans toutes les couleurs de grade, du S au 3XL."
       },
       "mma-shorts": {
         "name": "Shorts de MMA",
         "intro": "Shorts de MMA et de grappling en polyester stretch à sublimation intégrale, imprimés avec vos designs et les couleurs de votre équipe."
       },
       "rash-guards": {
-        "name": "Rashguards",
+        "name": "Rashguard",
         "intro": "Rashguards à manches courtes et longues en tissu de compression, sublimés avec vos designs et les couleurs de grade."
       },
-      "fight-wear": {
-        "name": "Vêtements de combat",
-        "intro": "Sweats à capuche, vestes zippées, pantalons d’échauffement, spats, shorts de compression et de Muay Thai, justaucorps de lutte, bandanas et serviettes sublimées, à vos couleurs et à votre marque."
-      },
       "bags": {
-        "name": "Sacs",
+        "name": "Sacs à kimono",
         "intro": "Sacs à kimono sublimés, sacs à dos pour kimono, sacs de sport et sacs à bandoulière, aux couleurs de votre académie."
       }
     },
     "types": {
       "bjjGi": "Kimono de jiu-jitsu",
       "judoUniform": "Judogi",
-      "karateUniform": "Karategi",
-      "taekwondoUniform": "Dobok de taekwondo",
-      "samboUniform": "Tenue de sambo",
       "bjjBelt": "Ceinture de JJB",
       "giFabricBelt": "Ceinture en tissu de kimono 350 g/m²",
       "casualBelt": "Ceinture casual",
       "judoBelt": "Ceinture de judo",
       "mmaShorts": "Short de MMA",
-      "hoodie": "Sweat à capuche",
-      "singlet": "Singlet de lutte",
-      "giBag": "Sac à dos pour kimono"
+      "giBag": "Sac à dos pour kimono",
+      "rashGuard": "Rashguard"
     },
     "labels": {
       "weave": "Tissage",
@@ -516,7 +496,6 @@
       "elasticOrDrawstring": "Élastique ou cordon",
       "sToXxxl": "S à 3XL",
       "sublimated": "Sublimation intégrale",
-      "sambo": "Entraînement et compétition de sambo",
       "bjjRank": "Grades de JJB",
       "judoRank": "Grades de judo",
       "giAndGear": "Kimono, ceinture et matériel"
@@ -531,7 +510,7 @@
     "title": "Produits",
     "eyebrow": "Catalogue",
     "intro": "Chaque produit est fabriqué sur commande dans notre propre usine, à vos couleurs et à votre image. Choisissez une catégorie pour voir la gamme.",
-    "metaDescription": "Kimonos de JJB, judogis, karategis et doboks, ceintures, vêtements de combat et sacs, fabriqués sur commande à votre image.",
+    "metaDescription": "Kimonos de JJB, judogis, rashguards, shorts de MMA, sacs à kimono et ceintures JJB, fabriqués sur commande à votre image.",
     "searchLabel": "Rechercher des produits",
     "searchPlaceholder": "Rechercher par nom ou code…",
     "filterLabel": "Filtrer par catégorie",
@@ -839,11 +818,18 @@
     "email": "E-mail",
     "whatsapp": "WhatsApp",
     "formSoon": "Le formulaire de devis en ligne arrive bientôt. En attendant, envoyez-nous un message WhatsApp ou un e-mail.",
-    "hours": "Du samedi au jeudi, 9h00–18h00 heure du Pakistan (UTC+5) ; fermé le vendredi. Nous répondons aux e-mails et messages WhatsApp sous un jour ouvré."
+    "hours": "Du samedi au jeudi, 9h00–18h00 heure du Pakistan (UTC+5) ; fermé le vendredi. Nous répondons aux e-mails et messages WhatsApp sous un jour ouvré.",
+    "follow": "Suivez-nous"
   },
   "NotFound": {
     "title": "Page introuvable",
     "text": "Cette page n'existe pas ou a été déplacée.",
+    "back": "Retour à l'accueil"
+  },
+  "ErrorPage": {
+    "title": "Une erreur s'est produite",
+    "text": "Cette page n'a pas pu se charger. Réessayez ou écrivez-nous sur WhatsApp.",
+    "retry": "Réessayer",
     "back": "Retour à l'accueil"
   },
   "BlogPage": {

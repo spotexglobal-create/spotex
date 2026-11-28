@@ -6,13 +6,16 @@ import { buildExportMap } from './export-map';
 import { FilmStage, type FilmProduct } from './FilmStage';
 import { getSite } from '@/lib/site';
 
-/** Products used in each scene, by slug. Line-up: one product per discipline (index into Film.uniforms.disciplines). */
+/**
+ * Products used in each scene, by slug. Line-up: one product per range (index into Film.uniforms.disciplines:
+ * 0 BJJ, 1 Judo, 2 MMA shorts, 3 Gi bags, 4 BJJ belts), the BJJ gi in the middle.
+ */
 const LINEUP = [
   { discipline: 1, slug: 'si-ju-1003' },
-  { discipline: 2, slug: 'k-104-sti-1' },
+  { discipline: 2, slug: 'si-ms-1001' },
   { discipline: 0, slug: 'si-jju-1001', main: true },
-  { discipline: 3, slug: 'tk-sti-01' },
-  { discipline: 4, slug: 'si-sb-1001' },
+  { discipline: 4, slug: 'jjb-101-sti-01' },
+  { discipline: 3, slug: 'si-gbp-1001' },
 ];
 const MAIN = 'si-jju-1001';
 /** How many products turn on the collection ring; taken one per category in turn, so every category is in it. */

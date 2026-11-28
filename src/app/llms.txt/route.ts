@@ -32,7 +32,7 @@ export async function GET() {
   const lines = [
     '# Spotex International',
     '',
-    `> Martial arts uniform manufacturer and exporter with its own factory in ${site.address.city}, ${site.address.country}, since ${site.foundedYear}. BJJ gis, judo, karate and taekwondo uniforms, belts and fight wear, made to order and private-labelled for academies, clubs and brands in the USA and Europe.`,
+    `> Martial arts uniform manufacturer and exporter with its own factory in ${site.address.city}, ${site.address.country}, since ${site.foundedYear}. BJJ gis, judo uniforms, rash guards, MMA shorts, gi bags and BJJ belts, made to order and private-labelled for academies, clubs and brands in the USA and Europe.`,
     '',
     '## Key facts',
     '',
@@ -53,6 +53,7 @@ export async function GET() {
     `- Address: ${site.address.street}, ${site.address.city} ${site.address.postalCode}, ${site.address.country}`,
     '- Office hours: Saturday to Thursday, 9:00 to 18:00 Pakistan time (UTC+5); closed on Fridays.',
     `- Quote and sample requests: ${url('/contact')}`,
+    ...Object.entries(site.social).map(([k, href]) => `- ${k[0].toUpperCase() + k.slice(1)}: ${href}`),
     '',
     '## Main pages',
     '',

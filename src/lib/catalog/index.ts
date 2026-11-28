@@ -48,7 +48,7 @@ const loadFromDb = unstable_cache(
     const docs = await ProductModel.find().sort({ order: 1, code: 1 }).lean();
     return docs.map((d) => toProduct(d));
   },
-  ['catalog-products'],
+  ['catalog-products-v2'],
   { tags: [CATALOG_TAG], revalidate: 3600 },
 );
 
@@ -90,11 +90,11 @@ const loadCategoriesFromDb = unstable_cache(
     const docs = await CategoryModel.find().lean();
     return docs.map((d) => toCategoryRecord(d));
   },
-  ['catalog-categories'],
+  ['catalog-categories-v2'],
   { tags: [CATALOG_TAG], revalidate: 3600 },
 );
 
-/** All ten categories (hidden ones too) with their stored details, in menu order. */
+/** All six categories (hidden ones too) with their stored details, in menu order. */
 export async function getCategoryRecords(): Promise<CategoryRecord[]> {
   const stored = dbConfigured() ? await loadCategoriesFromDb() : [];
   return CATEGORY_SLUGS.map((slug) => stored.find((c) => c.slug === slug) ?? defaultCategory(slug)).sort(

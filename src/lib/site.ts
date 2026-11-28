@@ -34,7 +34,7 @@ export const DEFAULT_SITE: SiteInfo = {
   address: { ...SITE.address },
   foundedYear: SITE.foundedYear,
   stats: { ...SITE.stats },
-  social: {},
+  social: { ...SITE.social },
 };
 
 const load = unstable_cache(
@@ -43,6 +43,8 @@ const load = unstable_cache(
     const d = await SettingsModel.findOne({ key: 'site' }).lean();
     if (!d) return DEFAULT_SITE;
     const pick = <T,>(v: T | null | undefined, fallback: T) => (v === null || v === undefined || v === '' ? fallback : v);
+    // social links saved in admin replace the defaults as a set; with none saved, the official profiles show
+    const social: SiteInfo['social'] = Object.fromEntries(SOCIAL_KEYS.flatMap((k) => (d.social?.[k] ? [[k, d.social[k]]] : [])));
     return {
       email: pick(d.email, DEFAULT_SITE.email),
       phone: pick(d.phone, DEFAULT_SITE.phone),
@@ -59,7 +61,7 @@ const load = unstable_cache(
         clients: pick(d.clients, DEFAULT_SITE.stats.clients),
         departments: DEFAULT_SITE.stats.departments,
       },
-      social: Object.fromEntries(SOCIAL_KEYS.flatMap((k) => (d.social?.[k] ? [[k, d.social[k]]] : []))),
+      social: Object.keys(social).length ? social : DEFAULT_SITE.social,
       updatedAt: d.updatedAt ? new Date(d.updatedAt).toISOString() : undefined,
     };
   },

@@ -2,7 +2,7 @@
   "Meta": {
     "siteName": "Spotex International",
     "homeTitle": "Spotex International · Produttore di divise per arti marziali",
-    "homeDescription": "Kimono BJJ, judo, karate e taekwondo e cinture, prodotti nella nostra fabbrica in Pakistan e personalizzati per palestre, club e marchi in Italia e in Europa."
+    "homeDescription": "Kimono BJJ, judogi, rash guard, pantaloncini MMA, borse per gi e cinture, prodotti nella nostra fabbrica in Pakistan e personalizzati per palestre, club e marchi in Italia e in Europa."
   },
   "Nav": {
     "home": "Home",
@@ -56,7 +56,7 @@
     "eyebrow": "Spotex International",
     "titleA": "Divise personalizzate,",
     "titleB": "prodotte da noi.",
-    "copy": "Kimono da jiu-jitsu, judo, karate e taekwondo prodotti nella nostra fabbrica, con il marchio della tua palestra o del tuo brand.",
+    "copy": "Kimono BJJ, judogi, rash guard e pantaloncini MMA prodotti nella nostra fabbrica, con il marchio della tua palestra o del tuo brand.",
     "callouts": {
       "si-jju-1001": {
         "label": {
@@ -201,28 +201,28 @@
     "uniforms": {
       "eyebrow": "02 · Divise",
       "titleA": "Una fabbrica.",
-      "titleB": "Ogni disciplina.",
+      "titleB": "Tutto l’essenziale.",
       "allCategories": "Vedi tutte le categorie",
       "disciplines": [
-        "Jiu-jitsu",
+        "Jiu-Jitsu",
         "Judo",
-        "Karate",
-        "Taekwondo",
-        "Sambo"
+        "Pantaloncini MMA",
+        "Borse per gi",
+        "Cinture BJJ"
       ],
       "facts": [
-        "Pearl, gold e altre · 280–550 GSM",
+        "Pearl, gold e altre trame · 280–550 GSM",
         "450 · 550 · 750 GSM",
-        "Tela 10 oz",
-        "Poliestere-cotone o 100% cotone",
-        "Giacche e pantaloncini rossi e blu"
+        "Sublimazione totale",
+        "Borse e zaini per gi",
+        "Tutti i colori IBJJF"
       ],
       "notes": [
-        "Gi BJJ in trama pearl, gold, all-play e honeycomb, in tutti i colori approvati IBJJF, con pantaloni ripstop e le toppe della tua accademia.",
+        "Kimono BJJ in trama pearl, gold, all-play e honeycomb, in tutti i colori approvati IBJJF, con pantaloni ripstop e le patch della tua palestra.",
         "Judogi a trama singola e doppia da 450 a 750 GSM, in bianco, blu, nero o rosa.",
-        "Karategi in cotone canvas leggero e pesante, tagliati per kata e kumite.",
-        "Dobok da taekwondo con scollo a V in policotone, con collo bianco, nero o colorato.",
-        "Giacche da sambo con ali sulle spalle e pantaloncini abbinati, in rosso e blu."
+        "Pantaloncini MMA e grappling in poliestere elasticizzato, completamente sublimati con i tuoi design e colori.",
+        "Borse e zaini per gi sublimati, con il marchio della tua palestra.",
+        "Cinture di grado in tutti i colori IBJJF, con barre di grado e il tuo ricamo."
       ]
     },
     "custom": {
@@ -259,7 +259,7 @@
       "titleA": "Il kit",
       "titleB": "completo.",
       "also": "Tocca un prodotto per i dettagli · Produciamo anche:",
-      "alsoList": "Rash guard · Spats · Pantaloncini Muay Thai · Felpe · Body da lotta · Borse · Portachiavi · Leggings · Reggiseni sportivi"
+      "alsoList": "Spats · Pantaloncini da grappling · Patch · Portachiavi · Leggings"
     },
     "belts": {
       "eyebrow": "05 · Cinture",
@@ -348,14 +348,14 @@
     },
     "knitting": {
       "name": "Maglieria",
-      "text": "Tessuti a maglia per rashguard, pantaloncini e fightwear.",
-      "lead": "Tessuti elasticizzati e a maglia per rash guard, pantaloncini, felpe e abbigliamento da combattimento sono prodotti in casa sulle nostre macchine.",
+      "text": "Tessuti a maglia per rash guard e pantaloncini MMA.",
+      "lead": "Tessuti elasticizzati e a maglia per rash guard e pantaloncini MMA sono prodotti in casa sulle nostre macchine.",
       "points": [
         "Tessuti elastici per rash guard e leggings",
-        "Felpa per hoodie e tute",
+        "Felpa e tessuti da allenamento",
         "Mesh e fodere traspiranti"
       ],
-      "benefit": "Abbigliamento da combattimento e gi da un solo fornitore, in colori coordinati."
+      "benefit": "Rash guard, pantaloncini e gi da un solo fornitore, in colori coordinati."
     },
     "dyeing": {
       "name": "Tintoria",
@@ -435,21 +435,9 @@
         "name": "Judogi",
         "intro": "Judogi in tre pesi: 450 GSM Academy, 550 GSM Challenger e 750 GSM Winner, con pantaloni in drill 100% cotone. In bianco, blu, nero o rosa."
       },
-      "karate-uniforms": {
-        "name": "Karategi",
-        "intro": "Karategi in 10 oz poliestere-cotone o 100% cotone, in tutti i colori standard, con vita elastica o coulisse."
-      },
-      "taekwondo-uniforms": {
-        "name": "Divise da taekwondo",
-        "intro": "Dobok da taekwondo in poliestere-cotone o 100% cotone, in tutti i colori standard, con pantaloni a vita elastica."
-      },
-      "sambo-uniforms": {
-        "name": "Divise da sambo",
-        "intro": "Giacche e pantaloncini da sambo su ordinazione in rosso e blu."
-      },
       "belts": {
-        "name": "Cinture",
-        "intro": "Cinture di grado per BJJ, judo e karate, cinture con passante in metallo, cinture master, cinture a 13 cuciture, cinture in tessuto da gi 350 GSM e cinture casual, in tutti i colori di grado e nelle taglie dalla S alla 3XL."
+        "name": "Cinture BJJ",
+        "intro": "Cinture di grado per BJJ e judo, cinture con passante in metallo, cinture master, cinture a 13 cuciture, cinture in tessuto da gi 350 GSM e cinture casual, in tutti i colori di grado e nelle taglie dalla S alla 3XL."
       },
       "mma-shorts": {
         "name": "Pantaloncini MMA",
@@ -459,29 +447,21 @@
         "name": "Rash guard",
         "intro": "Rash guard a manica corta e lunga in tessuto compressivo, sublimati con le tue grafiche e i colori delle cinture."
       },
-      "fight-wear": {
-        "name": "Fight wear",
-        "intro": "Felpe, giacche con zip, pantaloni da riscaldamento, spats, pantaloncini a compressione e da Muay Thai, body da lotta, bandane e asciugamani sublimati, con i tuoi colori e il tuo marchio."
-      },
       "bags": {
-        "name": "Borse",
+        "name": "Borse per gi",
         "intro": "Borse per gi sublimate, zaini per gi, borsoni e borse a tracolla, con il marchio della tua accademia."
       }
     },
     "types": {
       "bjjGi": "Kimono da jiu-jitsu",
       "judoUniform": "Judogi",
-      "karateUniform": "Karategi",
-      "taekwondoUniform": "Dobok da taekwondo",
-      "samboUniform": "Divisa da sambo",
       "bjjBelt": "Cintura BJJ",
       "giFabricBelt": "Cintura in tessuto gi da 350 g/m²",
       "casualBelt": "Cintura casual",
       "judoBelt": "Cintura da judo",
       "mmaShorts": "Pantaloncini MMA",
-      "hoodie": "Felpa con cappuccio",
-      "singlet": "Body da lotta",
-      "giBag": "Zaino per kimono"
+      "giBag": "Zaino per kimono",
+      "rashGuard": "Rash guard"
     },
     "labels": {
       "weave": "Trama",
@@ -516,7 +496,6 @@
       "elasticOrDrawstring": "Elastico o coulisse",
       "sToXxxl": "Dalla S alla 3XL",
       "sublimated": "Sublimazione totale",
-      "sambo": "Allenamento e gara di sambo",
       "bjjRank": "Gradi BJJ",
       "judoRank": "Gradi judo",
       "giAndGear": "Kimono, cintura e attrezzatura"
@@ -531,7 +510,7 @@
     "title": "Prodotti",
     "eyebrow": "Catalogo",
     "intro": "Ogni prodotto è realizzato su ordinazione nella nostra fabbrica, nei tuoi colori e con il tuo marchio. Scegli una categoria.",
-    "metaDescription": "Kimono BJJ, judogi, karategi e dobok, cinture, fightwear e borse, su ordinazione con il tuo marchio.",
+    "metaDescription": "Kimono BJJ, judogi, rash guard, pantaloncini MMA, borse per gi e cinture BJJ, su ordinazione con il tuo marchio.",
     "searchLabel": "Cerca prodotti",
     "searchPlaceholder": "Cerca per nome o codice…",
     "filterLabel": "Filtra per categoria",
@@ -839,11 +818,18 @@
     "email": "Email",
     "whatsapp": "WhatsApp",
     "formSoon": "Il modulo di preventivo online arriverà a breve. Nel frattempo scrivici su WhatsApp o via email.",
-    "hours": "Da sabato a giovedì, 9:00–18:00 ora del Pakistan (UTC+5); chiuso il venerdì. Rispondiamo a e-mail e messaggi WhatsApp entro un giorno lavorativo."
+    "hours": "Da sabato a giovedì, 9:00–18:00 ora del Pakistan (UTC+5); chiuso il venerdì. Rispondiamo a e-mail e messaggi WhatsApp entro un giorno lavorativo.",
+    "follow": "Seguici"
   },
   "NotFound": {
     "title": "Pagina non trovata",
     "text": "Questa pagina non esiste o è stata spostata.",
+    "back": "Torna alla home"
+  },
+  "ErrorPage": {
+    "title": "Qualcosa è andato storto",
+    "text": "Impossibile caricare questa pagina. Riprova oppure scrivici su WhatsApp.",
+    "retry": "Riprova",
     "back": "Torna alla home"
   },
   "BlogPage": {

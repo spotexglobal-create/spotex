@@ -2,7 +2,7 @@
   "Meta": {
     "siteName": "Spotex International",
     "homeTitle": "Spotex International · Hersteller von Kampfsportbekleidung",
-    "homeDescription": "BJJ-Gis, Judo-, Karate- und Taekwondo-Anzüge sowie Gürtel aus unserer eigenen Fabrik in Pakistan, mit Ihrem Branding für Vereine, Schulen und Marken in Europa."
+    "homeDescription": "BJJ-Gis, Judo-Anzüge, Rashguards, MMA-Shorts, Gi-Taschen und Gürtel aus unserer eigenen Fabrik in Pakistan, mit Ihrem Branding für Vereine, Schulen und Marken in Europa."
   },
   "Nav": {
     "home": "Start",
@@ -56,7 +56,7 @@
     "eyebrow": "Spotex International",
     "titleA": "Individuelle Anzüge,",
     "titleB": "selbst gefertigt.",
-    "copy": "Jiu-Jitsu-, Judo-, Karate- und Taekwondo-Anzüge aus eigener Fertigung, mit dem Branding Ihres Vereins oder Ihrer Marke.",
+    "copy": "BJJ-Gis, Judo-Anzüge, Rashguards und MMA-Shorts aus eigener Fertigung, mit dem Branding Ihres Vereins oder Ihrer Marke.",
     "callouts": {
       "si-jju-1001": {
         "label": {
@@ -201,28 +201,28 @@
     "uniforms": {
       "eyebrow": "02 · Anzüge",
       "titleA": "Eine Fabrik.",
-      "titleB": "Jede Disziplin.",
+      "titleB": "Alles, was zählt.",
       "allCategories": "Alle Kategorien ansehen",
       "disciplines": [
         "Jiu-Jitsu",
         "Judo",
-        "Karate",
-        "Taekwondo",
-        "Sambo"
+        "MMA-Shorts",
+        "Gi-Taschen",
+        "BJJ-Gürtel"
       ],
       "facts": [
         "Pearl, Gold & mehr · 280–550 GSM",
         "450 · 550 · 750 GSM",
-        "10 oz Canvas",
-        "Mischgewebe oder 100 % Baumwolle",
-        "Jacken & Shorts in Rot und Blau"
+        "Vollsublimation",
+        "Gi-Taschen & Rucksäcke",
+        "Alle IBJJF-Gürtelfarben"
       ],
       "notes": [
-        "BJJ-Gis in Pearl-, Gold-, All-Play- und Honeycomb-Webart, in allen IBJJF-zugelassenen Farben, mit Ripstop-Hosen und Ihren Akademie-Patches.",
-        "Judo-Anzüge in Einfach- und Doppelgewebe von 450 bis 750 GSM, in Weiß, Blau, Schwarz oder Pink.",
-        "Karate-Gis aus leichtem und schwerem Canvas-Baumwollstoff, geschnitten für Kata und Kumite.",
-        "Taekwondo-Doboks mit V-Ausschnitt aus Mischgewebe, mit weißem, schwarzem oder farbigem Kragen.",
-        "Sambo-Jacken mit Schulterflügeln und passenden Shorts, in Rot und Blau."
+        "BJJ-Gis in Pearl-, Gold-, All-Play- und Honeycomb-Webung, in allen IBJJF-Farben, mit Ripstop-Hosen und den Patches Ihres Vereins.",
+        "Einfach und doppelt gewebte Judo-Anzüge von 450 bis 750 GSM, in Weiß, Blau, Schwarz oder Pink.",
+        "Vollsublimierte MMA- und Grappling-Shorts aus Stretch-Polyester, mit Ihren Designs und Teamfarben.",
+        "Sublimierte Gi-Taschen und Rucksäcke mit dem Branding Ihres Vereins.",
+        "Graduierungsgürtel in allen IBJJF-Farben, mit Rangstreifen und Ihrer Stickerei."
       ]
     },
     "custom": {
@@ -259,7 +259,7 @@
       "titleA": "Die ganze",
       "titleB": "Ausrüstung.",
       "also": "Für Details auf ein Produkt tippen · Außerdem:",
-      "alsoList": "Rashguards · Spats · Muay-Thai-Shorts · Hoodies · Singlets · Taschen · Schlüsselanhänger · Leggings · Sport-BHs"
+      "alsoList": "Spats · Grappling-Shorts · Patches · Schlüsselanhänger · Leggings"
     },
     "belts": {
       "eyebrow": "05 · Gürtel",
@@ -348,14 +348,14 @@
     },
     "knitting": {
       "name": "Strickerei",
-      "text": "Strickstoffe für Rashguards, Shorts und Fightwear.",
-      "lead": "Stretch- und Strickstoffe für Rash Guards, Shorts, Hoodies und Fightwear entstehen im Haus auf unseren Strickmaschinen.",
+      "text": "Strickstoffe für Rashguards und MMA-Shorts.",
+      "lead": "Stretch- und Strickstoffe für Rashguards und MMA-Shorts entstehen im Haus auf unseren Strickmaschinen.",
       "points": [
         "Stretchstoffe für Rash Guards und Leggings",
-        "Fleece für Hoodies und Trainingsbekleidung",
+        "Fleece und Trainingsstoffe",
         "Atmungsaktives Mesh und Futter"
       ],
-      "benefit": "Fightwear und Gis von einem Lieferanten, in passenden Farben."
+      "benefit": "Rashguards, Shorts und Gis von einem Lieferanten, in passenden Farben."
     },
     "dyeing": {
       "name": "Färberei",
@@ -435,53 +435,33 @@
         "name": "Judoanzüge",
         "intro": "Judo-Anzüge in drei Gewichten: 450 GSM Academy, 550 GSM Challenger und 750 GSM Winner, mit Hosen aus 100 % Baumwoll-Drill. In Weiß, Blau, Schwarz oder Pink."
       },
-      "karate-uniforms": {
-        "name": "Karateanzüge",
-        "intro": "Karateanzüge aus 10 oz Mischgewebe oder 100 % Baumwolle, in allen gängigen Farben, mit Gummi- oder Kordelbund."
-      },
-      "taekwondo-uniforms": {
-        "name": "Taekwondo-Anzüge",
-        "intro": "Taekwondo-Doboks aus Mischgewebe oder 100 % Baumwolle, in allen gängigen Farben, mit Gummibund-Hosen."
-      },
-      "sambo-uniforms": {
-        "name": "Sambo-Anzüge",
-        "intro": "Sambo-Jacken und -Shorts auf Bestellung in Rot und Blau."
-      },
       "belts": {
-        "name": "Gürtel",
-        "intro": "Graduierungsgürtel für BJJ, Judo und Karate, Gürtel mit Metallschlaufe, Meistergürtel, Gürtel mit 13 Steppreihen, 350-GSM-Gi-Stoff-Gürtel und Freizeitgürtel, in allen Gürtelfarben und den Größen S bis 3XL."
+        "name": "BJJ-Gürtel",
+        "intro": "Graduierungsgürtel für BJJ und Judo, Gürtel mit Metallschlaufe, Meistergürtel, Gürtel mit 13 Steppreihen, 350-GSM-Gi-Stoff-Gürtel und Freizeitgürtel, in allen Gürtelfarben und den Größen S bis 3XL."
       },
       "mma-shorts": {
         "name": "MMA-Shorts",
         "intro": "Vollflächig sublimierte MMA- und Grappling-Shorts aus Stretch-Polyester, bedruckt mit Ihren Designs und Teamfarben."
       },
       "rash-guards": {
-        "name": "Rash Guards",
+        "name": "Rashguard",
         "intro": "Kurz- und langärmelige Rash Guards aus Kompressionsstoff, sublimiert mit Ihren Designs und Gurtfarben."
       },
-      "fight-wear": {
-        "name": "Fight Wear",
-        "intro": "Hoodies, Zip-Jacken, Aufwärmhosen, Spats, Kompressions- und Muay-Thai-Shorts, Ringertrikots, Bandanas und sublimierte Handtücher, in Ihren Farben und mit Ihrem Branding."
-      },
       "bags": {
-        "name": "Taschen",
+        "name": "Gi-Taschen",
         "intro": "Sublimierte Gi-Taschen, Gi-Rucksäcke, Duffel Bags und Umhängetaschen, mit dem Branding Ihrer Akademie."
       }
     },
     "types": {
       "bjjGi": "Jiu-Jitsu-Gi",
       "judoUniform": "Judoanzug",
-      "karateUniform": "Karateanzug",
-      "taekwondoUniform": "Taekwondo-Anzug",
-      "samboUniform": "Sambo-Anzug",
       "bjjBelt": "BJJ-Gürtel",
       "giFabricBelt": "Gürtel aus 350-g/m²-Gi-Stoff",
       "casualBelt": "Freizeitgürtel",
       "judoBelt": "Judogürtel",
       "mmaShorts": "MMA-Shorts",
-      "hoodie": "Hoodie",
-      "singlet": "Ringertrikot",
-      "giBag": "Gi-Rucksack"
+      "giBag": "Gi-Rucksack",
+      "rashGuard": "Rashguard"
     },
     "labels": {
       "weave": "Gewebe",
@@ -516,7 +496,6 @@
       "elasticOrDrawstring": "Gummi- oder Kordelbund",
       "sToXxxl": "S bis 3XL",
       "sublimated": "Vollflächige Sublimation",
-      "sambo": "Sambo-Training und Wettkampf",
       "bjjRank": "BJJ-Graduierung",
       "judoRank": "Judo-Graduierung",
       "giAndGear": "Gi, Gürtel und Trainingsausrüstung"
@@ -531,7 +510,7 @@
     "title": "Produkte",
     "eyebrow": "Katalog",
     "intro": "Jedes Produkt wird auf Bestellung in unserer eigenen Fabrik gefertigt, in Ihren Farben und mit Ihrem Branding. Wählen Sie eine Kategorie.",
-    "metaDescription": "BJJ-Gis, Judo-, Karate- und Taekwondo-Anzüge, Gürtel, Fightwear und Taschen, auf Bestellung mit Ihrem Branding.",
+    "metaDescription": "BJJ-Gis, Judo-Anzüge, Rashguards, MMA-Shorts, Gi-Taschen und BJJ-Gürtel, auf Bestellung mit Ihrem Branding.",
     "searchLabel": "Produkte suchen",
     "searchPlaceholder": "Nach Name oder Code suchen…",
     "filterLabel": "Nach Kategorie filtern",
@@ -839,11 +818,18 @@
     "email": "E-Mail",
     "whatsapp": "WhatsApp",
     "formSoon": "Das Online-Anfrageformular folgt in Kürze. Bis dahin schreiben Sie uns gern per WhatsApp oder E-Mail.",
-    "hours": "Samstag bis Donnerstag, 9:00–18:00 Uhr pakistanischer Zeit (UTC+5); freitags geschlossen. Wir antworten auf E-Mails und WhatsApp-Nachrichten innerhalb eines Werktags."
+    "hours": "Samstag bis Donnerstag, 9:00–18:00 Uhr pakistanischer Zeit (UTC+5); freitags geschlossen. Wir antworten auf E-Mails und WhatsApp-Nachrichten innerhalb eines Werktags.",
+    "follow": "Folgen Sie uns"
   },
   "NotFound": {
     "title": "Seite nicht gefunden",
     "text": "Diese Seite existiert nicht oder wurde verschoben.",
+    "back": "Zur Startseite"
+  },
+  "ErrorPage": {
+    "title": "Etwas ist schiefgelaufen",
+    "text": "Diese Seite konnte nicht geladen werden. Bitte versuchen Sie es erneut oder schreiben Sie uns auf WhatsApp.",
+    "retry": "Erneut versuchen",
     "back": "Zur Startseite"
   },
   "BlogPage": {

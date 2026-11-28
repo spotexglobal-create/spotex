@@ -2,7 +2,7 @@
   "Meta": {
     "siteName": "Spotex International",
     "homeTitle": "Spotex International · Martial Arts Uniform Manufacturer",
-    "homeDescription": "BJJ gis, judo, karate and taekwondo uniforms and belts, made in our own factory in Pakistan and custom-branded for academies and brands in the USA and Europe."
+    "homeDescription": "BJJ gis, judo uniforms, rash guards, MMA shorts, gi bags and belts, made in our own factory in Pakistan and custom-branded for academies and brands in the USA and Europe."
   },
   "Nav": {
     "home": "Home",
@@ -56,7 +56,7 @@
     "eyebrow": "Spotex International",
     "titleA": "Custom uniforms,",
     "titleB": "made in-house.",
-    "copy": "Jiu-Jitsu, Judo, Karate and Taekwondo uniforms, made in our own factory and branded for academies in the USA and Europe.",
+    "copy": "BJJ gis, judo uniforms, rash guards and MMA shorts, made in our own factory and branded for academies in the USA and Europe.",
     "callouts": {
       "si-jju-1001": {
         "label": {
@@ -201,28 +201,28 @@
     "uniforms": {
       "eyebrow": "02 · Uniforms",
       "titleA": "One factory.",
-      "titleB": "Every discipline.",
+      "titleB": "Every essential.",
       "allCategories": "View all categories",
       "disciplines": [
         "Jiu-Jitsu",
         "Judo",
-        "Karate",
-        "Taekwondo",
-        "Sambo"
+        "MMA Shorts",
+        "Gi Bags",
+        "BJJ Belts"
       ],
       "facts": [
         "Pearl, gold & more weaves · 280–550 GSM",
         "450 · 550 · 750 GSM",
-        "10 oz canvas",
-        "Poly-cotton or 100% cotton",
-        "Jackets & shorts, red and blue"
+        "Full sublimation",
+        "Gi bags & backpacks",
+        "Every IBJJF rank colour"
       ],
       "notes": [
         "BJJ gis in pearl, gold, all-play and honeycomb weaves, in every IBJJF-approved colour, with ripstop pants and your academy patches.",
         "Single and double-weave judo uniforms from 450 to 750 GSM, in white, blue, black or pink.",
-        "Karate gis in light and heavy canvas cotton, cut for kata and for kumite.",
-        "V-neck taekwondo doboks in poly-cotton, with white, black or coloured collars.",
-        "Sambo jackets with shoulder wings and matching shorts, in red and blue."
+        "Fully sublimated MMA and grappling shorts in stretch polyester, printed with your designs and team colours.",
+        "Sublimated gi bags and backpacks, branded for your academy.",
+        "Rank belts in every IBJJF colour, with rank bars and your embroidery."
       ]
     },
     "custom": {
@@ -259,7 +259,7 @@
       "titleA": "The full",
       "titleB": "kit.",
       "also": "Tap any product for details · Also made:",
-      "alsoList": "Rash guards · Spats · Muay Thai shorts · Hoodies · Singlets · Bags · Key chains · Leggings · Sports bras"
+      "alsoList": "Spats · Grappling shorts · Patches · Key chains · Leggings"
     },
     "belts": {
       "eyebrow": "05 · Belts",
@@ -348,14 +348,14 @@
     },
     "knitting": {
       "name": "Knitting",
-      "text": "Knitted fabrics for rash guards, shorts and fight wear.",
-      "lead": "Stretch and knitted fabrics for rash guards, shorts, hoodies and fight wear are made in-house on our knitting machines.",
+      "text": "Knitted fabrics for rash guards and MMA shorts.",
+      "lead": "Stretch and knitted fabrics for rash guards and MMA shorts are made in-house on our knitting machines.",
       "points": [
         "Stretch fabrics for rash guards and leggings",
-        "Fleece for hoodies and track wear",
+        "Fleece and training fabrics",
         "Breathable mesh and linings"
       ],
-      "benefit": "Fight wear and gis from one supplier, in matching colours."
+      "benefit": "Rash guards, shorts and gis from one supplier, in matching colours."
     },
     "dyeing": {
       "name": "Fabric Dyeing",
@@ -435,53 +435,33 @@
         "name": "Judo Uniforms",
         "intro": "Judo gis in three weights: 450 GSM Academy, 550 GSM Challenger and 750 GSM Winner, with 100% cotton drill pants. In white, blue, black or pink."
       },
-      "karate-uniforms": {
-        "name": "Karate Uniforms",
-        "intro": "10 oz karate uniforms in poly-cotton or 100% cotton, in all regular colours, with elastic or drawstring waist."
-      },
-      "taekwondo-uniforms": {
-        "name": "Taekwondo Uniforms",
-        "intro": "Taekwondo doboks in poly-cotton or 100% cotton, in all regular colours, with elastic waist pants."
-      },
-      "sambo-uniforms": {
-        "name": "Sambo Uniforms",
-        "intro": "Sambo jackets and shorts made to order in red and blue."
-      },
       "belts": {
-        "name": "Belts",
-        "intro": "BJJ, judo and karate rank belts, metal-loop belts, master belts, 13-row stitched belts, 350 GSM gi-fabric belts and casual belts, in every rank colour and in sizes S to 3XL."
+        "name": "BJJ Belts",
+        "intro": "BJJ and judo rank belts, metal-loop belts, master belts, 13-row stitched belts, 350 GSM gi-fabric belts and casual belts, in every rank colour and in sizes S to 3XL."
       },
       "mma-shorts": {
         "name": "MMA Shorts",
         "intro": "Fully sublimated MMA and grappling shorts in stretch polyester, printed with your designs and team colours."
       },
       "rash-guards": {
-        "name": "Rash Guards",
+        "name": "Rash Guard",
         "intro": "Short and long sleeve rash guards in compression fabric, sublimated with your designs and rank colours."
       },
-      "fight-wear": {
-        "name": "Fight Wear",
-        "intro": "Hoodies, zip jackets, warm-up pants, spats, compression and Muay Thai shorts, wrestling singlets, bandanas and sublimated towels, made with your colours and branding."
-      },
       "bags": {
-        "name": "Bags",
+        "name": "Gi Bags",
         "intro": "Sublimated gi bags, gi backpacks, duffel bags and shoulder-strap bags, branded for your academy."
       }
     },
     "types": {
       "bjjGi": "Jiu-Jitsu Gi",
       "judoUniform": "Judo Uniform",
-      "karateUniform": "Karate Uniform",
-      "taekwondoUniform": "Taekwondo Uniform",
-      "samboUniform": "Sambo Uniform",
       "bjjBelt": "BJJ Belt",
       "giFabricBelt": "350 GSM Gi-Fabric Belt",
       "casualBelt": "Casual Belt",
       "judoBelt": "Judo Belt",
       "mmaShorts": "MMA Shorts",
-      "hoodie": "Hoodie",
-      "singlet": "Wrestling Singlet",
-      "giBag": "Gi Bag Pack"
+      "giBag": "Gi Bag Pack",
+      "rashGuard": "Rash Guard"
     },
     "labels": {
       "weave": "Weave",
@@ -516,7 +496,6 @@
       "elasticOrDrawstring": "Elastic or drawstring",
       "sToXxxl": "S to 3XL",
       "sublimated": "Full sublimation",
-      "sambo": "Sambo training and competition",
       "bjjRank": "BJJ ranking",
       "judoRank": "Judo ranking",
       "giAndGear": "Gi, belt and training gear"
@@ -531,7 +510,7 @@
     "title": "Products",
     "eyebrow": "Catalogue",
     "intro": "Every product is made to order in our own factory, in your colours and with your branding. Pick a category to see the range.",
-    "metaDescription": "BJJ gis, judo, karate and taekwondo uniforms, belts, fight wear and bags, made to order with your branding.",
+    "metaDescription": "BJJ gis, judo uniforms, rash guards, MMA shorts, gi bags and BJJ belts, made to order with your branding.",
     "searchLabel": "Search products",
     "searchPlaceholder": "Search by name or code…",
     "filterLabel": "Filter by category",
@@ -839,11 +818,18 @@
     "email": "Email",
     "whatsapp": "WhatsApp",
     "formSoon": "The online quote form opens soon. Until then, send us a WhatsApp message or an email.",
-    "hours": "Saturday to Thursday, 9:00–18:00 Pakistan time (UTC+5); closed on Fridays. We reply to e-mails and WhatsApp messages within one working day."
+    "hours": "Saturday to Thursday, 9:00–18:00 Pakistan time (UTC+5); closed on Fridays. We reply to e-mails and WhatsApp messages within one working day.",
+    "follow": "Follow us"
   },
   "NotFound": {
     "title": "Page not found",
     "text": "This page doesn't exist or has moved.",
+    "back": "Back to home"
+  },
+  "ErrorPage": {
+    "title": "Something went wrong",
+    "text": "This page could not load. Please try again, or message us on WhatsApp.",
+    "retry": "Try again",
     "back": "Back to home"
   },
   "BlogPage": {

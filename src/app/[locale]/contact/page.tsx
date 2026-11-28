@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { CatalogHero } from '@/components/catalog/CatalogHero';
+import { SocialLinks } from '@/components/layout/SocialLinks';
 import { whatsappLink } from '@/config/site';
 import { initLocale, type LocaleParams } from '@/i18n/server';
 import { getCategories } from '@/lib/catalog';
@@ -74,6 +75,12 @@ export default async function ContactPage({ params, searchParams }: Props) {
             </p>
             <p className="mt-4 border-t border-ink/10 pt-4 text-[13px] leading-relaxed text-ink/85">{t('hours')}</p>
           </div>
+          {Object.keys(site.social).length > 0 && (
+            <div className="rounded-[20px] border-[1.5px] border-ink bg-white p-5">
+              <p className="text-[11px] font-bold tracking-[0.16em] text-ink uppercase">{t('follow')}</p>
+              <SocialLinks social={site.social} light className="mt-3" />
+            </div>
+          )}
         </aside>
       </section>
     </>

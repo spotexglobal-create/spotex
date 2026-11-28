@@ -169,3 +169,8 @@ export const ProductModel = define<ProductDoc>('Product', ProductSchema);
 export type CategoryDoc = InferSchemaType<typeof CategorySchema>;
 export const CategoryModel = define<CategoryDoc>('Category', CategorySchema);
 export const InquiryModel = define<InquiryDoc>('Inquiry', InquirySchema);
+
+/** Failed admin sign-ins, one record per attempt; MongoDB deletes each after 15 minutes (TTL index). */
+const LoginFailSchema = new Schema({ key: { type: String, required: true, index: true }, at: { type: Date, default: Date.now, expires: 60 * 15 } });
+export type LoginFailDoc = InferSchemaType<typeof LoginFailSchema>;
+export const LoginFailModel = define<LoginFailDoc>('LoginFail', LoginFailSchema);

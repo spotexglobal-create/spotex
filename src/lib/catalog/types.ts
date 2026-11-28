@@ -6,34 +6,20 @@ import type messages from '@/messages/en.json';
  * The same shapes are used by the MongoDB models later, so pages won't change when data moves.
  */
 
-export const CATEGORY_SLUGS = [
-  'bjj-gis',
-  'judo-uniforms',
-  'karate-uniforms',
-  'taekwondo-uniforms',
-  'sambo-uniforms',
-  'belts',
-  'mma-shorts',
-  'rash-guards',
-  'fight-wear',
-  'bags',
-] as const;
+// URL slugs stay as they are ('belts' is shown as "BJJ Belts", 'bags' as "Gi Bags")
+export const CATEGORY_SLUGS = ['bjj-gis', 'judo-uniforms', 'rash-guards', 'mma-shorts', 'bags', 'belts'] as const;
 
 export type CategorySlug = (typeof CATEGORY_SLUGS)[number];
 
 export const PRODUCT_TYPES = [
   'bjjGi',
   'judoUniform',
-  'karateUniform',
-  'taekwondoUniform',
-  'samboUniform',
+  'rashGuard',
   'bjjBelt',
   'giFabricBelt',
   'casualBelt',
   'judoBelt',
   'mmaShorts',
-  'hoodie',
-  'singlet',
   'giBag',
 ] as const;
 
